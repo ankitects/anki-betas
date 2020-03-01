@@ -13,6 +13,29 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
+### Changes in 2.1.21beta3 (8960d12a)
+
+Before trying this beta, please back up your collection and media files,
+as a lot has changed under the hood. Please keep an eye on the contents
+of your media folder until this update receives more testing.
+
+- Media syncing now logs to collection2.log in your profile folder. If you
+experience any problems with syncing, please attach your log in a support
+ticket and describe the problem (giving an example filename) so I can
+investigate.
+- Fix time spans over 12 months not being displayed in years.
+- Files deleted via the media check no longer trigger a rescan on next sync.
+- Fix the standard Mac build not displaying properly when dark mode active,
+and updated the docs to explain how you can force light mode in Anki while
+system dark mode is active.
+- Fix an oversight that was breaking some add-ons unnecessarily.
+- More translation work.
+- More type hints in the code (thanks to Alan).
+- Improvements for building on Windows (thanks to Evandro).
+- Support '/' separator in add-on web paths on Windows (thanks to BlueGreenMagick)
+- Fix tags that are in the wrong encoding as part of the DB check.
+- Display a more helpful warning when mpv/mplayer not installed.
+
 ### Changes in 2.1.21beta2 (65ec9d19)
 
 Before trying this beta, please back up your collection and media files,
