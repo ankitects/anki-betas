@@ -13,16 +13,36 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
+### Changes in 2.1.22beta1 (131d37dc)
+
+Please use File>Export to back up your collection with media before trying
+this beta. While big problems are unlikely, a backup is always a good thing
+to have.
+
+- All the changes from 2.1.21beta1 to 3
+- The new timezone handling is now exposed as an option in the preferences
+screen. Please avoid using this if you use AnkiDroid:
+https://anki.tenderapp.com/kb/anki-ecosystem/timezone-handling-changes
+- Instead of automatically clearing the media trash after 7 days,
+the media check screen now displays how many files are in the trash
+folder, and allows you to either empty the trash, or restore it back
+into the media folder.
+- Fixed repetitive sync errors when long filenames in media folder and
+media check not run.
+- More code improvements (thanks to Alan)
+- More add-on hooks (thanks to Arthur and Glutanimate)
+- More Windows build improvements (thanks to Evandro)
+- Rotate log files.
+- Ignore http(s) links when checking media.
+- Fix a resource leak introduced in an earlier beta.
+- Fix inversion of iOS drawings in night mode.
+
 ### Changes in 2.1.21beta4 (f1734a47)
 
 This has been released as 2.1.21 stable without the below changes - please
 see the 2.1.21 change notes.
 
 ### Changes in 2.1.21beta3 (8960d12a)
-
-Before trying this beta, please back up your collection and media files,
-as a lot has changed under the hood. Please keep an eye on the contents
-of your media folder until this update receives more testing.
 
 - Media syncing now logs to collection2.log in your profile folder. If you
 experience any problems with syncing, please attach your log in a support
@@ -42,10 +62,6 @@ system dark mode is active.
 - Display a more helpful warning when mpv/mplayer not installed.
 
 ### Changes in 2.1.21beta2 (65ec9d19)
-
-Before trying this beta, please back up your collection and media files,
-as a lot has changed under the hood. Please keep an eye on the contents
-of your media folder until this update receives more testing.
 
 - More work on the handling of translations, including tweaks to the way
 the answer buttons and the review history screen show intervals.
@@ -70,12 +86,7 @@ not appearing.
 - Fixed Anki not starting on Windows installs that were lacking TTS support.
 - Interrupt current audio even if autoplay is disabled.
 
-
 ### Changes in 2.1.21beta1 (683b7983)
-
-Before trying this beta, please back up your collection and media files,
-as a lot has changed under the hood. Please keep an eye on the contents
-of your media folder until this update receives more testing.
 
 Media syncing improvements:
 
