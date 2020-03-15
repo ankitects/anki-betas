@@ -13,6 +13,21 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
+### Changes in 2.1.22beta2 (0ecc189a)
+
+- Fixed problems playing audio on Windows. Users using the gtts add-on will need to update it.
+- Clear the audio queue when moving between cards with autoplay off.
+- Fixed play icons not appearing in browser preview when autoplay off.
+- Restored grey styling of zeros in the deck list that got lost in the night mode changes.
+- Fixed an error shown when running in Spanish.
+- Fixed fields containing a filename with non-Latin text from being corrupted when editing HTML (thanks to Evandro).
+- Support for validating add-on config schemas (thanks to Arthur).
+- Fixed a change that broke some add-ons.
+- Fixed the wrong language being selected in the preferences screen.
+- Removed the 'too many decks' message in the deck list screen.
+- Possible fix for issue playing audio from flash drive.
+- Fixed Anki getting stuck when importing an invalid file.
+
 ### Changes in 2.1.22beta1 (131d37dc)
 
 Please use File>Export to back up your collection with media before trying
