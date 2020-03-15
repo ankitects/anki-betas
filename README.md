@@ -36,14 +36,14 @@ to have.
 
 - All the changes from 2.1.21beta1 to 3
 - The new timezone handling is now exposed as an option in the preferences
-screen. Please avoid using this if you use AnkiDroid:
-https://anki.tenderapp.com/kb/anki-ecosystem/timezone-handling-changes
+  screen. Please avoid using this if you use AnkiDroid:
+  https://anki.tenderapp.com/kb/anki-ecosystem/timezone-handling-changes
 - Instead of automatically clearing the media trash after 7 days,
-the media check screen now displays how many files are in the trash
-folder, and allows you to either empty the trash, or restore it back
-into the media folder.
+  the media check screen now displays how many files are in the trash
+  folder, and allows you to either empty the trash, or restore it back
+  into the media folder.
 - Fixed repetitive sync errors when long filenames in media folder and
-media check not run.
+  media check not run.
 - More code improvements (thanks to Alan)
 - More add-on hooks (thanks to Arthur and Glutanimate)
 - More Windows build improvements (thanks to Evandro)
@@ -60,14 +60,14 @@ see the 2.1.21 change notes.
 ### Changes in 2.1.21beta3 (8960d12a)
 
 - Media syncing now logs to collection2.log in your profile folder. If you
-experience any problems with syncing, please attach your log in a support
-ticket and describe the problem (giving an example filename) so I can
-investigate.
+  experience any problems with syncing, please attach your log in a support
+  ticket and describe the problem (giving an example filename) so I can
+  investigate.
 - Fix time spans over 12 months not being displayed in years.
 - Files deleted via the media check no longer trigger a rescan on next sync.
 - Fix the standard Mac build not displaying properly when dark mode active,
-and updated the docs to explain how you can force light mode in Anki while
-system dark mode is active.
+  and updated the docs to explain how you can force light mode in Anki while
+  system dark mode is active.
 - Fix an oversight that was breaking some add-ons unnecessarily.
 - More translation work.
 - More type hints in the code (thanks to Alan).
@@ -79,15 +79,15 @@ system dark mode is active.
 ### Changes in 2.1.21beta2 (65ec9d19)
 
 - More work on the handling of translations, including tweaks to the way
-the answer buttons and the review history screen show intervals.
+  the answer buttons and the review history screen show intervals.
 - You can now export .apkg files with the V2 scheduler enabled.
 - Show next learning card due time, and count for today
 - Add-on hook improvements, thanks to Glutanimate and Arthur.
 - Hide the default deck in more cases (thanks to Arthur).
 - Some improvements to the build process (thanks to Evandro).
 - Fixed negative number in "add-on incompatible" message.
-- Fixed field contents added by old add-ons like Japanese Support 
-not appearing.
+- Fixed field contents added by old add-ons like Japanese Support
+  not appearing.
 - Fixed card info screen not appearing.
 - Fixed an error message when using very small learning steps.
 - Add "New #" prefix to the due column for new cards.
@@ -106,28 +106,28 @@ not appearing.
 Media syncing improvements:
 
 - Media syncing now happens in the background, so you can continue using
-Anki while the media sync completes.
+  Anki while the media sync completes.
 - Aside from syncing at open and close, Anki will sync any media changes
-every 15-20 minutes.
+  every 15-20 minutes.
 - You can click on the sync button while the spinner is active to monitor
-progress.
+  progress.
 - Long filenames and problematic characters should be handled smoothly now,
-instead of causing syncing errors.
+  instead of causing syncing errors.
 - Anki should no longer sometimes forget to download files when a media
-sync fails due to network errors.
+  sync fails due to network errors.
 - When media files are added within Anki, Anki now marks them
-in the database immediately, which can make things faster for people with
-slower disks if they are not modifying the media folder externally.
+  in the database immediately, which can make things faster for people with
+  slower disks if they are not modifying the media folder externally.
 
 Media check improvements:
 
 - The Check Media function now shows progress, and can be interrupted.
 - There is now a separate button to generate missing LaTeX.
 - If LaTeX fails to build, the problem card will be revealed in the browse
-screen.
+  screen.
 - When Anki finds files that are too long or would cause errors on some
-operating systems, it will automatically rename them and update your notes
-to point to the new filename.
+  operating systems, it will automatically rename them and update your notes
+  to point to the new filename.
 
 Both media sync and the media check now place deleted files in a media.trash
 folder inside your profile, instead of placing the files in the system trash.
@@ -173,12 +173,12 @@ For a full list of changes since 2.1.19, please see https://apps.ankiweb.net/doc
 ### Changes in 2.1.20beta7 (77912aa2/c70badcd/a4764e2a)
 
 - Foreground and background colours in text are now ignored
-when pasting in night mode.
+  when pasting in night mode.
 - On macOS, the system theme will be used when dark mode is active.
 - Qt has been downgraded to 5.13 on macOS to facilitate the above.
 - The audio replay buttons are smaller by default, and can be styled using fill and stroke on '.replay-button svg [circle|path]'.
 - Night mode now also used .night_mode - if you notice any problems
-with this please let me know.
+  with this please let me know.
 - Disabled elastic scrolling in webviews to work around a Qt bug.
 - Progress dialogs no longer pop up immediately.
 - Minor night mode tweaks.
@@ -198,12 +198,12 @@ with this please let me know.
 - Fix issues loading mpv on Mac/Linux.
 - Replay buttons now appear in {{FrontSide}}.
 - Replay buttons are shown in card layout and preview screens, but
-are not yet clickable.
+  are not yet clickable.
 - More changes to the card display code, which will break more
-add-ons I'm afraid.
+  add-ons I'm afraid.
 - The template hooks have been updated - please see
-https://github.com/ankitects/anki-addons/commits/master for required
-changes.
+  https://github.com/ankitects/anki-addons/commits/master for required
+  changes.
 - A few colour fixes for night mode.
 - A change from Arthur that fixes one issue that was breaking add-ons.
 - Invert LaTeX in night mode (thanks to zjosua).
@@ -212,54 +212,54 @@ changes.
 ### Changes in 2.1.20beta4 (98041059)
 
 - The night mode option now turns the interface dark as well. Please
-report any areas that don't display properly.
+  report any areas that don't display properly.
 - Fix mplayer window popping up on Windows.
 - Alter the way negated conditionals are handled in card generation.
 
 ### Changes in 2.1.20beta3 (95b497cc)
 
 - You can now use `{{tts en_US:Field}}` on your card templates to use the
-text to speech support built into Windows and macOS, changing the language
-code as necessary.
+  text to speech support built into Windows and macOS, changing the language
+  code as necessary.
 - You can specify the voices you'd prefer - the first available one
-will be used. Eg. `{{tts ja_JP voices=Apple_Otoya,Microsoft_Haruka:Field}}`.
-The voices you specify must match the language.
+  will be used. Eg. `{{tts ja_JP voices=Apple_Otoya,Microsoft_Haruka:Field}}`.
+  The voices you specify must match the language.
 - In addition to the built in TTS, there is an example add-on that uses gTTS
-available here: https://ankiweb.net/shared/info/391644525
+  available here: https://ankiweb.net/shared/info/391644525
 - To see all available voices, use the following in the debug console:
 
------
+```python
 for p in aqt.sound.av_player.players:
   if v := getattr(p, 'get_available_voices', None): pp(v())
------
+```
 
 - Audio buttons are now shown on the card, and can be turned off in the
-preferences. They will show for both regular audio and text to speech.
+  preferences. They will show for both regular audio and text to speech.
 - Added shortcut keys in the review screen to pause and jump forward/backward
-5 seconds.
+  5 seconds.
 - Anki now starts a new copy of mplayer for each audio file on Windows,
-which avoids the need to create temporary files. If you notice any problems
-related to this, please let me know.
+  which avoids the need to create temporary files. If you notice any problems
+  related to this, please let me know.
 - Add-ons that modified the audio code may break with this update.
 - For add-on authors, some more examples using the new hook system are
-available on the following page, including ported versions of the clickable
-tags and additional card fields add-ons:
-https://github.com/ankitects/anki-addons/tree/master/demos
+  available on the following page, including ported versions of the clickable
+  tags and additional card fields add-ons:
+  https://github.com/ankitects/anki-addons/tree/master/demos
 
 ### Changes in 2.1.20beta2 (c9a46268)
 
 - Anki will now check for add-on updates once a day.
 - Disabled add-ons are now included in the check as well.
 - If a user attempts to install an add-on that doesn't support the version
-they're on, Anki will now prevent them from doing so.
+  they're on, Anki will now prevent them from doing so.
 - The 'max supported version' that add-on authors can specify in AnkiWeb
-is now used to prevent users from downloading add-ons that won't work on
-their Anki version, and to disable add-ons when they update to a new version.
+  is now used to prevent users from downloading add-ons that won't work on
+  their Anki version, and to disable add-ons when they update to a new version.
 - Fix incorrect delay being logged when Hard is used on the first learning step
-in the V2 scheduler.
+  in the V2 scheduler.
 - The editor no longer modifies percent-escaped text outside of image tags.
 - Fix an extra linebreak being left in a field when an image is attached
-to an empty field.
+  to an empty field.
 
 ### Changes in 2.1.20beta1 (fa564772)
 
@@ -273,7 +273,7 @@ to an empty field.
 
 - Minimum Python version is now 3.7.
 - Updated the way templates are rendered. If you notice any problems or
-messages printed to the console, please post on the support site.
+  messages printed to the console, please post on the support site.
 - Double-clicking on .ankiaddon files should now work on Mac and Windows as well.
 - Bug fix for tag updated notes feature (thanks to Erez).
 
@@ -281,7 +281,7 @@ messages printed to the console, please post on the support site.
 
 - Added an option to tag updated notes when importing (thanks to Erez).
 - Install add-ons by double clicking on their files (thanks to Glutanimate).
-Currently only on Linux; support for Windows/Mac will be added soon.
+  Currently only on Linux; support for Windows/Mac will be added soon.
 - The alternate Windows build now uses Python 3.8/Qt 5.12.
 - The alternate Mac build now uses Python 3.8.
 - The alternate Linux build has been dropped.
@@ -292,13 +292,13 @@ notice any regressions, please post on the beta testing thread.
 ### Changes in 2.1.17beta6 (4cead7ef)
 
 - Added a beta label to the experimental scheduler,
-as a timezone corner case needs to be addressed before
-general release.
+  as a timezone corner case needs to be addressed before
+  general release.
 - Fixed sidebar background on Windows 10.
 - Fixed building from source on 32 bit Linux.
 - Fixed alternate template syntax not being recognized.
 - Automatically remove ':' from field names when opening the
-card templates screen, as it conflicts with the template syntax.
+  card templates screen, as it conflicts with the template syntax.
 
 ### Changes in 2.1.17beta5 (518cc442)
 
@@ -318,8 +318,8 @@ Another Windows-only build.
 
 - Improved the performance of the browse screen's sidebar.
 - If you use any add-ons that alter the sidebar, you will need to disable
-them prior to upgrading, as add-on authors will need to modify their code
-to work with the new implementation.
+  them prior to upgrading, as add-on authors will need to modify their code
+  to work with the new implementation.
 - Added an option in the preferences screen to adjust the UI size.
 - Fixed a regression in the way duplicate deck names were handled.
 
