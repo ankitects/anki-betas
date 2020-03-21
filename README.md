@@ -13,9 +13,7 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
-### Changes in 2.1.24beta1
-
-Build TBA.
+### Changes in 2.1.24beta1 (TBA)
 
 2.1.24 focuses on changes to the database layer and searching code.
 
@@ -67,9 +65,7 @@ Other changes:
 A lot has changed in this beta, so some issues may have slipped through the cracks. If
 you run into any problems, please let me know.
 
-### Changes in 2.1.22
-
-Build 0ecc189a.
+### Changes in 2.1.22beta2 (0ecc189a)
 
 - Fixed problems playing audio on Windows. Users using the gtts add-on will need to update it.
 - Clear the audio queue when moving between cards with autoplay off.
@@ -84,9 +80,7 @@ Build 0ecc189a.
 - Possible fix for issue playing audio from flash drive.
 - Fixed Anki getting stuck when importing an invalid file.
 
-### Changes in 2.1.22
-
-Build 131d37dc.
+### Changes in 2.1.22beta1 (131d37dc)
 
 Please use File>Export to back up your collection with media before trying
 this beta. While big problems are unlikely, a backup is always a good thing
@@ -110,16 +104,12 @@ to have.
 - Fix a resource leak introduced in an earlier beta.
 - Fix inversion of iOS drawings in night mode.
 
-### Changes in 2.1.21
-
-Build f1734a47.
+### Changes in 2.1.21beta4 (f1734a47)
 
 This has been released as 2.1.21 stable without the below changes - please
 see the 2.1.21 change notes.
 
-### Changes in 2.1.21
-
-Build 8960d12a.
+### Changes in 2.1.21beta3 (8960d12a)
 
 - Media syncing now logs to collection2.log in your profile folder. If you
   experience any problems with syncing, please attach your log in a support
@@ -138,9 +128,7 @@ Build 8960d12a.
 - Fix tags that are in the wrong encoding as part of the DB check.
 - Display a more helpful warning when mpv/mplayer not installed.
 
-### Changes in 2.1.21
-
-Build 65ec9d19.
+### Changes in 2.1.21beta2 (65ec9d19)
 
 - More work on the handling of translations, including tweaks to the way
   the answer buttons and the review history screen show intervals.
@@ -165,9 +153,7 @@ Build 65ec9d19.
 - Fixed Anki not starting on Windows installs that were lacking TTS support.
 - Interrupt current audio even if autoplay is disabled.
 
-### Changes in 2.1.21
-
-Build 683b7983.
+### Changes in 2.1.21beta1 (683b7983)
 
 Media syncing improvements:
 
@@ -206,9 +192,7 @@ Other changes:
 - Improvements to the readability of the scheduling code (thanks to Arthur)
 - More hooks for add-on authors (thanks to Arthur & Aristotelis)
 
-### Changes in 2.1.20
-
-Build d0284f75.
+### Changes in 2.1.20beta10 (d0284f75)
 
 For a full list of changes since 2.1.19, please see https://apps.ankiweb.net/docs/changes.html
 
@@ -223,16 +207,12 @@ For a full list of changes since 2.1.19, please see https://apps.ankiweb.net/doc
 - Constrain image width in editor to the field width.
 - Tweaks to replay audio button alignment/outline.
 
-### Changes in 2.1.20
-
-Build 1fbd925f.
+### Changes in 2.1.20beta9 (1fbd925f)
 
 - Standard Windows and Linux builds updated to latest Qt.
 - More legible colours in the stats screens in night mode.
 
-### Changes in 2.1.20
-
-Build 5d91580c.
+### Changes in 2.1.20beta8 (5d91580c)
 
 - Emptying a filtered deck in the V2 scheduler no longer unsuspends suspended cards inside it.
 - Added an option in the preferences to not interrupt the currently playing audio when answering.
@@ -242,9 +222,7 @@ Build 5d91580c.
 - Fix some misaligned dialogs in night mode.
 - Fix building from a .tar.gz file.
 
-### Changes in 2.1.20
-
-Build 77912aa2/c70badcd/a4764e2a.
+### Changes in 2.1.20beta7 (77912aa2/c70badcd/a4764e2a)
 
 - Foreground and background colours in text are now ignored
   when pasting in night mode.
@@ -257,9 +235,7 @@ Build 77912aa2/c70badcd/a4764e2a.
 - Progress dialogs no longer pop up immediately.
 - Minor night mode tweaks.
 
-### Changes in 2.1.20
-
-Build 23f13a31.
+### Changes in 2.1.20beta6 (23f13a31)
 
 - TTS tags now accept a 'speed=1.0' option to control voice speed.
 - Adding \{\{tts-voices:}} to your template will show all available voices.
@@ -269,9 +245,7 @@ Build 23f13a31.
 - Fix add-ons being marked as incompatible when they weren't.
 - Handle AnkiWeb's new support for multiple add-on versions.
 
-### Changes in 2.1.20
-
-Build d428b3b4.
+### Changes in 2.1.20beta5 (d428b3b4)
 
 - Fix issues loading mpv on Mac/Linux.
 - Replay buttons now appear in {{FrontSide}}.
@@ -287,18 +261,14 @@ Build d428b3b4.
 - Invert LaTeX in night mode (thanks to zjosua).
 - Support specifying min/max versions in .ankiaddon files.
 
-### Changes in 2.1.20
-
-Build 98041059.
+### Changes in 2.1.20beta4 (98041059)
 
 - The night mode option now turns the interface dark as well. Please
   report any areas that don't display properly.
 - Fix mplayer window popping up on Windows.
 - Alter the way negated conditionals are handled in card generation.
 
-### Changes in 2.1.20
-
-Build 95b497cc.
+### Changes in 2.1.20beta3 (95b497cc)
 
 - You can now use `{{tts en_US:Field}}` on your card templates to use the
   text to speech support built into Windows and macOS, changing the language
@@ -328,9 +298,7 @@ for p in aqt.sound.av_player.players:
   tags and additional card fields add-ons:
   https://github.com/ankitects/anki-addons/tree/master/demos
 
-### Changes in 2.1.20
-
-Build c9a46268.
+### Changes in 2.1.20beta2 (c9a46268)
 
 - Anki will now check for add-on updates once a day.
 - Disabled add-ons are now included in the check as well.
@@ -345,9 +313,7 @@ Build c9a46268.
 - Fix an extra linebreak being left in a field when an image is attached
   to an empty field.
 
-### Changes in 2.1.20
-
-Build fa564772.
+### Changes in 2.1.20beta1 (fa564772)
 
 - Changes to the way cards are rendered that will break some add-ons - please
   see https://anki.tenderapp.com/discussions/beta-testing/1706-anki-2120-updates-to-card-template-rendering[here]
@@ -355,9 +321,7 @@ Build fa564772.
 - Tweaks to the 'tag updated notes' feature (thanks to Erez)
 - Fix cards being sorted in wrong order when added after the note was created (thanks to Arthur)
 
-### Changes in 2.1.17
-
-Build f4fb7319.
+### Changes in 2.1.17beta8 (f4fb7319)
 
 - Minimum Python version is now 3.7.
 - Updated the way templates are rendered. If you notice any problems or
@@ -365,9 +329,7 @@ Build f4fb7319.
 - Double-clicking on .ankiaddon files should now work on Mac and Windows as well.
 - Bug fix for tag updated notes feature (thanks to Erez).
 
-### Changes in 2.1.17
-
-Build a4d38d65.
+### Changes in 2.1.17beta7 (a4d38d65)
 
 - Added an option to tag updated notes when importing (thanks to Erez).
 - Install add-ons by double clicking on their files (thanks to Glutanimate).
@@ -379,9 +341,7 @@ Build a4d38d65.
 A bunch of behind-the-scenes changes to the code in this release. If you
 notice any regressions, please post on the beta testing thread.
 
-### Changes in 2.1.17
-
-Build 4cead7ef.
+### Changes in 2.1.17beta6 (4cead7ef)
 
 - Added a beta label to the experimental scheduler,
   as a timezone corner case needs to be addressed before
@@ -392,25 +352,19 @@ Build 4cead7ef.
 - Automatically remove ':' from field names when opening the
   card templates screen, as it conflicts with the template syntax.
 
-### Changes in 2.1.17
-
-Build 518cc442.
+### Changes in 2.1.17beta5 (518cc442)
 
 - Changing large note types is significantly faster.
 - Fix a bug that was preventing new profiles from being created.
 - Fix a bug in the handling of MathJax+Cloze (thanks to Michal).
 - Fix missing border when the user has modified the interface scale.
 
-### Changes in 2.1.17
-
-Build bfcc8379.
+### Changes in 2.1.17beta4 (bfcc8379)
 
 The standard Mac and Linux builds have now been updated to the new toolkit
 as well - please report any regressions.
 
-### Changes in 2.1.17
-
-Build da942617.
+### Changes in 2.1.17beta3 (da942617)
 
 Another Windows-only build.
 
@@ -421,9 +375,7 @@ Another Windows-only build.
 - Added an option in the preferences screen to adjust the UI size.
 - Fixed a regression in the way duplicate deck names were handled.
 
-### Changes in 2.1.17
-
-Build ff6b58c2.
+### Changes in 2.1.17beta2 (ff6b58c2)
 
 A Windows-only build, built with the latest toolkit version. Please report
 any improvements or regressions.
@@ -438,23 +390,17 @@ In beta 2:
 - Remove help button from some Window titles.
 - Alter a change made in .16 that could break some editor add-ons.
 
-### Changes in 2.1.17
-
-Build 81bdd860.
+### Changes in 2.1.17beta1 (81bdd860)
 
 A Windows-only build, built with the latest toolkit version. Please report
 any improvements or regressions.
 
-### Changes in 2.1.16
-
-Build 4bc33e2f.
+### Changes in 2.1.16beta4 (4bc33e2f)
 
 - Syncing should work properly now when you change timezones without visiting AnkiWeb.
 - Ensure learning cards in filtered decks with 'order due' show in template order.
 
-### Changes in 2.1.16
-
-Build bb62a3c1.
+### Changes in 2.1.16beta3 (bb62a3c1)
 
 - Remove the 'experimental' label from the new scheduler.
 - New installs default to the new scheduler.
@@ -464,9 +410,7 @@ Build bb62a3c1.
 - Add an extra day to the interval when using Easy on a relearning card.
 - Preserve surrounding styling when making cloze deletions.
 
-### Changes in 2.1.16
-
-Build bceb4feb.
+### Changes in 2.1.16beta2 (bceb4feb)
 
 - Pasting now includes formatting by default.
 - Preserve foreground/background color when pasting.
@@ -487,9 +431,7 @@ Thanks to Arthur for contributing a number of fixes:
 - Case not being preserved when changing a deck's parent.
 - Hide default deck in other screens when empty.
 
-### Changes in 2.1.16
-
-Build 2e7b7560.
+### Changes in 2.1.16beta1 (2e7b7560)
 
 This build updates the translation handling as part of the move to Crowdin.
 Some languages were missing some plural forms in the past - in order to prevent
@@ -512,9 +454,7 @@ Also:
 - Fix a bug in the V2 scheduler.
 - Properly handle backslashes in the replacement section of Find&Replace.
 
-### Changes in 2.1.15
-
-Build 442df9d6.
+### Changes in 2.1.15beta1 (442df9d6)
 
 This is a candidate for the next stable release, so if you encounter any
 issues, please let me know as soon as you can.
