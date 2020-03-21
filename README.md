@@ -22,11 +22,11 @@ Build 9dda5cf6.
 Searching:
 
 - You can now use `re:something` to search via regular expression, eg:
-  -- `re:\bdog\b` will search for the word 'dog'. It has a word boundary character (`\b`) at the
-  start and end, so it will match 'a dog', but not 'a doggy'.
-  -- `front:re:t+1` would match "t1", "tt1" and so on in the Front field
-  -- When searching by regex, unicode case folding is used, so searching for `re:über` will
-  show a card that has "Über" on it.
+  - `re:\bdog\b` will search for the word 'dog'. It has a word boundary character (`\b`) at the
+    start and end, so it will match 'a dog', but not 'a doggy'.
+  - `front:re:t+1` would match "t1", "tt1" and so on in the Front field
+  - When searching by regex, unicode case folding is used, so searching for `re:über` will
+    show a card that has "Über" on it.
 - `nc:something` (short for "no combining") can be used to search while
   ignoring accents, eg `nc:uber` will match both "über" and "Über". This behaves the same way as the "Ignore Accents" add-on, but is about 16x faster.
 - You can now sort on the deck, card template, note type and tags columns.
@@ -45,7 +45,8 @@ Database changes (mainly of interest to add-on developers):
 
 - Anki now uses Rust's sqlite libraries instead of Python's.
 - The 'db' object on the collection retains most of the same API as before, minimizing the amount of immediate code changes that are required.
-- Some less-used features like named sqlite bindings ("where column = :foo") are no longer supported.
+- Some less-used features like named sqlite bindings ("where column = :foo") and custom
+  sql functions are no longer supported.
 - The old database code remains in db.py, and add-ons can continue to use it for accessing
   their own databases.
 - The database is now behind a mutex, and can be safely accessed from a background thread.
