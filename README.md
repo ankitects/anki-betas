@@ -13,6 +13,58 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
+### Changes in 2.1.24beta1 (TBA)
+
+2.1.24 focuses on changes to the database layer and searching code.
+
+Searching:
+
+- You can now use `re:something` to search via regular expression, eg:
+  -- `re:\bdog\b` will search for the word 'dog'. It has a word boundary character (`\b`) at the
+  start and end, so it will match 'a dog', but not 'a doggy'.
+  -- `front:re:t+1` would match "t1", "tt1" and so on in the Front field
+  -- When searching by regex, unicode case folding is used, so searching for `re:über` will
+  show a card that has "Über" on it.
+- `nc:something` (short for "no combining") can be used to search while
+  ignoring accents, eg `nc:uber` will match both "über" and "Über". This behaves the same way as the "Ignore Accents" add-on, but is about 16x faster.
+- You can now sort on the deck, card template, note type and tags columns.
+- You can now use wildcards when limiting the search to a field, eg `field*:something`.
+- You can now use wildcards when searching for a card template or note type by name.
+- `rated:x` searches are now capped to a year instead of a month.
+- You can now escaped double-quotes in a search - eg `"foo\"bar"`
+- Single-quote searches are no longer supported.
+- A version of Advanced Browser that works with this beta
+  has been made available [here](https://github.com/ankitects/advanced-browser/releases/tag/2.1.24-fixes). Not everything has been tested, and sorting on some fields will not currently
+  work properly.
+- Because the searching code has been rewritten, add-ons that modify the search code
+  will need to be updated to support 2.1.24. Unfortunately it is no longer possible to override the Finder class - add-ons will need to use the new hooks in the browser screen to either rewrite the search text, or perform their own lookups instead.
+
+Database changes (mainly of interest to add-on developers):
+
+- Anki now uses Rust's sqlite libraries instead of Python's.
+- The 'db' object on the collection retains most of the same API as before, minimizing the amount of immediate code changes that are required.
+- Some less-used features like named sqlite bindings ("where column = :foo") are no longer supported.
+- The old database code remains in db.py, and add-ons can continue to use it for accessing
+  their own databases.
+- The database is now behind a mutex, and can be safely accessed from a background thread.
+- Various screens like the database check have been updated to run on a background thread,
+  so they no longer lock up the UI while they're running.
+- The database progress handler has been removed. Anki previous had sqlite call back into
+  Python periodically during long-running DB operations so it could drain the UI queue,
+  but this would vary in choppyness depending on the type of DB operation being performed,
+  and it was the cause of some crashes in the past. Add-ons that perform long-running operations
+  should instead use mw.taskman.run_in_background() or their own threading solution moving forward.
+
+Other changes:
+
+- Anki will now wait for a media sync to complete or be aborted before closing the collection.
+- Fixed progress dialogs failing to appear in a timely manner.
+- Allow the type answer arrow to be styled (thanks to Evandro).
+- More hooks (thanks to Arthur).
+
+A lot has changed in this beta, so some issues may have slipped through the cracks. If
+you run into any problems, please let me know.
+
 ### Changes in 2.1.22beta2 (0ecc189a)
 
 - Fixed problems playing audio on Windows. Users using the gtts add-on will need to update it.
