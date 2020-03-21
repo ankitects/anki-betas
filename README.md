@@ -15,7 +15,7 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ### Changes in 2.1.24beta1
 
-Build TBA.
+Build 9dda5cf6.
 
 2.1.24 focuses on changes to the database layer and searching code.
 
