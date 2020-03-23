@@ -13,6 +13,21 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
+### Changes in 2.1.24beta2
+
+Build b1a8107a.
+
+Please see beta 1 for most of the changes.
+
+- The media check will now fix file references in fields that broke because a filename was shortened as part of a sync.
+- Fixed error when reviewing (thanks to zjosua).
+- Fixed reverse sort order for some browser columns.
+- Fixed the UI displaying badly when macOS dark mode changes while Anki is running.
+- Don't show a popup when a network error occurs while syncing media.
+- Fixed the collection_did_load add-on hook.
+- Fixed searches for "(something )" with a trailing space not working.
+- Fixed the wrong language shown in the preferences screen for some languages.
+
 ### Changes in 2.1.24beta1
 
 Build 9dda5cf6.
