@@ -13,6 +13,29 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
+### Changes in 2.1.24beta3
+
+Build d3964603.
+
+Updated the way cards and deck options are loaded and saved. Most add-ons should not be affected,
+but a few will need minor tweaks. If you run into any issues and can reproduce them when add-ons are disabled, please let me know.
+
+Other changes:
+
+- Media syncs no longer take time to abort.
+- Fixed media sync waiting forever when connection dropped.
+- Fixed an issue where regular syncs could fail to end.
+- Fixed current card sometimes not being centered when searching.
+- Don't force a full sync when DB check finds cards with a high due number.
+- A tweak which should fix some broken add-ons from preventing the collection from being loaded.
+- GitHub now checks Windows and Mac builds as well (thanks to Evandro).
+- More hooks (thanks to Arthur).
+- Fix tag searches in custom study (thanks to zjosua).
+- Don't throw an error when user has an embedded null in a note field.
+- Left-align tags in the browser.
+- Ignore .DS_Store files in the media trash folder.
+- Remove the check for ':' in DB queries.
+
 ### Changes in 2.1.24beta2
 
 Build b1a8107a.
