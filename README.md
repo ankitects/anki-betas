@@ -13,6 +13,29 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
+### Changes in 2.1.24beta4
+
+Build 16ab351b.
+
+If updating from beta3, please make sure you shut Anki down cleanly before updating.
+
+- Updated tag handling:
+  - non-wildcard searches now do full unicode case folding (eg 'tag:masse' matches 'Maße').
+  - wildcard searches do simple unicode case folding.
+  - tag list in browse screen now uses unicode case folding.
+- Fix 'is:due' search not combining with other searches properly.
+- Fix searches for things like deck:current not reflecting current state.
+- Fix duplicate searches.
+- Be more tolerant of deck IDs stored in the wrong format by older Anki versions.
+- Fix an error that could occur when performing an operation in the browse screen then immediately closing it.
+- Clean up the previewing code (thanks to Arthur). Add-ons that modify the preview screen will need updating.
+- Prepare for uploading releases to PyPI (thanks to Evandro).
+- Improve the handling of deck deletions (thanks to Arthur).
+- Avoid decimal place in steps lists where possible.
+- Add a compatibility shim for named args to avoid breaking some add-ons.
+- Updated config handling. While there should be no immediate breakages, if you're an add-on author and
+  store lists or dicts in Anki's config, please see 676f4e74a.
+
 ### Changes in 2.1.24beta3
 
 Build d3964603.
