@@ -17,7 +17,10 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 Build 16ab351b.
 
-If updating from beta3, please make sure you shut Anki down cleanly before updating.
+**Please note** beta 3+ makes changes to the database layout when a collection
+is opened, and undoes those changes when the collection is closed. Please make
+sure you shut down Anki cleanly prior to changing to a different version, as if Anki crashes or fails to close properly, you will get an error when trying to open your collection with a different version, and will first need to close the collection using the version you were using before. If you find the problem
+persists after a clean shutdown, please post on the support site.
 
 - Updated tag handling:
   - non-wildcard searches now do full unicode case folding (eg 'tag:masse' matches 'Maße').
