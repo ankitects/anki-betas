@@ -13,14 +13,31 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
+### Changes in 2.1.24beta5
+
+Build 0c5f22f4.
+
+Beta 3+ makes changes to the database layout when a collection
+is opened, and undoes those changes when the collection is closed. Please make
+sure you shut down Anki cleanly prior to changing to a different version, as if Anki crashes or fails to close properly, you will get an error when trying to open your collection with a different version, and will first need to open and close the collection using the version you were using before. If you find the problem persists after a clean shutdown, please post on the support site.
+
+- New load/save handling for note types and decks. This should be transparent;
+  if you notice any issues, please let me know.
+- Avoid scrolling if the selected browser row is still visible after an operation.
+- Handle renamed cloze fields when previewing (thanks to BlueGreenMagick).
+- Fix a case where decks could be sorted incorrectly (thanks to Arthur).
+- Fix some bugs introduced by the recent previewing changes.
+- Allow dragging fields to change their position (thanks to BlueGreenMagick).
+- Add socks support to media sync.
+- Improvements to debug console (thanks to BlueGreenMagick).
+- Build improvements (thanks to Evandro).
+- Fix deck option changes not marking collection as changed.
+- Fix deck_browser_did_render hook.
+- Fix interface getting stuck when a corrupt collection was encountered.
+
 ### Changes in 2.1.24beta4
 
 Build 16ab351b.
-
-**Please note** beta 3+ makes changes to the database layout when a collection
-is opened, and undoes those changes when the collection is closed. Please make
-sure you shut down Anki cleanly prior to changing to a different version, as if Anki crashes or fails to close properly, you will get an error when trying to open your collection with a different version, and will first need to close the collection using the version you were using before. If you find the problem
-persists after a clean shutdown, please post on the support site.
 
 - Updated tag handling:
   - non-wildcard searches now do full unicode case folding (eg 'tag:masse' matches 'Maße').
