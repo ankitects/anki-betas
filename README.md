@@ -18,8 +18,11 @@ https://anki.tenderapp.com/discussions/beta-testing
 Build 0c5f22f4.
 
 Beta 3+ makes changes to the database layout when a collection
-is opened, and undoes those changes when the collection is closed. Please make
-sure you shut down Anki cleanly prior to changing to a different version, as if Anki crashes or fails to close properly, you will get an error when trying to open your collection with a different version, and will first need to open and close the collection using the version you were using before. If you find the problem persists after a clean shutdown, please post on the support site.
+is opened, and undoes those changes when the collection is closed. There is
+a bug in this version that will prevent this from happening if automatic syncing is on, so if
+you wish to downgrade to an earlier Anki version, please open your collection using
+the latest beta, temporarily turn off automatic syncing, and then close the beta to make
+your collection readable in older versions.
 
 - New load/save handling for note types and decks. This should be transparent;
   if you notice any issues, please let me know.
