@@ -13,16 +13,57 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
+### Changes in 2.1.24beta6
+
+Build 394f7c63.
+
+:warning: After using this beta, if you wish to open your collection with an earlier
+beta or Anki release, please go to the File>Switch Profile menu item, and click
+on "Downgrade & Quit". If you skip this step, you may get an error message when
+opening your collection in an older Anki version, and you will need to return to
+the latest beta, downgrade, then try again.
+
+This beta changes the macOS dark mode handling of the standard build:
+
+- Anki now solely relies on the night mode setting in the preferences to decide
+  whether to show in light or dark mode. Some users wanted to run Anki in light
+  mode while keeping the rest of their system dark, and there were various
+  display problems when dark mode was changed after Anki started that couldn't
+  be easily worked around.
+- Users who only use dark mode, and preferred the native look of widgets in dark
+  mode, can achieve the previous appearance by running the following command in
+  the terminal:
+
+  ```
+  defaults write net.ankiweb.dtop NSRequiresAquaSystemAppearance -bool no
+  ```
+
+  And the following in the debug console:
+
+  ```
+  mw.pm.meta["dark_mode_widgets"] = True
+  ```
+
+  This is hidden behind a debug console command because it requires the
+  user ensure their system is always set to the same light/dark mode
+  as Anki.
+
+Other changes:
+
+- The macOS standard build is built with a newer SDK. If you notice any regressions, please let me know.
+- Fixed Anki closing after a full sync on collection load.
+- Fixed an error being shown when replaying audio.
+- Fixed filtered decks displaying an error in older Anki versions after downgrading.
+- Fixed add-ons with multiple branches not updating properly.
+- Change the way cloze deletions in RTL fields are handled, which should address some corner cases.
+- Fix editor buttons not being highlighted (thanks to Simone).
+- Improve invalid HTML/JS error messages (thanks to Evandro).
+- Fixed a useless log file being created when exporting.
+- Allow selecting add-on config help text (thanks to ijgnd).
+
 ### Changes in 2.1.24beta5
 
 Build 0c5f22f4.
-
-Beta 3+ makes changes to the database layout when a collection
-is opened, and undoes those changes when the collection is closed. There is
-a bug in this version that will prevent this from happening if automatic syncing is on, so if
-you wish to downgrade to an earlier Anki version, please open your collection using
-the latest beta, temporarily turn off automatic syncing, and then close the beta to make
-your collection readable in older versions.
 
 - New load/save handling for note types and decks. This should be transparent;
   if you notice any issues, please let me know.
