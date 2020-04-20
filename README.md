@@ -13,15 +13,23 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
-### Changes in 2.1.24beta6
-
-Build 394f7c63.
+### Changes in 2.1.24beta7
 
 :warning: After using this beta, if you wish to open your collection with an earlier
 beta or Anki release, please go to the File>Switch Profile menu item, and click
 on "Downgrade & Quit". If you skip this step, you may get an error message when
 opening your collection in an older Anki version, and you will need to return to
 the latest beta, downgrade, then try again.
+
+Build ec6c0f86.
+
+- Move the scheduling options in the preferences to a separate tab, so options
+  fit on the screen even on devices with small screens.
+- Fix pauses caused by a regression in the previous beta.
+
+### Changes in 2.1.24beta6
+
+Build 394f7c63.
 
 This beta changes the macOS dark mode handling of the standard build:
 
