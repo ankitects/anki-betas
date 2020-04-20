@@ -13,13 +13,19 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
-### Changes in 2.1.24beta7
-
 :warning: After using this beta, if you wish to open your collection with an earlier
 beta or Anki release, please go to the File>Switch Profile menu item, and click
 on "Downgrade & Quit". If you skip this step, you may get an error message when
 opening your collection in an older Anki version, and you will need to return to
 the latest beta, downgrade, then try again.
+
+### Changes in 2.1.24beta8
+
+Build 683f664d.
+
+- Fixed adding and removing deck option groups.
+
+### Changes in 2.1.24beta7
 
 Build ec6c0f86.
 
