@@ -19,6 +19,20 @@ on "Downgrade & Quit". If you skip this step, you may get an error message when
 opening your collection in an older Anki version, and you will need to return to
 the latest beta, downgrade, then try again.
 
+### Changes in 2.1.24beta9
+
+Build 359b9f5c.
+
+- You can use `w:something` to search on word boundaries, eg:
+  - `w:dog`  
+    search for "dog" on a word boundary - will match "dog", but not "doggy"
+    or "underdog".
+  - `w:dog*`  
+    will match "dog" and "doggy", but not "underdog".
+  - `w:*dog`  
+    will match "dog" and "underdog", but not "doggy".
+- Fixed clicking on links in add-on configuration documentation.
+
 ### Changes in 2.1.24beta8
 
 Build 683f664d.
