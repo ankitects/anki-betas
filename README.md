@@ -45,8 +45,6 @@ the latest version, downgrade, then try again.
   - Please bear in mind that if you take advantage of these features, older Anki
     clients may report the cards are blank, or try to clean them up when you
     use the Empty Cards feature.
-  - You can now delete a card template even if some notes are only using that
-    template - they will be given a blank card 1 instead.
   - Cloze numbers over 499 are no longer supported.
 
 - Card template screen:
@@ -56,6 +54,8 @@ the latest version, downgrade, then try again.
   - Added a search bar to search for text in the template or styling.
   - Added a dropdown to change the previewed cloze number.
   - Added a checkbox to toggle the filling of empty fields for preview.
+  - You can now delete a card template even if some notes are only using that
+    template - they will be given a blank card 1 instead.
 
 - Scheduling:
 
@@ -82,7 +82,7 @@ the latest version, downgrade, then try again.
   modern equivalents, the following in the debug console will stop Anki from normalizing note text.
 
   ```
-  mw.col.conf["normalize_note_text"] = True
+  mw.col.conf["normalize_note_text"] = False
   ```
 
 Other changes:
