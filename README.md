@@ -13,11 +13,82 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
-:warning: After using this beta, if you wish to open your collection with an earlier
+### Changes in 2.1.28alpha1
+
+Currently only available via git.
+
+:warning: This is an alpha release. Please back up your collection before trying
+it, take regular backups, and make frequent use of the check database feature
+until this update has received more testing.
+
+:warning: After using this alpha, if you wish to open your collection with an earlier
 beta or Anki release, please go to the File>Switch Profile menu item, and click
 on "Downgrade & Quit". If you skip this step, you may get an error message when
 opening your collection in an older Anki version, and you will need to return to
-the latest beta, downgrade, then try again.
+the latest version, downgrade, then try again.
+
+- Performance improvements to:
+
+  - Startup and shutdown (the first startup will be slow as your collection is updated).
+  - The Browse screen.
+  - The deck list.
+  - The note types screen.
+  - The card templates screen.
+  - The database check.
+
+- Card generation changes:
+
+  - Card generation now supports negated conditionals, and a mix of required
+    and optional fields.
+  - When adding/importing, if a normal note doesn't generate any cards, Anki
+    will now add a blank card 1 instead of refusing to add the note.
+  - Please bear in mind that if you take advantage of these features, older Anki
+    clients may report the cards are blank, or try to clean them up when you
+    use the Empty Cards feature.
+  - You can now delete a card template even if some notes are only using that
+    template - they will be given a blank card 1 instead.
+  - Cloze numbers over 499 are no longer supported.
+
+- Card template screen:
+
+  - Changes are now accumulated, and can be saved or discarded when you close the screen.
+  - The front, back, and styling are no longer shown at the same time. You can switch between them with ctrl+1/2/3 or cmd+1/2/3.
+  - Added a search bar to search for text in the template or styling.
+  - Added a dropdown to change the previewed cloze number.
+  - Added a checkbox to toggle the filling of empty fields for preview.
+
+- Scheduling:
+
+  - The deck list no longer caps counts to 1000.
+  - The overview and study screen no longer caps counts to 1000.
+  - The deck list will no longer show a parent count higher than the limit
+    set on the parent.
+
+- Empty cards screen:
+
+  - Notes will not be deleted by default.
+  - Empty cards are grouped by note type.
+  - Empty cards can be clicked on to reveal them in the browse screen.
+
+- Database check:
+
+  - Notes with the wrong field count are now recovered instead of being deleted.
+  - Notes with missing note types are now recovered instead of being deleted.
+  - Notes with missing cards are now recovered instead of being deleted.
+
+- Unicode normalization:
+
+  If you are studying rare CJK characters and wish to prevent them from being converted into
+  modern equivalents, the following in the debug console will stop Anki from normalizing note text.
+
+  ```
+  mw.col.conf["normalize_note_text"] = True
+  ```
+
+Other changes:
+
+- Fields screen now accumulates changes, which can be saved or discarded when you close the screen.
+- Updated a few screens to show progress bars instead of hanging the UI.
 
 ### Changes in 2.1.24beta9
 
