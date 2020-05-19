@@ -15,7 +15,7 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ### Changes in 2.1.28alpha1
 
-Currently only available via git.
+Build 97eadb78.
 
 :warning: This is an alpha release. Please back up your collection before trying
 it, take regular backups, and make frequent use of the check database feature
