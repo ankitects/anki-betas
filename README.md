@@ -34,13 +34,23 @@ Reworked collection syncing. Some warnings:
 - The checking stage at the end of the sync may be slower than normal, as some
   checks that are normally disabled have been re-enabled for safety.
 
-Changes:
+Sync changes:
 
 - Normal syncs and media syncs can operate in parallel, speeding up startup and shutdown.
 - Normal syncs no longer need to close open windows like the Browse screen, or close & re-open
   the collection.
 - Full syncs now show a progress bar.
 - Full syncs can now be cancelled, and both normal and full syncs cancel more quickly.
+
+Other changes:
+
+- Fixed deck deletion, and allow "deleting" the default deck (it comes back empty).
+- Fixed custom study not saving.
+- Card layout screen divider can now be adjusted (thanks to Evandro).
+- Fixed duplicate rendering in card layout screen (thanks to Evandro).
+- Fix for a previewing issue (thanks to Evandro).
+- Fixed off-by-one in field drag&drop (thanks to BlueGreenMagick)
+- Other minor fixes.
 
 ### Changes in 2.1.28alpha1
 
