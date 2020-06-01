@@ -13,9 +13,9 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
-### Changes in 2.1.28alpha1
+### Changes in 2.1.28alpha2
 
-Build 97eadb78.
+Only on git at the moment.
 
 :warning: This is an alpha release. Please back up your collection before trying
 it, take regular backups, and make frequent use of the check database feature
@@ -26,6 +26,25 @@ beta or Anki release, please go to the File>Switch Profile menu item, and click
 on "Downgrade & Quit". If you skip this step, you may get an error message when
 opening your collection in an older Anki version, and you will need to return to
 the latest version, downgrade, then try again.
+
+Reworked collection syncing. Some warnings:
+
+- While it has had some testing, please take frequent backups, and keep an eye
+  out for (and report) any problems.
+- The checking stage at the end of the sync may be slower than normal, as some
+  checks that are normally disabled have been re-enabled for safety.
+
+Changes:
+
+- Normal syncs and media syncs can operate in parallel, speeding up startup and shutdown.
+- Normal syncs no longer need to close open windows like the Browse screen, or close & re-open
+  the collection.
+- Full syncs now show a progress bar.
+- Full syncs can now be cancelled, and both normal and full syncs cancel more quickly.
+
+### Changes in 2.1.28alpha1
+
+Build 97eadb78.
 
 - Performance improvements to:
 
