@@ -15,7 +15,7 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ### Changes in 2.1.28alpha2
 
-Only on git at the moment.
+Build ebce044b / 2020-06-02.
 
 :warning: This is an alpha release. Please back up your collection before trying
 it, take regular backups, and make frequent use of the check database feature
@@ -44,6 +44,9 @@ Sync changes:
 
 Other changes:
 
+- Windows standard version has been updated to Qt 5.15.
+- Audio player on Windows has been switched back to mpv. Please report any
+  issues you have playing audio files/videos.
 - Fixed deck deletion, and allow "deleting" the default deck (it comes back empty).
 - Fixed custom study not saving.
 - Card layout screen divider can now be adjusted (thanks to Evandro).
