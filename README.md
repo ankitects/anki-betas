@@ -13,9 +13,9 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
-### Changes in 2.1.28alpha2
+### Changes in 2.1.28alpha3
 
-Build ebce044b / 2020-06-02.
+Build f44597bb / 2020-06-09.
 
 :warning: This is an alpha release. Please back up your collection before trying
 it, take regular backups, and make frequent use of the check database feature
@@ -26,6 +26,24 @@ beta or Anki release, please go to the File>Switch Profile menu item, and click
 on "Downgrade & Quit". If you skip this step, you may get an error message when
 opening your collection in an older Anki version, and you will need to return to
 the latest version, downgrade, then try again.
+
+- The standard Mac build now uses Qt 5.15 - please report any regressions. The
+  file size is a bit larger than it needs to be, and may be improved in the
+  future.
+- DB check now shows progress.
+- Fixed duplicate/empty field check.
+- Fixed audio being included in FrontSide.
+- Clearer error message on failed regex search.
+- Find & Replace remembers input (thanks to Evandro).
+- Code improvements (thanks to BlueGreenMagick, Thomas and Andrew).
+- Support input.conf for mpv
+- Fixed '&' being changed in image filenames in HTML editor.
+- Fixed exports getting broken by Windows carriage returns in note fields.
+- Miscellaneous other fixes.
+
+### Changes in 2.1.28alpha2
+
+Build ebce044b / 2020-06-02.
 
 Reworked collection syncing. Some warnings:
 
