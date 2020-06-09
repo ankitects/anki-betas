@@ -30,6 +30,7 @@ the latest version, downgrade, then try again.
 - The standard Mac build now uses Qt 5.15 - please report any regressions. The
   file size is a bit larger than it needs to be, and may be improved in the
   future.
+- The Linux build now uses Qt 5.15 - please report any regressions.
 - DB check now shows progress.
 - Fixed duplicate/empty field check.
 - Fixed audio being included in FrontSide.
