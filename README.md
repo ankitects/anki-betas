@@ -2,6 +2,16 @@
 
 ## Downloads
 
+:warning: This is an alpha release. Please back up your collection before trying
+it, take regular backups, and make frequent use of the check database feature
+until this update has received more testing.
+
+:warning: After using this alpha, if you wish to open your collection with an earlier
+beta or Anki release, please go to the File>Switch Profile menu item, and click
+on "Downgrade & Quit". If you skip this step, you may get an error message when
+opening your collection in an older Anki version, and you will need to return to
+the latest version, downgrade, then try again.
+
 You can get the latest beta from https://apps.ankiweb.net/downloads/beta/
 
 ## Problems
@@ -16,16 +26,6 @@ https://anki.tenderapp.com/discussions/beta-testing
 ### Changes in 2.1.28alpha3
 
 Build f44597bb / 2020-06-09.
-
-:warning: This is an alpha release. Please back up your collection before trying
-it, take regular backups, and make frequent use of the check database feature
-until this update has received more testing.
-
-:warning: After using this alpha, if you wish to open your collection with an earlier
-beta or Anki release, please go to the File>Switch Profile menu item, and click
-on "Downgrade & Quit". If you skip this step, you may get an error message when
-opening your collection in an older Anki version, and you will need to return to
-the latest version, downgrade, then try again.
 
 - The standard Mac build now uses Qt 5.15 - please report any regressions. The
   file size is a bit larger than it needs to be, and may be improved in the
