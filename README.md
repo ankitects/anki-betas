@@ -2,11 +2,11 @@
 
 ## Downloads
 
-:warning: This is an alpha release. Please back up your collection before trying
+:warning: This is a beta release. Please back up your collection before trying
 it, take regular backups, and make frequent use of the check database feature
 until this update has received more testing.
 
-:warning: After using this alpha, if you wish to open your collection with an earlier
+:warning: After using this beta, if you wish to open your collection with an earlier
 beta or Anki release, please go to the File>Switch Profile menu item, and click
 on "Downgrade & Quit". If you skip this step, you may get an error message when
 opening your collection in an older Anki version, and you will need to return to
@@ -22,6 +22,19 @@ our support site:
 https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
+
+### Changes in 2.1.28beta1
+
+Build 4d23a69e / 2020-07-01.
+
+- The stats screen has been rewritten - feedback on the beta thread would
+  be appreciated.
+- The old stats are accessible by shift+clicking on Stats.
+- Add edited:x search for matching notes edited in last x days.
+- Improvements to mpv handling (thanks to Kelciour).
+- Windows build fix (thanks to Evandro).
+- Various other fixes, including contributions from BlueGreenMagick, Arthur, neitrinoweb
+  and kenden.
 
 ### Changes in 2.1.28alpha3
 
