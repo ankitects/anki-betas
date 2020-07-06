@@ -23,6 +23,16 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
+### Changes in 2.1.28beta2
+
+Build cfc33815 / 2020-07-06.
+
+- Various tweaks to the graphs.
+- Update local media server (thanks to Evandro).
+- Use Qt colour picker on Linux (thanks to Andreas).
+- Fix some add-ons being broken.
+- Other minor fixes.
+
 ### Changes in 2.1.28beta1
 
 Build 4d23a69e / 2020-07-01.
