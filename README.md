@@ -23,6 +23,13 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 ## Changes
 
+### Changes in 2.1.28beta3
+
+Build 93425be8 / 2020-07-07.
+
+- Fix add-on regression (thanks to Evandro).
+- Various graph tweaks.
+
 ### Changes in 2.1.28beta2
 
 Build cfc33815 / 2020-07-06.
