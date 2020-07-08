@@ -19,7 +19,7 @@ You can get the latest beta from https://apps.ankiweb.net/downloads/beta/
 If you run into any issues, please let us know on the beta testing section of
 our support site:
 
-https://anki.tenderapp.com/discussions/beta-testing
+https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
