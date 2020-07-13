@@ -23,6 +23,15 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.28beta4
+
+Build 116aeead / 2020-07-13.
+
+- More graph tweaks.
+- Fixed is:review not including relearning cards.
+- Scroll media log to bottom at start (thanks to kelciour)
+- Update some dependencies, and other minor changes.
+
 ### Changes in 2.1.28beta3
 
 Build 93425be8 / 2020-07-07.
