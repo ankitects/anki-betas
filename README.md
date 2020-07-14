@@ -2,10 +2,6 @@
 
 ## Downloads
 
-:warning: This is a beta release. Please back up your collection before trying
-it, take regular backups, and make frequent use of the check database feature
-until this update has received more testing.
-
 :warning: After using this beta, if you wish to open your collection with an earlier
 beta or Anki release, please go to the File>Switch Profile menu item, and click
 on "Downgrade & Quit". If you skip this step, you may get an error message when
