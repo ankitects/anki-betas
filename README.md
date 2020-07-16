@@ -19,6 +19,16 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.28beta5
+
+Build 61017a2e / 2020-07-16.
+
+This is a candidate for the next stable release.
+
+- Minor tweaks to graph tooltips and axis labels.
+- Ctrl/cmd+number selects decks/note types in list (thanks to Alexander).
+- Translation updates (thanks as always to the volunteer translators).
+
 ### Changes in 2.1.28beta4
 
 Build 116aeead / 2020-07-13.
