@@ -19,11 +19,19 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.28beta6
+
+Build 7d8818f8 / 2020-07-17.
+
+This is a candidate for the next stable release.
+
+- Add range selectors to button + hour graphs.
+- Make it easier for add-ons to modify the graphs (thanks to Aristotelis).
+- Code testing tidy-ups (thanks to Arthur).
+
 ### Changes in 2.1.28beta5
 
 Build 61017a2e / 2020-07-16.
-
-This is a candidate for the next stable release.
 
 - Minor tweaks to graph tooltips and axis labels.
 - Ctrl/cmd+number selects decks/note types in list (thanks to Alexander).
