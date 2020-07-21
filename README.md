@@ -19,6 +19,18 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.29beta1
+
+Build 1b441f50 / 2020-07-21.
+
+- Add cloze-only: template filter, which can be combined with TTS to speak only the elided part.
+- Fix 1+ day learning cards not being included in future due graph.
+- Start media sync after full sync finishes.
+- Use right-to-left direction in webviews when using RTL interface language.
+- Support the terminal command that enables dark mode again.
+- Code tidy-ups (thanks to Arthur).
+- Close gracefully on SIGTERM.
+
 ### Changes in 2.1.28beta6
 
 Build 7d8818f8 / 2020-07-17.
