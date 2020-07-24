@@ -19,6 +19,18 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.29beta2
+
+Build 61e8611b / 2020-07-24.
+
+- Roll standard Windows build back to Qt 5.14.2 for now (fixes AltGr issue, performance problems)
+- Graphs now instruct user to use Check Database if data can't be read.
+- Future due graph now includes today's learning cards.
+- Fix preview not updating when editing text in the Browse screen.
+- Fix mpv taking time to start (thanks to Kelciour)
+- Code/build improvements (thanks to Evandro & Matt).
+- Other minor tweaks.
+
 ### Changes in 2.1.29beta1
 
 Build 1b441f50 / 2020-07-21.
