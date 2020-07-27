@@ -19,6 +19,13 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.29beta4
+
+Bulid 88fee1b7 / 2020-07-27.
+
+- Fix an issue introduced by the previous change to the future due graph.
+- Don't show an error when card contains an empty URL.
+
 ### Changes in 2.1.29beta3
 
 Bulid 15c9cd91 / 2020-07-26.
