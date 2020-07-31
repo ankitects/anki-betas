@@ -19,6 +19,21 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.30beta1
+
+Bulid 1353590a / 2020-07-31.
+
+- Fix early reviews not appearing in review graph.
+- Fix hour graph problem in timezones west of UTC.
+- Card counts graph now always shows table.
+- Fix move into/out of filtered decks not syncing.
+- Handle multiple same-numbered clozes in cloze-only filter.
+- Fix deck list and graphs not including v2 scheduler cards with rescheduling disabled.
+- Added night mode and mobile class toggles in card layout screen (thanks to ANH25).
+- Code improvements (thanks to Matt, phwoo, Evandro and aplaice).
+- Refresh tag list after clearing empty tags.
+- Other minor fixes.
+
 ### Changes in 2.1.29beta4
 
 Bulid 88fee1b7 / 2020-07-27.
