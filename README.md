@@ -19,9 +19,22 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.30beta2
+
+Build 818012e0 / 2020-08-05.
+
+- Add right axis to graphs.
+- Fix some young cards being shown as mature in reviews graph.
+- Fix negated conditonals being non-negated when renamed.
+- Fix automatic logout not working when auth failure occurs.
+- Fix 'add mobile class' not working properly.
+- Fix some syncing errors that could happen until Check Database was run.
+- Other graph tweaks/fixes.
+- Big thanks to Matt and phwoo who submitted a bunch of code improvements recently.
+
 ### Changes in 2.1.30beta1
 
-Bulid 1353590a / 2020-07-31.
+Build 1353590a / 2020-07-31.
 
 - Fix early reviews not appearing in review graph.
 - Fix hour graph problem in timezones west of UTC.
@@ -36,14 +49,14 @@ Bulid 1353590a / 2020-07-31.
 
 ### Changes in 2.1.29beta4
 
-Bulid 88fee1b7 / 2020-07-27.
+Build 88fee1b7 / 2020-07-27.
 
 - Fix an issue introduced by the previous change to the future due graph.
 - Don't show an error when card contains an empty URL.
 
 ### Changes in 2.1.29beta3
 
-Bulid 15c9cd91 / 2020-07-26.
+Build 15c9cd91 / 2020-07-26.
 
 - Fix due reviews in filtered deck showing incorrectly in future due graph.
 - Another attempt at addressing the AltGr issue on Windows.
