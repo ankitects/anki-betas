@@ -21,7 +21,9 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ### Changes in 2.1.30beta2
 
-Build 818012e0 / 2020-08-05.
+Build 818012e0 / 2eee4cb0 / 2020-08-05.
+
+Update 2020-08-06: Windows build repackaged to fix failure to start.
 
 - Add right axis to graphs.
 - Fix some young cards being shown as mature in reviews graph.
