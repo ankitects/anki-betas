@@ -19,6 +19,15 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.30beta3
+
+Build 83637199 / 2020-08-08.
+
+- Standard Windows build tweaked to hopefully fix issues introduced by Windows update.
+- Standard Mac build rolled back to Qt 5.14, to fix "show windows in tabs" not working.
+- More fixes for syncing bad data from older clients.
+- Catch negative review times in DB check.
+
 ### Changes in 2.1.30beta2
 
 Build 818012e0 / 2eee4cb0 / 2020-08-05.
