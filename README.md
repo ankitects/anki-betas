@@ -19,6 +19,22 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.31beta1
+
+Build 680b5e4b / 2020-08-19.
+
+- Show card counts in pie graph, and other minor graph tweaks.
+- Fix crash when dragging & dropping, thanks to ANH25.
+- Fix sync error+lost review when undoing in v2 filtered deck with scheduling off.
+- Close "edit current" when current card deleted.
+- Code improvements, thanks to Arthur, Evandro and Henrik.
+- Find&replace completion is now case sensitive.
+- Fix crash when recovering notes with missing notetype.
+- Fix handling of nested legacy template directives.
+- Fix issues with bulk tag removal.
+- Remove embedded direction markers in RTL cloze deletions.
+- Strip nul characters from tags.
+
 ### Changes in 2.1.30beta3
 
 Build 83637199 / 2020-08-08.
