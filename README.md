@@ -19,6 +19,13 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.31beta3
+
+Build 85d99f73 / 2020-08-21.
+
+- Full syncs and media syncs now terminate more quickly when the connection breaks.
+- Improve support for getting proxies from Windows registry.
+
 ### Changes in 2.1.31beta2
 
 Build 2b1bcda9 / 2020-08-21.
