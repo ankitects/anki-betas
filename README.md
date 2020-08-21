@@ -19,6 +19,16 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.31beta2
+
+Build 2b1bcda9 / 2020-08-21.
+
+- Fix mpv failing to play audio after it's restarted, thanks to Kelciour.
+- Fix Find&Replace window sizing.
+- Fix 'stale notetype' error after sync+add.
+- Code improvements from ANH, Evandro and Thomas.
+- Minor graph tweaks.
+
 ### Changes in 2.1.31beta1
 
 Build 680b5e4b / 2020-08-19.
