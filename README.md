@@ -19,6 +19,14 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.33beta1
+
+Build 7bcec00e / 2020-08-26.
+
+- Fix drag&drop into existing content (thanks to ANH).
+- Fix text in export file selector (thanks to ANH).
+- Fix timeouts in full syncs and media syncs again.
+
 ### Changes in 2.1.31beta3
 
 Build 85d99f73 / 2020-08-21.
