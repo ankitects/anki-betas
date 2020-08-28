@@ -19,6 +19,16 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.33beta2
+
+Build 4662a9fe / 2020-08-28.
+
+- Fix cards not being unburied if leaving Anki open and the first
+  action of a new day is a sync.
+- Access More button in review screen with 'm' (thanks to ANH).
+- Audio no longer plays when dropped/pasted (thanks to ANH).
+- Fix next learn message in congrats screen.
+
 ### Changes in 2.1.33beta1
 
 Build 7bcec00e / 2020-08-26.
