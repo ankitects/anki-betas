@@ -19,6 +19,24 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.34beta1
+
+Build 133fe851 / 2020-09-21.
+
+- Update the standard builds to the latest GUI toolkit version.
+  Please report any improvements or regressions you notice.
+- Dropped audio plays automatically again (thanks to abdo).
+- Revert to older sound playing behaviour to work around issues
+  (thanks to kelciour)
+- Various improvements, thanks hgiesel, cyphar, kaczmarj and Arthur.
+- Normal and night mode theming now uses CSS variables, making
+  it easier to use and override in add-ons.
+- Congrats screen, burying/suspending, filtered deck
+  building/emptying, and card reposition/reset have been reworked, but should (mostly) function as before. Please report any issues you encounter.
+- When cards are rescheduled in the browse screen, a review entry log is now created.
+- is:due now stops at now+learn ahead limit, instead of end of day.
+- Various bugfixes.
+
 ### Changes in 2.1.33beta2
 
 Build 4662a9fe / 2020-08-28.
