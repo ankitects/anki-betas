@@ -19,6 +19,21 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.34beta2
+
+Build 8af8f565 / 2020-09-22.
+
+- Fix a bug in Anki 2.1.28+ where a newly created deck config would default to
+  an ease of 130%. When updating, Anki will automatically change any deck
+  configs with an ease of 130% back to 250%, and change any cards using those
+  deck configs with a low ease back to an ease of 250%. If you have deliberately
+  set an initial ease of 130%, please change it to 131% or greater prior to
+  upgrading, so that Anki leaves your settings alone. Users who updated from
+  an older Anki version and did not add new deck configurations should not
+  be affected. Thanks to Aleksa for discovering the issue.
+- Roll back most of the non-bugfix scheduling changes from the previous beta, so
+  that this can be released as stable after a couple of days of testing.
+
 ### Changes in 2.1.34beta1
 
 Build 133fe851 / 2020-09-21.
