@@ -19,6 +19,21 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.35beta1
+
+Build 84dcaa86 / 2020-09-30.
+
+- Fix a bug in Anki 2.1.29+ that caused excessive memory and CPU usage
+  on long-running operations that show a progress bar, such as importing.
+- Roll back Mac and Windows builds to Qt 5.14 again,
+  as there are still issues with 5.15.
+- Fix display issue in graphs on alternate Mac build.
+- Fix preview not updating on multiple selection (thanks to abdo).
+- Fix old content appearing when flagging immediately
+  after typing.
+- Fix some handling of `*` in searches.
+- Sidebar now correctly escapes some characters (thanks to abdo).
+
 ### Changes in 2.1.34beta2
 
 Build 8af8f565 / 2020-09-22.
