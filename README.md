@@ -19,6 +19,17 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.36beta1
+
+Build 53a984ba / 2020-10-02.
+
+- Normal and night mode theming now uses CSS variables, making
+  it easier to use and override in add-ons.
+- Congrats screen, burying/suspending, filtered deck
+  building/emptying, and card reposition/reset have been reworked, but should (mostly) function as before. Please report any issues you encounter.
+- When cards are rescheduled in the browse screen, a review entry log is now created.
+- Various improvements, thanks hgiesel, cyphar, kaczmarj and Arthur.
+
 ### Changes in 2.1.35beta1
 
 Build 84dcaa86 / 2020-09-30.
