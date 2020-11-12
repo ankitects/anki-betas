@@ -19,6 +19,40 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.36beta2
+
+Build e0550b60 / 2020-11-12.
+
+The way Anki is built and packaged has been reworked for this release, which
+should make developing Anki easier moving forward. These changes should be
+mostly invisible to end users, but if you notice any problems introduced in this
+beta, please let us know on the forums.
+
+As part of these changes, the alternate Windows and Mac builds have been
+discontinued. If you're still using a 32-bit OS or a macOS version below 10.13,
+2.1.35 is the last version that will work on your setup.
+
+For developers, please see
+https://forums.ankiweb.net/t/changing-ankis-build-system-to-bazel/4737. Python
+3.8 is now the minimum supported version, so feel free to go wild with the
+walrus operator.
+
+Other changes:
+
+- Thanks to all the people who have contributed bugfixes and code/doc updates:
+  Abdo, Lukkea, Akshara, Kelciour, David, Henrik, Colin, Johan, Piotr, Andreas,
+  Arthur, Alan, RumovZ, Cecini, Soren, Krish, and ianki, in no particular order.
+  For the full list of changes, please see https://github.com/ankitects/anki/.
+  If I've missed someone, please let me know!
+- The main card area is now focused instead of the bottom area during review,
+  which allows using the keyboard to scroll (thanks to Henrik).
+- A separate mpv process is now used to play videos on Windows, which should
+  solve issues with playing getting stuck (thanks to Kelciour).
+- Fix error when switching to note type with fewer fields
+- Fix corrupt indexes when checking database.
+- Fix invalid utf8 in notes when checking database.
+- Fix invisible scrollbar in night mode + browser.
+
 ### Changes in 2.1.36beta1
 
 Build 53a984ba / 2020-10-02.
