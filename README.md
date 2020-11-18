@@ -19,6 +19,24 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.36beta3
+
+Build c1d15a8e / 2020-11-18.
+
+- MathJax has been updated to V3, thanks to Henrik. It should render faster
+  than before. Please report any issues you notice.
+- Anki's translation system has been updated. This should not have caused
+  any user-visible changes, but if you notice any regressions please let us know.
+- Fix issues with "find duplicates" (thanks to Abdo)
+
+For developers:
+
+- Gettext is no longer required to build Anki, as all strings have been
+  migrated to Fluent.
+- Python wheels have been provided on the beta download site - you should
+  be able to install them with "pip install /path/to/.whl". Please report any issues
+  you have with them.
+
 ### Changes in 2.1.36beta2
 
 Build e0550b60 / 2020-11-12.
