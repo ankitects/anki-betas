@@ -19,6 +19,24 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.36beta4
+
+Build 5313447c / 2020-11-30.
+
+This is nearing a stable release, so if you encounter any issues please
+let us know on the forums.
+
+- The handling of wildcards and escape characters in search [has been
+  reworked](https://docs.ankiweb.net/#/searching?id=matching-special-characters)
+  to be more consistent, thanks to Rumo.
+- Various fixes to translation handling, such as the translation
+  of early startup messages, thanks to Abdo.
+- Fixed some issues with adding/renaming decks (thanks to Cecini).
+- Fix duplicate search when sort field is not first field (thanks to Abdo).
+- Fix sync colour not updating after sync.
+- Thanks (as always) to people who contributed translations.
+- Other minor fixes.
+
 ### Changes in 2.1.36beta3
 
 Build c1d15a8e / 2020-11-18.
