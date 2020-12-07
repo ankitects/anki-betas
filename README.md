@@ -19,6 +19,17 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.36beta5
+
+Build c505894b / 2020-12-07.
+
+This is expected to be released as stable in a day or two
+without further changes, if no issues are discovered.
+
+- Support building with Python 3.9 on Mac/Linux.
+- Make it a bit easier to run Anki from source, and run it
+  with optimizations.
+
 ### Changes in 2.1.36beta4
 
 Build 5313447c / 2020-11-30.
