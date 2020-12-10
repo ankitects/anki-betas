@@ -1,14 +1,38 @@
 # Anki 2.1 Betas
 
-## Downloads
+## Packaged Download
 
-:warning: After using this beta, if you wish to open your collection with an earlier
-beta or Anki release, please go to the File>Switch Profile menu item, and click
-on "Downgrade & Quit". If you skip this step, you may get an error message when
-opening your collection in an older Anki version, and you will need to return to
-the latest version, downgrade, then try again.
+You can get the latest packaged beta from https://apps.ankiweb.net/downloads/beta/
 
-You can get the latest beta from https://apps.ankiweb.net/downloads/beta/
+## Python Packages
+
+If you have a local Python 3.8 or 3.9 installation, you can install beta builds
+directly with pip.
+
+Use something like the following, ensuring `2.1.37rc1` matches the version you want.
+Anki will be installed in a local Python folder called 'pyenv'.
+
+Mac/Linux:
+
+```
+$ python3.8 -m venv pyenv
+$ . pyenv/bin/activate
+(pyenv) $ pip install --upgrade pip
+(pyenv) $ pip install --upgrade aqt==2.1.37rc1
+(pyenv) $ pyenv/bin/anki
+```
+
+Windows:
+
+```
+c:\> python -m venv \pyenv
+c:\> \pyenv\scripts\activate.bat
+c:\> pip install --upgrade pip
+c:\> pip install aqt==2.1.37rc1
+c:\> pyenv\scripts\anki
+```
+
+Repeat the last step if you wish to start the same Anki version again.
 
 ## Problems
 
@@ -18,6 +42,17 @@ our support site:
 https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
+
+### Changes in 2.1.37rc1
+
+Build fe4fda70 / 2020-12-10.
+
+Will become the next stable release in a few days if no further
+issues are found.
+
+- Fix filtered decks not respecting sort order.
+- Fix automatic scrolling to the answer (thanks to Henrik).
+- Ease in the deck options now has a 131% minimum.
 
 ### Changes in 2.1.36beta5
 
