@@ -9,7 +9,9 @@ You can get the latest packaged beta from https://apps.ankiweb.net/downloads/bet
 If you have a local Python 3.8 or 3.9 installation, you can install beta builds
 directly with pip.
 
-Use something like the following, ensuring `2.1.37rc1` matches the version you want.
+Use something like the following, ensuring `2.1.38b1` matches the version you want.
+Note that 'beta' should be 'b' when using pip.
+
 Anki will be installed in a local Python folder called 'pyenv'.
 
 Mac/Linux:
@@ -18,7 +20,7 @@ Mac/Linux:
 $ python3.8 -m venv pyenv
 $ . pyenv/bin/activate
 (pyenv) $ pip install --upgrade pip
-(pyenv) $ pip install --upgrade aqt==2.1.37rc1
+(pyenv) $ pip install --upgrade aqt==2.1.38b1
 (pyenv) $ pyenv/bin/anki
 ```
 
@@ -28,7 +30,7 @@ Windows:
 c:\> python -m venv \pyenv
 c:\> \pyenv\scripts\activate.bat
 c:\> pip install --upgrade pip
-c:\> pip install aqt==2.1.37rc1
+c:\> pip install aqt==2.1.38b1
 c:\> pyenv\scripts\anki
 ```
 
@@ -42,6 +44,24 @@ our support site:
 https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
+
+### Changes in 2.1.38beta1
+
+Build 56ac71ff / 2020-12-16.
+
+- Switch audio recording libraries. Please try recording audio on a card
+  and let us know if there are any issues.
+- Fix the Reposition tool in the Browse screen not following the sort
+  order.
+- Fixed invisible characters when adding new card templates (thanks to Henrik).
+- Fixed duplicate check getting confused by non-breaking spaces (thanks to abdo).
+
+For developers:
+
+- Fixed Python code completion, and added some info to docs/development.md
+- ./run now runs Anki with Python warnings enabled - PRs that fix any that come
+  up would be welcome (thanks cecini for the first!)
+- PyAudio is no longer required for recording.
 
 ### Changes in 2.1.37rc1
 
