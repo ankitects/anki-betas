@@ -9,7 +9,7 @@ You can get the latest packaged beta from https://apps.ankiweb.net/downloads/bet
 If you have a local Python 3.8 or 3.9 installation, you can install beta builds
 directly with pip.
 
-Use something like the following, ensuring `2.1.38b1` matches the version you want.
+Use something like the following, ensuring `2.1.38b2` matches the version you want.
 Note that 'beta' should be 'b' when using pip.
 
 Anki will be installed in a local Python folder called 'pyenv'.
@@ -20,7 +20,7 @@ Mac/Linux:
 $ python3.8 -m venv pyenv
 $ . pyenv/bin/activate
 (pyenv) $ pip install --upgrade pip
-(pyenv) $ pip install --upgrade aqt==2.1.38b1
+(pyenv) $ pip install --upgrade aqt==2.1.38b2
 (pyenv) $ pyenv/bin/anki
 ```
 
@@ -30,7 +30,7 @@ Windows:
 c:\> python -m venv \pyenv
 c:\> \pyenv\scripts\activate.bat
 c:\> pip install --upgrade pip
-c:\> pip install aqt==2.1.38b1
+c:\> pip install aqt==2.1.38b2
 c:\> pyenv\scripts\anki
 ```
 
@@ -44,6 +44,20 @@ our support site:
 https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
+
+### Changes in 2.1.38beta2
+
+Build 38406862 / 2020-12-18.
+
+- Add another approach for recording audio that should avoid the
+  leading 300ms silence that was in beta1.
+- You can now choose between recording drivers in the preferences
+  screen, with 'qtrecorder' being similar to the beta1 approach, and
+  'pyaudio' being similar to previous Anki versions. If you find
+  some work better than others, please let us know. No restart is required
+  after changing the option and closing the preferences screen.
+- Fix '1' being shown instead of the correct number in some Russian
+  translations.
 
 ### Changes in 2.1.38beta1
 
