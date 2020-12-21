@@ -45,6 +45,20 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.38beta3
+
+Build d600bd58 / 2020-12-21.
+
+- All built-in Windows TTS voices should now be supported on recent Windows 10
+  releases (thanks to Ryan).
+- Work around --text-fg appearing in fields.
+- Record a short amount of extra time when stopping recording with the new
+  recording driver, and remove the qtrecorder option.
+- Fix link in about screen (thanks to Abdo).
+- Possible fix for sync button becoming blue without changes (thanks to Rumo).
+- Don't throw error when computer hostname is invalid.
+- Other minor changes (thanks to Henrik & k12sh)
+
 ### Changes in 2.1.38beta2
 
 Build 38406862 / 2020-12-18.
