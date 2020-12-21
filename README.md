@@ -9,8 +9,8 @@ You can get the latest packaged beta from https://apps.ankiweb.net/downloads/bet
 If you have a local Python 3.8 or 3.9 installation, you can install beta builds
 directly with pip.
 
-Use something like the following, ensuring `2.1.38b2` matches the version you want.
-Note that 'beta' should be 'b' when using pip.
+Use something like the following, ensuring `2.1.99b1` matches the version you want.
+Note that 'beta' should be 'b' when using pip, eg 2.1.99beta1 -> 2.1.99b1.
 
 Anki will be installed in a local Python folder called 'pyenv'.
 
@@ -20,7 +20,7 @@ Mac/Linux:
 $ python3.8 -m venv pyenv
 $ . pyenv/bin/activate
 (pyenv) $ pip install --upgrade pip
-(pyenv) $ pip install --upgrade aqt==2.1.38b2
+(pyenv) $ pip install --upgrade aqt==2.1.99b2
 (pyenv) $ pyenv/bin/anki
 ```
 
@@ -30,7 +30,7 @@ Windows:
 c:\> python -m venv \pyenv
 c:\> \pyenv\scripts\activate.bat
 c:\> pip install --upgrade pip
-c:\> pip install aqt==2.1.38b2
+c:\> pip install aqt==2.1.99b2
 c:\> pyenv\scripts\anki
 ```
 
