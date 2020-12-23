@@ -45,6 +45,22 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.38beta4
+
+Build 355e4cd5 / 2020-12-23.
+
+If no issues are discovered, this will likely be released as 2.1.38 stable
+in a few days.
+
+- Reduce the default fade time in the review screen.
+- The ANGLE video driver can now be selected in the Preferences on Windows.
+- Fix some instances of sync indicator remaining on after sync.
+
+For developers:
+
+- Protobuf binaries are now used to speed up the initial build.
+- Fix Windows build on Python 3.9 (but 3.8 is still recommended).
+
 ### Changes in 2.1.38beta3
 
 Build d600bd58 / 2020-12-21.
