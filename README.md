@@ -45,6 +45,66 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.39beta1
+
+Build 32278813 / 2021-01-26.
+
+New features:
+
+- Browser improvements:
+  - Tags now show in a tree (thanks to Abdo).
+  - New context menu actions to rename or remove tags and their children, rename
+    decks, manage notetypes, and rename/remove saved searches (thanks to Abdo
+    and BlueGreenMagick).
+  - The preview button in the browse screen has moved into the editing area (thanks to Henrik).
+  - With the improved sidebar, a number of options have been removed from the Filter button.
+- Search improvements:
+  - Searches are new rewritten into a canonical format (eg `one two` becomes
+    `"one" AND "two"`) (thanks to Rumo).
+  - Search error messages are now much more specific (thanks to Rumo).
+  - is:learn, is:due and prop:due now handle more cases, such as suspended cards
+    (thanks to Henrik).
+  - Added prop:pos search to search for new card position (thanks to Abdo).
+  - Added a shortcut to replace part of a search with a different search
+    (eg changing the selected deck) (thanks to Rumo).
+  - Support resched:x for searching for cards that were manually rescheduled
+    in x days (thanks to Henrik).
+  - Support prop:rated/resched to search for rated/rescheduled cards over
+    specific time periods (thanks to Henrik).
+- Graph improvements:
+  - A number of the graphs can now be clicked on to search for the cards
+    displayed by the graph (thanks to Henrik).
+  - The starting day of week can now be altered in the Calendar graph (thanks to Henrik).
+  - The Card Counts graph now supports toggling separate suspended/buried counts (thanks to Henrik).
+  - The intervals and ease graphs now covers more cases, such as suspended cards
+    (thanks to Henrik).
+  - Place less emphasis on outliers in the Calendar graph (thanks to Henrik).
+- Edit/More buttons auto-hide when window is small (thanks to Henrik).
+- The editor will now favour BR tags over DIVs (thanks to Henrik).
+- A basic sync server is now built into Anki. It does not yet support
+  media. Docs are in the docs/ folder of the source tree.
+
+Bugfixes:
+
+- Fix the Reposition command not preserving the browser sort order.
+- Fix some issues causing the sync indicator to show unnecessarily (thanks to Rumo).
+- Fix a spurious warning about a full sync when renaming card templates.
+- Fix Anki not working after installing on Linux over a previous install.
+- Don't log card resets when exporting.
+- Fix congrats screen not showing when learning cards were due soon.
+- Updated bundled lame and mpv on Windows and Mac builds.
+- Other fixes and improvements thanks to Henrik, Rumo, Abdo, Arthur, Guillem,
+  stayingpeachy, Daniel, khonkhortisan and Kerrick.
+
+For developers:
+
+- JS libraries like jQuery have been updated (thanks to Henrik).
+- Add (untested) support for ARM64 Linux.
+- orjson is turned back into an optional requirement (though is still
+  recommended, as it's faster).
+- The sidebar code has been moved from from browser.py into sidebar.py, which
+  may break some add-ons.
+
 ### Changes in 2.1.38beta4
 
 Build 355e4cd5 / 2020-12-23.
