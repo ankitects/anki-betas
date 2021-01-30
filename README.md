@@ -45,6 +45,27 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.39beta2
+
+Build 576f0043 / 2021-01-30.
+
+This beta is closer to 2.1.38 than the previous beta - it contains a bunch of
+bugfixes from beta 1, but feature changes have been cut, and will come back in
+2.1.40. This is expected to be released as stable without further changes,
+if no issues are found in the next couple of days.
+
+Changes since 2.1.38 stable:
+
+- Fix the Reposition command not preserving the browser sort order.
+- Fix some issues causing the sync indicator to show unnecessarily (thanks to Rumo).
+- Fix a spurious warning about a full sync when renaming card templates.
+- Fix Anki not working after installing on Linux over a previous install.
+- Don't log card resets when exporting.
+- Fix congrats screen not showing when learning cards were due soon.
+- Updated bundled lame and mpv on Windows and Mac builds.
+- Other fixes and improvements, with thanks to Henrik, Rumo, Abdo, Arthur, Guillem,
+  Meredith, Gustavo and Daniel.
+
 ### Changes in 2.1.39beta1
 
 Build 32278813 / 2021-01-26.
