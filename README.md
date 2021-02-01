@@ -54,6 +54,9 @@ bugfixes from beta 1, but feature changes have been cut, and will come back in
 2.1.40. This is expected to be released as stable without further changes,
 if no issues are found in the next couple of days.
 
+Please make sure to [downgrade](https://changes.ankiweb.net/#/) with beta 1
+before opening beta 2.
+
 Changes since 2.1.38 stable:
 
 - Fix the Reposition command not preserving the browser sort order.
