@@ -45,6 +45,58 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.41beta1
+
+Build 704b5e58 / 2021-02-07.
+
+This beta includes all the changes from 2.1.39beta1 - please see
+its change notes as well.
+
+Changes since 2.1.39beta1:
+
+- The editor's code has been reworked, thanks to Henrik:
+
+  - `<br>` tags will now be used by default instead of the previous `<div>`
+    tags, which solves some issues with multiple lines in cloze deletions and
+    MathJax.
+  - Invalid field content can no longer spill out into the editing area.
+  - Other behind-the-scenes changes have been made at the same time, and some
+    add-ons that alter the editor will need updating.
+
+- Browser sidebar improvements:
+
+  - Added a search bar, thanks to Abdo.
+  - The remaining items in the Filter button have been moved into the sidebar, and
+    the Filter button removed.
+  - Tags and decks can now be dragged and dropped.
+  - Each section can now be expanded/collapsed.
+  - Add-ons that were adjusting the sidebar or filter button may need updating.
+
+- Search improvements, thanks to Rumo:
+
+  - Filtered decks can now be created from a browser search, and vice versa.
+  - Better ergonomics for developers.
+
+- Reworked the Reschedule tool:
+  - Split into separate "Forget" and "Set Due Date" actions
+  - "Set Due Date" now [adjusts intervals](https://github.com/ankitects/anki/commit/704b5e581a70089798f0f4742640fde4a3f1a507) of review cards, instead of resetting them.
+  - Changed the "Delete Tags" shortcut; Ctrl+Shift+D now changes the due date.
+  - Added the action to the review screen as well.
+
+Other changes:
+
+- The tags field in the editor now autocompletes from anywhere in a tag name,
+  not only the start.
+- The title bar on Macs will now turn dark when night mode is activated.
+- Improvements to the graphs, thanks to Henrik.
+- Add deck description back to congrats screen, with [caveats](https://forums.ankiweb.net/t/anki-2-1-39-deck-descriptions-gone-after-finished-studying/7261).
+- Add opus to media list in editor.
+- Other improvements with thanks to Rumo, Henrik, Abdo, Arthur and Maksim.
+
+For developers:
+
+- Almost all of the Python codebase now has type hints. 🎉
+
 ### Changes in 2.1.39beta2
 
 Build 576f0043 / 2021-01-30.
