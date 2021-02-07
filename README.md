@@ -1,13 +1,14 @@
 # Anki 2.1 Betas
 
-## Packaged Download
+## Downloads
 
 You can get the latest packaged beta from https://apps.ankiweb.net/downloads/beta/
 
-## Python Packages
+If you have a local Python 3.8 or 3.9 installation, you can also install beta builds
+directly with pip:
 
-If you have a local Python 3.8 or 3.9 installation, you can install beta builds
-directly with pip.
+<details>
+<summary>Python Packages</summary>
 
 Use something like the following, ensuring `2.1.99b1` matches the version you want.
 Note that 'beta' should be 'b' when using pip, eg 2.1.99beta1 -> 2.1.99b1.
@@ -35,6 +36,8 @@ c:\> pyenv\scripts\anki
 ```
 
 Repeat the last step if you wish to start the same Anki version again.
+
+</details>
 
 ## Problems
 
