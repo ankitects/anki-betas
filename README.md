@@ -48,6 +48,35 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.41beta2
+
+Build 599d4634 / 2021-02-09.
+
+- Sidebar changes:
+
+  - Multiple selection. Currently only works with tag and deck drag&drop.
+  - Ctrl/Alt/Shift options to add/modify the search now require
+    a right click instead of a left click, to avoid conflicts with multiple
+    selection.
+  - Move "Current Deck" to Decks
+  - Click on Decks to show whole collection.
+  - Click on Flags to show any flag.
+  - Click on Tags to show all non-empty tags.
+  - Added "Untagged" under Tags.
+
+- "Set Due Date" changes:
+
+  - Interval can optionally be reset for review cards.
+  - Input now remembered.
+
+- Editor tweaks to make things easier for add-ons (thanks to Henrik).
+- Fix slowdown after large "check media" report.
+- Fix 'rsbackend' errors in some add-ons.
+- Fix compatibility with fastbar add-on.
+- Markdown rendering of deck config is now opt-in - once enabled,
+  it will change the handling of both the overview and congrats screen.
+  When not enabled, the congrats screen will not show the description.
+
 ### Changes in 2.1.41beta1
 
 Build 704b5e58 / 2021-02-07.
