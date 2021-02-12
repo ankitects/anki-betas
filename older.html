@@ -1,0 +1,1526 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Older - Anki Betas</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html" class="active">Older</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Anki Betas</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/ankitects/anki-betas/" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3><a class="header" href="#changes-in-2141beta3" id="changes-in-2141beta3">Changes in 2.1.41beta3</a></h3>
+<p>Build b3b40933 / 2021-02-12.</p>
+<ul>
+<li>
+<p>Sidebar:</p>
+<ul>
+<li>Drop multiple selection, and switch back to the old clicking behaviour.
+Multiple selection can be tackled again in a future update.</li>
+<li>&quot;Due&quot; now shows only cards due that day.</li>
+<li>Added &quot;Overdue&quot; item.</li>
+</ul>
+</li>
+<li>
+<p>&quot;Set due&quot; now leaves the review intervals alone unless '!' is provided.</p>
+</li>
+<li>
+<p>Fix stale preview in card layout screen (thanks to Henrik).</p>
+</li>
+<li>
+<p>Ignore manually scheduled cards in hour graph.</p>
+</li>
+</ul>
+<h3><a class="header" href="#changes-in-2141beta2" id="changes-in-2141beta2">Changes in 2.1.41beta2</a></h3>
+<p>Build 599d4634 / 2021-02-09.</p>
+<ul>
+<li>
+<p>Sidebar changes:</p>
+<ul>
+<li>Multiple selection. Currently only works with tag and deck drag&amp;drop.</li>
+<li>Ctrl/Alt/Shift options to add/modify the search now require
+a right click instead of a left click, to avoid conflicts with multiple
+selection.</li>
+<li>Move &quot;Current Deck&quot; to Decks</li>
+<li>Click on Decks to show whole collection.</li>
+<li>Click on Flags to show any flag.</li>
+<li>Click on Tags to show all non-empty tags.</li>
+<li>Added &quot;Untagged&quot; under Tags.</li>
+</ul>
+</li>
+<li>
+<p>&quot;Set Due Date&quot; changes:</p>
+<ul>
+<li>Interval can optionally be reset for review cards.</li>
+<li>Input now remembered.</li>
+</ul>
+</li>
+<li>
+<p>Editor tweaks to make things easier for add-ons (thanks to Henrik).</p>
+</li>
+<li>
+<p>Fix slowdown after large &quot;check media&quot; report.</p>
+</li>
+<li>
+<p>Fix 'rsbackend' errors in some add-ons.</p>
+</li>
+<li>
+<p>Fix compatibility with fastbar add-on.</p>
+</li>
+<li>
+<p>Markdown rendering of deck config is now opt-in - once enabled,
+it will change the handling of both the overview and congrats screen.
+When not enabled, the congrats screen will not show the description.</p>
+</li>
+</ul>
+<h3><a class="header" href="#changes-in-2141beta1" id="changes-in-2141beta1">Changes in 2.1.41beta1</a></h3>
+<p>Build 704b5e58 / 2021-02-07.</p>
+<p>This beta includes all the changes from 2.1.39beta1 - please see
+its change notes as well.</p>
+<p>Changes since 2.1.39beta1:</p>
+<ul>
+<li>
+<p>The editor's code has been reworked, thanks to Henrik:</p>
+<ul>
+<li><code>&lt;br&gt;</code> tags will now be used by default instead of the previous <code>&lt;div&gt;</code>
+tags, which solves some issues with multiple lines in cloze deletions and
+MathJax.</li>
+<li>Invalid field content can no longer spill out into the editing area.</li>
+<li>Other behind-the-scenes changes have been made at the same time, and some
+add-ons that alter the editor will need updating.</li>
+</ul>
+</li>
+<li>
+<p>Browser sidebar improvements:</p>
+<ul>
+<li>Added a search bar, thanks to Abdo.</li>
+<li>The remaining items in the Filter button have been moved into the sidebar, and
+the Filter button removed.</li>
+<li>Tags and decks can now be dragged and dropped.</li>
+<li>Each section can now be expanded/collapsed.</li>
+<li>Add-ons that were adjusting the sidebar or filter button may need updating.</li>
+</ul>
+</li>
+<li>
+<p>Search improvements, thanks to Rumo:</p>
+<ul>
+<li>Filtered decks can now be created from a browser search, and vice versa.</li>
+<li>Better ergonomics for developers.</li>
+</ul>
+</li>
+<li>
+<p>Reworked the Reschedule tool:</p>
+<ul>
+<li>Split into separate &quot;Forget&quot; and &quot;Set Due Date&quot; actions</li>
+<li>&quot;Set Due Date&quot; now <a href="https://github.com/ankitects/anki/commit/704b5e581a70089798f0f4742640fde4a3f1a507">adjusts intervals</a> of review cards, instead of resetting them.</li>
+<li>Changed the &quot;Delete Tags&quot; shortcut; Ctrl+Shift+D now changes the due date.</li>
+<li>Added the action to the review screen as well.</li>
+</ul>
+</li>
+</ul>
+<p>Other changes:</p>
+<ul>
+<li>The tags field in the editor now autocompletes from anywhere in a tag name,
+not only the start.</li>
+<li>The title bar on Macs will now turn dark when night mode is activated.</li>
+<li>Improvements to the graphs, thanks to Henrik.</li>
+<li>Add deck description back to congrats screen, with <a href="https://forums.ankiweb.net/t/anki-2-1-39-deck-descriptions-gone-after-finished-studying/7261">caveats</a>.</li>
+<li>Add opus to media list in editor.</li>
+<li>Other improvements with thanks to Rumo, Henrik, Abdo, Arthur and Maksim.</li>
+</ul>
+<p>For developers:</p>
+<ul>
+<li>Almost all of the Python codebase now has type hints. 🎉</li>
+</ul>
+<h3><a class="header" href="#changes-in-2139beta2" id="changes-in-2139beta2">Changes in 2.1.39beta2</a></h3>
+<p>Build 576f0043 / 2021-01-30.</p>
+<p>This beta is closer to 2.1.38 than the previous beta - it contains a bunch of
+bugfixes from beta 1, but feature changes have been cut, and will come back in
+2.1.40. This is expected to be released as stable without further changes,
+if no issues are found in the next couple of days.</p>
+<p>Please make sure to <a href="https://changes.ankiweb.net/#/">downgrade</a> with beta 1,
+before opening beta 2.</p>
+<p>Changes since 2.1.38 stable:</p>
+<ul>
+<li>Fix the Reposition command not preserving the browser sort order.</li>
+<li>Fix some issues causing the sync indicator to show unnecessarily (thanks to Rumo).</li>
+<li>Fix a spurious warning about a full sync when renaming card templates.</li>
+<li>Fix Anki not working after installing on Linux over a previous install.</li>
+<li>Don't log card resets when exporting.</li>
+<li>Fix congrats screen not showing when learning cards were due soon.</li>
+<li>Updated bundled lame and mpv on Windows and Mac builds.</li>
+<li>Other fixes and improvements, with thanks to Henrik, Rumo, Abdo, Arthur, Guillem,
+Meredith, Gustavo and Daniel.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2139beta1" id="changes-in-2139beta1">Changes in 2.1.39beta1</a></h3>
+<p>Build 32278813 / 2021-01-26.</p>
+<p>New features:</p>
+<ul>
+<li>Browser improvements:
+<ul>
+<li>Tags now show in a tree (thanks to Abdo).</li>
+<li>New context menu actions to rename or remove tags and their children, rename
+decks, manage notetypes, and rename/remove saved searches (thanks to Abdo
+and BlueGreenMagick).</li>
+<li>The preview button in the browse screen has moved into the editing area (thanks to Henrik).</li>
+<li>With the improved sidebar, a number of options have been removed from the Filter button.</li>
+</ul>
+</li>
+<li>Search improvements:
+<ul>
+<li>Searches are new rewritten into a canonical format (eg <code>one two</code> becomes
+<code>&quot;one&quot; AND &quot;two&quot;</code>) (thanks to Rumo).</li>
+<li>Search error messages are now much more specific (thanks to Rumo).</li>
+<li>is:learn, is:due and prop:due now handle more cases, such as suspended cards
+(thanks to Henrik).</li>
+<li>Added prop:pos search to search for new card position (thanks to Abdo).</li>
+<li>Added a shortcut to replace part of a search with a different search
+(eg changing the selected deck) (thanks to Rumo).</li>
+<li>Support resched:x for searching for cards that were manually rescheduled
+in x days (thanks to Henrik).</li>
+<li>Support prop:rated/resched to search for rated/rescheduled cards over
+specific time periods (thanks to Henrik).</li>
+</ul>
+</li>
+<li>Graph improvements:
+<ul>
+<li>A number of the graphs can now be clicked on to search for the cards
+displayed by the graph (thanks to Henrik).</li>
+<li>The starting day of week can now be altered in the Calendar graph (thanks to Henrik).</li>
+<li>The Card Counts graph now supports toggling separate suspended/buried counts (thanks to Henrik).</li>
+<li>The intervals and ease graphs now covers more cases, such as suspended cards
+(thanks to Henrik).</li>
+<li>Place less emphasis on outliers in the Calendar graph (thanks to Henrik).</li>
+</ul>
+</li>
+<li>Edit/More buttons auto-hide when window is small (thanks to Henrik).</li>
+<li>The editor will now favour BR tags over DIVs (thanks to Henrik).</li>
+<li>A basic sync server is now built into Anki. It does not yet support
+media. Docs are in the docs/ folder of the source tree.</li>
+</ul>
+<p>Bugfixes:</p>
+<ul>
+<li>Fix the Reposition command not preserving the browser sort order.</li>
+<li>Fix some issues causing the sync indicator to show unnecessarily (thanks to Rumo).</li>
+<li>Fix a spurious warning about a full sync when renaming card templates.</li>
+<li>Fix Anki not working after installing on Linux over a previous install.</li>
+<li>Don't log card resets when exporting.</li>
+<li>Fix congrats screen not showing when learning cards were due soon.</li>
+<li>Updated bundled lame and mpv on Windows and Mac builds.</li>
+<li>Other fixes and improvements thanks to Henrik, Rumo, Abdo, Arthur, Guillem,
+stayingpeachy, Daniel, khonkhortisan and Kerrick.</li>
+</ul>
+<p>For developers:</p>
+<ul>
+<li>JS libraries like jQuery have been updated (thanks to Henrik).</li>
+<li>Add (untested) support for ARM64 Linux.</li>
+<li>orjson is turned back into an optional requirement (though is still
+recommended, as it's faster).</li>
+<li>The sidebar code has been moved from from browser.py into sidebar.py, which
+may break some add-ons.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2138beta4" id="changes-in-2138beta4">Changes in 2.1.38beta4</a></h3>
+<p>Build 355e4cd5 / 2020-12-23.</p>
+<p>If no issues are discovered, this will likely be released as 2.1.38 stable
+in a few days.</p>
+<ul>
+<li>Reduce the default fade time in the review screen.</li>
+<li>The ANGLE video driver can now be selected in the Preferences on Windows.</li>
+<li>Fix some instances of sync indicator remaining on after sync.</li>
+</ul>
+<p>For developers:</p>
+<ul>
+<li>Protobuf binaries are now used to speed up the initial build.</li>
+<li>Fix Windows build on Python 3.9 (but 3.8 is still recommended).</li>
+</ul>
+<h3><a class="header" href="#changes-in-2138beta3" id="changes-in-2138beta3">Changes in 2.1.38beta3</a></h3>
+<p>Build d600bd58 / 2020-12-21.</p>
+<ul>
+<li>All built-in Windows TTS voices should now be supported on recent Windows 10
+releases (thanks to Ryan).</li>
+<li>Work around --text-fg appearing in fields.</li>
+<li>Record a short amount of extra time when stopping recording with the new
+recording driver, and remove the qtrecorder option.</li>
+<li>Fix link in about screen (thanks to Abdo).</li>
+<li>Possible fix for sync button becoming blue without changes (thanks to Rumo).</li>
+<li>Don't throw error when computer hostname is invalid.</li>
+<li>Other minor changes (thanks to Henrik &amp; k12sh)</li>
+</ul>
+<h3><a class="header" href="#changes-in-2138beta2" id="changes-in-2138beta2">Changes in 2.1.38beta2</a></h3>
+<p>Build 38406862 / 2020-12-18.</p>
+<ul>
+<li>Add another approach for recording audio that should avoid the
+leading 300ms silence that was in beta1.</li>
+<li>You can now choose between recording drivers in the preferences
+screen, with 'qtrecorder' being similar to the beta1 approach, and
+'pyaudio' being similar to previous Anki versions. If you find
+some work better than others, please let us know. No restart is required
+after changing the option and closing the preferences screen.</li>
+<li>Fix '1' being shown instead of the correct number in some Russian
+translations.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2138beta1" id="changes-in-2138beta1">Changes in 2.1.38beta1</a></h3>
+<p>Build 56ac71ff / 2020-12-16.</p>
+<ul>
+<li>Switch audio recording libraries. Please try recording audio on a card
+and let us know if there are any issues.</li>
+<li>Fix the Reposition tool in the Browse screen not following the sort
+order.</li>
+<li>Fixed invisible characters when adding new card templates (thanks to Henrik).</li>
+<li>Fixed duplicate check getting confused by non-breaking spaces (thanks to abdo).</li>
+</ul>
+<p>For developers:</p>
+<ul>
+<li>Fixed Python code completion, and added some info to docs/development.md</li>
+<li>./run now runs Anki with Python warnings enabled - PRs that fix any that come
+up would be welcome (thanks cecini for the first!)</li>
+<li>PyAudio is no longer required for recording.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2137rc1" id="changes-in-2137rc1">Changes in 2.1.37rc1</a></h3>
+<p>Build fe4fda70 / 2020-12-10.</p>
+<p>Will become the next stable release in a few days if no further
+issues are found.</p>
+<ul>
+<li>Fix filtered decks not respecting sort order.</li>
+<li>Fix automatic scrolling to the answer (thanks to Henrik).</li>
+<li>Ease in the deck options now has a 131% minimum.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2136beta5" id="changes-in-2136beta5">Changes in 2.1.36beta5</a></h3>
+<p>Build c505894b / 2020-12-07.</p>
+<p>This is expected to be released as stable in a day or two
+without further changes, if no issues are discovered.</p>
+<ul>
+<li>Support building with Python 3.9 on Mac/Linux.</li>
+<li>Make it a bit easier to run Anki from source, and run it
+with optimizations.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2136beta4" id="changes-in-2136beta4">Changes in 2.1.36beta4</a></h3>
+<p>Build 5313447c / 2020-11-30.</p>
+<p>This is nearing a stable release, so if you encounter any issues please
+let us know on the forums.</p>
+<ul>
+<li>The handling of wildcards and escape characters in search <a href="https://docs.ankiweb.net/#/searching?id=matching-special-characters">has been
+reworked</a>
+to be more consistent, thanks to Rumo.</li>
+<li>Various fixes to translation handling, such as the translation
+of early startup messages, thanks to Abdo.</li>
+<li>Fixed some issues with adding/renaming decks (thanks to Cecini).</li>
+<li>Fix duplicate search when sort field is not first field (thanks to Abdo).</li>
+<li>Fix sync colour not updating after sync.</li>
+<li>Thanks (as always) to people who contributed translations.</li>
+<li>Other minor fixes.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2136beta3" id="changes-in-2136beta3">Changes in 2.1.36beta3</a></h3>
+<p>Build c1d15a8e / 2020-11-18.</p>
+<ul>
+<li>MathJax has been updated to V3, thanks to Henrik. It should render faster
+than before. Please report any issues you notice.</li>
+<li>Anki's translation system has been updated. This should not have caused
+any user-visible changes, but if you notice any regressions please let us know.</li>
+<li>Fix issues with &quot;find duplicates&quot; (thanks to Abdo)</li>
+</ul>
+<p>For developers:</p>
+<ul>
+<li>Gettext is no longer required to build Anki, as all strings have been
+migrated to Fluent.</li>
+<li>Python wheels have been provided on the beta download site - you should
+be able to install them with &quot;pip install /path/to/.whl&quot;. Please report any issues
+you have with them.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2136beta2" id="changes-in-2136beta2">Changes in 2.1.36beta2</a></h3>
+<p>Build e0550b60 / 2020-11-12.</p>
+<p>The way Anki is built and packaged has been reworked for this release, which
+should make developing Anki easier moving forward. These changes should be
+mostly invisible to end users, but if you notice any problems introduced in this
+beta, please let us know on the forums.</p>
+<p>As part of these changes, the alternate Windows and Mac builds have been
+discontinued. If you're still using a 32-bit OS or a macOS version below 10.13,
+2.1.35 is the last version that will work on your setup.</p>
+<p>For developers, please see
+https://forums.ankiweb.net/t/changing-ankis-build-system-to-bazel/4737. Python
+3.8 is now the minimum supported version, so feel free to go wild with the
+walrus operator.</p>
+<p>Other changes:</p>
+<ul>
+<li>Thanks to all the people who have contributed bugfixes and code/doc updates:
+Abdo, Lukkea, Akshara, Kelciour, David, Henrik, Colin, Johan, Piotr, Andreas,
+Arthur, Alan, RumovZ, Cecini, Soren, Krish, and ianki, in no particular order.
+For the full list of changes, please see https://github.com/ankitects/anki/.
+If I've missed someone, please let me know!</li>
+<li>The main card area is now focused instead of the bottom area during review,
+which allows using the keyboard to scroll (thanks to Henrik).</li>
+<li>A separate mpv process is now used to play videos on Windows, which should
+solve issues with playing getting stuck (thanks to Kelciour).</li>
+<li>Fix error when switching to note type with fewer fields</li>
+<li>Fix corrupt indexes when checking database.</li>
+<li>Fix invalid utf8 in notes when checking database.</li>
+<li>Fix invisible scrollbar in night mode + browser.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2136beta1" id="changes-in-2136beta1">Changes in 2.1.36beta1</a></h3>
+<p>Build 53a984ba / 2020-10-02.</p>
+<ul>
+<li>Normal and night mode theming now uses CSS variables, making
+it easier to use and override in add-ons.</li>
+<li>Congrats screen, burying/suspending, filtered deck
+building/emptying, and card reposition/reset have been reworked, but should (mostly) function as before. Please report any issues you encounter.</li>
+<li>When cards are rescheduled in the browse screen, a review entry log is now created.</li>
+<li>Various improvements, thanks hgiesel, cyphar, kaczmarj and Arthur.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2135beta1" id="changes-in-2135beta1">Changes in 2.1.35beta1</a></h3>
+<p>Build 84dcaa86 / 2020-09-30.</p>
+<ul>
+<li>Fix a bug in Anki 2.1.29+ that caused excessive memory and CPU usage
+on long-running operations that show a progress bar, such as importing.</li>
+<li>Roll back Mac and Windows builds to Qt 5.14 again,
+as there are still issues with 5.15.</li>
+<li>Fix display issue in graphs on alternate Mac build.</li>
+<li>Fix preview not updating on multiple selection (thanks to abdo).</li>
+<li>Fix old content appearing when flagging immediately
+after typing.</li>
+<li>Fix some handling of <code>*</code> in searches.</li>
+<li>Sidebar now correctly escapes some characters (thanks to abdo).</li>
+</ul>
+<h3><a class="header" href="#changes-in-2134beta2" id="changes-in-2134beta2">Changes in 2.1.34beta2</a></h3>
+<p>Build 8af8f565 / 2020-09-22.</p>
+<ul>
+<li>Fix a bug in Anki 2.1.28+ where a newly created deck config would default to
+an ease of 130%. When updating, Anki will automatically change any deck
+configs with an ease of 130% back to 250%, and change any cards using those
+deck configs with a low ease back to an ease of 250%. If you have deliberately
+set an initial ease of 130%, please change it to 131% or greater prior to
+upgrading, so that Anki leaves your settings alone. Users who updated from
+an older Anki version and did not add new deck configurations should not
+be affected. Thanks to Aleksa for discovering the issue.</li>
+<li>Roll back most of the non-bugfix scheduling changes from the previous beta, so
+that this can be released as stable after a couple of days of testing.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2134beta1" id="changes-in-2134beta1">Changes in 2.1.34beta1</a></h3>
+<p>Build 133fe851 / 2020-09-21.</p>
+<ul>
+<li>Update the standard builds to the latest GUI toolkit version.
+Please report any improvements or regressions you notice.</li>
+<li>Dropped audio plays automatically again (thanks to abdo).</li>
+<li>Revert to older sound playing behaviour to work around issues
+(thanks to kelciour)</li>
+<li>Various improvements, thanks hgiesel, cyphar, kaczmarj and Arthur.</li>
+<li>Normal and night mode theming now uses CSS variables, making
+it easier to use and override in add-ons.</li>
+<li>Congrats screen, burying/suspending, filtered deck
+building/emptying, and card reposition/reset have been reworked, but should (mostly) function as before. Please report any issues you encounter.</li>
+<li>When cards are rescheduled in the browse screen, a review entry log is now created.</li>
+<li>is:due now stops at now+learn ahead limit, instead of end of day.</li>
+<li>Various bugfixes.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2133beta2" id="changes-in-2133beta2">Changes in 2.1.33beta2</a></h3>
+<p>Build 4662a9fe / 2020-08-28.</p>
+<ul>
+<li>Fix cards not being unburied if leaving Anki open and the first
+action of a new day is a sync.</li>
+<li>Access More button in review screen with 'm' (thanks to ANH).</li>
+<li>Audio no longer plays when dropped/pasted (thanks to ANH).</li>
+<li>Fix next learn message in congrats screen.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2133beta1" id="changes-in-2133beta1">Changes in 2.1.33beta1</a></h3>
+<p>Build 7bcec00e / 2020-08-26.</p>
+<ul>
+<li>Fix drag&amp;drop into existing content (thanks to ANH).</li>
+<li>Fix text in export file selector (thanks to ANH).</li>
+<li>Fix timeouts in full syncs and media syncs again.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2131beta3" id="changes-in-2131beta3">Changes in 2.1.31beta3</a></h3>
+<p>Build 85d99f73 / 2020-08-21.</p>
+<ul>
+<li>Full syncs and media syncs now terminate more quickly when the connection breaks.</li>
+<li>Improve support for getting proxies from Windows registry.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2131beta2" id="changes-in-2131beta2">Changes in 2.1.31beta2</a></h3>
+<p>Build 2b1bcda9 / 2020-08-21.</p>
+<ul>
+<li>Fix mpv failing to play audio after it's restarted, thanks to Kelciour.</li>
+<li>Fix Find&amp;Replace window sizing.</li>
+<li>Fix 'stale notetype' error after sync+add.</li>
+<li>Code improvements from ANH, Evandro and Thomas.</li>
+<li>Minor graph tweaks.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2131beta1" id="changes-in-2131beta1">Changes in 2.1.31beta1</a></h3>
+<p>Build 680b5e4b / 2020-08-19.</p>
+<ul>
+<li>Show card counts in pie graph, and other minor graph tweaks.</li>
+<li>Fix crash when dragging &amp; dropping, thanks to ANH25.</li>
+<li>Fix sync error+lost review when undoing in v2 filtered deck with scheduling off.</li>
+<li>Close &quot;edit current&quot; when current card deleted.</li>
+<li>Code improvements, thanks to Arthur, Evandro and Henrik.</li>
+<li>Find&amp;replace completion is now case sensitive.</li>
+<li>Fix crash when recovering notes with missing notetype.</li>
+<li>Fix handling of nested legacy template directives.</li>
+<li>Fix issues with bulk tag removal.</li>
+<li>Remove embedded direction markers in RTL cloze deletions.</li>
+<li>Strip nul characters from tags.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2130beta3" id="changes-in-2130beta3">Changes in 2.1.30beta3</a></h3>
+<p>Build 83637199 / 2020-08-08.</p>
+<ul>
+<li>Standard Windows build tweaked to hopefully fix issues introduced by Windows update.</li>
+<li>Standard Mac build rolled back to Qt 5.14, to fix &quot;show windows in tabs&quot; not working.</li>
+<li>More fixes for syncing bad data from older clients.</li>
+<li>Catch negative review times in DB check.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2130beta2" id="changes-in-2130beta2">Changes in 2.1.30beta2</a></h3>
+<p>Build 818012e0 / 2eee4cb0 / 2020-08-05.</p>
+<p>Update 2020-08-06: Windows build repackaged to fix failure to start.</p>
+<ul>
+<li>Add right axis to graphs.</li>
+<li>Fix some young cards being shown as mature in reviews graph.</li>
+<li>Fix negated conditonals being non-negated when renamed.</li>
+<li>Fix automatic logout not working when auth failure occurs.</li>
+<li>Fix 'add mobile class' not working properly.</li>
+<li>Fix some syncing errors that could happen until Check Database was run.</li>
+<li>Other graph tweaks/fixes.</li>
+<li>Big thanks to Matt and phwoo who submitted a bunch of code improvements recently.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2130beta1" id="changes-in-2130beta1">Changes in 2.1.30beta1</a></h3>
+<p>Build 1353590a / 2020-07-31.</p>
+<ul>
+<li>Fix early reviews not appearing in review graph.</li>
+<li>Fix hour graph problem in timezones west of UTC.</li>
+<li>Card counts graph now always shows table.</li>
+<li>Fix move into/out of filtered decks not syncing.</li>
+<li>Handle multiple same-numbered clozes in cloze-only filter.</li>
+<li>Fix deck list and graphs not including v2 scheduler cards with rescheduling disabled.</li>
+<li>Added night mode and mobile class toggles in card layout screen (thanks to ANH25).</li>
+<li>Code improvements (thanks to Matt, phwoo, Evandro and aplaice).</li>
+<li>Refresh tag list after clearing empty tags.</li>
+<li>Other minor fixes.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2129beta4" id="changes-in-2129beta4">Changes in 2.1.29beta4</a></h3>
+<p>Build 88fee1b7 / 2020-07-27.</p>
+<ul>
+<li>Fix an issue introduced by the previous change to the future due graph.</li>
+<li>Don't show an error when card contains an empty URL.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2129beta3" id="changes-in-2129beta3">Changes in 2.1.29beta3</a></h3>
+<p>Build 15c9cd91 / 2020-07-26.</p>
+<ul>
+<li>Fix due reviews in filtered deck showing incorrectly in future due graph.</li>
+<li>Another attempt at addressing the AltGr issue on Windows.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2129beta2" id="changes-in-2129beta2">Changes in 2.1.29beta2</a></h3>
+<p>Build ca8265a6 / 61e8611b / 2020-07-24.</p>
+<ul>
+<li>Roll standard Windows build back to Qt 5.14.1 for now (fixes performance problems)</li>
+<li>Graphs now instruct user to use Check Database if data can't be read.</li>
+<li>Future due graph now includes today's learning cards.</li>
+<li>Fix preview not updating when editing text in the Browse screen.</li>
+<li>Fix mpv taking time to start (thanks to Kelciour)</li>
+<li>Code/build improvements (thanks to Evandro &amp; Matt).</li>
+<li>Other minor tweaks.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2129beta1" id="changes-in-2129beta1">Changes in 2.1.29beta1</a></h3>
+<p>Build 1b441f50 / 2020-07-21.</p>
+<ul>
+<li>Add cloze-only: template filter, which can be combined with TTS to speak only the elided part.</li>
+<li>Fix 1+ day learning cards not being included in future due graph.</li>
+<li>Start media sync after full sync finishes.</li>
+<li>Use right-to-left direction in webviews when using RTL interface language.</li>
+<li>Support the terminal command that enables dark mode again.</li>
+<li>Code tidy-ups (thanks to Arthur).</li>
+<li>Close gracefully on SIGTERM.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2128beta6" id="changes-in-2128beta6">Changes in 2.1.28beta6</a></h3>
+<p>Build 7d8818f8 / 2020-07-17.</p>
+<p>This is a candidate for the next stable release.</p>
+<ul>
+<li>Add range selectors to button + hour graphs.</li>
+<li>Make it easier for add-ons to modify the graphs (thanks to Aristotelis).</li>
+<li>Code testing tidy-ups (thanks to Arthur).</li>
+</ul>
+<h3><a class="header" href="#changes-in-2128beta5" id="changes-in-2128beta5">Changes in 2.1.28beta5</a></h3>
+<p>Build 61017a2e / 2020-07-16.</p>
+<ul>
+<li>Minor tweaks to graph tooltips and axis labels.</li>
+<li>Ctrl/cmd+number selects decks/note types in list (thanks to Alexander).</li>
+<li>Translation updates (thanks as always to the volunteer translators).</li>
+</ul>
+<h3><a class="header" href="#changes-in-2128beta4" id="changes-in-2128beta4">Changes in 2.1.28beta4</a></h3>
+<p>Build 116aeead / 2020-07-13.</p>
+<ul>
+<li>More graph tweaks.</li>
+<li>Fixed is:review not including relearning cards.</li>
+<li>Scroll media log to bottom at start (thanks to kelciour)</li>
+<li>Update some dependencies, and other minor changes.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2128beta3" id="changes-in-2128beta3">Changes in 2.1.28beta3</a></h3>
+<p>Build 93425be8 / 2020-07-07.</p>
+<ul>
+<li>Fix add-on regression (thanks to Evandro).</li>
+<li>Various graph tweaks.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2128beta2" id="changes-in-2128beta2">Changes in 2.1.28beta2</a></h3>
+<p>Build cfc33815 / 2020-07-06.</p>
+<ul>
+<li>Various tweaks to the graphs.</li>
+<li>Update local media server (thanks to Evandro).</li>
+<li>Use Qt colour picker on Linux (thanks to Andreas).</li>
+<li>Fix some add-ons being broken.</li>
+<li>Other minor fixes.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2128beta1" id="changes-in-2128beta1">Changes in 2.1.28beta1</a></h3>
+<p>Build 4d23a69e / 2020-07-01.</p>
+<ul>
+<li>The stats screen has been rewritten - feedback on the beta thread would
+be appreciated.</li>
+<li>The old stats are accessible by shift+clicking on Stats.</li>
+<li>Add edited:x search for matching notes edited in last x days.</li>
+<li>Improvements to mpv handling (thanks to Kelciour).</li>
+<li>Windows build fix (thanks to Evandro).</li>
+<li>Various other fixes, including contributions from BlueGreenMagick, Arthur, neitrinoweb
+and kenden.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2128alpha3" id="changes-in-2128alpha3">Changes in 2.1.28alpha3</a></h3>
+<p>Build f44597bb / 2020-06-09.</p>
+<ul>
+<li>The standard Mac build now uses Qt 5.15 - please report any regressions. The
+file size is a bit larger than it needs to be, and may be improved in the
+future.</li>
+<li>The Linux build now uses Qt 5.15 - please report any regressions.</li>
+<li>DB check now shows progress.</li>
+<li>Fixed duplicate/empty field check.</li>
+<li>Fixed audio being included in FrontSide.</li>
+<li>Clearer error message on failed regex search.</li>
+<li>Find &amp; Replace remembers input (thanks to Evandro).</li>
+<li>Code improvements (thanks to BlueGreenMagick, Thomas and Andrew).</li>
+<li>Support input.conf for mpv</li>
+<li>Fixed '&amp;' being changed in image filenames in HTML editor.</li>
+<li>Fixed exports getting broken by Windows carriage returns in note fields.</li>
+<li>Miscellaneous other fixes.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2128alpha2" id="changes-in-2128alpha2">Changes in 2.1.28alpha2</a></h3>
+<p>Build ebce044b / 2020-06-02.</p>
+<p>Reworked collection syncing. Some warnings:</p>
+<ul>
+<li>While it has had some testing, please take frequent backups, and keep an eye
+out for (and report) any problems.</li>
+<li>The checking stage at the end of the sync may be slower than normal, as some
+checks that are normally disabled have been re-enabled for safety.</li>
+</ul>
+<p>Sync changes:</p>
+<ul>
+<li>Normal syncs and media syncs can operate in parallel, speeding up startup and shutdown.</li>
+<li>Normal syncs no longer need to close open windows like the Browse screen, or close &amp; re-open
+the collection.</li>
+<li>Full syncs now show a progress bar.</li>
+<li>Full syncs can now be cancelled, and both normal and full syncs cancel more quickly.</li>
+</ul>
+<p>Other changes:</p>
+<ul>
+<li>Windows standard version has been updated to Qt 5.15.</li>
+<li>Audio player on Windows has been switched back to mpv. Please report any
+issues you have playing audio files/videos.</li>
+<li>Fixed deck deletion, and allow &quot;deleting&quot; the default deck (it comes back empty).</li>
+<li>Fixed custom study not saving.</li>
+<li>Card layout screen divider can now be adjusted (thanks to Evandro).</li>
+<li>Fixed duplicate rendering in card layout screen (thanks to Evandro).</li>
+<li>Fix for a previewing issue (thanks to Evandro).</li>
+<li>Fixed off-by-one in field drag&amp;drop (thanks to BlueGreenMagick)</li>
+<li>Other minor fixes.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2128alpha1" id="changes-in-2128alpha1">Changes in 2.1.28alpha1</a></h3>
+<p>Build 97eadb78.</p>
+<ul>
+<li>
+<p>Performance improvements to:</p>
+<ul>
+<li>Startup and shutdown (the first startup will be slow as your collection is updated).</li>
+<li>The Browse screen.</li>
+<li>The deck list.</li>
+<li>The note types screen.</li>
+<li>The card templates screen.</li>
+<li>The database check.</li>
+</ul>
+</li>
+<li>
+<p>Card generation changes:</p>
+<ul>
+<li>Card generation now supports negated conditionals, and a mix of required
+and optional fields.</li>
+<li>When adding/importing, if a normal note doesn't generate any cards, Anki
+will now add a blank card 1 instead of refusing to add the note.</li>
+<li>Please bear in mind that if you take advantage of these features, older Anki
+clients may report the cards are blank, or try to clean them up when you
+use the Empty Cards feature.</li>
+<li>Cloze numbers over 499 are no longer supported.</li>
+</ul>
+</li>
+<li>
+<p>Card template screen:</p>
+<ul>
+<li>Changes are now accumulated, and can be saved or discarded when you close the screen.</li>
+<li>The front, back, and styling are no longer shown at the same time. You can switch between them with ctrl+1/2/3 or cmd+1/2/3.</li>
+<li>Added a search bar to search for text in the template or styling.</li>
+<li>Added a dropdown to change the previewed cloze number.</li>
+<li>Added a checkbox to toggle the filling of empty fields for preview.</li>
+<li>You can now delete a card template even if some notes are only using that
+template - they will be given a blank card 1 instead.</li>
+</ul>
+</li>
+<li>
+<p>Scheduling:</p>
+<ul>
+<li>The deck list no longer caps counts to 1000.</li>
+<li>The overview and study screen no longer caps counts to 1000.</li>
+<li>The deck list will no longer show a parent count higher than the limit
+set on the parent.</li>
+</ul>
+</li>
+<li>
+<p>Empty cards screen:</p>
+<ul>
+<li>Notes will not be deleted by default.</li>
+<li>Empty cards are grouped by note type.</li>
+<li>Empty cards can be clicked on to reveal them in the browse screen.</li>
+</ul>
+</li>
+<li>
+<p>Database check:</p>
+<ul>
+<li>Notes with the wrong field count are now recovered instead of being deleted.</li>
+<li>Notes with missing note types are now recovered instead of being deleted.</li>
+<li>Notes with missing cards are now recovered instead of being deleted.</li>
+</ul>
+</li>
+<li>
+<p>Unicode normalization:</p>
+<p>If you are studying rare CJK characters and wish to prevent them from being converted into
+modern equivalents, the following in the debug console will stop Anki from normalizing note text.</p>
+<pre><code>mw.col.conf[&quot;normalize_note_text&quot;] = False
+</code></pre>
+</li>
+</ul>
+<p>Other changes:</p>
+<ul>
+<li>Fields screen now accumulates changes, which can be saved or discarded when you close the screen.</li>
+<li>Updated a few screens to show progress bars instead of hanging the UI.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2124beta9" id="changes-in-2124beta9">Changes in 2.1.24beta9</a></h3>
+<p>Build 359b9f5c.</p>
+<ul>
+<li>You can use <code>w:something</code> to search on word boundaries, eg:
+<ul>
+<li><code>w:dog</code><br />
+search for &quot;dog&quot; on a word boundary - will match &quot;dog&quot;, but not &quot;doggy&quot;
+or &quot;underdog&quot;.</li>
+<li><code>w:dog*</code><br />
+will match &quot;dog&quot; and &quot;doggy&quot;, but not &quot;underdog&quot;.</li>
+<li><code>w:*dog</code><br />
+will match &quot;dog&quot; and &quot;underdog&quot;, but not &quot;doggy&quot;.</li>
+</ul>
+</li>
+<li>Fixed clicking on links in add-on configuration documentation.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2124beta8" id="changes-in-2124beta8">Changes in 2.1.24beta8</a></h3>
+<p>Build 683f664d.</p>
+<ul>
+<li>Fixed adding and removing deck option groups.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2124beta7" id="changes-in-2124beta7">Changes in 2.1.24beta7</a></h3>
+<p>Build ec6c0f86.</p>
+<ul>
+<li>Move the scheduling options in the preferences to a separate tab, so options
+fit on the screen even on devices with small screens.</li>
+<li>Fix pauses caused by a regression in the previous beta.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2124beta6" id="changes-in-2124beta6">Changes in 2.1.24beta6</a></h3>
+<p>Build 394f7c63.</p>
+<p>This beta changes the macOS dark mode handling of the standard build:</p>
+<ul>
+<li>
+<p>Anki now solely relies on the night mode setting in the preferences to decide
+whether to show in light or dark mode. Some users wanted to run Anki in light
+mode while keeping the rest of their system dark, and there were various
+display problems when dark mode was changed after Anki started that couldn't
+be easily worked around.</p>
+</li>
+<li>
+<p>Users who only use dark mode, and preferred the native look of widgets in dark
+mode, can achieve the previous appearance by running the following command in
+the terminal:</p>
+<pre><code>defaults write net.ankiweb.dtop NSRequiresAquaSystemAppearance -bool no
+</code></pre>
+<p>And the following in the debug console:</p>
+<pre><code>mw.pm.meta[&quot;dark_mode_widgets&quot;] = True
+</code></pre>
+<p>This is hidden behind a debug console command because it requires the
+user ensure their system is always set to the same light/dark mode
+as Anki.</p>
+</li>
+</ul>
+<p>Other changes:</p>
+<ul>
+<li>The macOS standard build is built with a newer SDK. If you notice any regressions, please let me know.</li>
+<li>Fixed Anki closing after a full sync on collection load.</li>
+<li>Fixed an error being shown when replaying audio.</li>
+<li>Fixed filtered decks displaying an error in older Anki versions after downgrading.</li>
+<li>Fixed add-ons with multiple branches not updating properly.</li>
+<li>Change the way cloze deletions in RTL fields are handled, which should address some corner cases.</li>
+<li>Fix editor buttons not being highlighted (thanks to Simone).</li>
+<li>Improve invalid HTML/JS error messages (thanks to Evandro).</li>
+<li>Fixed a useless log file being created when exporting.</li>
+<li>Allow selecting add-on config help text (thanks to ijgnd).</li>
+</ul>
+<h3><a class="header" href="#changes-in-2124beta5" id="changes-in-2124beta5">Changes in 2.1.24beta5</a></h3>
+<p>Build 0c5f22f4.</p>
+<ul>
+<li>New load/save handling for note types and decks. This should be transparent;
+if you notice any issues, please let me know.</li>
+<li>Avoid scrolling if the selected browser row is still visible after an operation.</li>
+<li>Handle renamed cloze fields when previewing (thanks to BlueGreenMagick).</li>
+<li>Fix a case where decks could be sorted incorrectly (thanks to Arthur).</li>
+<li>Fix some bugs introduced by the recent previewing changes.</li>
+<li>Allow dragging fields to change their position (thanks to BlueGreenMagick).</li>
+<li>Add socks support to media sync.</li>
+<li>Improvements to debug console (thanks to BlueGreenMagick).</li>
+<li>Build improvements (thanks to Evandro).</li>
+<li>Fix deck option changes not marking collection as changed.</li>
+<li>Fix deck_browser_did_render hook.</li>
+<li>Fix interface getting stuck when a corrupt collection was encountered.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2124beta4" id="changes-in-2124beta4">Changes in 2.1.24beta4</a></h3>
+<p>Build 16ab351b.</p>
+<ul>
+<li>Updated tag handling:
+<ul>
+<li>non-wildcard searches now do full unicode case folding (eg 'tag:masse' matches 'Maße').</li>
+<li>wildcard searches do simple unicode case folding.</li>
+<li>tag list in browse screen now uses unicode case folding.</li>
+</ul>
+</li>
+<li>Fix 'is:due' search not combining with other searches properly.</li>
+<li>Fix searches for things like deck:current not reflecting current state.</li>
+<li>Fix duplicate searches.</li>
+<li>Be more tolerant of deck IDs stored in the wrong format by older Anki versions.</li>
+<li>Fix an error that could occur when performing an operation in the browse screen then immediately closing it.</li>
+<li>Clean up the previewing code (thanks to Arthur). Add-ons that modify the preview screen will need updating.</li>
+<li>Prepare for uploading releases to PyPI (thanks to Evandro).</li>
+<li>Improve the handling of deck deletions (thanks to Arthur).</li>
+<li>Avoid decimal place in steps lists where possible.</li>
+<li>Add a compatibility shim for named args to avoid breaking some add-ons.</li>
+<li>Updated config handling. While there should be no immediate breakages, if you're an add-on author and
+store lists or dicts in Anki's config, please see 676f4e74a.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2124beta3" id="changes-in-2124beta3">Changes in 2.1.24beta3</a></h3>
+<p>Build d3964603.</p>
+<p>Updated the way cards and deck options are loaded and saved. Most add-ons should not be affected,
+but a few will need minor tweaks. If you run into any issues and can reproduce them when add-ons are disabled, please let me know.</p>
+<p>Other changes:</p>
+<ul>
+<li>Media syncs no longer take time to abort.</li>
+<li>Fixed media sync waiting forever when connection dropped.</li>
+<li>Fixed an issue where regular syncs could fail to end.</li>
+<li>Fixed current card sometimes not being centered when searching.</li>
+<li>Don't force a full sync when DB check finds cards with a high due number.</li>
+<li>A tweak which should fix some broken add-ons from preventing the collection from being loaded.</li>
+<li>GitHub now checks Windows and Mac builds as well (thanks to Evandro).</li>
+<li>More hooks (thanks to Arthur).</li>
+<li>Fix tag searches in custom study (thanks to zjosua).</li>
+<li>Don't throw an error when user has an embedded null in a note field.</li>
+<li>Left-align tags in the browser.</li>
+<li>Ignore .DS_Store files in the media trash folder.</li>
+<li>Remove the check for ':' in DB queries.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2124beta2" id="changes-in-2124beta2">Changes in 2.1.24beta2</a></h3>
+<p>Build b1a8107a.</p>
+<p>Please see beta 1 for most of the changes.</p>
+<ul>
+<li>The media check will now fix file references in fields that broke because a filename was shortened as part of a sync.</li>
+<li>Fixed error when reviewing (thanks to zjosua).</li>
+<li>Fixed reverse sort order for some browser columns.</li>
+<li>Fixed the UI displaying badly when macOS dark mode changes while Anki is running.</li>
+<li>Don't show a popup when a network error occurs while syncing media.</li>
+<li>Fixed the collection_did_load add-on hook.</li>
+<li>Fixed searches for &quot;(something )&quot; with a trailing space not working.</li>
+<li>Fixed the wrong language shown in the preferences screen for some languages.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2124beta1" id="changes-in-2124beta1">Changes in 2.1.24beta1</a></h3>
+<p>Build 9dda5cf6.</p>
+<p>2.1.24 focuses on changes to the database layer and searching code.</p>
+<p>Searching:</p>
+<ul>
+<li>You can now use <code>re:something</code> to search via regular expression, eg:
+<ul>
+<li><code>re:\bdog\b</code> will search for the word 'dog'. It has a word boundary character (<code>\b</code>) at the
+start and end, so it will match 'a dog', but not 'a doggy'.</li>
+<li><code>front:re:t+1</code> would match &quot;t1&quot;, &quot;tt1&quot; and so on in the Front field</li>
+<li>When searching by regex, unicode case folding is used, so searching for <code>re:über</code> will
+show a card that has &quot;Über&quot; on it.</li>
+</ul>
+</li>
+<li><code>nc:something</code> (short for &quot;no combining&quot;) can be used to search while
+ignoring accents, eg <code>nc:uber</code> will match both &quot;über&quot; and &quot;Über&quot;. This behaves the same way as the &quot;Ignore Accents&quot; add-on, but is about 16x faster.</li>
+<li>You can now sort on the deck, card template, note type and tags columns.</li>
+<li>You can now use wildcards when limiting the search to a field, eg <code>field*:something</code>.</li>
+<li>You can now use wildcards when searching for a card template or note type by name.</li>
+<li><code>rated:x</code> searches are now capped to a year instead of a month.</li>
+<li>You can now escaped double-quotes in a search - eg <code>&quot;foo\&quot;bar&quot;</code></li>
+<li>Single-quote searches are no longer supported.</li>
+<li>A version of Advanced Browser that works with this beta
+has been made available <a href="https://github.com/ankitects/advanced-browser/releases/tag/2.1.24-fixes">here</a>. Not everything has been tested, and sorting on some fields will not currently
+work properly.</li>
+<li>Because the searching code has been rewritten, add-ons that modify the search code
+will need to be updated to support 2.1.24. Unfortunately it is no longer possible to override the Finder class - add-ons will need to use the new hooks in the browser screen to either rewrite the search text, or perform their own lookups instead.</li>
+</ul>
+<p>Database changes (mainly of interest to add-on developers):</p>
+<ul>
+<li>Anki now uses Rust's sqlite libraries instead of Python's.</li>
+<li>The 'db' object on the collection retains most of the same API as before, minimizing the amount of immediate code changes that are required.</li>
+<li>Some less-used features like named sqlite bindings (&quot;where column = :foo&quot;) and custom
+sql functions are no longer supported.</li>
+<li>The old database code remains in db.py, and add-ons can continue to use it for accessing
+their own databases.</li>
+<li>The database is now behind a mutex, and can be safely accessed from a background thread.</li>
+<li>Various screens like the database check have been updated to run on a background thread,
+so they no longer lock up the UI while they're running.</li>
+<li>The database progress handler has been removed. Anki previous had sqlite call back into
+Python periodically during long-running DB operations so it could drain the UI queue,
+but this would vary in choppyness depending on the type of DB operation being performed,
+and it was the cause of some crashes in the past. Add-ons that perform long-running operations
+should instead use mw.taskman.run_in_background() or their own threading solution moving forward.</li>
+</ul>
+<p>Other changes:</p>
+<ul>
+<li>Anki will now wait for a media sync to complete or be aborted before closing the collection.</li>
+<li>Fixed progress dialogs failing to appear in a timely manner.</li>
+<li>Allow the type answer arrow to be styled (thanks to Evandro).</li>
+<li>More hooks (thanks to Arthur).</li>
+</ul>
+<p>A lot has changed in this beta, so some issues may have slipped through the cracks. If
+you run into any problems, please let me know.</p>
+<h3><a class="header" href="#changes-in-2122beta2" id="changes-in-2122beta2">Changes in 2.1.22beta2</a></h3>
+<p>Build 0ecc189a.</p>
+<ul>
+<li>Fixed problems playing audio on Windows. Users using the gtts add-on will need to update it.</li>
+<li>Clear the audio queue when moving between cards with autoplay off.</li>
+<li>Fixed play icons not appearing in browser preview when autoplay off.</li>
+<li>Restored grey styling of zeros in the deck list that got lost in the night mode changes.</li>
+<li>Fixed an error shown when running in Spanish.</li>
+<li>Fixed fields containing a filename with non-Latin text from being corrupted when editing HTML (thanks to Evandro).</li>
+<li>Support for validating add-on config schemas (thanks to Arthur).</li>
+<li>Fixed a change that broke some add-ons.</li>
+<li>Fixed the wrong language being selected in the preferences screen.</li>
+<li>Removed the 'too many decks' message in the deck list screen.</li>
+<li>Possible fix for issue playing audio from flash drive.</li>
+<li>Fixed Anki getting stuck when importing an invalid file.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2122beta1" id="changes-in-2122beta1">Changes in 2.1.22beta1</a></h3>
+<p>Build 131d37dc.</p>
+<p>Please use File&gt;Export to back up your collection with media before trying
+this beta. While big problems are unlikely, a backup is always a good thing
+to have.</p>
+<ul>
+<li>All the changes from 2.1.21beta1 to 3</li>
+<li>The new timezone handling is now exposed as an option in the preferences
+screen. Please avoid using this if you use AnkiDroid:
+https://anki.tenderapp.com/kb/anki-ecosystem/timezone-handling-changes</li>
+<li>Instead of automatically clearing the media trash after 7 days,
+the media check screen now displays how many files are in the trash
+folder, and allows you to either empty the trash, or restore it back
+into the media folder.</li>
+<li>Fixed repetitive sync errors when long filenames in media folder and
+media check not run.</li>
+<li>More code improvements (thanks to Alan)</li>
+<li>More add-on hooks (thanks to Arthur and Glutanimate)</li>
+<li>More Windows build improvements (thanks to Evandro)</li>
+<li>Rotate log files.</li>
+<li>Ignore http(s) links when checking media.</li>
+<li>Fix a resource leak introduced in an earlier beta.</li>
+<li>Fix inversion of iOS drawings in night mode.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2121beta4" id="changes-in-2121beta4">Changes in 2.1.21beta4</a></h3>
+<p>Build f1734a47.</p>
+<p>This has been released as 2.1.21 stable without the below changes - please
+see the 2.1.21 change notes.</p>
+<h3><a class="header" href="#changes-in-2121beta3" id="changes-in-2121beta3">Changes in 2.1.21beta3</a></h3>
+<p>Build 8960d12a.</p>
+<ul>
+<li>Media syncing now logs to collection2.log in your profile folder. If you
+experience any problems with syncing, please attach your log in a support
+ticket and describe the problem (giving an example filename) so I can
+investigate.</li>
+<li>Fix time spans over 12 months not being displayed in years.</li>
+<li>Files deleted via the media check no longer trigger a rescan on next sync.</li>
+<li>Fix the standard Mac build not displaying properly when dark mode active,
+and updated the docs to explain how you can force light mode in Anki while
+system dark mode is active.</li>
+<li>Fix an oversight that was breaking some add-ons unnecessarily.</li>
+<li>More translation work.</li>
+<li>More type hints in the code (thanks to Alan).</li>
+<li>Improvements for building on Windows (thanks to Evandro).</li>
+<li>Support '/' separator in add-on web paths on Windows (thanks to BlueGreenMagick)</li>
+<li>Fix tags that are in the wrong encoding as part of the DB check.</li>
+<li>Display a more helpful warning when mpv/mplayer not installed.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2121beta2" id="changes-in-2121beta2">Changes in 2.1.21beta2</a></h3>
+<p>Build 65ec9d19.</p>
+<ul>
+<li>More work on the handling of translations, including tweaks to the way
+the answer buttons and the review history screen show intervals.</li>
+<li>You can now export .apkg files with the V2 scheduler enabled.</li>
+<li>Show next learning card due time, and count for today</li>
+<li>Add-on hook improvements, thanks to Glutanimate and Arthur.</li>
+<li>Hide the default deck in more cases (thanks to Arthur).</li>
+<li>Some improvements to the build process (thanks to Evandro).</li>
+<li>Fixed negative number in &quot;add-on incompatible&quot; message.</li>
+<li>Fixed field contents added by old add-ons like Japanese Support
+not appearing.</li>
+<li>Fixed card info screen not appearing.</li>
+<li>Fixed an error message when using very small learning steps.</li>
+<li>Add &quot;New #&quot; prefix to the due column for new cards.</li>
+<li>Add back missing fcntl for add-ons.</li>
+<li>Fix a race condition in the audio playing code.</li>
+<li>Fixed {{Deck}} showing the filtered deck name instead of the original deck.</li>
+<li>Fixed LaTeX in cloze deletions not being rendered by the media check.</li>
+<li>Cards in night mode now default to dark grey instead of black.</li>
+<li>Fix issue with macOS's dark mode in the alternate Mac build.</li>
+<li>Don't allow scaling of the UI below 100%, as it doesn't work properly.</li>
+<li>Fixed Anki not starting on Windows installs that were lacking TTS support.</li>
+<li>Interrupt current audio even if autoplay is disabled.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2121beta1" id="changes-in-2121beta1">Changes in 2.1.21beta1</a></h3>
+<p>Build 683b7983.</p>
+<p>Media syncing improvements:</p>
+<ul>
+<li>Media syncing now happens in the background, so you can continue using
+Anki while the media sync completes.</li>
+<li>Aside from syncing at open and close, Anki will sync any media changes
+every 15-20 minutes.</li>
+<li>You can click on the sync button while the spinner is active to monitor
+progress.</li>
+<li>Long filenames and problematic characters should be handled smoothly now,
+instead of causing syncing errors.</li>
+<li>Anki should no longer sometimes forget to download files when a media
+sync fails due to network errors.</li>
+<li>When media files are added within Anki, Anki now marks them
+in the database immediately, which can make things faster for people with
+slower disks if they are not modifying the media folder externally.</li>
+</ul>
+<p>Media check improvements:</p>
+<ul>
+<li>The Check Media function now shows progress, and can be interrupted.</li>
+<li>There is now a separate button to generate missing LaTeX.</li>
+<li>If LaTeX fails to build, the problem card will be revealed in the browse
+screen.</li>
+<li>When Anki finds files that are too long or would cause errors on some
+operating systems, it will automatically rename them and update your notes
+to point to the new filename.</li>
+</ul>
+<p>Both media sync and the media check now place deleted files in a media.trash
+folder inside your profile, instead of placing the files in the system trash.
+Any files that have been sitting in that folder for a week or more will be
+deleted permanently when you next run a media check.</p>
+<p>Other changes:</p>
+<ul>
+<li>Updates to the translation infrastructure - please see https://anki.tenderapp.com/discussions/announcements/138-more-updates-to-ankis-translations</li>
+<li>Improvements to the readability of the scheduling code (thanks to Arthur)</li>
+<li>More hooks for add-on authors (thanks to Arthur &amp; Aristotelis)</li>
+</ul>
+<h3><a class="header" href="#changes-in-2120beta10" id="changes-in-2120beta10">Changes in 2.1.20beta10</a></h3>
+<p>Build d0284f75.</p>
+<p>For a full list of changes since 2.1.19, please see https://apps.ankiweb.net/docs/changes.html</p>
+<ul>
+<li>Added the ability to export selected notes from the Browse screen, thanks to Arthur.</li>
+<li>Don't filter em/strong tags when pasting.</li>
+<li>Fix rendering of question/answer column in browse screen.</li>
+<li>Clearer error when conditional replacement closing tags are switched.</li>
+<li>Show whether template errors occurred on the front or back template.</li>
+<li>Drawings done in AnkiMobile now appear correctly in night mode.</li>
+<li>Work around HTML editor sometimes failing to appear on macOS.</li>
+<li>Fix error when double-clicking the open profile button.</li>
+<li>Constrain image width in editor to the field width.</li>
+<li>Tweaks to replay audio button alignment/outline.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2120beta9" id="changes-in-2120beta9">Changes in 2.1.20beta9</a></h3>
+<p>Build 1fbd925f.</p>
+<ul>
+<li>Standard Windows and Linux builds updated to latest Qt.</li>
+<li>More legible colours in the stats screens in night mode.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2120beta8" id="changes-in-2120beta8">Changes in 2.1.20beta8</a></h3>
+<p>Build 5d91580c.</p>
+<ul>
+<li>Emptying a filtered deck in the V2 scheduler no longer unsuspends suspended cards inside it.</li>
+<li>Added an option in the preferences to not interrupt the currently playing audio when answering.</li>
+<li>In night mode, the scrollbar style is now consistent in and out of webviews.</li>
+<li>Lighter buttons and scrollbars in night mode.</li>
+<li>Fix the white lines showing on macOS dark mode in the browse screen.</li>
+<li>Fix some misaligned dialogs in night mode.</li>
+<li>Fix building from a .tar.gz file.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2120beta7" id="changes-in-2120beta7">Changes in 2.1.20beta7</a></h3>
+<p>Build 77912aa2/c70badcd/a4764e2a.</p>
+<ul>
+<li>Foreground and background colours in text are now ignored
+when pasting in night mode.</li>
+<li>On macOS, the system theme will be used when dark mode is active.</li>
+<li>Qt has been downgraded to 5.13 on macOS to facilitate the above.</li>
+<li>The audio replay buttons are smaller by default, and can be styled using fill and stroke on '.replay-button svg [circle|path]'.</li>
+<li>Night mode now also used .night_mode - if you notice any problems
+with this please let me know.</li>
+<li>Disabled elastic scrolling in webviews to work around a Qt bug.</li>
+<li>Progress dialogs no longer pop up immediately.</li>
+<li>Minor night mode tweaks.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2120beta6" id="changes-in-2120beta6">Changes in 2.1.20beta6</a></h3>
+<p>Build 23f13a31.</p>
+<ul>
+<li>TTS tags now accept a 'speed=1.0' option to control voice speed.</li>
+<li>Adding {{tts-voices:}} to your template will show all available voices.</li>
+<li>Replay audio buttons now clickable in card layout and preview screens.</li>
+<li>Fix autoplay of audio in the preview screen.</li>
+<li>Fix Anki filtering spaces out of pasted sound files.</li>
+<li>Fix add-ons being marked as incompatible when they weren't.</li>
+<li>Handle AnkiWeb's new support for multiple add-on versions.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2120beta5" id="changes-in-2120beta5">Changes in 2.1.20beta5</a></h3>
+<p>Build d428b3b4.</p>
+<ul>
+<li>Fix issues loading mpv on Mac/Linux.</li>
+<li>Replay buttons now appear in {{FrontSide}}.</li>
+<li>Replay buttons are shown in card layout and preview screens, but
+are not yet clickable.</li>
+<li>More changes to the card display code, which will break more
+add-ons I'm afraid.</li>
+<li>The template hooks have been updated - please see
+https://github.com/ankitects/anki-addons/commits/master for required
+changes.</li>
+<li>A few colour fixes for night mode.</li>
+<li>A change from Arthur that fixes one issue that was breaking add-ons.</li>
+<li>Invert LaTeX in night mode (thanks to zjosua).</li>
+<li>Support specifying min/max versions in .ankiaddon files.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2120beta4" id="changes-in-2120beta4">Changes in 2.1.20beta4</a></h3>
+<p>Build 98041059.</p>
+<ul>
+<li>The night mode option now turns the interface dark as well. Please
+report any areas that don't display properly.</li>
+<li>Fix mplayer window popping up on Windows.</li>
+<li>Alter the way negated conditionals are handled in card generation.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2120beta3" id="changes-in-2120beta3">Changes in 2.1.20beta3</a></h3>
+<p>Build 95b497cc.</p>
+<ul>
+<li>You can now use <code>{{tts en_US:Field}}</code> on your card templates to use the
+text to speech support built into Windows and macOS, changing the language
+code as necessary.</li>
+<li>You can specify the voices you'd prefer - the first available one
+will be used. Eg. <code>{{tts ja_JP voices=Apple_Otoya,Microsoft_Haruka:Field}}</code>.
+The voices you specify must match the language.</li>
+<li>In addition to the built in TTS, there is an example add-on that uses gTTS
+available here: https://ankiweb.net/shared/info/391644525</li>
+<li>To see all available voices, use the following in the debug console:</li>
+</ul>
+<pre><code class="language-python">for p in aqt.sound.av_player.players:
+  if v := getattr(p, 'get_available_voices', None): pp(v())
+</code></pre>
+<ul>
+<li>Audio buttons are now shown on the card, and can be turned off in the
+preferences. They will show for both regular audio and text to speech.</li>
+<li>Added shortcut keys in the review screen to pause and jump forward/backward
+5 seconds.</li>
+<li>Anki now starts a new copy of mplayer for each audio file on Windows,
+which avoids the need to create temporary files. If you notice any problems
+related to this, please let me know.</li>
+<li>Add-ons that modified the audio code may break with this update.</li>
+<li>For add-on authors, some more examples using the new hook system are
+available on the following page, including ported versions of the clickable
+tags and additional card fields add-ons:
+https://github.com/ankitects/anki-addons/tree/master/demos</li>
+</ul>
+<h3><a class="header" href="#changes-in-2120beta2" id="changes-in-2120beta2">Changes in 2.1.20beta2</a></h3>
+<p>Build c9a46268.</p>
+<ul>
+<li>Anki will now check for add-on updates once a day.</li>
+<li>Disabled add-ons are now included in the check as well.</li>
+<li>If a user attempts to install an add-on that doesn't support the version
+they're on, Anki will now prevent them from doing so.</li>
+<li>The 'max supported version' that add-on authors can specify in AnkiWeb
+is now used to prevent users from downloading add-ons that won't work on
+their Anki version, and to disable add-ons when they update to a new version.</li>
+<li>Fix incorrect delay being logged when Hard is used on the first learning step
+in the V2 scheduler.</li>
+<li>The editor no longer modifies percent-escaped text outside of image tags.</li>
+<li>Fix an extra linebreak being left in a field when an image is attached
+to an empty field.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2120beta1" id="changes-in-2120beta1">Changes in 2.1.20beta1</a></h3>
+<p>Build fa564772.</p>
+<ul>
+<li>Changes to the way cards are rendered that will break some add-ons - please
+see https://anki.tenderapp.com/discussions/beta-testing/1706-anki-2120-updates-to-card-template-rendering[here]</li>
+<li>A new hook system for add-ons - please see https://anki.tenderapp.com/discussions/beta-testing/1704-anki-2120-updates-to-the-hook-system[here]</li>
+<li>Tweaks to the 'tag updated notes' feature (thanks to Erez)</li>
+<li>Fix cards being sorted in wrong order when added after the note was created (thanks to Arthur)</li>
+</ul>
+<h3><a class="header" href="#changes-in-2117beta8" id="changes-in-2117beta8">Changes in 2.1.17beta8</a></h3>
+<p>Build f4fb7319.</p>
+<ul>
+<li>Minimum Python version is now 3.7.</li>
+<li>Updated the way templates are rendered. If you notice any problems or
+messages printed to the console, please post on the support site.</li>
+<li>Double-clicking on .ankiaddon files should now work on Mac and Windows as well.</li>
+<li>Bug fix for tag updated notes feature (thanks to Erez).</li>
+</ul>
+<h3><a class="header" href="#changes-in-2117beta7" id="changes-in-2117beta7">Changes in 2.1.17beta7</a></h3>
+<p>Build a4d38d65.</p>
+<ul>
+<li>Added an option to tag updated notes when importing (thanks to Erez).</li>
+<li>Install add-ons by double clicking on their files (thanks to Glutanimate).
+Currently only on Linux; support for Windows/Mac will be added soon.</li>
+<li>The alternate Windows build now uses Python 3.8/Qt 5.12.</li>
+<li>The alternate Mac build now uses Python 3.8.</li>
+<li>The alternate Linux build has been dropped.</li>
+</ul>
+<p>A bunch of behind-the-scenes changes to the code in this release. If you
+notice any regressions, please post on the beta testing thread.</p>
+<h3><a class="header" href="#changes-in-2117beta6" id="changes-in-2117beta6">Changes in 2.1.17beta6</a></h3>
+<p>Build 4cead7ef.</p>
+<ul>
+<li>Added a beta label to the experimental scheduler,
+as a timezone corner case needs to be addressed before
+general release.</li>
+<li>Fixed sidebar background on Windows 10.</li>
+<li>Fixed building from source on 32 bit Linux.</li>
+<li>Fixed alternate template syntax not being recognized.</li>
+<li>Automatically remove ':' from field names when opening the
+card templates screen, as it conflicts with the template syntax.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2117beta5" id="changes-in-2117beta5">Changes in 2.1.17beta5</a></h3>
+<p>Build 518cc442.</p>
+<ul>
+<li>Changing large note types is significantly faster.</li>
+<li>Fix a bug that was preventing new profiles from being created.</li>
+<li>Fix a bug in the handling of MathJax+Cloze (thanks to Michal).</li>
+<li>Fix missing border when the user has modified the interface scale.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2117beta4" id="changes-in-2117beta4">Changes in 2.1.17beta4</a></h3>
+<p>Build bfcc8379.</p>
+<p>The standard Mac and Linux builds have now been updated to the new toolkit
+as well - please report any regressions.</p>
+<h3><a class="header" href="#changes-in-2117beta3" id="changes-in-2117beta3">Changes in 2.1.17beta3</a></h3>
+<p>Build da942617.</p>
+<p>Another Windows-only build.</p>
+<ul>
+<li>Improved the performance of the browse screen's sidebar.</li>
+<li>If you use any add-ons that alter the sidebar, you will need to disable
+them prior to upgrading, as add-on authors will need to modify their code
+to work with the new implementation.</li>
+<li>Added an option in the preferences screen to adjust the UI size.</li>
+<li>Fixed a regression in the way duplicate deck names were handled.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2117beta2" id="changes-in-2117beta2">Changes in 2.1.17beta2</a></h3>
+<p>Build ff6b58c2.</p>
+<p>A Windows-only build, built with the latest toolkit version. Please report
+any improvements or regressions.</p>
+<p>If you've previously customized the DPI/Scaling as described on
+https://apps.ankiweb.net/docs/knownissues21.html#text-size, please try
+running the beta without the customizations and report how you go.</p>
+<p>In beta 2:</p>
+<ul>
+<li>Alter the way DPI scaling is handled.</li>
+<li>Remove help button from some Window titles.</li>
+<li>Alter a change made in .16 that could break some editor add-ons.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2117beta1" id="changes-in-2117beta1">Changes in 2.1.17beta1</a></h3>
+<p>Build 81bdd860.</p>
+<p>A Windows-only build, built with the latest toolkit version. Please report
+any improvements or regressions.</p>
+<h3><a class="header" href="#changes-in-2116beta4" id="changes-in-2116beta4">Changes in 2.1.16beta4</a></h3>
+<p>Build 4bc33e2f.</p>
+<ul>
+<li>Syncing should work properly now when you change timezones without visiting AnkiWeb.</li>
+<li>Ensure learning cards in filtered decks with 'order due' show in template order.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2116beta3" id="changes-in-2116beta3">Changes in 2.1.16beta3</a></h3>
+<p>Build bb62a3c1.</p>
+<ul>
+<li>Remove the 'experimental' label from the new scheduler.</li>
+<li>New installs default to the new scheduler.</li>
+<li>You can now import and export decks with scheduling enabled in the new scheduler.</li>
+<li>Fix bold/italics/underline pasting that broke in the last beta.</li>
+<li>Hide empty Default deck in deck picker (thanks to Arthur).</li>
+<li>Add an extra day to the interval when using Easy on a relearning card.</li>
+<li>Preserve surrounding styling when making cloze deletions.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2116beta2" id="changes-in-2116beta2">Changes in 2.1.16beta2</a></h3>
+<p>Build bceb4feb.</p>
+<ul>
+<li>Pasting now includes formatting by default.</li>
+<li>Preserve foreground/background color when pasting.</li>
+<li>Preserve bold/italic/underline when pasting from Google Docs.</li>
+<li>When pasting with the shift key, bold/italics/underline is also stripped.</li>
+<li>Draw preview screen more quickly.</li>
+<li>Fix race condition in preview screen (thanks to Håkon).</li>
+<li>Use --exact with dvsvgm to prevent truncated subscript/superscript in LaTeX.</li>
+<li>Various small fixes.</li>
+</ul>
+<p>Thanks to Arthur for contributing a number of fixes:</p>
+<ul>
+<li>Newly created cards could be given the wrong due number.</li>
+<li>Sticky fields were ignored when closing the add card window.</li>
+<li>Adding a note type forced a full sync.</li>
+<li>Remove shortcut keys from translations.</li>
+<li>Documentation changes for translators.</li>
+<li>Case not being preserved when changing a deck's parent.</li>
+<li>Hide default deck in other screens when empty.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2116beta1" id="changes-in-2116beta1">Changes in 2.1.16beta1</a></h3>
+<p>Build 2e7b7560.</p>
+<p>This build updates the translation handling as part of the move to Crowdin.
+Some languages were missing some plural forms in the past - in order to prevent
+errors, the missing forms have been copied from the highest previous plural.</p>
+<p>If you'd like to contribute to the translation effort, please see
+https://apps.ankiweb.net/docs/manual.html#translating-anki</p>
+<p>Also:</p>
+<ul>
+<li>Fix qtwebengineprocesses not being cleaned up when stats window closed.</li>
+<li>Allow smaller window when editing current card.</li>
+<li>Support pasting multiple URLs at once.</li>
+<li>Add ability to force software rendering on old Macs (thanks to Mike)</li>
+<li>A fix for case insensitive field name handling in find&amp;replace (thanks to lovac42)</li>
+<li>Fix non-integer intervals being imported from Mnemosyne (thanks to Blauelf)</li>
+<li>Clear undo queue when changing scheduler (thanks to lovac42)</li>
+<li>Default to not closing add window (thanks to Aidan)</li>
+<li>Sort new cards separately when sorting by ease (thanks to Arthur)</li>
+<li>Fix a bug in the V2 scheduler.</li>
+<li>Properly handle backslashes in the replacement section of Find&amp;Replace.</li>
+</ul>
+<h3><a class="header" href="#changes-in-2115beta1" id="changes-in-2115beta1">Changes in 2.1.15beta1</a></h3>
+<p>Build 442df9d6.</p>
+<p>This is a candidate for the next stable release, so if you encounter any
+issues, please let me know as soon as you can.</p>
+<ul>
+<li>The V2 scheduler now fully randomizes review cards due on a given day.</li>
+<li>Fix add-ons errors on Windows when profile path was short.</li>
+<li>Fix flag changes in Browse screen not syncing.</li>
+<li>Cleanup recording wav file when recording canceled.</li>
+<li>Fix the window icon on Wayland (thanks to Wilco).</li>
+<li>Add a progress bar to media deletion.</li>
+<li>Other minor changes.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="anki2.1.41.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="anki2.1.41.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
