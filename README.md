@@ -48,6 +48,21 @@ https://forums.ankiweb.net/c/beta-testing/
 
 ## Changes
 
+### Changes in 2.1.41beta3
+
+Build b3b40933 / 2021-02-12.
+
+- Sidebar:
+
+  - Drop multiple selection, and switch back to the old clicking behaviour.
+    Multiple selection can be tackled again in a future update.
+  - "Due" now shows only cards due that day.
+  - Added "Overdue" item.
+
+- "Set due" now leaves the review intervals alone unless '!' is provided.
+- Fix stale preview in card layout screen (thanks to Henrik).
+- Ignore manually scheduled cards in hour graph.
+
 ### Changes in 2.1.41beta2
 
 Build 599d4634 / 2021-02-09.
