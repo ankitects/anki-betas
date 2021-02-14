@@ -183,29 +183,27 @@ section</a> of the user forums.</p>
 from AnkiWeb.</p>
 <h2><a class="header" href="#via-pypipip" id="via-pypipip">Via PyPI/pip</a></h2>
 <p>If you have a local Python 3.8 or 3.9 installation, you can also install beta
-builds directly with pip. Use something like the following, ensuring <code>2.1.99b1</code>
-matches the version you want. Note that 'beta' should be 'b' when using pip, eg
-2.1.99beta1 -&gt; 2.1.99b1.</p>
+builds directly with pip.</p>
 <p>Anki will be installed in a local Python folder called 'pyenv'.</p>
 <details>
 <summary>Mac/Linux</summary>
 <pre><code>$ python3.8 -m venv pyenv
-$ . pyenv/bin/activate
-(pyenv) $ pip install --upgrade pip
-(pyenv) $ pip install --upgrade aqt==2.1.99b2
-(pyenv) $ pyenv/bin/anki
+$ pyenv/bin/pip install --upgrade pip
+$ pyenv/bin/pip install --upgrade --pre aqt
+$ pyenv/bin/anki
 </code></pre>
-<p>Repeat the last step if you wish to start the same Anki version again.</p>
+<p>Repeat the last step if you wish to start the same Anki version again.
+Repeat the last two steps to update to the latest beta and start it.</p>
 </details>
 <details>
 <summary>Windows</summary>
 <pre><code>c:\&gt; python -m venv \pyenv
-c:\&gt; \pyenv\scripts\activate.bat
-c:\&gt; pip install --upgrade pip
-c:\&gt; pip install aqt==2.1.99b2
+c:\&gt; pyenv\scripts\pip install --upgrade pip
+c:\&gt; pyenv\scripts\pip install --upgrade --pre aqt
 c:\&gt; pyenv\scripts\anki
 </code></pre>
-<p>Repeat the last step if you wish to start the same Anki version again.</p>
+<p>Repeat the last step if you wish to start the same Anki version again.
+Repeat the last two steps to update to the latest beta and start it.</p>
 </details>
 <h1><a class="header" href="#changes-in-2141" id="changes-in-2141">Changes in 2.1.41</a></h1>
 <h2><a class="header" href="#beta-3" id="beta-3">Beta 3</a></h2>
