@@ -20,9 +20,7 @@ from AnkiWeb.
 ## Via PyPI/pip
 
 If you have a local Python 3.8 or 3.9 installation, you can also install beta
-builds directly with pip. Use something like the following, ensuring `2.1.99b1`
-matches the version you want. Note that 'beta' should be 'b' when using pip, eg
-2.1.99beta1 -> 2.1.99b1.
+builds directly with pip.
 
 Anki will be installed in a local Python folder called 'pyenv'.
 
@@ -31,13 +29,13 @@ Anki will be installed in a local Python folder called 'pyenv'.
 
 ```
 $ python3.8 -m venv pyenv
-$ . pyenv/bin/activate
-(pyenv) $ pip install --upgrade pip
-(pyenv) $ pip install --upgrade aqt==2.1.99b2
-(pyenv) $ pyenv/bin/anki
+$ pyenv/bin/pip install --upgrade pip
+$ pyenv/bin/pip install --upgrade --pre aqt
+$ pyenv/bin/anki
 ```
 
 Repeat the last step if you wish to start the same Anki version again.
+Repeat the last two steps to update to the latest beta and start it.
 
 </details>
 
@@ -46,12 +44,12 @@ Repeat the last step if you wish to start the same Anki version again.
 
 ```
 c:\> python -m venv \pyenv
-c:\> \pyenv\scripts\activate.bat
-c:\> pip install --upgrade pip
-c:\> pip install aqt==2.1.99b2
+c:\> pyenv\scripts\pip install --upgrade pip
+c:\> pyenv\scripts\pip install --upgrade --pre aqt
 c:\> pyenv\scripts\anki
 ```
 
 Repeat the last step if you wish to start the same Anki version again.
+Repeat the last two steps to update to the latest beta and start it.
 
 </details>
