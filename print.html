@@ -206,6 +206,30 @@ c:\&gt; pyenv\scripts\anki
 Repeat the last two steps to update to the latest beta and start it.</p>
 </details>
 <h1><a class="header" href="#changes-in-2141" id="changes-in-2141">Changes in 2.1.41</a></h1>
+<h2><a class="header" href="#add-on-notes" id="add-on-notes">Add-On Notes</a></h2>
+<p>Add-on authors, please see <a href="https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390">https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390</a></p>
+<h2><a class="header" href="#beta-4" id="beta-4">Beta 4</a></h2>
+<p>Build 46e9720e / 2021-02-21.</p>
+<p>Scheduler updates:</p>
+<ul>
+<li>The V1-&gt;V2 upgrade process no longer resets cards that are in learning, or
+removes cards from filtered decks.</li>
+<li>Users on the old scheduler will now see a message at the top of the deck
+list prompting them to update to the Anki 2.1 scheduler.</li>
+<li>New users will see the message too. Enabling it by default would be a smoother
+experience, but that needs to wait until AnkiDroid 2.15 is released as stable,
+with support for the newer timezone handling.</li>
+<li>There is no option to downgrade to the V1 scheduler anymore, though you can
+still do so by downgrading to an older Anki version first.</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Fix tag replacement/deletion matching substrings (thanks to Abdo).</li>
+<li>Fix images not shrinking to fit in fields (thanks to Henrik).</li>
+<li>Fix &quot;saved searches&quot; getting selected when clicking in empty area of sidebar
+(thanks to BlueGreekMagick).</li>
+<li>Reposition dialog's &quot;shift cards&quot; option now defaults to off.</li>
+</ul>
 <h2><a class="header" href="#beta-3" id="beta-3">Beta 3</a></h2>
 <p>Build b3b40933 / 2021-02-12.</p>
 <ul>
