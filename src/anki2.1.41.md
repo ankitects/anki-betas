@@ -1,5 +1,33 @@
 # Changes in 2.1.41
 
+## Add-On Notes
+
+Add-on authors, please see <https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390>
+
+## Beta 4
+
+Build 46e9720e / 2021-02-21.
+
+Scheduler updates:
+
+- The V1->V2 upgrade process no longer resets cards that are in learning, or
+  removes cards from filtered decks.
+- Users on the old scheduler will now see a message at the top of the deck
+  list prompting them to update to the Anki 2.1 scheduler.
+- New users will see the message too. Enabling it by default would be a smoother
+  experience, but that needs to wait until AnkiDroid 2.15 is released as stable,
+  with support for the newer timezone handling.
+- There is no option to downgrade to the V1 scheduler anymore, though you can
+  still do so by downgrading to an older Anki version first.
+
+Fixes:
+
+- Fix tag replacement/deletion matching substrings (thanks to Abdo).
+- Fix images not shrinking to fit in fields (thanks to Henrik).
+- Fix "saved searches" getting selected when clicking in empty area of sidebar
+  (thanks to BlueGreekMagick).
+- Reposition dialog's "shift cards" option now defaults to off.
+
 ## Beta 3
 
 Build b3b40933 / 2021-02-12.
