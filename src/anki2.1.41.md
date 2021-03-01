@@ -4,6 +4,20 @@
 
 Add-on authors, please see <https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390>
 
+## Beta 5
+
+Build 14cc81f8 / 2021-03-01.
+
+- Filtered deck screen now has a link to show cards not matched by search (thanks to Rumo, Abdo).
+- Support Alt+number to switch between clozes in the card layout screen (thanks to Abdo).
+- Fix images not shrinking to fit editor field (thanks to Henrik).
+- Fix a focus handling issue in the editor (thanks to Henrik).
+- Fix incorrect review counts in the 2.1 scheduler when parent decks had a
+  smaller limit than their children.
+- Fix early review cards remaining in new queue after upgrading to 2.1 scheduler.
+- Improve error message when trying to nest under a filtered deck (thanks to Rumo).
+- Use monospace font in HTML editor.
+
 ## Beta 4
 
 Build 46e9720e / 2021-02-21.
