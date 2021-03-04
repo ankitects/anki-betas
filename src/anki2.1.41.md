@@ -4,6 +4,14 @@
 
 Add-on authors, please see <https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390>
 
+## Beta 7
+
+Build 3ba08d11 / 2021-03-04.
+
+- Fix a freeze when answering a card with a missing parent deck.
+- Fix an error that could occur when syncing between 2.1.41 and older
+  clients, then downgrading.
+
 ## Beta 6
 
 Build 92aaaf71 / 2021-03-02.
