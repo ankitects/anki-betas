@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Intro &amp; Downloads - Anki Betas</title>
+        <title>Changes in 2.1.43 - Anki Betas</title>
         
         
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html" class="active">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,51 +167,36 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#intro--downloads" id="intro--downloads">Intro &amp; Downloads</a></h1>
-<h2><a class="header" href="#downgrading" id="downgrading">Downgrading</a></h2>
-<p>Beta versions may sometimes change your collection in a way that is not
-compatible with older Anki versions. If you wish to switch back to an older
-version, please go to the <code>File&gt;Switch Profile</code> menu item, and click on
-<code>Downgrade &amp; Quit</code> in the current version first.</p>
-<h2><a class="header" href="#problems" id="problems">Problems</a></h2>
-<p>If you run into any issues, please let us know on the <a href="https://forums.ankiweb.net/c/beta-testing/">beta testing
-section</a> of the user forums.</p>
-<h2><a class="header" href="#packaged-builds" id="packaged-builds">Packaged Builds</a></h2>
-<p>You can get the <a href="https://apps.ankiweb.net/downloads/beta/">latest packaged beta</a>
-from AnkiWeb.</p>
-<h2><a class="header" href="#via-pypipip" id="via-pypipip">Via PyPI/pip</a></h2>
-<p>If you have a local Python 3.8 or 3.9 installation, you can also install beta
-builds directly with pip.</p>
-<p>Anki will be installed in a local Python folder called 'pyenv'.</p>
-<details>
-<summary>Mac/Linux</summary>
-<pre><code>$ python3.8 -m venv pyenv
-$ pyenv/bin/pip install --upgrade pip
-$ pyenv/bin/pip install --upgrade --pre aqt
-$ pyenv/bin/anki
-</code></pre>
-<p>Repeat the last step if you wish to start the same Anki version again.
-Repeat the last two steps to update to the latest beta and start it.</p>
-</details>
-<details>
-<summary>Windows</summary>
-<pre><code>c:\&gt; python -m venv \pyenv
-c:\&gt; pyenv\scripts\pip install --upgrade pip
-c:\&gt; pyenv\scripts\pip install --upgrade --pre aqt
-c:\&gt; pyenv\scripts\anki
-</code></pre>
-<p>Repeat the last step if you wish to start the same Anki version again.
-Repeat the last two steps to update to the latest beta and start it.</p>
-</details>
+                        <h1><a class="header" href="#changes-in-2143" id="changes-in-2143">Changes in 2.1.43</a></h1>
+<h2><a class="header" href="#beta-1" id="beta-1">Beta 1</a></h2>
+<p>Build 0fbae6bc / 2021-03-27.</p>
+<ul>
+<li>The reviewing screen will now wait for up to 100ms
+for images to load before showing, and waits until images
+have been loaded before scrolling to the answer.</li>
+<li>The default fade-in on the review screen has been removed.</li>
+<li>Fix DB check incorrectly identifying an issue after
+lapsing a card with a non-zero interval % in the V1 scheduler.</li>
+<li>Fix editing toolbar being initially active (thanks to Henrik).</li>
+<li>Fix some error messages (thanks to Rumo).</li>
+<li>Fix expand/collapse triggering click in sidebar (thanks to BlueGreenMagick).</li>
+<li>Update translations, thanks to the translators.</li>
+<li>Fix &quot;Forgot Card&quot; message.</li>
+<li>Fix deck list not updating after deleting.</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
                         
-                            <a rel="next" href="anki2.1.43.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="anki2.1.41.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -223,9 +208,13 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                    <a rel="prev" href="intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
                 
-                    <a rel="next" href="anki2.1.43.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="anki2.1.41.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
