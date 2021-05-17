@@ -48,6 +48,7 @@ Editor changes, thanks to Henrik:
 - The toolbar's icons and style have been updated.
 - The editor now provides bullet and numbered list buttons.
 - The editor now provides buttons to control text alignment and indent.
+- Sticky fields can now be toggled on/off from the editing screen.
 - Editor shortcuts are handled differently, and the current approach does not
   work well on non-QWERTY keymaps. This will likely change before a stable release.
 - A new API is available for add-ons, but this has not been finalized yet.
