@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Changes in 2.1.41 - Anki Betas</title>
+        <title>Changes in 2.1.45 - Anki Betas</title>
         
         
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html" class="active">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html" class="active">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,179 +167,95 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#changes-in-2141" id="changes-in-2141">Changes in 2.1.41</a></h1>
-<h2><a class="header" href="#add-on-notes" id="add-on-notes">Add-On Notes</a></h2>
-<p>Add-on authors, please see <a href="https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390">https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390</a></p>
-<h2><a class="header" href="#beta-7" id="beta-7">Beta 7</a></h2>
-<p>Build 3ba08d11 / 2021-03-04.</p>
+                        <h1><a class="header" href="#changes-in-2145" id="changes-in-2145">Changes in 2.1.45</a></h1>
+<h2><a class="header" href="#alpha-1" id="alpha-1">Alpha 1</a></h2>
+<p>Build 10bfb95f / 2021-05-17.</p>
+<p>There have been a lot of under-the-hood changes in this release, and there may
+be some rough edges at the moment.</p>
+<p>Undo handling:</p>
 <ul>
-<li>Fix a freeze when answering a card with a missing parent deck.</li>
-<li>Fix an error that could occur when syncing between 2.1.41 and older
-clients, then downgrading.</li>
+<li>Most actions now support multiple undo steps. You can change a card template,
+delete some notes, bury a card, then undo each of those steps if you wish.</li>
+<li>Actions that support multiple undo steps will now save the changes
+immediately, meaning that if Anki crashes, the changes you made in the last
+few minutes will no longer be lost.</li>
+<li>Actions that don't support the new undo handling (eg, Check Database), will
+clear the undo history.</li>
+<li>Add-ons will clear the undo history if they modify the database directly, or
+use routines that don't support undoing. There are some new routines available
+to add-ons to make operations undoable, but add-ons may need to be updated
+to use them.</li>
 </ul>
-<h2><a class="header" href="#beta-6" id="beta-6">Beta 6</a></h2>
-<p>Build 92aaaf71 / 2021-03-02.</p>
+<p>Scheduling changes:</p>
 <ul>
-<li>Fix 2.1 scheduler review counts not matching deck list.</li>
-<li>Fix a focusing issue in the editor (thanks to Henrik).</li>
+<li>An <a href="./2021-scheduler.html">experimental new scheduler</a>.</li>
+<li>The deck list now shows the learning count separately.</li>
+<li>On new collections, the v2 scheduler is now the default.</li>
 </ul>
-<h2><a class="header" href="#beta-5" id="beta-5">Beta 5</a></h2>
-<p>Build 14cc81f8 / 2021-03-01.</p>
+<p>Browser changes, thanks to Rumo:</p>
 <ul>
-<li>Filtered deck screen now has a link to show cards not matched by search (thanks to Rumo, Abdo).</li>
-<li>Support Alt+number to switch between clozes in the card layout screen (thanks to Abdo).</li>
-<li>Fix images not shrinking to fit editor field (thanks to Henrik).</li>
-<li>Fix a focus handling issue in the editor (thanks to Henrik).</li>
-<li>Fix incorrect review counts in the 2.1 scheduler when parent decks had a
-smaller limit than their children.</li>
-<li>Fix early review cards remaining in new queue after upgrading to 2.1 scheduler.</li>
-<li>Improve error message when trying to nest under a filtered deck (thanks to Rumo).</li>
-<li>Use monospace font in HTML editor.</li>
+<li>The sidebar now has two modes. The default allows clicking on items to search
+for them. The other mode allows you to select multiple items at once, so you
+can drag &amp; drop or delete multiple items.</li>
+<li>The browse screen can now be toggled between showing cards,
+and showing notes.</li>
+<li>When showing notes, some columns will show an aggregate over all the
+cards of a note.</li>
+<li>Column rendering has been moved into the backend, and will be faster than
+before (but is still limited by the speed of the graphics toolkit).</li>
+<li>A fair bit of the browser code has been changed, and some add-ons like the
+&quot;Advanced Browser&quot; add-on will need to be updated to support the new approach.</li>
 </ul>
-<h2><a class="header" href="#beta-4" id="beta-4">Beta 4</a></h2>
-<p>Build 46e9720e / 2021-02-21.</p>
-<p>Scheduler updates:</p>
+<p>Editor changes, thanks to Henrik:</p>
 <ul>
-<li>The V1-&gt;V2 upgrade process no longer resets cards that are in learning, or
-removes cards from filtered decks.</li>
-<li>Users on the old scheduler will now see a message at the top of the deck
-list prompting them to update to the Anki 2.1 scheduler.</li>
-<li>New users will see the message too. Enabling it by default would be a smoother
-experience, but that needs to wait until AnkiDroid 2.15 is released as stable,
-with support for the newer timezone handling.</li>
-<li>There is no option to downgrade to the V1 scheduler anymore, though you can
-still do so by downgrading to an older Anki version first.</li>
+<li>The editing toolbar has been reimplemented in a way that will allow easier
+improvements in the future.</li>
+<li>The toolbar's icons and style have been updated.</li>
+<li>The editor now provides bullet and numbered list buttons.</li>
+<li>The editor now provides buttons to control text alignment and indent.</li>
+<li>Editor shortcuts are handled differently, and the current approach does not
+work well on non-QWERTY keymaps. This will likely change before a stable release.</li>
+<li>A new API is available for add-ons, but this has not been finalized yet.</li>
 </ul>
-<p>Fixes:</p>
+<p>State handling:</p>
 <ul>
-<li>Fix tag replacement/deletion matching substrings (thanks to Abdo).</li>
-<li>Fix images not shrinking to fit in fields (thanks to Henrik).</li>
-<li>Fix &quot;saved searches&quot; getting selected when clicking in empty area of sidebar
-(thanks to BlueGreekMagick).</li>
-<li>Reposition dialog's &quot;shift cards&quot; option now defaults to off.</li>
+<li>When you make changes, the user interface should update more consistently now.
+Adding a new tag to a note will update the sidebar in the Browse screen for
+example, and when you review a card that is shown there, the columns will
+update.</li>
+<li>The Browse screen no longer refreshes a search automatically. When you make a
+change, the column text may update, but the number of rows will not change.
+Deleted cards show &quot;(deleted)&quot; until you search again.</li>
+<li>The main window no longer shows a &quot;waiting for editing to finish&quot; screen. When
+you make changes such as editing a note, the main window will dim, and will
+automatically refresh when you return to it.</li>
 </ul>
-<h2><a class="header" href="#beta-3" id="beta-3">Beta 3</a></h2>
-<p>Build b3b40933 / 2021-02-12.</p>
+<p>The deck options screen has been reimplemented:</p>
 <ul>
-<li>
-<p>Sidebar:</p>
-<ul>
-<li>Drop multiple selection, and switch back to the old clicking behaviour.
-Multiple selection can be tackled again in a future update.</li>
-<li>&quot;Due&quot; now shows only cards due that day.</li>
-<li>Added &quot;Overdue&quot; item.</li>
-</ul>
-</li>
-<li>
-<p>&quot;Set due&quot; now leaves the review intervals alone unless '!' is provided.</p>
-</li>
-<li>
-<p>Fix stale preview in card layout screen (thanks to Henrik).</p>
-</li>
-<li>
-<p>Ignore manually scheduled cards in hour graph.</p>
-</li>
-</ul>
-<h2><a class="header" href="#beta-2" id="beta-2">Beta 2</a></h2>
-<p>Build 599d4634 / 2021-02-09.</p>
-<ul>
-<li>
-<p>Sidebar changes:</p>
-<ul>
-<li>Multiple selection. Currently only works with tag and deck drag&amp;drop.</li>
-<li>Ctrl/Alt/Shift options to add/modify the search now require
-a right click instead of a left click, to avoid conflicts with multiple
-selection.</li>
-<li>Move &quot;Current Deck&quot; to Decks</li>
-<li>Click on Decks to show whole collection.</li>
-<li>Click on Flags to show any flag.</li>
-<li>Click on Tags to show all non-empty tags.</li>
-<li>Added &quot;Untagged&quot; under Tags.</li>
-</ul>
-</li>
-<li>
-<p>&quot;Set Due Date&quot; changes:</p>
-<ul>
-<li>Interval can optionally be reset for review cards.</li>
-<li>Input now remembered.</li>
-</ul>
-</li>
-<li>
-<p>Editor tweaks to make things easier for add-ons (thanks to Henrik).</p>
-</li>
-<li>
-<p>Fix slowdown after large &quot;check media&quot; report.</p>
-</li>
-<li>
-<p>Fix 'rsbackend' errors in some add-ons.</p>
-</li>
-<li>
-<p>Fix compatibility with fastbar add-on.</p>
-</li>
-<li>
-<p>Markdown rendering of deck config is now opt-in - once enabled,
-it will change the handling of both the overview and congrats screen.
-When not enabled, the congrats screen will not show the description.</p>
-</li>
-</ul>
-<h2><a class="header" href="#beta-1" id="beta-1">Beta 1</a></h2>
-<p>Build 704b5e58 / 2021-02-07.</p>
-<p>This beta includes all the changes from 2.1.39beta1 - please see
-its change notes as well.</p>
-<p>Changes since 2.1.39beta1:</p>
-<ul>
-<li>
-<p>The editor's code has been reworked, thanks to Henrik:</p>
-<ul>
-<li><code>&lt;br&gt;</code> tags will now be used by default instead of the previous <code>&lt;div&gt;</code>
-tags, which solves some issues with multiple lines in cloze deletions and
-MathJax.</li>
-<li>Invalid field content can no longer spill out into the editing area.</li>
-<li>Other behind-the-scenes changes have been made at the same time, and some
-add-ons that alter the editor will need updating.</li>
-</ul>
-</li>
-<li>
-<p>Browser sidebar improvements:</p>
-<ul>
-<li>Added a search bar, thanks to Abdo.</li>
-<li>The remaining items in the Filter button have been moved into the sidebar, and
-the Filter button removed.</li>
-<li>Tags and decks can now be dragged and dropped.</li>
-<li>Each section can now be expanded/collapsed.</li>
-<li>Add-ons that were adjusting the sidebar or filter button may need updating.</li>
-</ul>
-</li>
-<li>
-<p>Search improvements, thanks to Rumo:</p>
-<ul>
-<li>Filtered decks can now be created from a browser search, and vice versa.</li>
-<li>Better ergonomics for developers.</li>
-</ul>
-</li>
-<li>
-<p>Reworked the Reschedule tool:</p>
-<ul>
-<li>Split into separate &quot;Forget&quot; and &quot;Set Due Date&quot; actions</li>
-<li>&quot;Set Due Date&quot; now <a href="https://github.com/ankitects/anki/commit/704b5e581a70089798f0f4742640fde4a3f1a507">adjusts intervals</a> of review cards, instead of resetting them.</li>
-<li>Changed the &quot;Delete Tags&quot; shortcut; Ctrl+Shift+D now changes the due date.</li>
-<li>Added the action to the review screen as well.</li>
-</ul>
-</li>
+<li>(Re)learning steps are now shown with units, eg 10m or 4d.</li>
+<li>Deck options are now shown on one scrollable page.</li>
+<li>Extra help is available for most options.</li>
+<li>It is easy to see at a glance which options have been changed from the
+default, and individual options can be reverted to the default setting.</li>
+<li>Warnings will be shown for some common issues (eg, review limit too low
+compared to new cards).</li>
+<li>Some of the more advanced options have been moved to a separate &quot;Advanced&quot;
+section.</li>
+<li>The old options can be accessed with a Shift+click, since it will take a while
+for add-ons to be updated to support the new screen.</li>
+<li>The deck description is now accessible via a button in the overview screen,
+instead of via the deck options.</li>
 </ul>
 <p>Other changes:</p>
 <ul>
-<li>The tags field in the editor now autocompletes from anywhere in a tag name,
-not only the start.</li>
-<li>The title bar on Macs will now turn dark when night mode is activated.</li>
-<li>Improvements to the graphs, thanks to Henrik.</li>
-<li>Add deck description back to congrats screen, with <a href="https://forums.ankiweb.net/t/anki-2-1-39-deck-descriptions-gone-after-finished-studying/7261">caveats</a>.</li>
-<li>Add opus to media list in editor.</li>
-<li>Other improvements with thanks to Rumo, Henrik, Abdo, Arthur and Maksim.</li>
-</ul>
-<p>For developers:</p>
-<ul>
-<li>Almost all of the Python codebase now has type hints. 🎉</li>
+<li>Numerous behind-the-scenes improvements from Henrik and Rumo.</li>
+<li>The Find&amp;Replace option in the Browse screen can now be used on tags as well.</li>
+<li>You can now choose which add-ons you want to update (thanks to BlueGreenMagick).</li>
+<li>Fix text with single quote not being escaped in export (thanks to Ryan).</li>
+<li>Other fixes and improvements thanks to Abdo, Glutanimate, Arthur and Shaun.</li>
+<li>The Card Info screen ignores manual rescheduling when calculating the average
+time.</li>
+<li>Performance improvements and other miscellaneous fixes.</li>
 </ul>
 
                     </main>
@@ -347,13 +263,13 @@ not only the start.</li>
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="anki2.1.43.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="2021-scheduler.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="older.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="anki2.1.44.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -365,13 +281,13 @@ not only the start.</li>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="anki2.1.43.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="2021-scheduler.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="older.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="anki2.1.44.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
