@@ -2,7 +2,7 @@
 
 The 2021 scheduler ("v3") is an update to the [Anki 2.1
 scheduler](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html) ("v2"). An
-alpha version will become available when 2.1.45alpha1 is released. The design is
+alpha version was introduced in [2.1.45alpha1](./anki2.1.45.md). The design is
 not set in stone yet, so feedback on what you like and don't like would be
 appreciated.
 
