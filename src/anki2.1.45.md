@@ -1,5 +1,24 @@
 # Changes in 2.1.45
 
+## Alpha 2
+
+Build b9a4908b / 2021-05-19.
+
+- Fixed a bug that was causing the Undo action to force a full sync.
+- You can now redo undone actions. The Redo menu item will be hidden
+  for actions that don't support the new undo code, including reviews in
+  the v1/v2 scheduer.
+- Changed the shortcut for Undo in the Browse screen to match the main
+  window.
+- Fixed an error when switching between cards and notes modes (thanks to Rumo).
+- Various tweaks to the appearance of the deck options screen (some thanks to
+  Henrik).
+- Fixed Custom Study when the v3 scheduler is enabled.
+- Compatibility tweaks to fix the breakage of some add-ons.
+
+The Fields/Cards text in the editor is currently a bit large, and it'll likely
+be tweaked in the future.
+
 ## Alpha 1
 
 Build 10bfb95f / 2021-05-17.
