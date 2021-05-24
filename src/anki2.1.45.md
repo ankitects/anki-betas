@@ -1,5 +1,27 @@
 # Changes in 2.1.45
 
+## Alpha 3
+
+Build f91f00a5 / 2021-05-24.
+
+- Fix new ease not being applied when failing a review card in the v3 scheduler.
+- The `[...]` in cloze deletions is now read as "blank" by TTS (thanks to Rumo).
+- Flags can now be renamed in the sidebar (thanks to Rumo).
+- Improvements to the handling of shortcuts in the editor (thanks to Henrik).
+- Improve cards/notes switch appearance (thanks to Rumo & Kleinerpirat).
+- Various tweaks to the Deck Options screen.
+- When Browse screen is opened, default to the first sidebar mode.
+- Add night mode styling to 'type in the answer' box, and improve legibility
+  of comparison.
+- Fix Find&Replace searching in incorrect field.
+- Fix missing cumulative overlays in graphs.
+- Fix strange characters in Deck Options titlebar (thanks to Abdo).
+- Fix Unbury action missing cards in child decks.
+- Fix wrong stock note type being added (thanks to Abdo).
+- Horizontal scrolling in the browse screen is less jumpy (thanks to Rumo).
+- Report changed card count when changing deck/flag in Browse screen.
+- Fix actions like a sort column change clearing the undo history.
+
 ## Alpha 2
 
 Build b9a4908b / 2021-05-19.
