@@ -207,18 +207,21 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 </details>
 <h1><a class="header" href="#2021-scheduler" id="2021-scheduler">2021 Scheduler</a></h1>
 <p>The 2021 scheduler (&quot;v3&quot;) is an update to the <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">Anki 2.1
-scheduler</a> (&quot;v2&quot;). An
-alpha version was introduced in <a href="./anki2.1.45.html">2.1.45alpha1</a>. The design is
-not set in stone yet, so feedback on what you like and don't like would be
-appreciated.</p>
+scheduler</a> (&quot;v2&quot;). It was
+first introduced in <a href="./anki2.1.45.html">2.1.45alpha1</a> and AnkiMobile 2.0.75beta2.
+The design is not set in stone yet, so feedback on what you like and don't like
+would be appreciated.</p>
 <h2><a class="header" href="#compatibility" id="compatibility">Compatibility</a></h2>
 <p>The v2 and v3 schedulers are compatible. You can switch between them without
 a full sync, and it will not cause scheduling issues if you use v3 on one
 device and sync to another device that is using v2.</p>
+<p>It will likely be some time until AnkiDroid and AnkiWeb support the v3 scheduler
+directly. In the mean time, they will continue to show cards using the v2 scheduler,
+regardless of the setting you have chosen.</p>
 <p>Because the v3 scheduler uses a different approach to gathering and sorting
 cards, there is a good chance that the number of cards you are presented with
-will differ if you switch back and forth - so while it should not cause scheduling
-issues, it may be a little confusing.</p>
+will differ if you switch back and forth - so while it is safe to switch back and
+forth, you should not expect the daily counts to match.</p>
 <h2><a class="header" href="#changes" id="changes">Changes</a></h2>
 <h3><a class="header" href="#undo" id="undo">Undo</a></h3>
 <p>The v3 scheduler uses Anki's new undo infrastructure - you can answer a card,
@@ -251,7 +254,7 @@ new cards will be introduced.</p>
 <h3><a class="header" href="#sorting" id="sorting">Sorting</a></h3>
 <p>Additional deck options have been added to control the order new cards and
 reviews are presented in. New cards can be mixed from multiple decks, and
-reviews can be ordered by interval.</p>
+reviews can optionally be ordered by interval or subdeck.</p>
 <p>When burying is disabled, it is now possible to control whether siblings are
 shown together or not.</p>
 <p>The options controlling the mixing of new cards and interday learning cards have
@@ -327,11 +330,50 @@ it's possible there are still bugs lurking. Please make backups, and consider us
 add-on like <a href="https://ankiweb.net/shared/info/2179254157">this one</a> to keep an eye on your
 scheduling until it has received more testing.</p>
 <h2><a class="header" href="#trying-it-out" id="trying-it-out">Trying it out</a></h2>
-<p>The following command in the debug console can be used to activate it:</p>
-<pre><code class="language-python">mw.col.set_2021_test_scheduler_enabled(True)
-</code></pre>
-<p>Replace <code>True</code> with <code>False</code> to disable it again.</p>
+<p>As of 2.1.45alpha4 and AnkiMobile 2.0.75beta2, the scheduler can be enabled and disabled in the Preferences screen.</p>
 <h1><a class="header" href="#changes-in-2145" id="changes-in-2145">Changes in 2.1.45</a></h1>
+<h2><a class="header" href="#alpha-4" id="alpha-4">Alpha 4</a></h2>
+<p>Build be9bbf21 / 2021-06-02.</p>
+<p>v3 scheduler changes:</p>
+<ul>
+<li>The v3 scheduler can now be toggled in the Preferences screen.</li>
+<li>Review cards can now optionally be shown in subdeck order.</li>
+<li>Fixed 'deck priority' for new cards not following subdeck order.</li>
+</ul>
+<p>Other features/behaviour changes:</p>
+<ul>
+<li>Updated text colour and highlight colour buttons, thanks to Henrik and Matthias.</li>
+<li>Added 3 new flag colours, thanks to Rumo.</li>
+<li>Sidebar items can be dragged onto the Saved Searches area to add them as a favourite,
+thanks to Rumo.</li>
+<li>Added a new menu item to clone the current deck options.</li>
+<li>Custom study now limits the tag selection to 100 tags or fewer.</li>
+<li>Extra checks are now done when updating a card template, such as detecting when
+a cloze notetype is missing a cloze directive, or two templates have identical question
+sides, thanks to Rumo.</li>
+<li>Editor toolbar styling improvements, thanks to Henrik and Matthias.</li>
+<li>The &quot;sync required&quot; indicator is now updated immediately, and will turn off
+if you undo the first change made after a sync.</li>
+<li>Removed the superfluous &quot;keep input&quot; option from the Fields dialog.</li>
+<li>When opening deck option from the study screen, you'll now be asked which deck
+you want if the card is in a subdeck.</li>
+<li>Support ctrl+numpad enter to add cards.</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Fixed an error/crash occurring when timeboxing was enabled.</li>
+<li>Fixed deck options screen mishandling steps shorter a minute.</li>
+<li>Fixed remembered tags not being applied to subsequently-added notes.</li>
+<li>Fixed an error being shown when exporting cards/decks with a non-default deck configuration.</li>
+<li>Fixed changes to the current field not being saved when saving the deck options.</li>
+<li>Fixes for building on linux-arm64 (thanks to qubist-pixel-ux).</li>
+<li>Force x11 mode when the packaged build is run on a system that tells Qt to use Wayland,
+as Wayland is not currently supported by the packaged build.</li>
+<li>When a fatal error occurs, close Anki instead of allowing it to remain in a stuck state.</li>
+<li>Fix formatting of some error messages, thanks to Rumo.</li>
+<li>Various behinds-the-scenes changes thanks to Henrik and Rumo.</li>
+<li>Miscellaneous other changes.</li>
+</ul>
 <h2><a class="header" href="#alpha-3" id="alpha-3">Alpha 3</a></h2>
 <p>Build f91f00a5 / 2021-05-24.</p>
 <ul>

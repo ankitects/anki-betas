@@ -169,18 +169,21 @@
                     <main>
                         <h1><a class="header" href="#2021-scheduler" id="2021-scheduler">2021 Scheduler</a></h1>
 <p>The 2021 scheduler (&quot;v3&quot;) is an update to the <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">Anki 2.1
-scheduler</a> (&quot;v2&quot;). An
-alpha version was introduced in <a href="./anki2.1.45.html">2.1.45alpha1</a>. The design is
-not set in stone yet, so feedback on what you like and don't like would be
-appreciated.</p>
+scheduler</a> (&quot;v2&quot;). It was
+first introduced in <a href="./anki2.1.45.html">2.1.45alpha1</a> and AnkiMobile 2.0.75beta2.
+The design is not set in stone yet, so feedback on what you like and don't like
+would be appreciated.</p>
 <h2><a class="header" href="#compatibility" id="compatibility">Compatibility</a></h2>
 <p>The v2 and v3 schedulers are compatible. You can switch between them without
 a full sync, and it will not cause scheduling issues if you use v3 on one
 device and sync to another device that is using v2.</p>
+<p>It will likely be some time until AnkiDroid and AnkiWeb support the v3 scheduler
+directly. In the mean time, they will continue to show cards using the v2 scheduler,
+regardless of the setting you have chosen.</p>
 <p>Because the v3 scheduler uses a different approach to gathering and sorting
 cards, there is a good chance that the number of cards you are presented with
-will differ if you switch back and forth - so while it should not cause scheduling
-issues, it may be a little confusing.</p>
+will differ if you switch back and forth - so while it is safe to switch back and
+forth, you should not expect the daily counts to match.</p>
 <h2><a class="header" href="#changes" id="changes">Changes</a></h2>
 <h3><a class="header" href="#undo" id="undo">Undo</a></h3>
 <p>The v3 scheduler uses Anki's new undo infrastructure - you can answer a card,
@@ -213,7 +216,7 @@ new cards will be introduced.</p>
 <h3><a class="header" href="#sorting" id="sorting">Sorting</a></h3>
 <p>Additional deck options have been added to control the order new cards and
 reviews are presented in. New cards can be mixed from multiple decks, and
-reviews can be ordered by interval.</p>
+reviews can optionally be ordered by interval or subdeck.</p>
 <p>When burying is disabled, it is now possible to control whether siblings are
 shown together or not.</p>
 <p>The options controlling the mixing of new cards and interday learning cards have
@@ -289,10 +292,7 @@ it's possible there are still bugs lurking. Please make backups, and consider us
 add-on like <a href="https://ankiweb.net/shared/info/2179254157">this one</a> to keep an eye on your
 scheduling until it has received more testing.</p>
 <h2><a class="header" href="#trying-it-out" id="trying-it-out">Trying it out</a></h2>
-<p>The following command in the debug console can be used to activate it:</p>
-<pre><code class="language-python">mw.col.set_2021_test_scheduler_enabled(True)
-</code></pre>
-<p>Replace <code>True</code> with <code>False</code> to disable it again.</p>
+<p>As of 2.1.45alpha4 and AnkiMobile 2.0.75beta2, the scheduler can be enabled and disabled in the Preferences screen.</p>
 
                     </main>
 
