@@ -1,10 +1,10 @@
 # 2021 Scheduler
 
 The 2021 scheduler ("v3") is an update to the [Anki 2.1
-scheduler](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html) ("v2"). An
-alpha version was introduced in [2.1.45alpha1](./anki2.1.45.md). The design is
-not set in stone yet, so feedback on what you like and don't like would be
-appreciated.
+scheduler](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html) ("v2"). It was
+first introduced in [2.1.45alpha1](./anki2.1.45.md) and AnkiMobile 2.0.75beta2.
+The design is not set in stone yet, so feedback on what you like and don't like
+would be appreciated.
 
 ## Compatibility
 
@@ -12,10 +12,14 @@ The v2 and v3 schedulers are compatible. You can switch between them without
 a full sync, and it will not cause scheduling issues if you use v3 on one
 device and sync to another device that is using v2.
 
+It will likely be some time until AnkiDroid and AnkiWeb support the v3 scheduler
+directly. In the mean time, they will continue to show cards using the v2 scheduler,
+regardless of the setting you have chosen.
+
 Because the v3 scheduler uses a different approach to gathering and sorting
 cards, there is a good chance that the number of cards you are presented with
-will differ if you switch back and forth - so while it should not cause scheduling
-issues, it may be a little confusing.
+will differ if you switch back and forth - so while it is safe to switch back and
+forth, you should not expect the daily counts to match.
 
 ## Changes
 
@@ -56,7 +60,7 @@ new cards will be introduced.
 
 Additional deck options have been added to control the order new cards and
 reviews are presented in. New cards can be mixed from multiple decks, and
-reviews can be ordered by interval.
+reviews can optionally be ordered by interval or subdeck.
 
 When burying is disabled, it is now possible to control whether siblings are
 shown together or not.
@@ -158,10 +162,4 @@ scheduling until it has received more testing.
 
 ## Trying it out
 
-The following command in the debug console can be used to activate it:
-
-```python
-mw.col.set_2021_test_scheduler_enabled(True)
-```
-
-Replace `True` with `False` to disable it again.
+As of 2.1.45alpha4 and AnkiMobile 2.0.75beta2, the scheduler can be enabled and disabled in the Preferences screen.

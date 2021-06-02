@@ -1,5 +1,49 @@
 # Changes in 2.1.45
 
+## Alpha 4
+
+Build be9bbf21 / 2021-06-02.
+
+v3 scheduler changes:
+
+- The v3 scheduler can now be toggled in the Preferences screen.
+- Review cards can now optionally be shown in subdeck order.
+- Fixed 'deck priority' for new cards not following subdeck order.
+
+Other features/behaviour changes:
+
+- Updated text colour and highlight colour buttons, thanks to Henrik and Matthias.
+- Added 3 new flag colours, thanks to Rumo.
+- Sidebar items can be dragged onto the Saved Searches area to add them as a favourite,
+  thanks to Rumo.
+- Added a new menu item to clone the current deck options.
+- Custom study now limits the tag selection to 100 tags or fewer.
+- Extra checks are now done when updating a card template, such as detecting when
+  a cloze notetype is missing a cloze directive, or two templates have identical question
+  sides, thanks to Rumo.
+- Editor toolbar styling improvements, thanks to Henrik and Matthias.
+- The "sync required" indicator is now updated immediately, and will turn off
+  if you undo the first change made after a sync.
+- Removed the superfluous "keep input" option from the Fields dialog.
+- When opening deck option from the study screen, you'll now be asked which deck
+  you want if the card is in a subdeck.
+- Support ctrl+numpad enter to add cards.
+
+Fixes:
+
+- Fixed an error/crash occurring when timeboxing was enabled.
+- Fixed deck options screen mishandling steps shorter a minute.
+- Fixed remembered tags not being applied to subsequently-added notes.
+- Fixed an error being shown when exporting cards/decks with a non-default deck configuration.
+- Fixed changes to the current field not being saved when saving the deck options.
+- Fixes for building on linux-arm64 (thanks to qubist-pixel-ux).
+- Force x11 mode when the packaged build is run on a system that tells Qt to use Wayland,
+  as Wayland is not currently supported by the packaged build.
+- When a fatal error occurs, close Anki instead of allowing it to remain in a stuck state.
+- Fix formatting of some error messages, thanks to Rumo.
+- Various behinds-the-scenes changes thanks to Henrik and Rumo.
+- Miscellaneous other changes.
+
 ## Alpha 3
 
 Build f91f00a5 / 2021-05-24.
