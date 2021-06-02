@@ -4,6 +4,10 @@
 
 Build be9bbf21 / 2021-06-02.
 
+Known issues:
+
+- Changes to styling section in card layout screen not reflected in preview.
+
 v3 scheduler changes:
 
 - The v3 scheduler can now be toggled in the Preferences screen.
