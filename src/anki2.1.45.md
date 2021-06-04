@@ -125,6 +125,7 @@ Browser changes, thanks to Rumo:
   and showing notes.
 - When showing notes, some columns will show an aggregate over all the
   cards of a note.
+- Added an introduced:x search to locate cards first studied in the last x days.
 - Column rendering has been moved into the backend, and will be faster than
   before (but is still limited by the speed of the graphics toolkit).
 - A fair bit of the browser code has been changed, and some add-ons like the
