@@ -1,5 +1,27 @@
 # Changes in 2.1.45
 
+## Beta 1
+
+Build 5bd2dc65 / 2021-06-08.
+
+Changes:
+
+- Added an option to the v3 scheduler to sort new cards in reverse order.
+- Added a Card Info option to the review screen.
+- Reduced editor toolbar size on Macs.
+- When opening the Browse screen with an active study card, the whole
+  deck is now shown (thanks to Rumo).
+
+Fixes:
+
+- Fixed audio getting stuck when pausing near end (thanks to kelciour).
+- Fixed current review card sometimes changing when making edits.
+- Fixed deck options tooltip appearance (thanks to Matthias).
+- Fixed selected deck not being honored when importing text file.
+- Fixed styling changes not being reflected in preview.
+- Fixed timebox window getting stuck when it appeared at start of study.
+- Fixed various links to the manual (thanks to cherryblossom000).
+
 ## Alpha 4
 
 Build be9bbf21 / 2021-06-02.
