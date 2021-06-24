@@ -30,7 +30,6 @@ Other features:
 - Support system SSL certs on Linux.
 - Improved add-on support for the new deck options screen (thanks to Henrik).
 - Changed v3 scheduler label from "experimental" to "beta".
-- Added Card Info action to reviewer (shortcut: i)
 
 Fixes:
 
