@@ -1,5 +1,54 @@
 # Changes in 2.1.45
 
+## Beta 2
+
+Build b693bdbf / 2021-06-24.
+
+Browser updates:
+
+- Added an option in the Preferences screen to customize the starting
+  search text (eg, to start with "deck:current").
+- More reliably scroll to the current card.
+- When opening the Browse screen during review, all cards in the
+  deck are shown (thanks to Rumo).
+- New tag icons and associated backend work (thanks to Henrik).
+
+HTML editor, thanks to Henrik:
+
+- Now appears inline, instead of in a separate pop-up.
+- Supports syntax highlighting, and showing opening/closing tags.
+
+Change notetype:
+
+- Supports multiple undo.
+- Can match old and new fields by name.
+- Allows mapping a source field to more than one destination
+  fields, allowing you to clone the contents of a field.
+
+Other features:
+
+- Warn user when they attempt to use cloze markers inappropriately
+  (thanks to Rumo).
+- Support system SSL certs on Linux.
+- Improved add-on support for the new deck options screen (thanks to Henrik).
+- Changed v3 scheduler label from "experimental" to "beta".
+
+Fixes:
+
+- Fixed resource leak in sound code (thanks to Kelciour).
+- Fixed incorrect font on Windows (thanks to Kelciour).
+- Fixed crash when pressing the copy shortcut with no active selection.
+- Make the color selector inactive when no field is selected (thanks to hkr),
+  and make it apply color immediately (thanks to Henrik).
+- Fixed creation of filtered decks from Browser (thanks to Rumo).
+- Fixed escaping of hyphens in searches (thanks to Rumo).
+- Fixed 'Set Due Date' not remembering provided input.
+- Fixed incorrect card count when removing multiple templates.
+- Fixed an issue compiling on recent Python 3.9 installs.
+- Fixed field pin status being forgotten when opening Cards screen.
+- Reduce chances of a flash when revealing answer on cards with images.
+- Miscellaneous other changes.
+
 ## Beta 1
 
 Build 5bd2dc65 / 2021-06-08.
