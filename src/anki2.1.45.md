@@ -9,8 +9,6 @@ Browser updates:
 - Added an option in the Preferences screen to customize the starting
   search text (eg, to start with "deck:current").
 - More reliably scroll to the current card.
-- When opening the Browse screen during review, all cards in the
-  deck are shown (thanks to Rumo).
 - New tag icons and associated backend work (thanks to Henrik).
 
 HTML editor, thanks to Henrik:
@@ -32,6 +30,7 @@ Other features:
 - Support system SSL certs on Linux.
 - Improved add-on support for the new deck options screen (thanks to Henrik).
 - Changed v3 scheduler label from "experimental" to "beta".
+- Added Card Info action to reviewer (shortcut: i)
 
 Fixes:
 
