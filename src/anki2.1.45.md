@@ -4,6 +4,12 @@
 
 Build b693bdbf / 2021-06-24.
 
+Known issues:
+
+- If adding cards with tags, toggling a pin will clear the saved tags, but
+  they will still be shown in the UI. To make sure the tags are still added,
+  to subsequent cards, please click in the tags area after toggling a pin.
+
 Browser updates:
 
 - Added an option in the Preferences screen to customize the starting
