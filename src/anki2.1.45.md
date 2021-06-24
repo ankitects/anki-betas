@@ -44,7 +44,7 @@ Fixes:
 - Fixed 'Set Due Date' not remembering provided input.
 - Fixed incorrect card count when removing multiple templates.
 - Fixed an issue compiling on recent Python 3.9 installs.
-- Fixed field pin status being forgotten when opening Cards screen.
+- Fixed field pin status being forgotten when opening Cards screen (thanks to Henrik).
 - Reduce chances of a flash when revealing answer on cards with images.
 - Miscellaneous other changes.
 
