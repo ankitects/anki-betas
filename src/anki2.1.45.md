@@ -1,5 +1,19 @@
 # Changes in 2.1.45
 
+## Beta 3
+
+Build 18843e71 / 2021-06-25.
+
+- Fixed remembered tags not being applied to subsequently added
+  cards after actions like toggling a pin/deleting a deck/etc.
+- Fixed toggling of night mode preview in day mode (thanks to hkr).
+- Fixed incorrect field content issue with HTML editor (thanks to Henrik).
+- Exclude deck and tag expand/collapse from undo queue; fixes automatic
+  scroll to Current Deck in Browser.
+- Fixed .apkg importer allowing import of V2 collection with scheduling
+  into a V1 collection.
+- Disable cloze and math buttons in HTML editor.
+
 ## Beta 2
 
 Build b693bdbf / 2021-06-24.
