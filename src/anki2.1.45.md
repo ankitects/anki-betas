@@ -1,9 +1,10 @@
 # Changes in 2.1.45
 
-## Beta 4
+## Beta 5
 
-Build 45b790ec / 2021-06-29.
+Build 0f7a230f / 2021-06-29.
 
+- Fixed the packaging issue in beta 4 that was preventing startup.
 - Show deck options in two columns on wider screens (thanks to Matthias, Hikaru
   & Henrik).
 - Sidebar search now scrolls to first match (thanks to Abdo & Rumo).
