@@ -1,5 +1,22 @@
 # Changes in 2.1.45
 
+## Beta 4
+
+Build 45b790ec / 2021-06-29.
+
+- Show deck options in two columns on wider screens (thanks to Matthias, Hikaru
+  & Henrik).
+- Sidebar search now scrolls to first match (thanks to Abdo & Rumo).
+- Reverted a change that was causing some add-ons that modify the reviewing screen
+  to break.
+- Show error before uploading if collection larger than AnkiWeb's limits.
+- Handle invalid card template numbers in DB check.
+- Fixed error message when confirming cloze deletion in normal note type.
+- Fixed expanding/collapsing tags triggering refresh (thanks to Rumo).
+- Fixed night mode preset dialogs in deck options (thanks to Henrik).
+- Fixed some issues with preserving selected item
+  in sidebar (thanks to Rumo).
+
 ## Beta 3
 
 Build 18843e71 / 2021-06-25.
