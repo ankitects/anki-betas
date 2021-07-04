@@ -1,5 +1,14 @@
 # Changes in 2.1.45
 
+## Beta 6
+
+Build 6ffa7440 / 2021-07-04.
+
+- Pre-load images on answer side (thanks to Hikaru).
+- Updated sidebar and editor icons (thanks to Henrik).
+- Fixed revert confirmation sometimes getting stuck in deck options (thanks to Henrik).
+- Fixed unnecessary percent-escaping of images in HTML editor.
+
 ## Beta 5
 
 Build 0f7a230f / 2021-06-29.
