@@ -1,5 +1,18 @@
 # Changes in 2.1.45
 
+## Release Candidate 1
+
+Build 60f6fccc / 2021-07-13.
+
+- Fix red duplicate background being included in copy+paste (thanks to Hikaru).
+- Fix copy/cut affecting whole line in HTML editor (thanks to Hikaru).
+- Fix spurious error when importing v1 scheduling deck into v1 collection.
+- Tweaks to deck config/editor API (thanks to Henrik).
+- An add-on compat fix for the browser (thanks to Rumo).
+- More friendly message when importing v2 deck into v1 collection.
+- Allow cloze: in non-cloze notetypes for now.
+- Miscellaneous other changes.
+
 ## Beta 6
 
 Build 6ffa7440 / 2021-07-04.
