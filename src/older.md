@@ -7,7 +7,7 @@ bugfixes from beta 1, but feature changes have been cut, and will come back in
 2.1.40. This is expected to be released as stable without further changes,
 if no issues are found in the next couple of days.
 
-Please make sure to [downgrade](https://changes.ankiweb.net/#/) with beta 1,
+Please make sure to [downgrade](https://changes.ankiweb.net/) with beta 1,
 before opening beta 2.
 
 Changes since 2.1.38 stable:
@@ -174,7 +174,7 @@ This is nearing a stable release, so if you encounter any issues please
 let us know on the forums.
 
 - The handling of wildcards and escape characters in search [has been
-  reworked](https://docs.ankiweb.net/#/searching?id=matching-special-characters)
+  reworked](https://docs.ankiweb.net/searching.html)
   to be more consistent, thanks to Rumo.
 - Various fixes to translation handling, such as the translation
   of early startup messages, thanks to Abdo.
@@ -983,7 +983,7 @@ Build 77912aa2/c70badcd/a4764e2a.
   when pasting in night mode.
 - On macOS, the system theme will be used when dark mode is active.
 - Qt has been downgraded to 5.13 on macOS to facilitate the above.
-- The audio replay buttons are smaller by default, and can be styled using fill and stroke on '.replay-button svg [circle|path]'.
+- The audio replay buttons are smaller by default, and can be styled using fill and stroke on `.replay-button svg [circle|path]`.
 - Night mode now also used .night_mode - if you notice any problems
   with this please let me know.
 - Disabled elastic scrolling in webviews to work around a Qt bug.
@@ -1083,8 +1083,8 @@ Build c9a46268.
 Build fa564772.
 
 - Changes to the way cards are rendered that will break some add-ons - please
-  see https://anki.tenderapp.com/discussions/beta-testing/1706-anki-2120-updates-to-card-template-rendering[here]
-- A new hook system for add-ons - please see https://anki.tenderapp.com/discussions/beta-testing/1704-anki-2120-updates-to-the-hook-system[here]
+  see [here](https://anki.tenderapp.com/discussions/beta-testing/1706-anki-2120-updates-to-card-template-rendering)
+- A new hook system for add-ons - please see [here](https://anki.tenderapp.com/discussions/beta-testing/1704-anki-2120-updates-to-the-hook-system)
 - Tweaks to the 'tag updated notes' feature (thanks to Erez)
 - Fix cards being sorted in wrong order when added after the note was created (thanks to Arthur)
 
