@@ -1,5 +1,23 @@
 # Changes in 2.1.45
 
+ ## Release Candidate 2
+
+Build e7189f4a / 2021-07-24.
+
+- Fix numpad enter in type answer screen.
+- Avoid escaping non-Latin text in image filenames (thanks in part to Hikaru).
+- Find and replace / rename with parent options in the sidebar (thanks to Rumo).
+- F3/F4 in card layout screen go to next/previous template (thanks to Evandro).
+- Set due date uses the deck's configured starting ease (thanks to cyphar).
+- Fix preview shortcut when fields not focused (thanks to Henrik).
+- Strip invalid unicode from filenames in media check.
+- Fix skipped entry on mousedown in browser search history (thanks to Rumo).
+- Handle buggy hooks in the reviewer (thanks to Henrik & Hikaru).
+- Fix flags not being excluded on export (thanks to Alex).
+- Fix notes with missing cards causing a fatal browser error.
+- As always, thanks to the translators who've contributed translations.
+- Minor other changes.
+
 ## Release Candidate 1
 
 Build 60f6fccc / 2021-07-13.
