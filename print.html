@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -179,6 +179,43 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2147"><a class="header" href="#changes-in-2147">Changes in 2.1.47</a></h1>
+<h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
+<p>Build dffa38c4 / 2021-08-22.</p>
+<p>Changes to the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">v3 scheduler</a>:</p>
+<ul>
+<li>Interday learning cards are included in the learning count again, instead of
+the review count.</li>
+<li>Interday learning cards are still affected by the review limit. The review
+limit is first applied to interday learning cards, then reviews, and finally
+new cards.</li>
+<li>Filtered decks with rescheduling disabled now log reviews, so the reviews will
+appear in your graphs.</li>
+<li>Added an option to sort reviews by ascending/descending ease.</li>
+<li>Fixed an issue where an error message could appear after undoing/redoing a mix
+of reviews and other changes.</li>
+<li>Fixed custom scheduling not working.</li>
+</ul>
+<p>Other changes:</p>
+<ul>
+<li>The &quot;timebox finished&quot; message is now shown on card answer, instead of after
+revealing the next card. This should also address an issue where the message
+popped up outside of review.</li>
+<li>Added shortcut for Forget in the Browse screen.</li>
+<li>Fixed an error being shown when there was no current deck.</li>
+<li>Fixed incorrect quoting in duplicate search (thanks to Abdo).</li>
+<li>Fixed deck options inverting the &quot;replay question when showing answer&quot; option.</li>
+<li>Fixed an issue with ampersands in the Add Cards history button (thanks to
+Arthur).</li>
+<li>Fixed handling of audio/video tags (thanks to Hikaru).</li>
+<li>Fixed errors playing audio when computer was slow to respond (thanks to Kelciour).</li>
+<li>Fixed preferences screen not updating undo menu, and causing an error when
+subsequently reviewing a card in the v3 scheduler.</li>
+<li>Fixed case changes being ignored in tag rename.</li>
+<li>Fixed error shown when DB check run on corrupt collection.</li>
+<li>Fixed deck options prompt showing the default deck, instead of the correct one.</li>
+<li>Fixed reposition command ignoring suspended cards.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2145"><a class="header" href="#changes-in-2145">Changes in 2.1.45</a></h1>
 <h2 id="release-candidate-2"><a class="header" href="#release-candidate-2">Release Candidate 2</a></h2>
 <p>Build e7189f4a / 2021-07-24.</p>
@@ -197,7 +234,7 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <li>As always, thanks to the translators who've contributed translations.</li>
 <li>Minor other changes.</li>
 </ul>
-<h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-1"><a class="header" href="#release-candidate-1-1">Release Candidate 1</a></h2>
 <p>Build 60f6fccc / 2021-07-13.</p>
 <ul>
 <li>Fix red duplicate background being included in copy+paste (thanks to Hikaru).</li>
