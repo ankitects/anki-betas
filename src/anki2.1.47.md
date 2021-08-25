@@ -8,9 +8,8 @@ Changes to the [v3 scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html):
 
 - Interday learning cards are included in the learning count again, instead of
   the review count.
-- Interday learning cards are still affected by the review limit. The review
-  limit is first applied to interday learning cards, then reviews, and finally
-  new cards.
+- Interday learning cards are still affected by the review limit. Interday
+  learning cards are fetched first, then reviews, and finally new cards.
 - Filtered decks with rescheduling disabled now log reviews, so the reviews will
   appear in your graphs.
 - Added an option to sort reviews by ascending/descending ease.
