@@ -8,7 +8,8 @@ Build 3077a1f9 / 2021-08-25.
 
 For add-on developers:
 
-- The Svelte components Anki exports should now work correctly in add-ons.
+- The Svelte components Anki exports should now work correctly in add-ons,
+provided they exclude svelte when bundling.
 - WithShortcut is now also available.
 
 ## Release Candidate 1
