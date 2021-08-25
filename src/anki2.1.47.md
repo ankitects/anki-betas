@@ -1,6 +1,17 @@
 # Changes in 2.1.47
 
- ## Release Candidate 1
+## Release Candidate 2
+
+Build 3077a1f9 / 2021-08-25.
+
+- Fixed calendar graph day labels showing incorrectly in some timezones.
+
+For add-on developers:
+
+- The Svelte components Anki exports should now work correctly in add-ons.
+- WithShortcut is now also available.
+
+## Release Candidate 1
 
 Build dffa38c4 / 2021-08-22.
 
