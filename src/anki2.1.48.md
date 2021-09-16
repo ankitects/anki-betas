@@ -1,5 +1,13 @@
 # Changes in 2.1.48
 
+## Release Candidate 2
+
+Build 466d67ca / 2021-09-16.
+
+- Possible fix for reported sound issues.
+- Wayland is off by default again, but can be enabled by starting Anki with
+  ANKI_WAYLAND=1 defined.
+
 ## Release Candidate 1
 
 Build af2ec0b9 / 2021-09-13.
