@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Intro &amp; Downloads - Anki Betas</title>
+        <title>Changes in 2.1.50 - Anki Betas</title>
         <!-- Custom HTML head -->
         
 
@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html" class="active">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -140,48 +140,124 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="intro--downloads"><a class="header" href="#intro--downloads">Intro &amp; Downloads</a></h1>
-<h2 id="downgrading"><a class="header" href="#downgrading">Downgrading</a></h2>
-<p>Beta versions may sometimes change your collection in a way that is not
-compatible with older Anki versions. If you wish to switch back to an older
-version, please go to the <code>File&gt;Switch Profile</code> menu item, and click on
-<code>Downgrade &amp; Quit</code> in the current version first.</p>
-<h2 id="problems"><a class="header" href="#problems">Problems</a></h2>
-<p>If you run into any issues, please let us know on the <a href="https://forums.ankiweb.net/c/beta-testing/">beta testing
-section</a> of the user forums.</p>
-<h2 id="packaged-builds"><a class="header" href="#packaged-builds">Packaged Builds</a></h2>
-<p>You can get the <a href="https://apps.ankiweb.net/downloads/beta/">latest packaged beta</a>
-from AnkiWeb.</p>
-<h2 id="via-pypipip"><a class="header" href="#via-pypipip">Via PyPI/pip</a></h2>
-<p>If you have a local Python 3.8 or 3.9 installation, you can also install beta
-builds directly with pip.</p>
-<p>Anki will be installed in a local Python folder called 'pyenv'.</p>
-<details>
-<summary>Mac/Linux</summary>
-<pre><code>$ python3.8 -m venv pyenv
-$ pyenv/bin/pip install --upgrade pip
-$ pyenv/bin/pip install --upgrade --pre aqt
-$ pyenv/bin/anki
+                        <h1 id="changes-in-2150"><a class="header" href="#changes-in-2150">Changes in 2.1.50</a></h1>
+<h2 id="beta-1"><a class="header" href="#beta-1">Beta 1</a></h2>
+<p>Build TBA / 2021-TBA</p>
+<p>Toolkit changes:</p>
+<ul>
+<li>The packaged builds now come in separate Qt5 and Qt6 versions.</li>
+<li>Qt6 is a recently-updated version of the toolkit. It fixes some issues that
+existed in Qt5, but it may introduce new problems. We recommend you try it first.</li>
+<li>Qt5 is the graphics toolkit used to build previous Anki releases. If you find
+that Qt5 works for you and Qt6 does not, please let us know.</li>
+</ul>
+<p>Windows:</p>
+<ul>
+<li>Windows 10 or 11 is required. If you are still using Windows 7 or 8, 2.1.49 is
+the last build that will install on your system.</li>
+</ul>
+<p>macOS:</p>
+<ul>
+<li>There is now a native build for Apple Silicon. It currently does not support
+recording, and the audio playback still uses Intel binaries, so you will still
+need Rosetta installed. Only Qt6 is available for Apple Silicon.</li>
+<li>The Qt6 x86 build requires macOS 10.14.</li>
+<li>The Qt5 x86 build requires macOS 10.13.4.</li>
+</ul>
+<p>Linux:</p>
+<ul>
+<li>The Linux builds need zstd to decompress, eg:</li>
+</ul>
+<pre><code class="language-sh">sudo apt install zstd
+tar axf anki-2.1.50-linux-qt6.tar.zstd
 </code></pre>
-<p>Repeat the last step if you wish to start the same Anki version again.
-Repeat the last two steps to update to the latest beta and start it.</p>
-</details>
-<details>
-<summary>Windows</summary>
-<pre><code>c:\&gt; python -m venv \pyenv
-c:\&gt; pyenv\scripts\pip install --upgrade pip
-c:\&gt; pyenv\scripts\pip install --upgrade --pre aqt
-c:\&gt; pyenv\scripts\anki
-</code></pre>
-<p>Repeat the last step if you wish to start the same Anki version again.
-Repeat the last two steps to update to the latest beta and start it.</p>
-</details>
+<ul>
+<li>The x86 builds require glibc 2.27 or later.</li>
+<li>A wheel is now provided for ARM64 Linux, and requires glibc 2.31 or greater. A
+packaged version is not currently possible.</li>
+<li>No fcitx driver or gtk2 theme is bundled with the packaged builds at the moment.</li>
+</ul>
+<p>Major editor changes, mostly thanks to Henrik:</p>
+<ul>
+<li>A redesigned tag editor.</li>
+<li>MathJax has a live preview.</li>
+<li>HTML and rendered text can be viewed at the same time.</li>
+<li>Images can be resized within the editor.</li>
+<li>Fields can now have an optional description/tooltip assigned to them (thanks
+to Matthias, Henrik &amp; Rumo).</li>
+<li>Lots of behind-the-scenes changes. Because of the extensive changes, some
+add-ons that modify the editing screen will have broken.</li>
+</ul>
+<p>Scheduler changes:</p>
+<ul>
+<li>The V1 scheduler is no longer supported. If you have not yet updated to V2 or V3,
+you will be prompted to update when you attempt to review cards in 2.1.50.</li>
+<li>The V3 scheduler will be declared stable when 2.1.50 is released.</li>
+<li>The V3 scheduler applies fuzz more evenly now, especially with smaller
+intervals (thanks to Rumo).</li>
+<li>Fixed new cards not decrementing the review limit in V3, which could lead to
+more new cards appearing after the review limit was reached.</li>
+</ul>
+<p>Other new features:</p>
+<ul>
+<li>Anki will now switch to day or night mode automatically depending on your
+system settings. You can force day or night mode in the Preferences screen.
+(thanks in large part to Rumo).</li>
+<li>The Card Info screen now updates automatically as you change to a different
+card (thanks to Rumo).</li>
+<li>Added a shortcut to make Anki full screen (F11 or Cmd+Ctrl+F, thanks to Rumo).</li>
+<li>Added tooltips to some browser columns (thanks to Rumo).</li>
+<li>Added an option to add/remove sidebar tag to selected notes (thanks to Rumo).</li>
+</ul>
+<p>Other improvements:</p>
+<ul>
+<li>Improvements to the Change Notetype screen (thanks to Matthias).</li>
+<li>Improved performance with large selections in the Browse screen (thanks to Rumo).</li>
+<li>Fixed the deck list showing up blank in collections with many expanded decks.</li>
+<li>Changed the &quot;Previous Card Info&quot; shortcut to avoid a conflict with language input.</li>
+<li>Possible fix for intermittent UI glitch on initial startup (thanks to Evandro).</li>
+<li>Flip sidebar location in RTL mode (thanks to Abdo).</li>
+<li>Fix deck name not updating after deck/notetype renamed (thanks to Hikaru).</li>
+<li>Fixed &quot;tag duplicates&quot; possibly operating on stale data (thanks to Ren).</li>
+<li>The Add Cards screen will no longer allow accidental triggering of main window
+shortcuts when it is open on a Mac (thanks to Rumo).</li>
+<li>Fixed incorrect card count in timebox after undo (thanks to Abdo).</li>
+<li>Fixed quotation of &quot;and&quot; and &quot;or&quot; in search (thanks to Rumo).</li>
+<li>Numerous other fixes and contributions, thanks to Rumo, Henrik, Abdo, Evandro,
+Arthur, Soren, BlueGreenMagick, Yoshi, Jakub, Gesa, blue-putty, stopendy, and
+zjosua.</li>
+</ul>
+<p>For developers:</p>
+<ul>
+<li>Anki now requires Python 3.9.</li>
+<li>Anki contains some compatibility shims that should allow many add-ons written
+for PyQt5 to work with PyQt6 as well (thanks to Aristotelis). These shims will
+not remain forever, so it is recommended that you update your add-ons to be
+compatible with Qt6 without shims. The two main breakages are the renaming of
+PyQt5 to PyQt6 (you can support both by importing from aqt.qt instead), and
+the requirement that <a href="https://github.com/ankitects/anki/pull/1406/commits/b5906305b37e2ed4767fd495a5ce74f629cb8ed1">enums are
+qualified</a>.</li>
+<li>If you’re using Qt Designer to generate UI files, the Qt5 and Qt6 versions
+need to be generated and bundled separately if you want to support both at once.</li>
+<li>PyQt6 does not support the Qt resource system (pyrcc was removed), so Anki now
+uses a different approach, and urls like <code>:/icons/foo.jpg</code> should become
+<code>icons:foo.jpg</code>.</li>
+<li>The way Anki is packaged has changed. Most of the standard library should be
+available now. If you notice any problems importing standard libraries that
+previously worked, please let us know.</li>
+<li>The aqt package no longer depends on PyQt, as either version 5 or 6 is supported.
+You can specify the major version you want when installing - eg 'pip install aqt[qt6]'</li>
+<li>manifest.json now supports a 'homepage' argument (thanks to Abdo)</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="next" href="2021-scheduler.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="prev" href="2021-scheduler.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="anki2.1.48.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -190,7 +266,10 @@ Repeat the last two steps to update to the latest beta and start it.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="next" href="2021-scheduler.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="prev" href="2021-scheduler.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="anki2.1.48.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

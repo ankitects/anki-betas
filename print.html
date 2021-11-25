@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -179,6 +179,115 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2150"><a class="header" href="#changes-in-2150">Changes in 2.1.50</a></h1>
+<h2 id="beta-1"><a class="header" href="#beta-1">Beta 1</a></h2>
+<p>Build TBA / 2021-TBA</p>
+<p>Toolkit changes:</p>
+<ul>
+<li>The packaged builds now come in separate Qt5 and Qt6 versions.</li>
+<li>Qt6 is a recently-updated version of the toolkit. It fixes some issues that
+existed in Qt5, but it may introduce new problems. We recommend you try it first.</li>
+<li>Qt5 is the graphics toolkit used to build previous Anki releases. If you find
+that Qt5 works for you and Qt6 does not, please let us know.</li>
+</ul>
+<p>Windows:</p>
+<ul>
+<li>Windows 10 or 11 is required. If you are still using Windows 7 or 8, 2.1.49 is
+the last build that will install on your system.</li>
+</ul>
+<p>macOS:</p>
+<ul>
+<li>There is now a native build for Apple Silicon. It currently does not support
+recording, and the audio playback still uses Intel binaries, so you will still
+need Rosetta installed. Only Qt6 is available for Apple Silicon.</li>
+<li>The Qt6 x86 build requires macOS 10.14.</li>
+<li>The Qt5 x86 build requires macOS 10.13.4.</li>
+</ul>
+<p>Linux:</p>
+<ul>
+<li>The Linux builds need zstd to decompress, eg:</li>
+</ul>
+<pre><code class="language-sh">sudo apt install zstd
+tar axf anki-2.1.50-linux-qt6.tar.zstd
+</code></pre>
+<ul>
+<li>The x86 builds require glibc 2.27 or later.</li>
+<li>A wheel is now provided for ARM64 Linux, and requires glibc 2.31 or greater. A
+packaged version is not currently possible.</li>
+<li>No fcitx driver or gtk2 theme is bundled with the packaged builds at the moment.</li>
+</ul>
+<p>Major editor changes, mostly thanks to Henrik:</p>
+<ul>
+<li>A redesigned tag editor.</li>
+<li>MathJax has a live preview.</li>
+<li>HTML and rendered text can be viewed at the same time.</li>
+<li>Images can be resized within the editor.</li>
+<li>Fields can now have an optional description/tooltip assigned to them (thanks
+to Matthias, Henrik &amp; Rumo).</li>
+<li>Lots of behind-the-scenes changes. Because of the extensive changes, some
+add-ons that modify the editing screen will have broken.</li>
+</ul>
+<p>Scheduler changes:</p>
+<ul>
+<li>The V1 scheduler is no longer supported. If you have not yet updated to V2 or V3,
+you will be prompted to update when you attempt to review cards in 2.1.50.</li>
+<li>The V3 scheduler will be declared stable when 2.1.50 is released.</li>
+<li>The V3 scheduler applies fuzz more evenly now, especially with smaller
+intervals (thanks to Rumo).</li>
+<li>Fixed new cards not decrementing the review limit in V3, which could lead to
+more new cards appearing after the review limit was reached.</li>
+</ul>
+<p>Other new features:</p>
+<ul>
+<li>Anki will now switch to day or night mode automatically depending on your
+system settings. You can force day or night mode in the Preferences screen.
+(thanks in large part to Rumo).</li>
+<li>The Card Info screen now updates automatically as you change to a different
+card (thanks to Rumo).</li>
+<li>Added a shortcut to make Anki full screen (F11 or Cmd+Ctrl+F, thanks to Rumo).</li>
+<li>Added tooltips to some browser columns (thanks to Rumo).</li>
+<li>Added an option to add/remove sidebar tag to selected notes (thanks to Rumo).</li>
+</ul>
+<p>Other improvements:</p>
+<ul>
+<li>Improvements to the Change Notetype screen (thanks to Matthias).</li>
+<li>Improved performance with large selections in the Browse screen (thanks to Rumo).</li>
+<li>Fixed the deck list showing up blank in collections with many expanded decks.</li>
+<li>Changed the &quot;Previous Card Info&quot; shortcut to avoid a conflict with language input.</li>
+<li>Possible fix for intermittent UI glitch on initial startup (thanks to Evandro).</li>
+<li>Flip sidebar location in RTL mode (thanks to Abdo).</li>
+<li>Fix deck name not updating after deck/notetype renamed (thanks to Hikaru).</li>
+<li>Fixed &quot;tag duplicates&quot; possibly operating on stale data (thanks to Ren).</li>
+<li>The Add Cards screen will no longer allow accidental triggering of main window
+shortcuts when it is open on a Mac (thanks to Rumo).</li>
+<li>Fixed incorrect card count in timebox after undo (thanks to Abdo).</li>
+<li>Fixed quotation of &quot;and&quot; and &quot;or&quot; in search (thanks to Rumo).</li>
+<li>Numerous other fixes and contributions, thanks to Rumo, Henrik, Abdo, Evandro,
+Arthur, Soren, BlueGreenMagick, Yoshi, Jakub, Gesa, blue-putty, stopendy, and
+zjosua.</li>
+</ul>
+<p>For developers:</p>
+<ul>
+<li>Anki now requires Python 3.9.</li>
+<li>Anki contains some compatibility shims that should allow many add-ons written
+for PyQt5 to work with PyQt6 as well (thanks to Aristotelis). These shims will
+not remain forever, so it is recommended that you update your add-ons to be
+compatible with Qt6 without shims. The two main breakages are the renaming of
+PyQt5 to PyQt6 (you can support both by importing from aqt.qt instead), and
+the requirement that <a href="https://github.com/ankitects/anki/pull/1406/commits/b5906305b37e2ed4767fd495a5ce74f629cb8ed1">enums are
+qualified</a>.</li>
+<li>If you’re using Qt Designer to generate UI files, the Qt5 and Qt6 versions
+need to be generated and bundled separately if you want to support both at once.</li>
+<li>PyQt6 does not support the Qt resource system (pyrcc was removed), so Anki now
+uses a different approach, and urls like <code>:/icons/foo.jpg</code> should become
+<code>icons:foo.jpg</code>.</li>
+<li>The way Anki is packaged has changed. Most of the standard library should be
+available now. If you notice any problems importing standard libraries that
+previously worked, please let us know.</li>
+<li>The aqt package no longer depends on PyQt, as either version 5 or 6 is supported.
+You can specify the major version you want when installing - eg 'pip install aqt[qt6]'</li>
+<li>manifest.json now supports a 'homepage' argument (thanks to Abdo)</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2148"><a class="header" href="#changes-in-2148">Changes in 2.1.48</a></h1>
 <h2 id="release-candidate-2"><a class="header" href="#release-candidate-2">Release Candidate 2</a></h2>
 <p>Build 466d67ca / 2021-09-16.</p>
@@ -369,7 +478,7 @@ and make it apply color immediately (thanks to Henrik).</li>
 <li>Reduce chances of a flash when revealing answer on cards with images.</li>
 <li>Miscellaneous other changes.</li>
 </ul>
-<h2 id="beta-1"><a class="header" href="#beta-1">Beta 1</a></h2>
+<h2 id="beta-1-1"><a class="header" href="#beta-1-1">Beta 1</a></h2>
 <p>Build 5bd2dc65 / 2021-06-08.</p>
 <p>Changes:</p>
 <ul>
@@ -565,14 +674,14 @@ time.</li>
 <li>Performance improvements and other miscellaneous fixes.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2144"><a class="header" href="#changes-in-2144">Changes in 2.1.44</a></h1>
-<h2 id="beta-1-1"><a class="header" href="#beta-1-1">Beta 1</a></h2>
+<h2 id="beta-1-2"><a class="header" href="#beta-1-2">Beta 1</a></h2>
 <p>Build b2b3275f / 2021-05-04.</p>
 <ul>
 <li>Search text is no longer automatically quoted/interspersed with ANDs.</li>
 <li>Fix two backslashes being treated as one in MathJax.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2143"><a class="header" href="#changes-in-2143">Changes in 2.1.43</a></h1>
-<h2 id="beta-1-2"><a class="header" href="#beta-1-2">Beta 1</a></h2>
+<h2 id="beta-1-3"><a class="header" href="#beta-1-3">Beta 1</a></h2>
 <p>Build 0fbae6bc / 2021-03-27.</p>
 <ul>
 <li>The reviewing screen will now wait for up to 100ms
@@ -703,7 +812,7 @@ it will change the handling of both the overview and congrats screen.
 When not enabled, the congrats screen will not show the description.</p>
 </li>
 </ul>
-<h2 id="beta-1-3"><a class="header" href="#beta-1-3">Beta 1</a></h2>
+<h2 id="beta-1-4"><a class="header" href="#beta-1-4">Beta 1</a></h2>
 <p>Build 704b5e58 / 2021-02-07.</p>
 <p>This beta includes all the changes from 2.1.39beta1 - please see
 its change notes as well.</p>
