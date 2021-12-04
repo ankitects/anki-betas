@@ -2,7 +2,7 @@
 
 ## Beta 1
 
-Build TBA / 2021-TBA
+Build 43c41d76 / 2021-12-04.
 
 Toolkit changes:
 
@@ -59,6 +59,7 @@ you will be prompted to update when you attempt to review cards in 2.1.50.
   intervals (thanks to Rumo).
 - Fixed new cards not decrementing the review limit in V3, which could lead to
   more new cards appearing after the review limit was reached.  
+- Fixed new cards not appearing in the correct order in the V3 scheduler.
 
 Other new features:
 
@@ -85,9 +86,9 @@ Other improvements:
 shortcuts when it is open on a Mac (thanks to Rumo).
 - Fixed incorrect card count in timebox after undo (thanks to Abdo).
 - Fixed quotation of "and" and "or" in search (thanks to Rumo).
-- Numerous other fixes and contributions, thanks to Rumo, Henrik, Abdo, Evandro,
-  Arthur, Soren, BlueGreenMagick, Yoshi, Jakub, Gesa, blue-putty, stopendy, and
-  zjosua.
+- Numerous other fixes and contributions, thanks to Rumo, Henrik, Abdo, Matthias,
+  Evandro, Arthur, Soren, BlueGreenMagick, Yoshi, Jakub, Gesa, blue-putty,
+  stopendy, and zjosua.
 
 For developers:
 
