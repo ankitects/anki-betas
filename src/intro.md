@@ -19,7 +19,7 @@ from AnkiWeb.
 
 ## Via PyPI/pip
 
-If you have a local Python 3.8 or 3.9 installation, you can also install beta
+If you have a local Python 3.9 installation, you can also install beta
 builds directly with pip.
 
 Anki will be installed in a local Python folder called 'pyenv'.
@@ -28,7 +28,7 @@ Anki will be installed in a local Python folder called 'pyenv'.
 <summary>Mac/Linux</summary>
 
 ```
-$ python3.8 -m venv pyenv
+$ python3.9 -m venv pyenv
 $ pyenv/bin/pip install --upgrade pip
 $ pyenv/bin/pip install --upgrade --pre aqt
 $ pyenv/bin/anki
