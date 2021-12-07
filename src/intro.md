@@ -30,12 +30,14 @@ Anki will be installed in a local Python folder called 'pyenv'.
 ```
 $ python3.9 -m venv pyenv
 $ pyenv/bin/pip install --upgrade pip
-$ pyenv/bin/pip install --upgrade --pre aqt
+$ pyenv/bin/pip install --upgrade --pre aqt[qt6]
 $ pyenv/bin/anki
 ```
 
 Repeat the last step if you wish to start the same Anki version again.
 Repeat the last two steps to update to the latest beta and start it.
+
+Remove `[qt6]` if you wish to use a compatible system-installed PyQt.
 
 </details>
 
@@ -45,7 +47,7 @@ Repeat the last two steps to update to the latest beta and start it.
 ```
 c:\> python -m venv \pyenv
 c:\> pyenv\scripts\pip install --upgrade pip
-c:\> pyenv\scripts\pip install --upgrade --pre aqt
+c:\> pyenv\scripts\pip install --upgrade --pre aqt[qt6]
 c:\> pyenv\scripts\anki
 ```
 
