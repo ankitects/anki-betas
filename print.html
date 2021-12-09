@@ -181,6 +181,52 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2150"><a class="header" href="#changes-in-2150">Changes in 2.1.50</a></h1>
+<h2 id="beta-2"><a class="header" href="#beta-2">Beta 2</a></h2>
+<p>Build db804d95 / 2021-12-09.</p>
+<p>macOS:</p>
+<ul>
+<li>The Apple Silicon build now support recording, and is fully native - Rosetta is no longer required.</li>
+<li>The Qt6 Intel build now has a minimum macOS requirement of 10.14.4.</li>
+</ul>
+<p>Linux:</p>
+<ul>
+<li>Fixed not being able to run Anki after running install.sh.</li>
+<li>Added an experimental arm64 packaged build. PyQt and Qt are not included, so
+you need to link in your distro's version of PyQt5.15. For example, after
+untarring the file and changing into the top level directory with the 'anki'
+executable:
+<pre><code># eg Debian 11:
+sudo apt install python3-pyqt5.{qtwebengine,qtmultimedia}
+ln -sf /usr/lib/python3/dist-packages/PyQt5 lib/
+
+# eg Fedora 34:
+sudo dnf install python3-qt5-webengine
+ln -sf /usr/lib64/python3.9/site-packages/PyQt5 lib/
+</code></pre>
+You may also be able to use the above technique for switching the x86_64
+builds to your system's PyQt version - just delete the PyQt5 or 6 folder
+before linking your system version in.</li>
+<li>Fcitx users: this build includes libraries that may allow the Qt5 build to
+work with Fcitx. Please let us know if they work for you or not.</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>Added a &quot;Create Copy&quot; option in the browse screen, to copy selected note's
+contents into the Add window (thanks to Rumo).</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Make scrollbars dark again in night mode (thanks to Hikaru).</li>
+<li>Various improvements to right-to-left display (thanks to Abdo).</li>
+<li>Fixed an error being shown when gathering new cards in descending position in the v3 scheduler.</li>
+<li>Fixed unwanted height/width settings when copying images between fields (thanks to Henrik).</li>
+<li>Reduced editor button size on Windows/Linux (thanks to Mathtias).</li>
+<li>Support autoplay in audio tags again (thanks to Andreas).</li>
+<li>Don't save window position when they're full screen, as Qt doesn't handle it well (thanks to Rumo).</li>
+<li>Fixed the main window sometimes failing to load properly when Anki starts (which could lead to
+blank windows, a giant sync icon, etc).</li>
+<li>Miscellaneous other fixes, thanks to Abdo, Matthias, TheFeelTrain and Arthur.</li>
+</ul>
 <h2 id="beta-1"><a class="header" href="#beta-1">Beta 1</a></h2>
 <p>Build 43c41d76 / 2021-12-04.</p>
 <p>Toolkit changes:</p>
@@ -276,7 +322,7 @@ for PyQt5 to work with PyQt6 as well (thanks to Aristotelis). These shims will
 not remain forever, so it is recommended that you update your add-ons to be
 compatible with Qt6 without shims. The two main breakages are the renaming of
 PyQt5 to PyQt6 (you can support both by importing from aqt.qt instead), and
-the requirement that <a href="https://github.com/ankitects/anki/pull/1406/commits/b5906305b37e2ed4767fd495a5ce74f629cb8ed1">enums are
+the requirement that <a href="https://github.com/ankitects/anki/pull/1406/commits/a7812dedc096627692ab3d7e64b90be632f52134">enums are
 qualified</a>.</li>
 <li>If you’re using Qt Designer to generate UI files, the Qt5 and Qt6 versions
 need to be generated and bundled separately if you want to support both at once.</li>
@@ -287,7 +333,7 @@ uses a different approach, and urls like <code>:/icons/foo.jpg</code> should bec
 available now. If you notice any problems importing standard libraries that
 previously worked, please let us know.</li>
 <li>The aqt package no longer depends on PyQt, as either version 5 or 6 is supported.
-You can specify the major version you want when installing - eg 'pip install aqt[qt6]'</li>
+You can specify the major version you want when installing - eg <code>pip install aqt[qt6]</code></li>
 <li>manifest.json now supports a 'homepage' argument (thanks to Abdo)</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2148"><a class="header" href="#changes-in-2148">Changes in 2.1.48</a></h1>
@@ -429,7 +475,7 @@ scroll to Current Deck in Browser.</li>
 into a V1 collection.</li>
 <li>Disable cloze and math buttons in HTML editor.</li>
 </ul>
-<h2 id="beta-2"><a class="header" href="#beta-2">Beta 2</a></h2>
+<h2 id="beta-2-1"><a class="header" href="#beta-2-1">Beta 2</a></h2>
 <p>Build b693bdbf / 2021-06-24.</p>
 <p>Known issues:</p>
 <ul>
@@ -772,7 +818,7 @@ Multiple selection can be tackled again in a future update.</li>
 <p>Ignore manually scheduled cards in hour graph.</p>
 </li>
 </ul>
-<h2 id="beta-2-1"><a class="header" href="#beta-2-1">Beta 2</a></h2>
+<h2 id="beta-2-2"><a class="header" href="#beta-2-2">Beta 2</a></h2>
 <p>Build 599d4634 / 2021-02-09.</p>
 <ul>
 <li>
