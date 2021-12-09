@@ -6,7 +6,7 @@ Build db804d95 / 2021-12-09.
 
 macOS:
 
-- The Apple Silicon build now support recording, and is fully native - Rosetta is no longer required.
+- The Apple Silicon build now supports recording, and is fully native - Rosetta is no longer required.
 - The Qt6 Intel build now has a minimum macOS requirement of 10.14.4.
 
 Linux:
