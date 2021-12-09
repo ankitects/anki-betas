@@ -1,5 +1,54 @@
 # Changes in 2.1.50
 
+## Beta 2
+
+Build db804d95 / 2021-12-09.
+
+macOS:
+
+- The Apple Silicon build now support recording, and is fully native - Rosetta is no longer required.
+- The Qt6 Intel build now has a minimum macOS requirement of 10.14.4.
+
+Linux:
+
+- Fixed not being able to run Anki after running install.sh.
+- Added an experimental arm64 packaged build. PyQt and Qt are not included, so
+  you need to link in your distro's version of PyQt5.15. For example, after
+  untarring the file and changing into the top level directory with the 'anki'
+  executable:
+  ```
+  # eg Debian 11:
+  sudo apt install python3-pyqt5.{qtwebengine,qtmultimedia}
+  ln -sf /usr/lib/python3/dist-packages/PyQt5 lib/
+
+  # eg Fedora 34:
+  sudo dnf install python3-qt5-webengine
+  ln -sf /usr/lib64/python3.9/site-packages/PyQt5 lib/
+  ```
+  You may also be able to use the above technique for switching the x86_64
+  builds to your system's PyQt version - just delete the PyQt5 or 6 folder
+  before linking your system version in.
+- Fcitx users: this build includes libraries that may allow the Qt5 build to
+  work with Fcitx. Please let us know if they work for you or not.
+
+Features:
+
+- Added a "Create Copy" option in the browse screen, to copy selected note's
+contents into the Add window (thanks to Rumo).
+
+Fixes:
+
+- Make scrollbars dark again in night mode (thanks to Hikaru).
+- Various improvements to right-to-left display (thanks to Abdo).
+- Fixed an error being shown when gathering new cards in descending position in the v3 scheduler.
+- Fixed unwanted height/width settings when copying images between fields (thanks to Henrik).
+- Reduced editor button size on Windows/Linux (thanks to Mathtias).
+- Support autoplay in audio tags again (thanks to Andreas).
+- Don't save window position when they're full screen, as Qt doesn't handle it well (thanks to Rumo).
+- Fixed the main window sometimes failing to load properly when Anki starts (which could lead to
+blank windows, a giant sync icon, etc).
+- Miscellaneous other fixes, thanks to Abdo, Matthias, TheFeelTrain and Arthur.
+
 ## Beta 1
 
 Build 43c41d76 / 2021-12-04.
@@ -99,7 +148,7 @@ For developers:
   compatible with Qt6 without shims. The two main breakages are the renaming of
   PyQt5 to PyQt6 (you can support both by importing from aqt.qt instead), and
   the requirement that [enums are
-  qualified](https://github.com/ankitects/anki/pull/1406/commits/b5906305b37e2ed4767fd495a5ce74f629cb8ed1).
+  qualified](https://github.com/ankitects/anki/pull/1406/commits/a7812dedc096627692ab3d7e64b90be632f52134).
 - If you’re using Qt Designer to generate UI files, the Qt5 and Qt6 versions
   need to be generated and bundled separately if you want to support both at once.
 - PyQt6 does not support the Qt resource system (pyrcc was removed), so Anki now
@@ -109,5 +158,5 @@ For developers:
   available now. If you notice any problems importing standard libraries that
   previously worked, please let us know.
 - The aqt package no longer depends on PyQt, as either version 5 or 6 is supported.
-  You can specify the major version you want when installing - eg 'pip install aqt[qt6]'
+  You can specify the major version you want when installing - eg `pip install aqt[qt6]`
 - manifest.json now supports a 'homepage' argument (thanks to Abdo)
