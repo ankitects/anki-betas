@@ -37,8 +37,9 @@ $ pyenv/bin/anki
 Repeat the last step if you wish to start the same Anki version again.
 Repeat the last two steps to update to the latest beta and start it.
 
-Remove `[qt6]` if you wish to use a compatible system-installed PyQt.
-
+Remove `[qt6]` if you wish to use a compatible system-installed PyQt. On ARM
+Linux, you must use a system-installed PyQt, as no PyQt wheels are available on
+PyPI for ARM Linux.
 </details>
 
 <details>
