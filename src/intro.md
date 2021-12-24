@@ -25,7 +25,7 @@ builds directly with pip.
 Anki will be installed in a local Python folder called 'pyenv'.
 
 <details>
-<summary>Mac/Linux</summary>
+<summary>Mac (both Intel/Apple), and Linux (x86_64)</summary>
 
 ```
 $ python3.9 -m venv pyenv
@@ -34,12 +34,38 @@ $ pyenv/bin/pip install --upgrade --pre aqt[qt6]
 $ pyenv/bin/anki
 ```
 
-Repeat the last step if you wish to start the same Anki version again.
-Repeat the last two steps to update to the latest beta and start it.
+- Repeat the last step if you wish to start the same Anki version again.
+- Repeat the last two steps to update to the latest beta and start it.
+</details>
 
-Remove `[qt6]` if you wish to use a compatible system-installed PyQt. On ARM
-Linux, you must use a system-installed PyQt, as no PyQt wheels are available on
-PyPI for ARM Linux.
+
+<details>
+<summary>Linux (ARM)</summary>
+
+As there are no PyQt packages on PyPI for Linux/ARM, you will need to have
+your distro's PyQt5 packages already installed. Eg on Debian 11:
+
+```
+$ sudo apt install python3-pyqt5.{qtwebengine,qtmultimedia}
+```
+
+Or on Fedora:
+
+```
+$ sudo dnf install python3-qt5-webengine
+```  
+
+Then run the following:
+
+```
+$ python3.9 -m venv --system-site-packages pyenv
+$ pyenv/bin/pip install --upgrade pip
+$ pyenv/bin/pip install --upgrade --pre aqt
+$ pyenv/bin/anki
+```
+
+- Repeat the last step if you wish to start the same Anki version again.
+- Repeat the last two steps to update to the latest beta and start it.
 </details>
 
 <details>
