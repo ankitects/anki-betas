@@ -18,8 +18,8 @@ V3 scheduler changes, thanks to Rumo:
   - The gather order and sort order options have been simplified, but should offer the same
     functionality as before. Please check your deck options after upgrading, as some users
     may need to adjust their display order settings to match what they were using before.
-- If you have more than 2 learning steps, the middle steps now repeat the current step, instead of
-  being the average of the previous and current step.
+- If you have more than 2 learning steps, after the first step, Hard repeats the previous
+  delay, instead of being the average of the previous and next step.
 - Review cards and new cards are now interspersed more evenly.
 
 Improvements to the editor, thanks to Henrik:
