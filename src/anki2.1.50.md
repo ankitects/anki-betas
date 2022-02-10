@@ -1,5 +1,108 @@
 # Changes in 2.1.50
 
+## Beta 3
+
+Build 95dbf30f / 2021-02-10.
+
+V3 scheduler changes, thanks to Rumo:
+
+- Intermediate limits are now respected. For example, if you have a deck tree of
+  A>B>C>D, and click on B, then deck C is limited by deck B, and deck D is
+  limited by both deck B and deck C. This is similar to the way the previous
+  schedulers behaved, except the decks above the one you click on do not
+  contribute to the limit.
+- The gathering and sorting of new cards has been reworked, trading a little performance
+  for more intuitive behaviour:
+  - It is now possible to sort notes or cards randomly at gather time, ensuring a random
+    selection is taken from all available new cards.
+  - The gather order and sort order options have been simplified, but should offer the same
+    functionality as before. Please check your deck options after upgrading, as some users
+    may need to adjust their display order settings to match what they were using before.
+- If you have more than 2 learning steps, the middle steps now repeat the current step, instead of
+  being the average of the previous and current step.
+- Review cards and new cards are now interspersed more evenly.
+
+Improvements to the editor, thanks to Henrik:
+
+- You can now use the keyboard left/right keys to move into/out of the MathJax editor.
+- The HTML editor now matches the current Anki theme.
+- Fixed an issue that could prevent image resizing.
+- Fixed IME input after pressing tab.
+- Fixed currently-focused field not updating contents after an undo operation or find&replace.
+- Fixed leading HTML comments being stripped by the HTML editor.
+- Lots of other behind-the-scenes changes (see the developers section below) and fixes.
+
+New features:
+
+- Be smarter about mapping existing text to new fields when switching notetypes in the Add screen (thanks to Abdo).
+- A new TTS tag format that allows you to combine extra text and multiple fields, such as
+  `[anki:tts lang=en_US]Here is {{Field1}} and {{Field2}}[/anki:tts]` (thanks to Rumo). There are no plans
+  to deprecate the old TTS syntax - either can be used.
+- Apkg files can now be dragged on the main window to import them (thanks to Abdo).
+- "Create Copy" uses the current card's deck, and can be also accessed via
+  shortcut from the review screen (thanks to Rumo)
+- Added Belarusian and Odia to available languages in the preferences.
+- When switching Anki versions, an add-on update check is run on startup (thanks to Rumo).
+- Make links with target=\_blank work (thanks to Danish).
+- Added "Forget Card" action to review screen (thanks to Araceli).
+
+Fixes and other improvements:
+
+- Compression on automatic backups has been turned off, which can make Anki much faster to shut down with large
+  collections (eg 7.9s->0.45s). Compression will likely come back in the future when we can integrate a more efficient
+  compression library.
+- Add back the missing "Show Duplicates" link in the editor (thanks to Matthias and Henrik).
+- Added shortcut keys for creating lists and indentation (thanks to Rumo).
+- Behind-the-scenes improvements to the deck and notetype selectors (thanks to Sam).
+- Change cards/notes toggle to Ctrl/Cmd+Alt+T to avoid conflict on macOS.
+- Deck creation in the custom study screen has been reworked, and now supports undo properly (thanks to Rumo).
+- Don't show error when gsettings exists but does not have a GNOME theme set (thanks to Spooghetti420).
+- Don't show error when Windows color scheme setting is missing (thanks to qxo).
+- Filtered decks in 'order added' now sort by card template.
+- Fixed a number of issues with the preview window (thanks to Hikaru).
+- Fixed AltGr triggering Ctrl+Alt shortcuts on Windows (thanks to Rumo)
+- Fixed an error that could appear when clicking on the sidebar (thanks to qxo).
+- Fixed error shown when double-tapping answer buttons on the v3 scheduler.
+- Fixed external scripts being executed out of order (thanks to Hikaru).
+- Fixed field content sometimes spilling outside container (thanks to Hikaru).
+- Fixed flicker in review screen when referencing external js, and preload css files (thanks to Hikaru).
+- Fixed interday learning siblings not being buried during review, causing them to reappear later after actions like an edit.
+- Fixed new card position appearing as a date when cards were in preview (thanks to Abdo).
+- Fixed unwanted `<div>` being left behind when deleting field contents (thanks to Hikaru).
+- Hide "open new window" action in GNOME (thanks to Fusion future & Felipe)
+- Improve search highlight color in templates screen (thanks to Abdo).
+- Improved display of the card info screen (thanks to Rumo).
+- Improved localization of large numbers in the graphs, and various layout tweaks (thanks to Vova).
+- Performance improvements for searching through many fields with a wildcard search (thanks to Rumo).
+- Report correct count in timebox screen with v2 scheduler (thanks to Abdo).
+- Support Markdown inside HTML tags in config.md (thanks to Abdo).
+- The `note:` and `card:` searches no longer do a substring match (thanks to Rumo).
+- The calendar graph uses consistent coloring as years are changed (thanks to Ryan).
+- The top and bottom bars will no longer zoom in/out, but the main area and editors can be zoomed in and out (thanks to Rumo).
+- Tweaks to the sidebar icons (thanks to Henrik).
+- Updated translations - thanks as always to all the translators.
+- Use white menubar on Windows (thanks to Rumo).
+- Various behind-the-scenes fixes (thanks to Arthur).
+
+Packaging changes:
+
+- The building of the Anki packages has been reworked. Everything should
+  hopefully behave as before; if you notice any problems, please let us know.
+- Update mpv to 0.34 on Windows.
+- Fcitx5 support is now bundled with both the qt6 and qt5 Linux packages.
+- Drop the experimental arm64 Linux package.
+
+Notes for developers:
+
+Henrik has spent a lot of time working out how to smoothly provide an API for
+the editor, and investigating how we can provide types to make targeting the API
+easier. This has required a number of refactorings, and some add-ons that were
+accessing the editor will have broken again in this update. While the code is
+not set in stone yet, hopefully we're getting there. An example of using the
+latest API is available here:
+
+<https://github.com/hgiesel/anki_new_format_pack/commits/master>
+
 ## Beta 2
 
 Build db804d95 / 2021-12-09.
@@ -16,6 +119,7 @@ Linux:
   you need to link in your distro's version of PyQt5.15. For example, after
   untarring the file and changing into the top level directory with the 'anki'
   executable:
+
   ```
   # eg Debian 11:
   sudo apt install python3-pyqt5.{qtwebengine,qtmultimedia}
@@ -25,16 +129,18 @@ Linux:
   sudo dnf install python3-qt5-webengine
   ln -sf /usr/lib64/python3.9/site-packages/PyQt5 lib/
   ```
+
   You may also be able to use the above technique for switching the x86_64
   builds to your system's PyQt version - just delete the PyQt5 or 6 folder
   before linking your system version in.
+
 - Fcitx users: this build includes libraries that may allow the Qt5 build to
   work with Fcitx. Please let us know if they work for you or not.
 
 Features:
 
 - Added a "Create Copy" option in the browse screen, to copy selected note's
-contents into the Add window (thanks to Rumo).
+  contents into the Add window (thanks to Rumo).
 
 Fixes:
 
@@ -46,7 +152,7 @@ Fixes:
 - Support autoplay in audio tags again (thanks to Andreas).
 - Don't save window position when they're full screen, as Qt doesn't handle it well (thanks to Rumo).
 - Fixed the main window sometimes failing to load properly when Anki starts (which could lead to
-blank windows, a giant sync icon, etc).
+  blank windows, a giant sync icon, etc).
 - Miscellaneous other fixes, thanks to Abdo, Matthias, TheFeelTrain and Arthur.
 
 ## Beta 1
@@ -57,7 +163,7 @@ Toolkit changes:
 
 - The packaged builds now come in separate Qt5 and Qt6 versions.
 - Qt6 is a recently-updated version of the toolkit. It fixes some issues that
-existed in Qt5, but it may introduce new problems. We recommend you try it first.
+  existed in Qt5, but it may introduce new problems. We recommend you try it first.
 - Qt5 is the graphics toolkit used to build previous Anki releases. If you find
   that Qt5 works for you and Qt6 does not, please let us know.
 
@@ -86,7 +192,7 @@ tar axf anki-2.1.50-linux-qt6.tar.zstd
 - The x86 builds require glibc 2.27 or later.
 - A wheel is now provided for ARM64 Linux, and requires glibc 2.31 or greater. A
   packaged version is not currently possible.
-- No fcitx driver or gtk2 theme is bundled with the packaged builds at the moment.  
+- No fcitx driver or gtk2 theme is bundled with the packaged builds at the moment.
 
 Major editor changes, mostly thanks to Henrik:
 
@@ -102,12 +208,12 @@ Major editor changes, mostly thanks to Henrik:
 Scheduler changes:
 
 - The V1 scheduler is no longer supported. If you have not yet updated to V2 or V3,
-you will be prompted to update when you attempt to review cards in 2.1.50.
+  you will be prompted to update when you attempt to review cards in 2.1.50.
 - The V3 scheduler will be declared stable when 2.1.50 is released.
 - The V3 scheduler applies fuzz more evenly now, especially with smaller
   intervals (thanks to Rumo).
 - Fixed new cards not decrementing the review limit in V3, which could lead to
-  more new cards appearing after the review limit was reached.  
+  more new cards appearing after the review limit was reached.
 - Fixed new cards not appearing in the correct order in the V3 scheduler.
 
 Other new features:
@@ -132,7 +238,7 @@ Other improvements:
 - Fix deck name not updating after deck/notetype renamed (thanks to Hikaru).
 - Fixed "tag duplicates" possibly operating on stale data (thanks to Ren).
 - The Add Cards screen will no longer allow accidental triggering of main window
-shortcuts when it is open on a Mac (thanks to Rumo).
+  shortcuts when it is open on a Mac (thanks to Rumo).
 - Fixed incorrect card count in timebox after undo (thanks to Abdo).
 - Fixed quotation of "and" and "or" in search (thanks to Rumo).
 - Numerous other fixes and contributions, thanks to Rumo, Henrik, Abdo, Matthias,
