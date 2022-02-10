@@ -2,7 +2,7 @@
 
 ## Beta 3
 
-Build 95dbf30f / 2021-02-10.
+Build 95dbf30f / 2022-02-10.
 
 V3 scheduler changes, thanks to Rumo:
 
