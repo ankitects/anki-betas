@@ -202,6 +202,107 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2150"><a class="header" href="#changes-in-2150">Changes in 2.1.50</a></h1>
+<h2 id="beta-3"><a class="header" href="#beta-3">Beta 3</a></h2>
+<p>Build 95dbf30f / 2021-02-10.</p>
+<p>V3 scheduler changes, thanks to Rumo:</p>
+<ul>
+<li>Intermediate limits are now respected. For example, if you have a deck tree of
+A&gt;B&gt;C&gt;D, and click on B, then deck C is limited by deck B, and deck D is
+limited by both deck B and deck C. This is similar to the way the previous
+schedulers behaved, except the decks above the one you click on do not
+contribute to the limit.</li>
+<li>The gathering and sorting of new cards has been reworked, trading a little performance
+for more intuitive behaviour:
+<ul>
+<li>It is now possible to sort notes or cards randomly at gather time, ensuring a random
+selection is taken from all available new cards.</li>
+<li>The gather order and sort order options have been simplified, but should offer the same
+functionality as before. Please check your deck options after upgrading, as some users
+may need to adjust their display order settings to match what they were using before.</li>
+</ul>
+</li>
+<li>If you have more than 2 learning steps, the middle steps now repeat the current step, instead of
+being the average of the previous and current step.</li>
+<li>Review cards and new cards are now interspersed more evenly.</li>
+</ul>
+<p>Improvements to the editor, thanks to Henrik:</p>
+<ul>
+<li>You can now use the keyboard left/right keys to move into/out of the MathJax editor.</li>
+<li>The HTML editor now matches the current Anki theme.</li>
+<li>Fixed an issue that could prevent image resizing.</li>
+<li>Fixed IME input after pressing tab.</li>
+<li>Fixed currently-focused field not updating contents after an undo operation or find&amp;replace.</li>
+<li>Fixed leading HTML comments being stripped by the HTML editor.</li>
+<li>Lots of other behind-the-scenes changes (see the developers section below) and fixes.</li>
+</ul>
+<p>New features:</p>
+<ul>
+<li>Be smarter about mapping existing text to new fields when switching notetypes in the Add screen (thanks to Abdo).</li>
+<li>A new TTS tag format that allows you to combine extra text and multiple fields, such as
+<code>[anki:tts lang=en_US]Here is {{Field1}} and {{Field2}}[/anki:tts]</code> (thanks to Rumo). There are no plans
+to deprecate the old TTS syntax - either can be used.</li>
+<li>Apkg files can now be dragged on the main window to import them (thanks to Abdo).</li>
+<li>&quot;Create Copy&quot; uses the current card's deck, and can be also accessed via
+shortcut from the review screen (thanks to Rumo)</li>
+<li>Added Belarusian and Odia to available languages in the preferences.</li>
+<li>When switching Anki versions, an add-on update check is run on startup (thanks to Rumo).</li>
+<li>Make links with target=_blank work (thanks to Danish).</li>
+<li>Added &quot;Forget Card&quot; action to review screen (thanks to Araceli).</li>
+</ul>
+<p>Fixes and other improvements:</p>
+<ul>
+<li>Compression on automatic backups has been turned off, which can make Anki much faster to shut down with large
+collections (eg 7.9s-&gt;0.45s). Compression will likely come back in the future when we can integrate a more efficient
+compression library.</li>
+<li>Add back the missing &quot;Show Duplicates&quot; link in the editor (thanks to Matthias and Henrik).</li>
+<li>Added shortcut keys for creating lists and indentation (thanks to Rumo).</li>
+<li>Behind-the-scenes improvements to the deck and notetype selectors (thanks to Sam).</li>
+<li>Change cards/notes toggle to Ctrl/Cmd+Alt+T to avoid conflict on macOS.</li>
+<li>Deck creation in the custom study screen has been reworked, and now supports undo properly (thanks to Rumo).</li>
+<li>Don't show error when gsettings exists but does not have a GNOME theme set (thanks to Spooghetti420).</li>
+<li>Don't show error when Windows color scheme setting is missing (thanks to qxo).</li>
+<li>Filtered decks in 'order added' now sort by card template.</li>
+<li>Fixed a number of issues with the preview window (thanks to Hikaru).</li>
+<li>Fixed AltGr triggering Ctrl+Alt shortcuts on Windows (thanks to Rumo)</li>
+<li>Fixed an error that could appear when clicking on the sidebar (thanks to qxo).</li>
+<li>Fixed error shown when double-tapping answer buttons on the v3 scheduler.</li>
+<li>Fixed external scripts being executed out of order (thanks to Hikaru).</li>
+<li>Fixed field content sometimes spilling outside container (thanks to Hikaru).</li>
+<li>Fixed flicker in review screen when referencing external js, and preload css files (thanks to Hikaru).</li>
+<li>Fixed interday learning siblings not being buried during review, causing them to reappear later after actions like an edit.</li>
+<li>Fixed new card position appearing as a date when cards were in preview (thanks to Abdo).</li>
+<li>Fixed unwanted <code>&lt;div&gt;</code> being left behind when deleting field contents (thanks to Hikaru).</li>
+<li>Hide &quot;open new window&quot; action in GNOME (thanks to Fusion future &amp; Felipe)</li>
+<li>Improve search highlight color in templates screen (thanks to Abdo).</li>
+<li>Improved display of the card info screen (thanks to Rumo).</li>
+<li>Improved localization of large numbers in the graphs, and various layout tweaks (thanks to Vova).</li>
+<li>Performance improvements for searching through many fields with a wildcard search (thanks to Rumo).</li>
+<li>Report correct count in timebox screen with v2 scheduler (thanks to Abdo).</li>
+<li>Support Markdown inside HTML tags in config.md (thanks to Abdo).</li>
+<li>The <code>note:</code> and <code>card:</code> searches no longer do a substring match (thanks to Rumo).</li>
+<li>The calendar graph uses consistent coloring as years are changed (thanks to Ryan).</li>
+<li>The top and bottom bars will no longer zoom in/out, but the main area and editors can be zoomed in and out (thanks to Rumo).</li>
+<li>Tweaks to the sidebar icons (thanks to Henrik).</li>
+<li>Updated translations - thanks as always to all the translators.</li>
+<li>Use white menubar on Windows (thanks to Rumo).</li>
+<li>Various behind-the-scenes fixes (thanks to Arthur).</li>
+</ul>
+<p>Packaging changes:</p>
+<ul>
+<li>The building of the Anki packages has been reworked. Everything should
+hopefully behave as before; if you notice any problems, please let us know.</li>
+<li>Update mpv to 0.34 on Windows.</li>
+<li>Fcitx5 support is now bundled with both the qt6 and qt5 Linux packages.</li>
+<li>Drop the experimental arm64 Linux package.</li>
+</ul>
+<p>Notes for developers:</p>
+<p>Henrik has spent a lot of time working out how to smoothly provide an API for
+the editor, and investigating how we can provide types to make targeting the API
+easier. This has required a number of refactorings, and some add-ons that were
+accessing the editor will have broken again in this update. While the code is
+not set in stone yet, hopefully we're getting there. An example of using the
+latest API is available here:</p>
+<p><a href="https://github.com/hgiesel/anki_new_format_pack/commits/master">https://github.com/hgiesel/anki_new_format_pack/commits/master</a></p>
 <h2 id="beta-2"><a class="header" href="#beta-2">Beta 2</a></h2>
 <p>Build db804d95 / 2021-12-09.</p>
 <p>macOS:</p>
@@ -211,11 +312,14 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 </ul>
 <p>Linux:</p>
 <ul>
-<li>Fixed not being able to run Anki after running install.sh.</li>
-<li>Added an experimental arm64 packaged build. PyQt and Qt are not included, so
+<li>
+<p>Fixed not being able to run Anki after running install.sh.</p>
+</li>
+<li>
+<p>Added an experimental arm64 packaged build. PyQt and Qt are not included, so
 you need to link in your distro's version of PyQt5.15. For example, after
 untarring the file and changing into the top level directory with the 'anki'
-executable:
+executable:</p>
 <pre><code># eg Debian 11:
 sudo apt install python3-pyqt5.{qtwebengine,qtmultimedia}
 ln -sf /usr/lib/python3/dist-packages/PyQt5 lib/
@@ -224,11 +328,14 @@ ln -sf /usr/lib/python3/dist-packages/PyQt5 lib/
 sudo dnf install python3-qt5-webengine
 ln -sf /usr/lib64/python3.9/site-packages/PyQt5 lib/
 </code></pre>
-You may also be able to use the above technique for switching the x86_64
+<p>You may also be able to use the above technique for switching the x86_64
 builds to your system's PyQt version - just delete the PyQt5 or 6 folder
-before linking your system version in.</li>
-<li>Fcitx users: this build includes libraries that may allow the Qt5 build to
-work with Fcitx. Please let us know if they work for you or not.</li>
+before linking your system version in.</p>
+</li>
+<li>
+<p>Fcitx users: this build includes libraries that may allow the Qt5 build to
+work with Fcitx. Please let us know if they work for you or not.</p>
+</li>
 </ul>
 <p>Features:</p>
 <ul>
@@ -483,7 +590,7 @@ to break.</li>
 <li>Fixed some issues with preserving selected item
 in sidebar (thanks to Rumo).</li>
 </ul>
-<h2 id="beta-3"><a class="header" href="#beta-3">Beta 3</a></h2>
+<h2 id="beta-3-1"><a class="header" href="#beta-3-1">Beta 3</a></h2>
 <p>Build 18843e71 / 2021-06-25.</p>
 <ul>
 <li>Fixed remembered tags not being applied to subsequently added
@@ -817,7 +924,7 @@ still do so by downgrading to an older Anki version first.</li>
 (thanks to BlueGreekMagick).</li>
 <li>Reposition dialog's &quot;shift cards&quot; option now defaults to off.</li>
 </ul>
-<h2 id="beta-3-1"><a class="header" href="#beta-3-1">Beta 3</a></h2>
+<h2 id="beta-3-2"><a class="header" href="#beta-3-2">Beta 3</a></h2>
 <p>Build b3b40933 / 2021-02-12.</p>
 <ul>
 <li>
