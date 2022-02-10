@@ -88,6 +88,7 @@ Packaging changes:
 
 - The building of the Anki packages has been reworked. Everything should
   hopefully behave as before; if you notice any problems, please let us know.
+- Update to (Py)Qt 6.2.3.
 - Update mpv to 0.34 on Windows.
 - Fcitx5 support is now bundled with both the qt6 and qt5 Linux packages.
 - Drop the experimental arm64 Linux package.
