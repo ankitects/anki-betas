@@ -1,5 +1,52 @@
 # Changes in 2.1.50
 
+## Beta 4
+
+Build 4ed499fb / 2022-02-23.
+
+V3 scheduler changes, thanks to Rumo:
+
+- When new cards are answered for the first time, Anki will remember their original
+  position, and it can be seen in the card info. An option to restore cards
+  to their original position manually and on export will likely come in the next beta.
+- The overview screen now shows how many cards will be buried. Please report any
+  inaccuricies, as it is possible a different approach will be needed.
+- Added a separate option to control burying of interday learning siblings. This is
+  currently incorrectly shown when the V2 scheduler is enabled as well.
+- When a Hard learning step exceeds a day, it is now rounded to a full day, so the
+  delay does not vary depending on the time of day you answer.
+
+Other new features:
+
+- The way bold/italics/etc is applied in the editor has been reworked to be more
+  robust, thanks to Henrik. This has resulted in tweaks to the formatting button
+  order, and the clear formatting button now lets you configure what formatting
+  should be removed.
+- An option to ignore accents in searches by default has been added to
+  preferences screen (thanks to Abdo).
+- Added a View menu to the main window and browse window (thanks to Rumo).
+
+Bugfixes:
+
+- Added a "Learn" label to the learning counts in the deck list.
+- Fixed an error loading the old deck options screen when using Python 3.10.
+- Fixed an error when an installed TTS voice on Windows supported multiple languages (thanks to Rumo).
+- Fixed an error when exporting a collection with media files in it with very old modification dates (thanks to gnnoh).
+- Fixed junk appearing in the clipboard when copy/pasting on Windows, by rolling Qt back to the previous version.
+- Fixed newly-added deck not being selected in the Add screen (thanks to Hikaru).
+- Fixed sound failing to play after exporting a collection (thanks to Rumo and Kelciour).
+- Fixed various memory leaks (thanks to Rumo and Hikaru).
+- Flag changes no longer add an undo entry, which fixes some potential errors and unpredictable undo behaviour.
+- Reduced flicker when opening browser in night mode (thanks to Rumo).
+- Some behind-the-scenes code improvements (thanks to Sam).
+
+For developers:
+
+- `mw.progress.timer()` should now be passed a `parent` argument, as the
+  previous default of using `mw` prevents the timers from being freed after they
+  are no longer active.
+- Improved Python code completion/type handling in VS Code (thanks to Rumo).
+
 ## Beta 3
 
 Build 95dbf30f / 2022-02-10.
