@@ -202,6 +202,51 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2150"><a class="header" href="#changes-in-2150">Changes in 2.1.50</a></h1>
+<h2 id="beta-4"><a class="header" href="#beta-4">Beta 4</a></h2>
+<p>Build 4ed499fb / 2022-02-23.</p>
+<p>V3 scheduler changes, thanks to Rumo:</p>
+<ul>
+<li>When new cards are answered for the first time, Anki will remember their original
+position, and it can be seen in the card info. An option to restore cards
+to their original position manually and on export will likely come in the next beta.</li>
+<li>The overview screen now shows how many cards will be buried. Please report any
+inaccuricies, as it is possible a different approach will be needed.</li>
+<li>Added a separate option to control burying of interday learning siblings. This is
+currently incorrectly shown when the V2 scheduler is enabled as well.</li>
+<li>When a Hard learning step exceeds a day, it is now rounded to a full day, so the
+delay does not vary depending on the time of day you answer.</li>
+</ul>
+<p>Other new features:</p>
+<ul>
+<li>The way bold/italics/etc is applied in the editor has been reworked to be more
+robust, thanks to Henrik. This has resulted in tweaks to the formatting button
+order, and the clear formatting button now lets you configure what formatting
+should be removed.</li>
+<li>An option to ignore accents in searches by default has been added to
+preferences screen (thanks to Abdo).</li>
+<li>Added a View menu to the main window and browse window (thanks to Rumo).</li>
+</ul>
+<p>Bugfixes:</p>
+<ul>
+<li>Added a &quot;Learn&quot; label to the learning counts in the deck list.</li>
+<li>Fixed an error loading the old deck options screen when using Python 3.10.</li>
+<li>Fixed an error when an installed TTS voice on Windows supported multiple languages (thanks to Rumo).</li>
+<li>Fixed an error when exporting a collection with media files in it with very old modification dates (thanks to gnnoh).</li>
+<li>Fixed junk appearing in the clipboard when copy/pasting on Windows, by rolling Qt back to the previous version.</li>
+<li>Fixed newly-added deck not being selected in the Add screen (thanks to Hikaru).</li>
+<li>Fixed sound failing to play after exporting a collection (thanks to Rumo and Kelciour).</li>
+<li>Fixed various memory leaks (thanks to Rumo and Hikaru).</li>
+<li>Flag changes no longer add an undo entry, which fixes some potential errors and unpredictable undo behaviour.</li>
+<li>Reduced flicker when opening browser in night mode (thanks to Rumo).</li>
+<li>Some behind-the-scenes code improvements (thanks to Sam).</li>
+</ul>
+<p>For developers:</p>
+<ul>
+<li><code>mw.progress.timer()</code> should now be passed a <code>parent</code> argument, as the
+previous default of using <code>mw</code> prevents the timers from being freed after they
+are no longer active.</li>
+<li>Improved Python code completion/type handling in VS Code (thanks to Rumo).</li>
+</ul>
 <h2 id="beta-3"><a class="header" href="#beta-3">Beta 3</a></h2>
 <p>Build 95dbf30f / 2022-02-10.</p>
 <p>V3 scheduler changes, thanks to Rumo:</p>
@@ -903,7 +948,7 @@ smaller limit than their children.</li>
 <li>Improve error message when trying to nest under a filtered deck (thanks to Rumo).</li>
 <li>Use monospace font in HTML editor.</li>
 </ul>
-<h2 id="beta-4"><a class="header" href="#beta-4">Beta 4</a></h2>
+<h2 id="beta-4-1"><a class="header" href="#beta-4-1">Beta 4</a></h2>
 <p>Build 46e9720e / 2021-02-21.</p>
 <p>Scheduler updates:</p>
 <ul>
