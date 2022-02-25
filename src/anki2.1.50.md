@@ -1,5 +1,25 @@
 # Changes in 2.1.50
 
+## Beta 5
+
+Build 3564ece6 / 2022-02-25.
+
+Editor fixes, thanks to Henrik:
+
+- Fixed `<` and `>` not working correctly in the MathJax editor.
+- Fixed media files not being inserted at cursor position on Windows.
+- Cloze shortcut correctly positions cursor.
+- Adjust color picker shortcut, and apply color when different color selected.
+- Make it easy for add-ons to adjust the HTML editor theme.
+
+Other changes:
+
+- Fixed the errors when using the preview button in the browser, and more work on
+  memory leaks (thanks to Rumo).
+- Truncate deck names in the deck list if they are too long (thanks to Sachin).
+- Flags are undoable again, and should update correctly in the browser.
+- Hide the 'bury interday siblings' options when the V2 scheduler enabled.
+
 ## Beta 4
 
 Build 4ed499fb / 2022-02-23.
