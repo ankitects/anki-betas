@@ -1,5 +1,31 @@
 # Changes in 2.1.50
 
+## Beta 6
+
+Release TBA
+
+- Reworked backup handling (thanks to Rumo):
+  - Backups are created much faster than they were previously, which allows Anki to
+    close faster when you have a large collection.
+  - There are new options in the preferences to control the number of daily, weekly and
+    monthly backups you'd like to retain. Anki will keep all backups made in the last 48 hours,
+    but avoids making more than one every 5 minutes when you're rapidly opening and closing
+    your profile.
+  - Because the backup storage format has changed, backups created with 2.1.50 will not be
+    importable into older Anki versions. Manually-exported colpkg files are still compatible
+    with older Anki versions.
+- You can now search for tags by regular expression (thanks to Rumo). One use
+  for this is locating notes that are tagged with a `parent` tag, while not matching
+  ones tagged with `parent::child`: `tag:re:^parent$`.
+- Added a silent option (/s) for the Windows uninstaller (thanks to Patric).
+- Fixed add-on config screen failing to show in bundled build.
+- Fixed buried counts being shown when v2 scheduler enabled.
+- Fixed MathJax sometimes being deleted when it wasn't visibly selected (thanks to Henrik).
+- Fixed newline shortcut in MathJax editor (thanks to Henrik).
+- Fixed shortcut/button to add a new tag (thanks to Henrik).
+- Fixed some parts of the media handling code matching more HTML tags than it should have (thanks to Brayan).
+- Fixes for the bury count on the overview screen (thanks to Rumo).
+
 ## Beta 5
 
 Build 3564ece6 / 2022-02-25.
