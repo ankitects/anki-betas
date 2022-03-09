@@ -54,6 +54,10 @@ thanks to Rumo:
 - Intermediate deck limits now affect their children. Please see the [scheduler
   page](https://faqs.ankiweb.net/the-2021-scheduler.html#daily-limits) for more
   info.
+- When new cards are answered, Anki now records their original position. When you later
+  export a shared deck without scheduling, the original positions will be restored.
+- The Forget action now gives you options to restore the original card position,
+  and to reset the card's lapse and repetition counters.
 - The gathering and sorting of new cards has been reworked, trading a little performance
   for more intuitive behaviour:
   - It is now possible to sort notes or cards randomly at gather time, ensuring a random
@@ -231,7 +235,7 @@ Most of these changes are thanks to Henrik.
 
 ## Beta 6
 
-Release TBA
+Release a495fbaa / 2022-03-09.
 
 - Reworked backup handling (thanks to Rumo):
   - Backups are created much faster than they were previously, which allows Anki to
@@ -243,6 +247,10 @@ Release TBA
   - Because the backup storage format has changed, backups created with 2.1.50 will not be
     importable into older Anki versions. Manually-exported colpkg files are still compatible
     with older Anki versions.
+- When exporting a shared deck with scheduling disabled, the original card position will be
+  restored if it is available (thanks to Rumo).
+- The Forget action now gives you options to restore the original card position,
+  and to reset the card's lapse and repetition counters (thanks to Rumo).
 - You can now search for tags by regular expression (thanks to Rumo). One use
   for this is locating notes that are tagged with a `parent` tag, while not matching
   ones tagged with `parent::child`: `tag:re:^parent$`.
