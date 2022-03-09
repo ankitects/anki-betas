@@ -265,6 +265,10 @@ thanks to Rumo:</p>
 <li>Intermediate deck limits now affect their children. Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html#daily-limits">scheduler
 page</a> for more
 info.</li>
+<li>When new cards are answered, Anki now records their original position. When you later
+export a shared deck without scheduling, the original positions will be restored.</li>
+<li>The Forget action now gives you options to restore the original card position,
+and to reset the card's lapse and repetition counters.</li>
 <li>The gathering and sorting of new cards has been reworked, trading a little performance
 for more intuitive behaviour:
 <ul>
@@ -446,7 +450,7 @@ are no longer active.</li>
 <li>Improved Python code completion/type handling in VS Code (thanks to Rumo).</li>
 </ul>
 <h2 id="beta-6"><a class="header" href="#beta-6">Beta 6</a></h2>
-<p>Release TBA</p>
+<p>Release a495fbaa / 2022-03-09.</p>
 <ul>
 <li>Reworked backup handling (thanks to Rumo):
 <ul>
@@ -461,6 +465,10 @@ importable into older Anki versions. Manually-exported colpkg files are still co
 with older Anki versions.</li>
 </ul>
 </li>
+<li>When exporting a shared deck with scheduling disabled, the original card position will be
+restored if it is available (thanks to Rumo).</li>
+<li>The Forget action now gives you options to restore the original card position,
+and to reset the card's lapse and repetition counters (thanks to Rumo).</li>
 <li>You can now search for tags by regular expression (thanks to Rumo). One use
 for this is locating notes that are tagged with a <code>parent</code> tag, while not matching
 ones tagged with <code>parent::child</code>: <code>tag:re:^parent$</code>.</li>
