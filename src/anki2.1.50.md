@@ -112,8 +112,12 @@ Most of these changes are thanks to Henrik.
     but avoids making more than one every 5 minutes when you're rapidly opening and closing
     your profile.
   - Because the backup storage format has changed, backups created with 2.1.50 will not be
-    importable into older Anki versions. Manually-exported colpkg files are still compatible
-    with older Anki versions.
+    importable into older Anki versions.
+- Reworked .colpkg import/export (thanks to Rumo):
+  - When exporting, you can optionally target Anki 2.1.50+. When doing so,
+    imports and exports are faster, and media files will be compressed, but the
+    resulting .colpkg will not be readable by older Anki clients.
+  - Collections are now checked for corruption when importing.
 - An option to ignore accents in searches by default has been added to
   preferences screen (thanks to Abdo).
 - The Card Info screen now updates automatically as you change to a different
@@ -144,6 +148,7 @@ Most of these changes are thanks to Henrik.
 
 - Added a "Learn" label to the learning counts in the deck list.
 - Added shortcut keys for creating lists and indentation (thanks to Rumo).
+- Allow longer maximum answer times in the deck settings (thanks to Bruce).
 - Behind-the-scenes improvements to the deck and notetype selectors (thanks to Sam).
 - Change cards/notes toggle to Ctrl/Cmd+Alt+T to avoid conflict on macOS.
 - Changed the "Previous Card Info" shortcut to avoid a conflict with language input.
@@ -159,6 +164,7 @@ Most of these changes are thanks to Henrik.
 - Fixed an error that could appear when clicking on the sidebar (thanks to qxo).
 - Fixed an error when an installed TTS voice on Windows supported multiple languages (thanks to Rumo).
 - Fixed an error when exporting a collection with media files in it with very old modification dates (thanks to gnnoh).
+- Fixed an intermittent error when building on Windows.
 - Fixed error shown when double-tapping answer buttons on the v3 scheduler.
 - Fixed errors and display issues when flagging and undoing in the review screen.
 - Fixed external scripts being executed out of order (thanks to Hikaru).
@@ -190,6 +196,7 @@ Most of these changes are thanks to Henrik.
 - The `note:` and `card:` searches no longer do a substring match (thanks to Rumo).
 - The Add Cards screen will no longer allow accidental triggering of main window shortcuts when it is open on a Mac (thanks to Rumo).
 - The calendar graph uses consistent coloring as years are changed (thanks to Ryan).
+- The custom study screen no longer (sometimes incorrectly) limits the amount you can extend the daily limits by.
 - The top and bottom bars will no longer zoom in/out, but the main area and editors can be zoomed in and out (thanks to Rumo).
 - Truncate deck names in the deck list if they are too long (thanks to Sachin).
 - Tweaks to the sidebar icons (thanks to Henrik).
@@ -233,13 +240,28 @@ Most of these changes are thanks to Henrik.
   are no longer active.
 - Improved Python code completion/type handling in VS Code (thanks to Rumo).
 
+## Beta 7
+
+Release 02ba50f2 / 2022-03-15.
+
+- Reworked .colpkg import/export (thanks to Rumo):
+  - When exporting, you can optionally target Anki 2.1.50+. When doing so,
+    imports and exports are faster, and media files will be compressed, but the
+    resulting .colpkg will not be readable by older Anki clients.
+  - Collections are now checked for corruption when importing.
+- Various fixes for the editor (thanks to Henrik):
+- Allow longer maximum answer times in the deck settings (thanks to Bruce).
+- The custom study screen no longer (sometimes incorrectly) limits the amount
+  you can extend the daily limits by.
+- Fix an intermittent error when building on Windows.
+
 ## Beta 6
 
 Release a495fbaa / 2022-03-09.
 
 - Reworked backup handling (thanks to Rumo):
   - Backups are created much faster than they were previously, which allows Anki to
-    close faster when you have a large collection.
+    close faster when you have a large collection, while still compressing the backups.
   - There are new options in the preferences to control the number of daily, weekly and
     monthly backups you'd like to retain. Anki will keep all backups made in the last 48 hours,
     but avoids making more than one every 5 minutes when you're rapidly opening and closing
