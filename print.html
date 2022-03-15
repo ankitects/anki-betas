@@ -214,6 +214,7 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <li><a href="anki2.1.50.html#for-developers">For Developers</a></li>
 </ul>
 </li>
+<li><a href="anki2.1.50.html#beta-7">Beta 7</a></li>
 <li><a href="anki2.1.50.html#beta-6">Beta 6</a></li>
 <li><a href="anki2.1.50.html#beta-5">Beta 5</a></li>
 <li><a href="anki2.1.50.html#beta-4">Beta 4</a></li>
@@ -326,8 +327,15 @@ monthly backups you'd like to retain. Anki will keep all backups made in the las
 but avoids making more than one every 5 minutes when you're rapidly opening and closing
 your profile.</li>
 <li>Because the backup storage format has changed, backups created with 2.1.50 will not be
-importable into older Anki versions. Manually-exported colpkg files are still compatible
-with older Anki versions.</li>
+importable into older Anki versions.</li>
+</ul>
+</li>
+<li>Reworked .colpkg import/export (thanks to Rumo):
+<ul>
+<li>When exporting, you can optionally target Anki 2.1.50+. When doing so,
+imports and exports are faster, and media files will be compressed, but the
+resulting .colpkg will not be readable by older Anki clients.</li>
+<li>Collections are now checked for corruption when importing.</li>
 </ul>
 </li>
 <li>An option to ignore accents in searches by default has been added to
@@ -360,6 +368,7 @@ ones tagged with <code>parent::child</code>: <code>tag:re:^parent$</code>.</li>
 <ul>
 <li>Added a &quot;Learn&quot; label to the learning counts in the deck list.</li>
 <li>Added shortcut keys for creating lists and indentation (thanks to Rumo).</li>
+<li>Allow longer maximum answer times in the deck settings (thanks to Bruce).</li>
 <li>Behind-the-scenes improvements to the deck and notetype selectors (thanks to Sam).</li>
 <li>Change cards/notes toggle to Ctrl/Cmd+Alt+T to avoid conflict on macOS.</li>
 <li>Changed the &quot;Previous Card Info&quot; shortcut to avoid a conflict with language input.</li>
@@ -375,6 +384,7 @@ ones tagged with <code>parent::child</code>: <code>tag:re:^parent$</code>.</li>
 <li>Fixed an error that could appear when clicking on the sidebar (thanks to qxo).</li>
 <li>Fixed an error when an installed TTS voice on Windows supported multiple languages (thanks to Rumo).</li>
 <li>Fixed an error when exporting a collection with media files in it with very old modification dates (thanks to gnnoh).</li>
+<li>Fixed an intermittent error when building on Windows.</li>
 <li>Fixed error shown when double-tapping answer buttons on the v3 scheduler.</li>
 <li>Fixed errors and display issues when flagging and undoing in the review screen.</li>
 <li>Fixed external scripts being executed out of order (thanks to Hikaru).</li>
@@ -406,6 +416,7 @@ ones tagged with <code>parent::child</code>: <code>tag:re:^parent$</code>.</li>
 <li>The <code>note:</code> and <code>card:</code> searches no longer do a substring match (thanks to Rumo).</li>
 <li>The Add Cards screen will no longer allow accidental triggering of main window shortcuts when it is open on a Mac (thanks to Rumo).</li>
 <li>The calendar graph uses consistent coloring as years are changed (thanks to Ryan).</li>
+<li>The custom study screen no longer (sometimes incorrectly) limits the amount you can extend the daily limits by.</li>
 <li>The top and bottom bars will no longer zoom in/out, but the main area and editors can be zoomed in and out (thanks to Rumo).</li>
 <li>Truncate deck names in the deck list if they are too long (thanks to Sachin).</li>
 <li>Tweaks to the sidebar icons (thanks to Henrik).</li>
@@ -449,13 +460,30 @@ previous default of using <code>mw</code> prevents the timers from being freed a
 are no longer active.</li>
 <li>Improved Python code completion/type handling in VS Code (thanks to Rumo).</li>
 </ul>
+<h2 id="beta-7"><a class="header" href="#beta-7">Beta 7</a></h2>
+<p>Release 02ba50f2 / 2022-03-15.</p>
+<ul>
+<li>Reworked .colpkg import/export (thanks to Rumo):
+<ul>
+<li>When exporting, you can optionally target Anki 2.1.50+. When doing so,
+imports and exports are faster, and media files will be compressed, but the
+resulting .colpkg will not be readable by older Anki clients.</li>
+<li>Collections are now checked for corruption when importing.</li>
+</ul>
+</li>
+<li>Various fixes for the editor (thanks to Henrik):</li>
+<li>Allow longer maximum answer times in the deck settings (thanks to Bruce).</li>
+<li>The custom study screen no longer (sometimes incorrectly) limits the amount
+you can extend the daily limits by.</li>
+<li>Fix an intermittent error when building on Windows.</li>
+</ul>
 <h2 id="beta-6"><a class="header" href="#beta-6">Beta 6</a></h2>
 <p>Release a495fbaa / 2022-03-09.</p>
 <ul>
 <li>Reworked backup handling (thanks to Rumo):
 <ul>
 <li>Backups are created much faster than they were previously, which allows Anki to
-close faster when you have a large collection.</li>
+close faster when you have a large collection, while still compressing the backups.</li>
 <li>There are new options in the preferences to control the number of daily, weekly and
 monthly backups you'd like to retain. Anki will keep all backups made in the last 48 hours,
 but avoids making more than one every 5 minutes when you're rapidly opening and closing
@@ -1219,7 +1247,7 @@ lapsing a card with a non-zero interval % in the V1 scheduler.</li>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2141"><a class="header" href="#changes-in-2141">Changes in 2.1.41</a></h1>
 <h2 id="add-on-notes"><a class="header" href="#add-on-notes">Add-On Notes</a></h2>
 <p>Add-on authors, please see <a href="https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390">https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390</a></p>
-<h2 id="beta-7"><a class="header" href="#beta-7">Beta 7</a></h2>
+<h2 id="beta-7-1"><a class="header" href="#beta-7-1">Beta 7</a></h2>
 <p>Build 3ba08d11 / 2021-03-04.</p>
 <ul>
 <li>Fix a freeze when answering a card with a missing parent deck.</li>
