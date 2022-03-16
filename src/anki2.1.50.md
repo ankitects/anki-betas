@@ -244,6 +244,8 @@ Most of these changes are thanks to Henrik.
 
 Release 02ba50f2 / 2022-03-15.
 
+This release has been yanked due to a bug in colpkg imports. Please wait for the next beta.
+
 - Reworked .colpkg import/export (thanks to Rumo):
   - When exporting, you can optionally target Anki 2.1.50+. When doing so,
     imports and exports are faster, and media files will be compressed, but the
