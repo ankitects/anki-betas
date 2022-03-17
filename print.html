@@ -214,6 +214,7 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <li><a href="anki2.1.50.html#for-developers">For Developers</a></li>
 </ul>
 </li>
+<li><a href="anki2.1.50.html#beta-8">Beta 8</a></li>
 <li><a href="anki2.1.50.html#beta-7">Beta 7</a></li>
 <li><a href="anki2.1.50.html#beta-6">Beta 6</a></li>
 <li><a href="anki2.1.50.html#beta-5">Beta 5</a></li>
@@ -460,9 +461,20 @@ previous default of using <code>mw</code> prevents the timers from being freed a
 are no longer active.</li>
 <li>Improved Python code completion/type handling in VS Code (thanks to Rumo).</li>
 </ul>
+<h2 id="beta-8"><a class="header" href="#beta-8">Beta 8</a></h2>
+<p>Release 02c580e4 / 2022-03-17.</p>
+<ul>
+<li>Various fixes for .colpkg importing and exporting. We're reasonably confident
+the bugs have been ironed out at this point, but would appreciate you giving them
+a try and confirming the new code works well for you.</li>
+<li>.colpkg files created with the previous beta will not be importable into this
+build. If you created a .colpkg file with beta 7 and need to recover data from it,
+please get in touch and we can help you out.</li>
+<li>Fixed addMedia() call used by some add-ons (thanks to Henrik).</li>
+</ul>
 <h2 id="beta-7"><a class="header" href="#beta-7">Beta 7</a></h2>
 <p>Release 02ba50f2 / 2022-03-15.</p>
-<p>This release has been yanked due to a bug in colpkg imports. Please wait for the next beta.</p>
+<p>This release has been yanked due to bugs in colpkg imports. Please wait for the next beta.</p>
 <ul>
 <li>Reworked .colpkg import/export (thanks to Rumo):
 <ul>
