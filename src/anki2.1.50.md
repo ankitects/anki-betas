@@ -240,11 +240,23 @@ Most of these changes are thanks to Henrik.
   are no longer active.
 - Improved Python code completion/type handling in VS Code (thanks to Rumo).
 
+## Beta 8
+
+Release 02c580e4 / 2022-03-17.
+
+- Various fixes for .colpkg importing and exporting. We're reasonably confident
+  the bugs have been ironed out at this point, but would appreciate you giving them
+  a try and confirming the new code works well for you.
+- .colpkg files created with the previous beta will not be importable into this
+  build. If you created a .colpkg file with beta 7 and need to recover data from it,
+  please get in touch and we can help you out.
+- Fixed addMedia() call used by some add-ons (thanks to Henrik).
+
 ## Beta 7
 
 Release 02ba50f2 / 2022-03-15.
 
-This release has been yanked due to a bug in colpkg imports. Please wait for the next beta.
+This release has been yanked due to bugs in colpkg imports. Please wait for the next beta.
 
 - Reworked .colpkg import/export (thanks to Rumo):
   - When exporting, you can optionally target Anki 2.1.50+. When doing so,
