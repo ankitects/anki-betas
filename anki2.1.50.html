@@ -153,6 +153,7 @@
 <li><a href="#for-developers">For Developers</a></li>
 </ul>
 </li>
+<li><a href="#beta-9">Beta 9</a></li>
 <li><a href="#beta-8">Beta 8</a></li>
 <li><a href="#beta-7">Beta 7</a></li>
 <li><a href="#beta-6">Beta 6</a></li>
@@ -399,6 +400,20 @@ You can specify the major version you want when installing - eg <code>pip instal
 previous default of using <code>mw</code> prevents the timers from being freed after they
 are no longer active.</li>
 <li>Improved Python code completion/type handling in VS Code (thanks to Rumo).</li>
+</ul>
+<h2 id="beta-9"><a class="header" href="#beta-9">Beta 9</a></h2>
+<p>Release 4515c41d / 2022-03-21.</p>
+<ul>
+<li>Fixed a serious issue with changing card numbers in Change Notetype that was
+present since beta 3. (thanks to Arthur for the reproduction steps).</li>
+<li>Anki can now create backups periodically, instead of only on close. The
+default is every 30 minutes; you can adjust this in the preferences screen.</li>
+<li>The File menu now has an option to create a backup immediately.</li>
+<li>When using Custom Study to extend deck limits in the V3 scheduler, parent/child
+limits of the selected deck are no longer adjusted (thanks to Rumo).</li>
+<li>Fixed an error that could occur in the browser when switching profiles
+(thanks to Hikaru).</li>
+<li>Improvements and optimizations to colpkg exports/imports (thanks to Rumo).</li>
 </ul>
 <h2 id="beta-8"><a class="header" href="#beta-8">Beta 8</a></h2>
 <p>Release 02c580e4 / 2022-03-17.</p>
