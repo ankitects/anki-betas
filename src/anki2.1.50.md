@@ -240,6 +240,21 @@ Most of these changes are thanks to Henrik.
   are no longer active.
 - Improved Python code completion/type handling in VS Code (thanks to Rumo).
 
+## Beta 9
+
+Release 4515c41d / 2022-03-21.
+
+- Fixed a serious issue with changing card numbers in Change Notetype that was
+  present since beta 3. (thanks to Arthur for the reproduction steps).
+- Anki can now create backups periodically, instead of only on close. The
+  default is every 30 minutes; you can adjust this in the preferences screen.
+- The File menu now has an option to create a backup immediately.
+- When using Custom Study to extend deck limits in the V3 scheduler, parent/child
+  limits of the selected deck are no longer adjusted (thanks to Rumo).
+- Fixed an error that could occur in the browser when switching profiles
+  (thanks to Hikaru).
+- Improvements and optimizations to colpkg exports/imports (thanks to Rumo).
+
 ## Beta 8
 
 Release 02c580e4 / 2022-03-17.
