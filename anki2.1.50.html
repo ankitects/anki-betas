@@ -233,6 +233,8 @@ delay does not vary depending on the time of day you answer.</li>
 <li>Fixed new cards not decrementing the review limit, which could lead to
 more new cards appearing after the review limit was reached.</li>
 <li>Review cards and new cards are now interspersed more evenly.</li>
+<li>When using Custom Study to extend deck limits in the V3 scheduler, parent/child
+limits of the selected deck are no longer adjusted.</li>
 </ul>
 <h3 id="editor-changes"><a class="header" href="#editor-changes">Editor Changes</a></h3>
 <p>Most of these changes are thanks to Henrik.</p>
@@ -259,14 +261,13 @@ developers section below)</li>
 <li>Anki will now switch to day or night mode automatically depending on your
 system settings. You can force day or night mode in the Preferences screen.
 (thanks in large part to Rumo).</li>
-<li>Reworked backup handling (thanks to Rumo):
+<li>Reworked backup handling (mostly thanks to Rumo):
 <ul>
-<li>Backups are created much faster than they were previously, which allows Anki to
-close faster when you have a large collection.</li>
+<li>Backups are created much faster than they were previously.</li>
+<li>Anki can now create backups periodically. The default is every 30 minutes; you can adjust this in the preferences screen.</li>
 <li>There are new options in the preferences to control the number of daily, weekly and
-monthly backups you'd like to retain. Anki will keep all backups made in the last 48 hours,
-but avoids making more than one every 5 minutes when you're rapidly opening and closing
-your profile.</li>
+monthly backups you'd like to retain.</li>
+<li>The File menu now has an option to create a backup immediately.</li>
 <li>Because the backup storage format has changed, backups created with 2.1.50 will not be
 importable into older Anki versions.</li>
 </ul>
@@ -323,6 +324,7 @@ ones tagged with <code>parent::child</code>: <code>tag:re:^parent$</code>.</li>
 <li>Fixed AltGr triggering Ctrl+Alt shortcuts on Windows (thanks to Rumo)</li>
 <li>Fixed an error loading the old deck options screen when using Python 3.10.</li>
 <li>Fixed an error that could appear when clicking on the sidebar (thanks to qxo).</li>
+<li>Fixed an error that could occur in the browser when switching profiles (thanks to Hikaru).</li>
 <li>Fixed an error when an installed TTS voice on Windows supported multiple languages (thanks to Rumo).</li>
 <li>Fixed an error when exporting a collection with media files in it with very old modification dates (thanks to gnnoh).</li>
 <li>Fixed an intermittent error when building on Windows.</li>
