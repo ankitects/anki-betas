@@ -77,6 +77,8 @@ thanks to Rumo:
 - Fixed new cards not decrementing the review limit, which could lead to
   more new cards appearing after the review limit was reached.
 - Review cards and new cards are now interspersed more evenly.
+- When using Custom Study to extend deck limits in the V3 scheduler, parent/child
+  limits of the selected deck are no longer adjusted.
 
 ### Editor Changes
 
@@ -104,13 +106,12 @@ Most of these changes are thanks to Henrik.
 - Anki will now switch to day or night mode automatically depending on your
   system settings. You can force day or night mode in the Preferences screen.
   (thanks in large part to Rumo).
-- Reworked backup handling (thanks to Rumo):
-  - Backups are created much faster than they were previously, which allows Anki to
-    close faster when you have a large collection.
+- Reworked backup handling (mostly thanks to Rumo):
+  - Backups are created much faster than they were previously.
+  - Anki can now create backups periodically. The default is every 30 minutes; you can adjust this in the preferences screen.
   - There are new options in the preferences to control the number of daily, weekly and
-    monthly backups you'd like to retain. Anki will keep all backups made in the last 48 hours,
-    but avoids making more than one every 5 minutes when you're rapidly opening and closing
-    your profile.
+    monthly backups you'd like to retain.
+  - The File menu now has an option to create a backup immediately.
   - Because the backup storage format has changed, backups created with 2.1.50 will not be
     importable into older Anki versions.
 - Reworked .colpkg import/export (thanks to Rumo):
@@ -162,6 +163,7 @@ Most of these changes are thanks to Henrik.
 - Fixed AltGr triggering Ctrl+Alt shortcuts on Windows (thanks to Rumo)
 - Fixed an error loading the old deck options screen when using Python 3.10.
 - Fixed an error that could appear when clicking on the sidebar (thanks to qxo).
+- Fixed an error that could occur in the browser when switching profiles (thanks to Hikaru).
 - Fixed an error when an installed TTS voice on Windows supported multiple languages (thanks to Rumo).
 - Fixed an error when exporting a collection with media files in it with very old modification dates (thanks to gnnoh).
 - Fixed an intermittent error when building on Windows.
