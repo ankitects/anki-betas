@@ -153,9 +153,11 @@ Most of these changes are thanks to Henrik.
 - Behind-the-scenes improvements to the deck and notetype selectors (thanks to Sam).
 - Change cards/notes toggle to Ctrl/Cmd+Alt+T to avoid conflict on macOS.
 - Changed the "Previous Card Info" shortcut to avoid a conflict with language input.
+- Colpkg imports now always require a full sync.
 - Deck creation in the custom study screen has been reworked, and now supports undo properly (thanks to Rumo).
 - Don't show error when gsettings exists but does not have a GNOME theme set (thanks to Spooghetti420).
 - Don't show error when Windows color scheme setting is missing (thanks to qxo).
+- Fall back on regular file deletion when no recycling bin/trash folder is available on Linux.
 - Filtered decks in 'order added' now sort by card template.
 - Fix deck name not updating after deck/notetype renamed (thanks to Hikaru).
 - Fixed "tag duplicates" possibly operating on stale data (thanks to Ren).
@@ -190,11 +192,14 @@ Most of these changes are thanks to Henrik.
 - Improved performance with large selections in the Browse screen (thanks to Rumo).
 - Improvements to the Change Notetype screen (thanks to Matthias).
 - Performance improvements for searching through many fields with a wildcard search (thanks to Rumo).
+- Randomized card positions now start at 1, which avoids a corner case in filtered deck scheduling.
 - Reduced flicker when opening browser in night mode (thanks to Rumo).
 - Report correct count in timebox screen with v2 scheduler (thanks to Abdo).
+- Rows with database inconsistencies in the browse screen now prompt you to use "check database" instead of saying they were deleted (thanks to Rumo).
 - Some behind-the-scenes code improvements (thanks to Sam).
 - Support autoplay in audio tags again (thanks to Andreas).
 - Support Markdown inside HTML tags in config.md (thanks to Abdo).
+- The 'future due' graph no longer shows learning cards in a filtered deck as being due a long time ago.
 - The `note:` and `card:` searches no longer do a substring match (thanks to Rumo).
 - The Add Cards screen will no longer allow accidental triggering of main window shortcuts when it is open on a Mac (thanks to Rumo).
 - The calendar graph uses consistent coloring as years are changed (thanks to Ryan).
@@ -206,6 +211,7 @@ Most of these changes are thanks to Henrik.
 - Use white menubar on Windows (thanks to Rumo).
 - Various behind-the-scenes fixes (thanks to Arthur).
 - Various improvements to right-to-left display (thanks to Abdo).
+- When Anki encounters an issue with a card template, it now provides a link to a help page with more information (thanks to Rumo).
 - Numerous other fixes and contributions, thanks to Rumo, Henrik, Abdo, Matthias,
   Evandro, Arthur, Soren, BlueGreenMagick, Yoshi, Jakub, Gesa, blue-putty,
   stopendy, TheFeelTrain and zjosua.
@@ -241,6 +247,21 @@ Most of these changes are thanks to Henrik.
   previous default of using `mw` prevents the timers from being freed after they
   are no longer active.
 - Improved Python code completion/type handling in VS Code (thanks to Rumo).
+
+## Release Candidate 1
+
+Release ebe33a99 / 2022-03-29.
+
+- Fixed a serious issue with repositioning/removing card templates in the card
+  layout screen, that was present since beta 3 (thanks to Rumo for the fix).
+- Fixed "create cloze with same number" shortcut on Qt6/macOS (thanks to Henrik).
+- Fixed cursor sometimes not moving into MathJax editor, leading to accidental deletion (thanks to Henrik).
+- Colpkg imports now always require a full sync.
+- Fall back on regular file deletion when no recycling bin/trash folder is available on Linux.
+- Randomized card positions now start at 1, which avoids a corner case in filtered deck scheduling.
+- Rows with database inconsistencies in the browse screen now prompt you to use "check database" instead of saying they were deleted (thanks to Rumo).
+- The 'future due' graph no longer shows learning cards in a filtered deck as being due a long time ago.
+- When Anki encounters an issue with a card template, it now provides a link to a help page with more information (thanks to Rumo).
 
 ## Beta 9
 
