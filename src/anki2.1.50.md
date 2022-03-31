@@ -97,6 +97,7 @@ Most of these changes are thanks to Henrik.
 - Fixed IME input after pressing tab.
 - Fixed media files not being inserted at cursor position on Windows.
 - Cloze shortcut correctly positions cursor.
+- Added a separate cloze button to repeat the current cloze.
 - Lots of behind-the-scenes changes and fixes. Because of the extensive changes,
   some add-ons that modify the editing screen will have broken (see the
   developers section below)
@@ -247,6 +248,19 @@ Most of these changes are thanks to Henrik.
   previous default of using `mw` prevents the timers from being freed after they
   are no longer active.
 - Improved Python code completion/type handling in VS Code (thanks to Rumo).
+
+## Release Candidate 2
+
+Release 6718e678 / 2022-03-31.
+
+- Added a separate cloze button to repeat the current cloze (thanks to Henrik).
+- Fixed an error when importing some colpkg files from older Anki versions that contained media.
+- Fixed an issue with adding items to the editor toolbar from an add-on (thanks to Henrik).
+- Fixed cloze shortcut on Windows.
+- Fixed invalid HTML in field causing Anki to hang (thanks to Henrik).
+- New cards no longer have their position changed by the Forget action when
+  "restore position" is enabled, and the cards don't have an original position
+  (thanks to Rumo).
 
 ## Release Candidate 1
 
