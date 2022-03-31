@@ -258,6 +258,8 @@ Release 6718e678 / 2022-03-31.
 - Fixed an issue with adding items to the editor toolbar from an add-on (thanks to Henrik).
 - Fixed cloze shortcut on Windows.
 - Fixed invalid HTML in field causing Anki to hang (thanks to Henrik).
+- Force decimal separator to be a period in the deck options, to work around
+  blank boxes in the Qt6 build.
 - New cards no longer have their position changed by the Forget action when
   "restore position" is enabled, and the cards don't have an original position
   (thanks to Rumo).
