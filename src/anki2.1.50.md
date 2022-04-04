@@ -685,5 +685,5 @@ For developers:
   available now. If you notice any problems importing standard libraries that
   previously worked, please let us know.
 - The aqt package no longer depends on PyQt, as either version 5 or 6 is supported.
-  You can specify the major version you want when installing - eg `pip install aqt[qt6]`
+  You can specify the major version you want when installing - eg `pip install 'aqt[qt6]'`
 - manifest.json now supports a 'homepage' argument (thanks to Abdo)
