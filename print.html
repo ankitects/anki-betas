@@ -161,7 +161,7 @@ builds directly with pip.</p>
 <summary>Mac (both Intel/Apple), and Linux (x86_64)</summary>
 <pre><code>$ python3.9 -m venv pyenv
 $ pyenv/bin/pip install --upgrade pip
-$ pyenv/bin/pip install --upgrade --pre aqt[qt6]
+$ pyenv/bin/pip install --upgrade --pre 'aqt[qt6]'
 $ pyenv/bin/anki
 </code></pre>
 <ul>
@@ -899,7 +899,7 @@ uses a different approach, and urls like <code>:/icons/foo.jpg</code> should bec
 available now. If you notice any problems importing standard libraries that
 previously worked, please let us know.</li>
 <li>The aqt package no longer depends on PyQt, as either version 5 or 6 is supported.
-You can specify the major version you want when installing - eg <code>pip install aqt[qt6]</code></li>
+You can specify the major version you want when installing - eg <code>pip install 'aqt[qt6]'</code></li>
 <li>manifest.json now supports a 'homepage' argument (thanks to Abdo)</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2148"><a class="header" href="#changes-in-2148">Changes in 2.1.48</a></h1>
