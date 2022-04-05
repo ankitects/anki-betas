@@ -249,9 +249,21 @@ Most of these changes are thanks to Henrik.
   are no longer active.
 - Improved Python code completion/type handling in VS Code (thanks to Rumo).
 
+## Release Candidate 3
+
+Build c96ef8cd / 2022-04-05.
+
+- The editor loads faster now, especially with lots of fields (thanks to Henrik).
+- It is now possible to choose between OpenGL and software video drivers in the preferences on Qt6.
+- Fixed background color mismatch in the editing screen.
+- Fixed highlight color button using text color (thanks to Henrik).
+- Fixed invisible tag input in Qt5 (thanks to Hikaru).
+- Set caret inside chemical expression in MathJax (thanks to Henrik).
+- Minor change to prevent the Advanced Browser add-on breaking.
+
 ## Release Candidate 2
 
-Release 6718e678 / 2022-03-31.
+Build 6718e678 / 2022-03-31.
 
 - Added a separate cloze button to repeat the current cloze (thanks to Henrik).
 - Fixed an error when importing some colpkg files from older Anki versions that contained media.
@@ -266,7 +278,7 @@ Release 6718e678 / 2022-03-31.
 
 ## Release Candidate 1
 
-Release ebe33a99 / 2022-03-29.
+Build ebe33a99 / 2022-03-29.
 
 - Fixed a serious issue with repositioning/removing card templates in the card
   layout screen, that was present since beta 3 (thanks to Rumo for the fix).
@@ -281,7 +293,7 @@ Release ebe33a99 / 2022-03-29.
 
 ## Beta 9
 
-Release 4515c41d / 2022-03-21.
+Build 4515c41d / 2022-03-21.
 
 - Fixed a serious issue with changing card numbers in Change Notetype that was
   present since beta 3. (thanks to Arthur for the reproduction steps).
@@ -296,7 +308,7 @@ Release 4515c41d / 2022-03-21.
 
 ## Beta 8
 
-Release 02c580e4 / 2022-03-17.
+Build 02c580e4 / 2022-03-17.
 
 - Various fixes for .colpkg importing and exporting. We're reasonably confident
   the bugs have been ironed out at this point, but would appreciate you giving them
@@ -308,7 +320,7 @@ Release 02c580e4 / 2022-03-17.
 
 ## Beta 7
 
-Release 02ba50f2 / 2022-03-15.
+Build 02ba50f2 / 2022-03-15.
 
 This release has been yanked due to bugs in colpkg imports. Please wait for the next beta.
 
@@ -325,7 +337,7 @@ This release has been yanked due to bugs in colpkg imports. Please wait for the 
 
 ## Beta 6
 
-Release a495fbaa / 2022-03-09.
+Build a495fbaa / 2022-03-09.
 
 - Reworked backup handling (thanks to Rumo):
   - Backups are created much faster than they were previously, which allows Anki to
