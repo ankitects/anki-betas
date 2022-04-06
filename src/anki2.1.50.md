@@ -249,6 +249,15 @@ Most of these changes are thanks to Henrik.
   are no longer active.
 - Improved Python code completion/type handling in VS Code (thanks to Rumo).
 
+## Release Candidate 4
+
+Build 26d40c3a / 2022-04-06.
+
+- The editing speedup change has been pushed back to 2.1.51 due to a bug.
+- For Qt6, the video driver now defaults to OpenGL on Windows/Linux, like earlier betas.
+  The option in the preferences has been hidden again, and a new file introduced for
+  adjusting behaviour: https://docs.ankiweb.net/platform/windows/display-issues.html#qt6
+
 ## Release Candidate 3
 
 Build c96ef8cd / 2022-04-05.
