@@ -2,6 +2,20 @@
 
 <!-- toc -->
 
+## Release Candidate 2
+
+Build a7cb5e21 / 2022-04-19.
+
+- Fixed compatibility with older macOS versions.
+- Fixed formatting being turned off when pressing shift (thanks to Henrik).
+- Remember original card position when using 'set due date' on a card (thanks to Rumo).
+- Fixed compatibility with 'card info during review' and similar add-ons.
+- Fixed illegible calendar buttons in dark mode on Mac/Linux.
+- Fixed stats PDF being illegible when saving in dark mode after scrolling down (thanks to Luka).
+- Use `<b>` and `<i>` formatting tags, instead of `<strong>` and `<em>`.
+- Fixed an issue with the search history when clicking on items in the sidebar (thanks to Rumo).
+- Anki now closes the Browse screen before full sync or colpkg import/export, so it doesn't show errors.
+
 ## Release Candidate 1
 
 Build 51a0641b / 2022-04-10.
