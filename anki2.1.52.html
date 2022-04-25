@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Intro &amp; Downloads - Anki Betas</title>
+        <title>Changes in 2.1.52 - Anki Betas</title>
         <!-- Custom HTML head -->
         
 
@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html" class="active">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html" class="active">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -140,70 +140,39 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="intro--downloads"><a class="header" href="#intro--downloads">Intro &amp; Downloads</a></h1>
-<h2 id="downgrading"><a class="header" href="#downgrading">Downgrading</a></h2>
-<p>Beta versions may sometimes change your collection in a way that is not
-compatible with older Anki versions. If you wish to switch back to an older
-version, please go to the <code>File&gt;Switch Profile</code> menu item, and click on
-<code>Downgrade &amp; Quit</code> in the current version first.</p>
-<h2 id="problems"><a class="header" href="#problems">Problems</a></h2>
-<p>If you run into any issues, please let us know on the <a href="https://forums.ankiweb.net/c/beta-testing/">beta testing
-section</a> of the user forums.</p>
-<h2 id="packaged-builds"><a class="header" href="#packaged-builds">Packaged Builds</a></h2>
-<p>You can get the <a href="https://apps.ankiweb.net/downloads/beta/?C=N&amp;O=D">latest packaged beta</a>
-from AnkiWeb.</p>
-<h2 id="via-pypipip"><a class="header" href="#via-pypipip">Via PyPI/pip</a></h2>
-<p>If you have a local Python 3.9 installation, you can also install beta
-builds directly with pip.</p>
-<p>Anki will be installed in a local Python folder called 'pyenv'.</p>
-<details>
-<summary>Mac (both Intel/Apple), and Linux (x86_64)</summary>
-<pre><code>$ python3.9 -m venv pyenv
-$ pyenv/bin/pip install --upgrade pip
-$ pyenv/bin/pip install --upgrade --pre 'aqt[qt6]'
-$ pyenv/bin/anki
-</code></pre>
+                        <h1 id="changes-in-2152"><a class="header" href="#changes-in-2152">Changes in 2.1.52</a></h1>
 <ul>
-<li>Repeat the last step if you wish to start the same Anki version again.</li>
-<li>Repeat the last two steps to update to the latest beta and start it.</li>
+<li><a href="#release-candidate-1">Release Candidate 1</a></li>
 </ul>
-</details>
-<details>
-<summary>Linux (ARM)</summary>
-<p>As there are no PyQt packages on PyPI for Linux/ARM, you will need to have
-your distro's PyQt5 packages already installed. Eg on Debian 11:</p>
-<pre><code>$ sudo apt install python3-pyqt5.{qtwebengine,qtmultimedia}
-</code></pre>
-<p>Or on Fedora:</p>
-<pre><code>$ sudo dnf install python3-qt5-webengine
-</code></pre>
-<p>Then run the following:</p>
-<pre><code>$ python3.9 -m venv --system-site-packages pyenv
-$ pyenv/bin/pip install --upgrade pip
-$ pyenv/bin/pip install --upgrade --pre aqt
-$ pyenv/bin/anki
-</code></pre>
+<h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
+<p>Build a989e508 / 2022-04-25.</p>
 <ul>
-<li>Repeat the last step if you wish to start the same Anki version again.</li>
-<li>Repeat the last two steps to update to the latest beta and start it.</li>
+<li>Update Qt to 6.3, which fixes inertial scrolling on macOS.</li>
+<li>List text is now aligned to the left by default (thanks to Matthias).</li>
+<li>Reset page zoom when moving between different screens.</li>
+<li>Fixed backspace sometimes removing multiple images at once (thanks to Henrik).</li>
+<li>Fixed colpkg imports not being cancellable (thanks to Rumo).</li>
+<li>Fixed copying and pasting MathJax on Windows (Qt6).</li>
+<li>Fixed current working directory changing on apkg export.</li>
+<li>Fixed custom browser font not being honored (Qt6).</li>
+<li>Fixed due graph showing wrong date for review cards in a filtered deck with rescheduling disabled.</li>
+<li>Fixed some formatting being lost when copying between fields on Windows (Qt6).</li>
+<li>Fixed grey background in type answer text + dark mode (thanks to Matthias).</li>
+<li>Fixed handling of <code>&lt;</code> and <code>&gt;</code> symbols in MathJax (thanks to Henrik).</li>
+<li>Fixed intermittent editor loading failures when add-ons have injected a large amount of code.</li>
+<li>Fixed pasting of local files of unsupported types that contain spaces (thanks to Abdo).</li>
+<li>The Qt6 Linux build now defaults to X11/XWayland instead of Wayland due to some <a href="https://github.com/ankitects/anki/issues/1767">remaining issues</a>;
+you can force-enable Wayland with ANKI_WAYLAND=1.</li>
 </ul>
-</details>
-<details>
-<summary>Windows</summary>
-<pre><code>c:\&gt; python -m venv \pyenv
-c:\&gt; pyenv\scripts\pip install --upgrade pip
-c:\&gt; pyenv\scripts\pip install --upgrade --pre aqt[qt6]
-c:\&gt; pyenv\scripts\anki
-</code></pre>
-<p>Repeat the last step if you wish to start the same Anki version again.
-Repeat the last two steps to update to the latest beta and start it.</p>
-</details>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="next" href="2021-scheduler.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="prev" href="2021-scheduler.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="anki2.1.51.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -212,7 +181,10 @@ Repeat the last two steps to update to the latest beta and start it.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="next" href="2021-scheduler.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="prev" href="2021-scheduler.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="anki2.1.51.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

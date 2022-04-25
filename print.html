@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -201,6 +201,30 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2152"><a class="header" href="#changes-in-2152">Changes in 2.1.52</a></h1>
+<ul>
+<li><a href="anki2.1.52.html#release-candidate-1">Release Candidate 1</a></li>
+</ul>
+<h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
+<p>Build a989e508 / 2022-04-25.</p>
+<ul>
+<li>Update Qt to 6.3, which fixes inertial scrolling on macOS.</li>
+<li>List text is now aligned to the left by default (thanks to Matthias).</li>
+<li>Reset page zoom when moving between different screens.</li>
+<li>Fixed backspace sometimes removing multiple images at once (thanks to Henrik).</li>
+<li>Fixed colpkg imports not being cancellable (thanks to Rumo).</li>
+<li>Fixed copying and pasting MathJax on Windows (Qt6).</li>
+<li>Fixed current working directory changing on apkg export.</li>
+<li>Fixed custom browser font not being honored (Qt6).</li>
+<li>Fixed due graph showing wrong date for review cards in a filtered deck with rescheduling disabled.</li>
+<li>Fixed some formatting being lost when copying between fields on Windows (Qt6).</li>
+<li>Fixed grey background in type answer text + dark mode (thanks to Matthias).</li>
+<li>Fixed handling of <code>&lt;</code> and <code>&gt;</code> symbols in MathJax (thanks to Henrik).</li>
+<li>Fixed intermittent editor loading failures when add-ons have injected a large amount of code.</li>
+<li>Fixed pasting of local files of unsupported types that contain spaces (thanks to Abdo).</li>
+<li>The Qt6 Linux build now defaults to X11/XWayland instead of Wayland due to some <a href="https://github.com/ankitects/anki/issues/1767">remaining issues</a>;
+you can force-enable Wayland with ANKI_WAYLAND=1.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2151"><a class="header" href="#changes-in-2151">Changes in 2.1.51</a></h1>
 <ul>
 <li><a href="anki2.1.51.html#release-candidate-2">Release Candidate 2</a></li>
@@ -219,7 +243,7 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <li>Fixed an issue with the search history when clicking on items in the sidebar (thanks to Rumo).</li>
 <li>Anki now closes the Browse screen before full sync or colpkg import/export, so it doesn't show errors.</li>
 </ul>
-<h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-1"><a class="header" href="#release-candidate-1-1">Release Candidate 1</a></h2>
 <p>Build 51a0641b / 2022-04-10.</p>
 <ul>
 <li>Reviews in the V3 scheduler can now optionally be sorted by relative overdueness (thanks to Abdo).</li>
@@ -278,7 +302,7 @@ blank boxes in the Qt6 build.</li>
 &quot;restore position&quot; is enabled, and the cards don't have an original position
 (thanks to Rumo).</li>
 </ul>
-<h2 id="release-candidate-1-1"><a class="header" href="#release-candidate-1-1">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-2"><a class="header" href="#release-candidate-1-2">Release Candidate 1</a></h2>
 <p>Build ebe33a99 / 2022-03-29.</p>
 <ul>
 <li>Fixed a serious issue with repositioning/removing card templates in the card
@@ -701,7 +725,7 @@ You can specify the major version you want when installing - eg <code>pip instal
 <li>Wayland is off by default again, but can be enabled by starting Anki with
 ANKI_WAYLAND=1 defined.</li>
 </ul>
-<h2 id="release-candidate-1-2"><a class="header" href="#release-candidate-1-2">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-3"><a class="header" href="#release-candidate-1-3">Release Candidate 1</a></h2>
 <p>Build af2ec0b9 / 2021-09-13.</p>
 <ul>
 <li>Add &quot;Previous Card Info&quot; action to review screen (thanks to Evandro).</li>
@@ -729,7 +753,7 @@ ANKI_WAYLAND=1 defined.</li>
 provided they exclude svelte when bundling.</li>
 <li>WithShortcut is now also available.</li>
 </ul>
-<h2 id="release-candidate-1-3"><a class="header" href="#release-candidate-1-3">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-4"><a class="header" href="#release-candidate-1-4">Release Candidate 1</a></h2>
 <p>Build dffa38c4 / 2021-08-22.</p>
 <p>Changes to the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">v3 scheduler</a>:</p>
 <ul>
@@ -782,7 +806,7 @@ subsequently reviewing a card in the v3 scheduler.</li>
 <li>As always, thanks to the translators who've contributed translations.</li>
 <li>Minor other changes.</li>
 </ul>
-<h2 id="release-candidate-1-4"><a class="header" href="#release-candidate-1-4">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-5"><a class="header" href="#release-candidate-1-5">Release Candidate 1</a></h2>
 <p>Build 60f6fccc / 2021-07-13.</p>
 <ul>
 <li>Fix red duplicate background being included in copy+paste (thanks to Hikaru).</li>
