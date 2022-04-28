@@ -6,7 +6,7 @@
 
 Build a989e508 / 2022-04-25.
 
-- Update Qt to 6.3, which fixes inertial scrolling on macOS.
+- Update Qt to 6.3, which fixes slow loading of large images, and inertial scrolling on macOS.
 - List text is now aligned to the left by default (thanks to Matthias).
 - Reset page zoom when moving between different screens.
 - Fixed backspace sometimes removing multiple images at once (thanks to Henrik).
