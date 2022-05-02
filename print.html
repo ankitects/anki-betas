@@ -203,7 +203,36 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2152"><a class="header" href="#changes-in-2152">Changes in 2.1.52</a></h1>
 <ul>
+<li><a href="anki2.1.52.html#release-candidate-2">Release Candidate 2</a></li>
 <li><a href="anki2.1.52.html#release-candidate-1">Release Candidate 1</a></li>
+</ul>
+<h2 id="release-candidate-2"><a class="header" href="#release-candidate-2">Release Candidate 2</a></h2>
+<p>Build 63f05b2b / 2022-05-02.</p>
+<p>Bugfixes/tweaks:</p>
+<ul>
+<li>The Qt5 Mac build now caps tag autocomplete matches to 10, as showing more is extremely slow in the old toolkit version.</li>
+<li>Fix custom study applying the previously-input limit, instead of the current one.</li>
+<li>Fix an error when previewing cards and selecting multiple cards (thanks to Rumo).</li>
+<li>Removed the highlight on the Show Answer and Good buttons.</li>
+<li>Make it easier to search in fields programmatically (thanks to Abdo).</li>
+</ul>
+<p>This build also includes a new implementation of apkg importing and exporting, thanks to Rumo. Some advantages:</p>
+<ul>
+<li>Undo/redo is now supported.</li>
+<li>Faster imports (especially for decks with a lot of note content).</li>
+<li>Support for older clients can be optionally disabled, which results in smaller
+apkg files, and faster imports.</li>
+<li>Flags are removed when scheduling is excluded.</li>
+</ul>
+<p>The new functionality is hidden behind a feature flag, and <strong>not active by default</strong>.
+You can try it out by using <code>mw.pm.set_new_import_export(True)</code> in the <a href="https://docs.ankiweb.net/misc.html#debug-console">debug console</a>.
+To revert to the old behaviour, replace True with False.</p>
+<p>Things to note:</p>
+<ul>
+<li>This is new code that has received limited testing so far, so please use <code>File&gt;Create Backup</code> before trying it out.
+Any testing/feedback you can provide would be appreciated.</li>
+<li>While active, it is not currently possible to export files other than apkg/colpkg.</li>
+<li>The Special Fields will not work while this functionality is enabled.</li>
 </ul>
 <h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
 <p>Build a989e508 / 2022-04-25.</p>
@@ -230,7 +259,7 @@ you can force-enable Wayland with ANKI_WAYLAND=1.</li>
 <li><a href="anki2.1.51.html#release-candidate-2">Release Candidate 2</a></li>
 <li><a href="anki2.1.51.html#release-candidate-1">Release Candidate 1</a></li>
 </ul>
-<h2 id="release-candidate-2"><a class="header" href="#release-candidate-2">Release Candidate 2</a></h2>
+<h2 id="release-candidate-2-1"><a class="header" href="#release-candidate-2-1">Release Candidate 2</a></h2>
 <p>Build a7cb5e21 / 2022-04-19.</p>
 <ul>
 <li>Fixed compatibility with older macOS versions.</li>
@@ -288,7 +317,7 @@ adjusting behaviour: https://docs.ankiweb.net/platform/windows/display-issues.ht
 <li>Set caret inside chemical expression in MathJax (thanks to Henrik).</li>
 <li>Minor change to prevent the Advanced Browser add-on breaking.</li>
 </ul>
-<h2 id="release-candidate-2-1"><a class="header" href="#release-candidate-2-1">Release Candidate 2</a></h2>
+<h2 id="release-candidate-2-2"><a class="header" href="#release-candidate-2-2">Release Candidate 2</a></h2>
 <p>Build 6718e678 / 2022-03-31.</p>
 <ul>
 <li>Added a separate cloze button to repeat the current cloze (thanks to Henrik).</li>
@@ -718,7 +747,7 @@ You can specify the major version you want when installing - eg <code>pip instal
 <li>manifest.json now supports a 'homepage' argument (thanks to Abdo)</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2148"><a class="header" href="#changes-in-2148">Changes in 2.1.48</a></h1>
-<h2 id="release-candidate-2-2"><a class="header" href="#release-candidate-2-2">Release Candidate 2</a></h2>
+<h2 id="release-candidate-2-3"><a class="header" href="#release-candidate-2-3">Release Candidate 2</a></h2>
 <p>Build 466d67ca / 2021-09-16.</p>
 <ul>
 <li>Possible fix for reported sound issues.</li>
@@ -742,7 +771,7 @@ ANKI_WAYLAND=1 defined.</li>
 <li>Miscellaneous other fixes.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2147"><a class="header" href="#changes-in-2147">Changes in 2.1.47</a></h1>
-<h2 id="release-candidate-2-3"><a class="header" href="#release-candidate-2-3">Release Candidate 2</a></h2>
+<h2 id="release-candidate-2-4"><a class="header" href="#release-candidate-2-4">Release Candidate 2</a></h2>
 <p>Build 3077a1f9 / 2021-08-25.</p>
 <ul>
 <li>Fixed calendar graph day labels showing incorrectly in some timezones.</li>
@@ -789,7 +818,7 @@ subsequently reviewing a card in the v3 scheduler.</li>
 <li>Fixed reposition command ignoring suspended cards.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2145"><a class="header" href="#changes-in-2145">Changes in 2.1.45</a></h1>
-<h2 id="release-candidate-2-4"><a class="header" href="#release-candidate-2-4">Release Candidate 2</a></h2>
+<h2 id="release-candidate-2-5"><a class="header" href="#release-candidate-2-5">Release Candidate 2</a></h2>
 <p>Build e7189f4a / 2021-07-24.</p>
 <ul>
 <li>Fix numpad enter in type answer screen.</li>
