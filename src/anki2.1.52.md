@@ -31,7 +31,7 @@ Things to note:
 - This is new code that has received limited testing so far, so please use `File>Create Backup` before trying it out.
   Any testing/feedback you can provide would be appreciated.
 - While active, it is not currently possible to export files other than apkg/colpkg.
-- The Special Fields will not work while this functionality is enabled.
+- The Special Fields add-on will not work while this functionality is enabled.
 
 ## Release Candidate 1
 
