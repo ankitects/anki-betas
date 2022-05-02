@@ -2,6 +2,37 @@
 
 <!-- toc -->
 
+## Release Candidate 2
+
+Build 63f05b2b / 2022-05-02.
+
+Bugfixes/tweaks:
+
+- The Qt5 Mac build now caps tag autocomplete matches to 10, as showing more is extremely slow in the old toolkit version.
+- Fix custom study applying the previously-input limit, instead of the current one.
+- Fix an error when previewing cards and selecting multiple cards (thanks to Rumo).
+- Removed the highlight on the Show Answer and Good buttons.
+- Make it easier to search in fields programmatically (thanks to Abdo).
+
+This build also includes a new implementation of apkg importing and exporting, thanks to Rumo. Some advantages:
+
+- Undo/redo is now supported.
+- Faster imports (especially for decks with a lot of note content).
+- Support for older clients can be optionally disabled, which results in smaller
+  apkg files, and faster imports.
+- Flags are removed when scheduling is excluded.
+
+The new functionality is hidden behind a feature flag, and **not active by default**.
+You can try it out by using `mw.pm.set_new_import_export(True)` in the [debug console](https://docs.ankiweb.net/misc.html#debug-console).
+To revert to the old behaviour, replace True with False.
+
+Things to note:
+
+- This is new code that has received limited testing so far, so please use `File>Create Backup` before trying it out.
+  Any testing/feedback you can provide would be appreciated.
+- While active, it is not currently possible to export files other than apkg/colpkg.
+- The Special Fields will not work while this functionality is enabled.
+
 ## Release Candidate 1
 
 Build a989e508 / 2022-04-25.
