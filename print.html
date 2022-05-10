@@ -203,8 +203,38 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2152"><a class="header" href="#changes-in-2152">Changes in 2.1.52</a></h1>
 <ul>
+<li><a href="anki2.1.52.html#release-candidate-3">Release Candidate 3</a></li>
 <li><a href="anki2.1.52.html#release-candidate-2">Release Candidate 2</a></li>
 <li><a href="anki2.1.52.html#release-candidate-1">Release Candidate 1</a></li>
+</ul>
+<h2 id="release-candidate-3"><a class="header" href="#release-candidate-3">Release Candidate 3</a></h2>
+<p>Build ab1c2395 / 2022-05-10.</p>
+<p>The Qt 6.3.1 release we were waiting on has been delayed by a month, so 2.1.52 is now
+expected to release as stable within the next week, if no important issues come up.</p>
+<p>Editor improvements:</p>
+<ul>
+<li>Ctrl/Cmd+A in tag editing area now selects all tags (thanks to BlueGreenMagick).</li>
+<li>Pressing tab on the last field now moves focus to tag area (thanks to Henrik).</li>
+<li>Reduce size of editor buttons on Windows/Linux (thanks to Henrik).</li>
+<li>Tags copied from the tag editor are no longer joined together when pasted into
+the add tags/remove tags dialogs (thanks to Henrik).</li>
+<li>Fixed <code>&amp;amp;</code> showing up when using <code>&amp;</code> in MathJax (thanks in part to Henrik).</li>
+<li>Fixed various issues with tag editing (thanks to BlueGreenMagick and Henrik).</li>
+</ul>
+<p>Other fixes:</p>
+<ul>
+<li>Fixed scrollbars showing in bottom area of review screen (thanks to Matthias).</li>
+<li>Fixed v3 scheduler allowing one extra card when review limit reached (thanks to Rumo).</li>
+<li>Fixed Anki needing to close when invalid modification times encountered by the browser on
+Windows.</li>
+<li>Fixed new importer failing to import a subdeck export (thanks to Rumo).</li>
+<li>Improve progress feedback when using the new importing and exporting code.</li>
+<li>New import code supports .zip filenames, and runs on drag/drop + file double-click cases as well.</li>
+</ul>
+<p>For developers:</p>
+<ul>
+<li>The <code>field_filter</code> hook can now check if it's running for the question or answer side (thanks to Abdo).</li>
+<li>Added a <code>av_player_will_play_tags</code> hook (thanks to Abdo).</li>
 </ul>
 <h2 id="release-candidate-2"><a class="header" href="#release-candidate-2">Release Candidate 2</a></h2>
 <p>Build 63f05b2b / 2022-05-02.</p>
@@ -306,7 +336,7 @@ you can force-enable Wayland with ANKI_WAYLAND=1.</li>
 The option in the preferences has been hidden again, and a new file introduced for
 adjusting behaviour: https://docs.ankiweb.net/platform/windows/display-issues.html#qt6</li>
 </ul>
-<h2 id="release-candidate-3"><a class="header" href="#release-candidate-3">Release Candidate 3</a></h2>
+<h2 id="release-candidate-3-1"><a class="header" href="#release-candidate-3-1">Release Candidate 3</a></h2>
 <p>Build c96ef8cd / 2022-04-05.</p>
 <ul>
 <li>The editor loads faster now, especially with lots of fields (thanks to Henrik).</li>
