@@ -2,6 +2,38 @@
 
 <!-- toc -->
 
+## Release Candidate 3
+
+Build ab1c2395 / 2022-05-10.
+
+The Qt 6.3.1 release we were waiting on has been delayed by a month, so 2.1.52 is now
+expected to release as stable within the next week, if no important issues come up.
+
+Editor improvements:
+
+- Ctrl/Cmd+A in tag editing area now selects all tags (thanks to BlueGreenMagick).
+- Pressing tab on the last field now moves focus to tag area (thanks to Henrik).
+- Reduce size of editor buttons on Windows/Linux (thanks to Henrik).
+- Tags copied from the tag editor are no longer joined together when pasted into
+  the add tags/remove tags dialogs (thanks to Henrik).
+- Fixed `&amp;` showing up when using `&` in MathJax (thanks in part to Henrik).
+- Fixed various issues with tag editing (thanks to BlueGreenMagick and Henrik).
+
+Other fixes:
+
+- Fixed scrollbars showing in bottom area of review screen (thanks to Matthias).
+- Fixed v3 scheduler allowing one extra card when review limit reached (thanks to Rumo).
+- Fixed Anki needing to close when invalid modification times encountered by the browser on
+  Windows.
+- Fixed new importer failing to import a subdeck export (thanks to Rumo).
+- Improve progress feedback when using the new importing and exporting code.
+- New import code supports .zip filenames, and runs on drag/drop + file double-click cases as well.
+
+For developers:
+
+- The `field_filter` hook can now check if it's running for the question or answer side (thanks to Abdo).
+- Added a `av_player_will_play_tags` hook (thanks to Abdo).
+
 ## Release Candidate 2
 
 Build 63f05b2b / 2022-05-02.
