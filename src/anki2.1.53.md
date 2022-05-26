@@ -1,5 +1,17 @@
 # Changes in 2.1.53
 
+## Release Candidate 2
+
+Build 96bacf79 / 2022-05-26.
+
+- Possible fix for crashes on some machines when closing windows.
+- Fix automatic backups popping up progress window when Anki minimized.
+- Fix cards not being generated after template edits.
+- Fix deck options top bar disappearing as you scroll down.
+- Fix duplicate Anki icons appearing in dock on macOS.
+- Fix duplicate first character in certain ibus configurations (thanks to wisherhxl).
+- Fix some MathJax directives failing to render in editor.
+
 ## Release Candidate 1
 
 Build f6ecddef / 2022-05-20.
