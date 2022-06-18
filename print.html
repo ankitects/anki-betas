@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro &amp; Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -201,6 +201,39 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2154"><a class="header" href="#changes-in-2154">Changes in 2.1.54</a></h1>
+<h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
+<p>Build 595c9273 / 2022-06-18.</p>
+<p>A new CSV importer &amp; exporter, thanks to Rumo:</p>
+<ul>
+<li>Shows a preview based on the selected field separator.</li>
+<li>Column mapping includes field text for reference.</li>
+<li>Multiple decks and notetypes can now be imported/exported at once, as columns can be mapped to deck or notetype name.</li>
+<li>Supports exporting and importing a unique identifier for a note, to use instead of a matching first field. This removes the need for the 'add note id' add-on.</li>
+<li>Extends the header syntax so that files can specify metadata such as the desired field separator, and the mapping of fields.</li>
+<li>The new functionality is not enabled by default, and can be enabled with a checkbox in the preferences screen. This also enables
+the new apkg import/export code introduced in 2.1.52. If you use the Special Fields add-on, you will need to disable this option
+in order to use the add-on.</li>
+</ul>
+<p>Update to Qt 6.3.1:</p>
+<ul>
+<li>Fixes complex-language input (eg Japanese, Hindi, etc) on macOS being flaky.</li>
+<li>Fixes unwanted text when copying from the review screen on Windows.</li>
+<li>Fixes a startup failure with certain Linux keyboard configurations.</li>
+</ul>
+<p>Other changes:</p>
+<ul>
+<li>Accept .zip extension when importing add-ons (thanks to Abdo).</li>
+<li>Add support for getting light/dark mode status with latest freedesktop standard (thanks to Bart).</li>
+<li>Field descriptions in the editor are now shown inline, instead of in a tooltip (thanks to Matthias).</li>
+<li>Fixed a rounding issue when describing time intervals of a year or more.</li>
+<li>Fixed an error that occurred after a one-way download fetched a collection with a different scheduler version enabled.</li>
+<li>Fixed desktop hanging when attempting to add a new notetype in KDE (kwin).</li>
+<li>Fixed flag names not updating after sync until Anki restarted.</li>
+<li>Fixed inability to enter underscore in tags area on some keyboard layouts (thanks to Henrik).</li>
+<li>Provide a way for the review screen to support drop events (thanks to Abdo).</li>
+<li>Other minor fixes and improvements.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2153"><a class="header" href="#changes-in-2153">Changes in 2.1.53</a></h1>
 <h2 id="release-candidate-2"><a class="header" href="#release-candidate-2">Release Candidate 2</a></h2>
 <p>Build 96bacf79 / 2022-05-26.</p>
@@ -213,7 +246,7 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <li>Fix duplicate first character in certain ibus configurations (thanks to wisherhxl).</li>
 <li>Fix some MathJax directives failing to render in editor.</li>
 </ul>
-<h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-1"><a class="header" href="#release-candidate-1-1">Release Candidate 1</a></h2>
 <p>Build f6ecddef / 2022-05-20.</p>
 <p>Editor changes:</p>
 <ul>
@@ -299,7 +332,7 @@ Any testing/feedback you can provide would be appreciated.</li>
 <li>While active, it is not currently possible to export files other than apkg/colpkg.</li>
 <li>The Special Fields add-on will not work while this functionality is enabled.</li>
 </ul>
-<h2 id="release-candidate-1-1"><a class="header" href="#release-candidate-1-1">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-2"><a class="header" href="#release-candidate-1-2">Release Candidate 1</a></h2>
 <p>Build a989e508 / 2022-04-25.</p>
 <ul>
 <li>Update Qt to 6.3, which fixes slow loading of large images, and inertial scrolling on macOS.</li>
@@ -337,7 +370,7 @@ you can force-enable Wayland with ANKI_WAYLAND=1.</li>
 <li>Fixed an issue with the search history when clicking on items in the sidebar (thanks to Rumo).</li>
 <li>Anki now closes the Browse screen before full sync or colpkg import/export, so it doesn't show errors.</li>
 </ul>
-<h2 id="release-candidate-1-2"><a class="header" href="#release-candidate-1-2">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-3"><a class="header" href="#release-candidate-1-3">Release Candidate 1</a></h2>
 <p>Build 51a0641b / 2022-04-10.</p>
 <ul>
 <li>Reviews in the V3 scheduler can now optionally be sorted by relative overdueness (thanks to Abdo).</li>
@@ -396,7 +429,7 @@ blank boxes in the Qt6 build.</li>
 &quot;restore position&quot; is enabled, and the cards don't have an original position
 (thanks to Rumo).</li>
 </ul>
-<h2 id="release-candidate-1-3"><a class="header" href="#release-candidate-1-3">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-4"><a class="header" href="#release-candidate-1-4">Release Candidate 1</a></h2>
 <p>Build ebe33a99 / 2022-03-29.</p>
 <ul>
 <li>Fixed a serious issue with repositioning/removing card templates in the card
@@ -819,7 +852,7 @@ You can specify the major version you want when installing - eg <code>pip instal
 <li>Wayland is off by default again, but can be enabled by starting Anki with
 ANKI_WAYLAND=1 defined.</li>
 </ul>
-<h2 id="release-candidate-1-4"><a class="header" href="#release-candidate-1-4">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-5"><a class="header" href="#release-candidate-1-5">Release Candidate 1</a></h2>
 <p>Build af2ec0b9 / 2021-09-13.</p>
 <ul>
 <li>Add &quot;Previous Card Info&quot; action to review screen (thanks to Evandro).</li>
@@ -847,7 +880,7 @@ ANKI_WAYLAND=1 defined.</li>
 provided they exclude svelte when bundling.</li>
 <li>WithShortcut is now also available.</li>
 </ul>
-<h2 id="release-candidate-1-5"><a class="header" href="#release-candidate-1-5">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-6"><a class="header" href="#release-candidate-1-6">Release Candidate 1</a></h2>
 <p>Build dffa38c4 / 2021-08-22.</p>
 <p>Changes to the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">v3 scheduler</a>:</p>
 <ul>
@@ -900,7 +933,7 @@ subsequently reviewing a card in the v3 scheduler.</li>
 <li>As always, thanks to the translators who've contributed translations.</li>
 <li>Minor other changes.</li>
 </ul>
-<h2 id="release-candidate-1-6"><a class="header" href="#release-candidate-1-6">Release Candidate 1</a></h2>
+<h2 id="release-candidate-1-7"><a class="header" href="#release-candidate-1-7">Release Candidate 1</a></h2>
 <p>Build 60f6fccc / 2021-07-13.</p>
 <ul>
 <li>Fix red duplicate background being included in copy+paste (thanks to Hikaru).</li>
