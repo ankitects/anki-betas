@@ -2,6 +2,17 @@
 
 ## Release Candidate 1
 
+Build 30c6bd58 / 2022-06-21.
+
+- Fixed broken column headers in Browse screen. You'll need to reconfigure your columns after updating.
+- Fixed undo history being cleared and error showing when double-tapping delete in Browse screen.
+- Fixed field descriptions appearing underneath field text (thanks to Hikaru).
+- Changing field delimeter in new import screen rebuilds field map.
+- Editor API improvements (thanks to Henrik).
+- Add ellipsis to Forget action.
+
+## Release Candidate 1
+
 Build 595c9273 / 2022-06-18.
 
 A new CSV importer & exporter, thanks to Rumo:
