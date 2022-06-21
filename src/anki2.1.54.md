@@ -1,6 +1,6 @@
 # Changes in 2.1.54
 
-## Release Candidate 1
+## Release Candidate 2
 
 Build 30c6bd58 / 2022-06-21.
 
