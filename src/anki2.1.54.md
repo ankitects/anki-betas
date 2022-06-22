@@ -1,5 +1,13 @@
 # Changes in 2.1.54
 
+## Release Candidate 3
+
+Build a8e34ce4 / 2022-06-22.
+
+- Fixed fields sticking in add screen when they shouldn't (thanks to Henrik).
+- Fixed incorrect header text alignment in Qt 6.3.1 (thanks to Rumo).
+- Automatically map tags field in new import screen (thanks to Rumo).
+
 ## Release Candidate 2
 
 Build 30c6bd58 / 2022-06-21.
