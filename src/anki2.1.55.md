@@ -1,5 +1,38 @@
 # Changes in 2.1.55
 
+## Beta 2
+
+Build e14f87ba / 2022-10-12.
+
+More UI improvements thanks to Matthias:
+
+- Improve visibility/appearance of duplicate warning.
+- Fix selected tag not being highlighted.
+- HTML tag auto-close can now be toggled via settings button in editor.
+- Move MathJax preview toggle to settings button.
+- When MathJax preview disabled, newly added equations no longer pop-up the preview.
+- Cards/notes selector now uses full label.
+- Improve layout for RTL languages.
+- Add left/right padding to buttons.
+- Ensure dropdowns are shown within window margins.
+- Fix vertical misalignment of bottom toolbar buttons.
+- Fix misaligned settings button.
+- Fix unreadable tooltips in dark mode on Windows.
+- Fix daily limits in deck options incorrectly starting from 1.
+- Tweak border color in dark mode.
+- Tweak appearance of menus on Windows/Linux.
+
+Other improvements/fixes:
+
+- Update Qt to 6.4, which performs better under Wayland. Please let us know of any improvements/regressions
+  it brings.
+- Fix MathJax editor not being hidden when note added or switched.
+- Fix scrolling with keys/keyboard event listeners not working on answer side (thanks to Hikaru).
+- Fix styling of pop-over arrows (thanks to BlueGreekMagick).
+- Make it easier to read add-on errors (thanks to Abdo).
+- Fix type answer warning making text bold.
+- Fix font size not being removed when pasting between fields.
+
 ## Beta 1
 
 Build f72570c or 6944210 / 2022-09-28.
