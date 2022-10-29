@@ -1,5 +1,33 @@
 # Changes in 2.1.55
 
+## Beta 3
+
+Build e5c4ccf0 / 2022-10-29.
+
+More UI work, thanks to Matthias. The styling is not set in stone, so we'd appreciate you letting us know
+what you like better now, and anything you don't like.
+
+- Reworked the appearance of the main window.
+- Changes to the theming of things like buttons, particularly on Windows/Linux.
+- Improvements to the deck options screen.
+- Fixed field names appearing on top of field content, by finishing the work Henrik had previously done.
+- Improved appearance of add-on buttons in editor.
+- The tag area separator in the editor now snaps into place.
+- Improved the tag completion pop-up.
+- Lay some of the groundwork for custom color themes in the future.
+
+Known issues in this beta:
+
+- The 'reduce motion' option in the preferences breaks the editing window.
+
+Improvements/Fixes:
+
+- Fixed indent/outdent shortcuts not working properly.
+- Fixed maximized browser window not being restored (thanks to Hikaru).
+- Fixed some issues with dragging tags/decks onto other tags/decks (thanks to Abdo).
+- Improve Anki's error handling, including some more informative error messages (thanks to Rumo).
+- Preserve background color when copy+pasting between fields.
+
 ## Beta 2
 
 Build e14f87ba / 2022-10-12.
