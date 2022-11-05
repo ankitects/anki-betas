@@ -1,5 +1,43 @@
 # Changes in 2.1.55
 
+## Beta 4
+
+Build e3c3405f / 2022-11-05.
+
+Lots of UI fixes thanks to Matthias:
+
+- Add back thick field focus border.
+- Add margin to buttons in reviewer.
+- Duplicate outline in editor no longer gets hidden when field not active.
+- Fix a lack of styling in the review area.
+- Fix colors on things like flags changing unintentionally.
+- Fix dropdowns wrapping to the top.
+- Fix fields not showing with reduce motion active.
+- Fix HTML editor not showing content initially.
+- Fix issues with the reviewer answer button area.
+- Fix short deck options' help text appearing next to the title.
+- Fix some issues with displaying on the Qt5 build.
+- Fix various RTL issues.
+- Flatten buttons to match macOS style (thanks also to Hikaru).
+- Increasingly increment/decrement SpinBox value on long press.
+- Prevent deck options switches from toggling on label click.
+- Set same font size for all platforms and make editor UI a bit smaller.
+- Tweaks to browser column headers.
+- Use circle icon for radio box.
+- Use custom scrollbar in stats screen, use grid layout, and tweak styling.
+
+Other fixes/improvements:
+
+- Fixed Apple Silicon macOS build failing to start.
+- Double-click on browse panes to split evenly (thanks to Aristotelis).
+- Fix browser sidebars appearing in wrong order in RTL mode (thanks to Abdo).
+- Fix headers in importing screen overlapping section content.
+- Fix MathJax pop-up appearing at bottom of screen.
+- Fix wrong deck preset being selected by default in some cases.
+- Improve the appearance of hte note/card switch toggle (thanks to Aristotelis).
+- Preload images on the front side of a card to reduce pop-in (thanks to Kelciour).
+- Remove untranslated 'see old deck options for add-ons' notice.
+
 ## Beta 3
 
 Build e5c4ccf0 / 2022-10-29.
