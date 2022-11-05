@@ -935,7 +935,22 @@ deleted permanently when you next run a media check.
 
 Other changes:
 
-- Updates to the translation infrastructure - please see https://anki.tenderapp.com/discussions/announcements/138-more-updates-to-ankis-translations
+- Updates to the translation infrastructure:
+
+```
+The upcoming 2.1.21 beta is introducing a new way to translate strings, and in order to support it, the translations website will be moving again.
+
+The new system uses Fluent (https://projectfluent.org/) instead of gettext. This has a number of advantages:
+
+Separate identifiers are used for each string instead the English text, which means the English text can be improved without breaking existing translations in other languages.
+It is easier to add comments to the translation files to make things clearer for translators.
+Plural support is more flexible, and translators can add different plural forms even if the original English text doesn't use separate single/plural forms.
+Translations can be more easily split up into multiple files.
+Only a small number of strings are currently using Fluent, and most of the text in Anki is still using gettext. The plan is to gradually move more strings over to Fluent over time.
+
+Because Crowdin does not support Fluent, I've set up a separate translations site using Mozilla Pontoon. Both the new Fluent strings and the old gettext strings are available. You can view it in read-only mode by visiting https://i18n.ankiweb.net
+```
+
 - Improvements to the readability of the scheduling code (thanks to Arthur)
 - More hooks for add-on authors (thanks to Arthur & Aristotelis)
 
@@ -1082,9 +1097,44 @@ Build c9a46268.
 
 Build fa564772.
 
-- Changes to the way cards are rendered that will break some add-ons - please
-  see [here](https://anki.tenderapp.com/discussions/beta-testing/1706-anki-2120-updates-to-card-template-rendering)
-- A new hook system for add-ons - please see [here](https://anki.tenderapp.com/discussions/beta-testing/1704-anki-2120-updates-to-the-hook-system)
+- Changes to the way cards are rendered that will break some add-ons:
+
+```
+The card template rendering process in Anki 2.1.20 has changed significantly under the hood, and most of the code that was in the anki/templates folder has gone away. Add-ons that were relying on hooks to modify the card rendering should continue to function, but add-ons that were using or monkey patching methods in the templates module will break, as those methods no longer exist.
+
+I have looked through the add-ons on AnkiWeb that modify the card template, and believe most of them should be able to accomplish what they were doing before by using the new card_did_render and/or field_filter hooks. Examples of how each of them can be used are available here:
+
+https://github.com/ankitects/anki-addons/blob/master/demos/
+
+For add-ons that were using the furigana/hint field modifiers, they are available for copying in the template_legacy.py file.
+
+If the hooks are insufficient for what your add-on is doing, please let me know within the next few weeks. If you're an end user and an add-on you use has broken, please let the add-on author know of this post.
+
+In terms of user-visible changes:
+
+The limit of 100 replacements on a template has been dropped.
+The new approach allow add-ons to add fields without 'unknown field' messages appearing on mobile devices (once they've been updated)
+Fields with a ':' character are no longer allowed. If you have a ':' in your fields, you can open and close the Cards screen to automatically remove the colon.
+Templates that reference a field that doesn't exist will now only show an error, instead of partially rendering.
+{{field}} references are ignored inside fields, so there is no risk of LaTeX/MathJax being interpreted as a field reference.
+The <% %> alternate syntax is deprecated, as it is no longer necessary due to the above change.
+Clearer errors when the user forgets to close a {{field}} reference, or mismatches open and close conditionals.
+```
+
+- A new hook system for add-ons:
+
+```
+Anki 2.1.20 introduces a new hook system that allows for better code completion and type checking than the old system. For a short explanation and link to some sample add-ons, please see https://apps.ankiweb.net/docs/addons.html#new-hooks
+
+Add-ons using the old hooks should continue to work, as the new hooks will automatically call the old hooks in most cases, and a few runHook/runFilter calls have been left in the codebase in the places where the new hooks differ significantly from the old ones.
+
+There are a bunch of hooks that previously were called with no arguments, such as when a new deck is created. The new hooks will tend to pass the newly created item into the callback, but will not do so for the legacy hooks, to avoid breaking old code.
+
+If anyone has feedback on the naming or the arguments of the new hooks, please let me know during the beta testing period, so they can be changed prior to add-on authors relying on them.
+
+To go along with these changes, the policy on adding new hooks has also changed. In the past, Anki's add-on documentation suggested hooks were best left for code paths that multiple add-ons wanted to extend, but this resulted in an over-reliance on monkey patching, and has made things fragile. The add-on documentation has been updated to encourage add-on authors to submit pull requests for any hooks they need, and the hope is that the bulk of add-ons can move away from monkey patching in the future.
+```
+
 - Tweaks to the 'tag updated notes' feature (thanks to Erez)
 - Fix cards being sorted in wrong order when added after the note was created (thanks to Arthur)
 
