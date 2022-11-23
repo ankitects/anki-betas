@@ -207,6 +207,32 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2155"><a class="header" href="#changes-in-2155">Changes in 2.1.55</a></h1>
+<h2 id="beta-5"><a class="header" href="#beta-5">Beta 5</a></h2>
+<p>Build b88a7394 / 2022-11-23.</p>
+<p>This beta is built with the new build system in PR #2022. The packages should
+behave as before, but if you notice any issues, please let us know. The wheels
+for this beta are missing from PyPi, but available on the download site.</p>
+<p>More UI tweaks thanks to Matthias:</p>
+<ul>
+<li>Fixed the editor freezing when expanding/collapsing images.</li>
+<li>Fixed the double border when 'reduce motion' is on.</li>
+<li>Don't show/hide the field icons on hover when 'reduce motion' is on.</li>
+<li>Move the options button in the editor to the left.</li>
+<li>Fixed some issues with field descriptions not updating.</li>
+<li>Fixed bad answer button display when answer times disabled.</li>
+<li>UI size tweaks.</li>
+</ul>
+<p>Other fixes:</p>
+<ul>
+<li>Fixed inverted ctrl+right/left handling in RTL fields again (thanks to Abdo).</li>
+<li>Add tooltip to More button (thanks to Hikaru).</li>
+<li>Fixed incorrect location of tag completion pop-up (thanks to Hikaru).</li>
+<li>Fixed a regression in some add-ons in the browser (thanks to Abdo).</li>
+<li>Fixed an issue with the night theme class (thanks to BlueGreenMagick).</li>
+<li>Improve handling of invalid UTF-8 in DB check.</li>
+<li>Suppress the &quot;Unknown error&quot; message that the web toolkit can output on Windows.</li>
+<li>Improve an add-on hook (thanks to zjosua).</li>
+</ul>
 <h2 id="beta-4"><a class="header" href="#beta-4">Beta 4</a></h2>
 <p>Build e3c3405f / 2022-11-05.</p>
 <p>Lots of UI fixes thanks to Matthias:</p>
@@ -700,7 +726,7 @@ ones tagged with <code>parent::child</code>: <code>tag:re:^parent$</code>.</li>
 <li>Fixed some parts of the media handling code matching more HTML tags than it should have (thanks to Brayan).</li>
 <li>Fixes for the bury count on the overview screen (thanks to Rumo).</li>
 </ul>
-<h2 id="beta-5"><a class="header" href="#beta-5">Beta 5</a></h2>
+<h2 id="beta-5-1"><a class="header" href="#beta-5-1">Beta 5</a></h2>
 <p>Build 3564ece6 / 2022-02-25.</p>
 <p>Editor fixes, thanks to Henrik:</p>
 <ul>
@@ -1135,7 +1161,7 @@ subsequently reviewing a card in the v3 scheduler.</li>
 <li>Fixed revert confirmation sometimes getting stuck in deck options (thanks to Henrik).</li>
 <li>Fixed unnecessary percent-escaping of images in HTML editor.</li>
 </ul>
-<h2 id="beta-5-1"><a class="header" href="#beta-5-1">Beta 5</a></h2>
+<h2 id="beta-5-2"><a class="header" href="#beta-5-2">Beta 5</a></h2>
 <p>Build 0f7a230f / 2021-06-29.</p>
 <ul>
 <li>Fixed the packaging issue in beta 4 that was preventing startup.</li>
@@ -1451,7 +1477,7 @@ clients, then downgrading.</li>
 <li>Fix 2.1 scheduler review counts not matching deck list.</li>
 <li>Fix a focusing issue in the editor (thanks to Henrik).</li>
 </ul>
-<h2 id="beta-5-2"><a class="header" href="#beta-5-2">Beta 5</a></h2>
+<h2 id="beta-5-3"><a class="header" href="#beta-5-3">Beta 5</a></h2>
 <p>Build 14cc81f8 / 2021-03-01.</p>
 <ul>
 <li>Filtered deck screen now has a link to show cards not matched by search (thanks to Rumo, Abdo).</li>
