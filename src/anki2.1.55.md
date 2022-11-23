@@ -1,5 +1,34 @@
 # Changes in 2.1.55
 
+## Beta 5
+
+Build b88a7394 / 2022-11-23.
+
+This beta is built with the new build system in PR #2022. The packages should
+behave as before, but if you notice any issues, please let us know. The wheels
+for this beta are missing from PyPi, but available on the download site.
+
+More UI tweaks thanks to Matthias:
+
+- Fixed the editor freezing when expanding/collapsing images.
+- Fixed the double border when 'reduce motion' is on.
+- Don't show/hide the field icons on hover when 'reduce motion' is on.
+- Move the options button in the editor to the left.
+- Fixed some issues with field descriptions not updating.
+- Fixed bad answer button display when answer times disabled.
+- UI size tweaks.
+
+Other fixes:
+
+- Fixed inverted ctrl+right/left handling in RTL fields again (thanks to Abdo).
+- Add tooltip to More button (thanks to Hikaru).
+- Fixed incorrect location of tag completion pop-up (thanks to Hikaru).
+- Fixed a regression in some add-ons in the browser (thanks to Abdo).
+- Fixed an issue with the night theme class (thanks to BlueGreenMagick).
+- Improve handling of invalid UTF-8 in DB check.
+- Suppress the "Unknown error" message that the web toolkit can output on Windows.
+- Improve an add-on hook (thanks to zjosua).
+
 ## Beta 4
 
 Build e3c3405f / 2022-11-05.
