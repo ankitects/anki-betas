@@ -207,11 +207,27 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2155"><a class="header" href="#changes-in-2155">Changes in 2.1.55</a></h1>
+<h2 id="beta-6"><a class="header" href="#beta-6">Beta 6</a></h2>
+<p>Build ca116699 / 2022-11-28.</p>
+<ul>
+<li>Fixed a number of issues with the tag editor (thanks to Matthias).</li>
+<li>Fixed shortcuts to select all/delete tags not working (thanks to Hikaru).</li>
+<li>Fixed non-native scrollbar and rubber-band scrolling in some screens on macOS (thanks to Matthias).</li>
+<li>Reduce size of dropdown text (thanks to Matthias).</li>
+<li>Tweak default styling to avoid overriding some shared deck styling (thanks to Matthias).</li>
+<li>Tweak button styling to improve restyle add-on behavior (thanks to BlueGreenMagick).</li>
+</ul>
+<p>For developers:</p>
+<ul>
+<li>The build system has been switched from Bazel to Ninja.</li>
+<li>Wheels are available on PyPI again.</li>
+<li>Thanks to Stefan for a bunch of spelling/typo fixes to the code.</li>
+</ul>
 <h2 id="beta-5"><a class="header" href="#beta-5">Beta 5</a></h2>
 <p>Build b88a7394 / 2022-11-23.</p>
 <p>This beta is built with the new build system in PR #2022. The packages should
 behave as before, but if you notice any issues, please let us know. The wheels
-for this beta are missing from PyPi, but available on the download site.</p>
+for this beta are missing from PyPi.</p>
 <p>More UI tweaks thanks to Matthias:</p>
 <ul>
 <li>Fixed the editor freezing when expanding/collapsing images.</li>
@@ -694,7 +710,7 @@ resulting .colpkg will not be readable by older Anki clients.</li>
 you can extend the daily limits by.</li>
 <li>Fix an intermittent error when building on Windows.</li>
 </ul>
-<h2 id="beta-6"><a class="header" href="#beta-6">Beta 6</a></h2>
+<h2 id="beta-6-1"><a class="header" href="#beta-6-1">Beta 6</a></h2>
 <p>Build a495fbaa / 2022-03-09.</p>
 <ul>
 <li>Reworked backup handling (thanks to Rumo):
@@ -1153,7 +1169,7 @@ subsequently reviewing a card in the v3 scheduler.</li>
 <li>Allow cloze: in non-cloze notetypes for now.</li>
 <li>Miscellaneous other changes.</li>
 </ul>
-<h2 id="beta-6-1"><a class="header" href="#beta-6-1">Beta 6</a></h2>
+<h2 id="beta-6-2"><a class="header" href="#beta-6-2">Beta 6</a></h2>
 <p>Build 6ffa7440 / 2021-07-04.</p>
 <ul>
 <li>Pre-load images on answer side (thanks to Hikaru).</li>
@@ -1471,7 +1487,7 @@ lapsing a card with a non-zero interval % in the V1 scheduler.</li>
 <li>Fix an error that could occur when syncing between 2.1.41 and older
 clients, then downgrading.</li>
 </ul>
-<h2 id="beta-6-2"><a class="header" href="#beta-6-2">Beta 6</a></h2>
+<h2 id="beta-6-3"><a class="header" href="#beta-6-3">Beta 6</a></h2>
 <p>Build 92aaaf71 / 2021-03-02.</p>
 <ul>
 <li>Fix 2.1 scheduler review counts not matching deck list.</li>
