@@ -1,12 +1,28 @@
 # Changes in 2.1.55
 
+## Beta 6
+
+Build ca116699 / 2022-11-28.
+
+- Fixed a number of issues with the tag editor (thanks to Matthias).
+- Fixed shortcuts to select all/delete tags not working (thanks to Hikaru).
+- Fixed non-native scrollbar and rubber-band scrolling in some screens on macOS (thanks to Matthias).
+- Reduce size of dropdown text (thanks to Matthias).
+- Tweak default styling to avoid overriding some shared deck styling (thanks to Matthias).
+- Tweak button styling to improve restyle add-on behavior (thanks to BlueGreenMagick).
+
+For developers:
+- The build system has been switched from Bazel to Ninja.
+- Wheels are available on PyPI again.
+- Thanks to Stefan for a bunch of spelling/typo fixes to the code.
+
 ## Beta 5
 
 Build b88a7394 / 2022-11-23.
 
 This beta is built with the new build system in PR #2022. The packages should
 behave as before, but if you notice any issues, please let us know. The wheels
-for this beta are missing from PyPi, but available on the download site.
+for this beta are missing from PyPi.
 
 More UI tweaks thanks to Matthias:
 
