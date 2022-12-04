@@ -1,5 +1,32 @@
 # Changes in 2.1.55
 
+## Beta 7
+
+Build fad1ff74 / 2022-12-04.
+
+- Fixed 'remove formatting' not handling formatting in the middle of a selection.
+- Fixed (or at least reduced) crashes on exit.
+- Fixed alternate table row color on macOS dark mode.
+- Fixed audio not playing on macOS.
+- Fixed glitchy animation of floating elements (thanks to Matthias).
+- Fixed incorrect field mapping in the change notetype screen.
+- Fixed interface being reversed on first run with RTL language.
+- Fixed some regressions in the tag editor. If you notice this causes empty tags to be added again, please let us know.
+- Fixed the current text input not being saved when clicking on the Save button without leaving the field first.
+- Fixed TTS throwing errors on Windows.
+- Give containers a brighter color than canvas (thanks to Matthias).
+- Improve button color/hover gradients (thanks to Matthias).
+- Improve the appearance of dropdowns, and fix layout in CSV import screen (thanks to Matthias).
+- MathJax preview is no longer subject to image shrinking.
+- Reduce flicker when showing congrats screen.
+- Slightly reduce padding in deck list (thanks to Matthias).
+- The Hard button on the first step is now capped to a maximum of 1 day greater than Again (thanks to Rumo).
+- The zoom level is no longer reset when moving between screens.
+- Tweak scrollbar colors for better visibility in dark theme (thanks to Matthias).
+- Tweak the appearance/behaviour of the increment/decrement buttons in deck options.
+- Use third grid column in graphs layout on wide screens (thanks to Matthias).
+- Added an option to force Windows/Linux-style appearance on Macs (thanks to Matthias). Enable with `mw.pm.set_force_custom_styles(True)` in the debug console, then restart.
+
 ## Beta 6
 
 Build ca116699 / 2022-11-28.
