@@ -207,6 +207,32 @@ Repeat the last two steps to update to the latest beta and start it.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2155"><a class="header" href="#changes-in-2155">Changes in 2.1.55</a></h1>
+<h2 id="beta-7"><a class="header" href="#beta-7">Beta 7</a></h2>
+<p>Build fad1ff74 / 2022-12-04.</p>
+<ul>
+<li>Fixed 'remove formatting' not handling formatting in the middle of a selection.</li>
+<li>Fixed (or at least reduced) crashes on exit.</li>
+<li>Fixed alternate table row color on macOS dark mode.</li>
+<li>Fixed audio not playing on macOS.</li>
+<li>Fixed glitchy animation of floating elements (thanks to Matthias).</li>
+<li>Fixed incorrect field mapping in the change notetype screen.</li>
+<li>Fixed interface being reversed on first run with RTL language.</li>
+<li>Fixed some regressions in the tag editor. If you notice this causes empty tags to be added again, please let us know.</li>
+<li>Fixed the current text input not being saved when clicking on the Save button without leaving the field first.</li>
+<li>Fixed TTS throwing errors on Windows.</li>
+<li>Give containers a brighter color than canvas (thanks to Matthias).</li>
+<li>Improve button color/hover gradients (thanks to Matthias).</li>
+<li>Improve the appearance of dropdowns, and fix layout in CSV import screen (thanks to Matthias).</li>
+<li>MathJax preview is no longer subject to image shrinking.</li>
+<li>Reduce flicker when showing congrats screen.</li>
+<li>Slightly reduce padding in deck list (thanks to Matthias).</li>
+<li>The Hard button on the first step is now capped to a maximum of 1 day greater than Again (thanks to Rumo).</li>
+<li>The zoom level is no longer reset when moving between screens.</li>
+<li>Tweak scrollbar colors for better visibility in dark theme (thanks to Matthias).</li>
+<li>Tweak the appearance/behaviour of the increment/decrement buttons in deck options.</li>
+<li>Use third grid column in graphs layout on wide screens (thanks to Matthias).</li>
+<li>Added an option to force Windows/Linux-style appearance on Macs (thanks to Matthias). Enable with <code>mw.pm.set_force_custom_styles(True)</code> in the debug console, then restart.</li>
+</ul>
 <h2 id="beta-6"><a class="header" href="#beta-6">Beta 6</a></h2>
 <p>Build ca116699 / 2022-11-28.</p>
 <ul>
@@ -692,7 +718,7 @@ build. If you created a .colpkg file with beta 7 and need to recover data from i
 please get in touch and we can help you out.</li>
 <li>Fixed addMedia() call used by some add-ons (thanks to Henrik).</li>
 </ul>
-<h2 id="beta-7"><a class="header" href="#beta-7">Beta 7</a></h2>
+<h2 id="beta-7-1"><a class="header" href="#beta-7-1">Beta 7</a></h2>
 <p>Build 02ba50f2 / 2022-03-15.</p>
 <p>This release has been yanked due to bugs in colpkg imports. Please wait for the next beta.</p>
 <ul>
@@ -1480,7 +1506,7 @@ lapsing a card with a non-zero interval % in the V1 scheduler.</li>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2141"><a class="header" href="#changes-in-2141">Changes in 2.1.41</a></h1>
 <h2 id="add-on-notes"><a class="header" href="#add-on-notes">Add-On Notes</a></h2>
 <p>Add-on authors, please see <a href="https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390">https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390</a></p>
-<h2 id="beta-7-1"><a class="header" href="#beta-7-1">Beta 7</a></h2>
+<h2 id="beta-7-2"><a class="header" href="#beta-7-2">Beta 7</a></h2>
 <p>Build 3ba08d11 / 2021-03-04.</p>
 <ul>
 <li>Fix a freeze when answering a card with a missing parent deck.</li>
