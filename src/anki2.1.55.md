@@ -1,5 +1,30 @@
 # Changes in 2.1.55
 
+## Release Candidate 1
+
+Build f38c4e2f / 2022-12-09.
+
+- Close MathJax editor when Esc is pressed (thanks to Abdo).
+- Field collapse state and HTML editor no longer resets when card added (thanks to Matthias).
+- Fixed 'change notetype' starting with the wrong notetype selected.
+- Fixed MathJax editor not hiding as you select a different note.
+- Fixed more RTL issues (thanks to Matthias).
+- Fixed some dialogs failing to appear on new installs.
+- Fixed stuck animation when MathJax editor near edge of window (thanks to Matthias).
+- Fixed text color button not applying colors in some cases (thanks to Henrik).
+- Improve dropdown appearance and tweak change notetypes screen (thanks to Matthias).
+- Increased initial add-on dialog size.
+- Make up/down buttons in deck options more subtle (thanks to Matthias).
+- Pages like deck options now have a larger default size.
+- Possible fix for slow TTS on Windows.
+
+Developer-focused:
+
+- Fixed a 'git failed' message that could occur when building.
+- Fixes to work with the latest timing library (thanks to Rumo).
+- Make it easier to replace hooks (thanks to zjosua).
+
+
 ## Beta 7
 
 Build fad1ff74 / 2022-12-04.
