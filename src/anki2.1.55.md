@@ -1,5 +1,19 @@
 # Changes in 2.1.55
 
+## Release Candidate 2
+
+Build e0c4ba4b / 2022-12-14.
+
+- Better hover feedback on top menu (thanks to Matthias).
+- Fix cursor moving to field start when closing MathJax editor.
+- Fix disabled state not being conveyed in dropdowns (thanks to Matthias).
+- Fix inability to choose black in editor.
+- Fix MathJax popup not appearing when activated via mouse (thanks to Hikaru).
+- Fix RTL issues on first run.
+- Hide description button for filtered decks (thanks to Matthias).
+- Improve dropdown arrow appearance (thanks to Matthias).
+- Revert to Qt 6.3 on macOS, which fixes a flickering issue.
+
 ## Release Candidate 1
 
 Build f38c4e2f / 2022-12-09.
