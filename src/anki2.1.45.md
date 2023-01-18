@@ -1,6 +1,6 @@
 # Changes in 2.1.45
 
- ## Release Candidate 2
+## Release Candidate 2
 
 Build e7189f4a / 2021-07-24.
 
@@ -37,7 +37,8 @@ Build 6ffa7440 / 2021-07-04.
 
 - Pre-load images on answer side (thanks to Hikaru).
 - Updated sidebar and editor icons (thanks to Henrik).
-- Fixed revert confirmation sometimes getting stuck in deck options (thanks to Henrik).
+- Fixed revert confirmation sometimes getting stuck in deck options (thanks to
+  Henrik).
 - Fixed unnecessary percent-escaping of images in HTML editor.
 
 ## Beta 5
@@ -48,28 +49,27 @@ Build 0f7a230f / 2021-06-29.
 - Show deck options in two columns on wider screens (thanks to Matthias, Hikaru
   & Henrik).
 - Sidebar search now scrolls to first match (thanks to Abdo & Rumo).
-- Reverted a change that was causing some add-ons that modify the reviewing screen
-  to break.
+- Reverted a change that was causing some add-ons that modify the reviewing
+  screen to break.
 - Show error before uploading if collection larger than AnkiWeb's limits.
 - Handle invalid card template numbers in DB check.
 - Fixed error message when confirming cloze deletion in normal note type.
 - Fixed expanding/collapsing tags triggering refresh (thanks to Rumo).
 - Fixed night mode preset dialogs in deck options (thanks to Henrik).
-- Fixed some issues with preserving selected item
-  in sidebar (thanks to Rumo).
+- Fixed some issues with preserving selected item in sidebar (thanks to Rumo).
 
 ## Beta 3
 
 Build 18843e71 / 2021-06-25.
 
-- Fixed remembered tags not being applied to subsequently added
-  cards after actions like toggling a pin/deleting a deck/etc.
+- Fixed remembered tags not being applied to subsequently added cards after
+  actions like toggling a pin/deleting a deck/etc.
 - Fixed toggling of night mode preview in day mode (thanks to hkr).
 - Fixed incorrect field content issue with HTML editor (thanks to Henrik).
-- Exclude deck and tag expand/collapse from undo queue; fixes automatic
-  scroll to Current Deck in Browser.
-- Fixed .apkg importer allowing import of V2 collection with scheduling
-  into a V1 collection.
+- Exclude deck and tag expand/collapse from undo queue; fixes automatic scroll
+  to Current Deck in Browser.
+- Fixed .apkg importer allowing import of V2 collection with scheduling into a
+  V1 collection.
 - Disable cloze and math buttons in HTML editor.
 
 ## Beta 2
@@ -78,14 +78,14 @@ Build b693bdbf / 2021-06-24.
 
 Known issues:
 
-- If adding cards with tags, toggling a pin will clear the saved tags, but
-  they will still be shown in the UI. To make sure the tags are still added,
-  to subsequent cards, please click in the tags area after toggling a pin.
+- If adding cards with tags, toggling a pin will clear the saved tags, but they
+  will still be shown in the UI. To make sure the tags are still added, to
+  subsequent cards, please click in the tags area after toggling a pin.
 
 Browser updates:
 
-- Added an option in the Preferences screen to customize the starting
-  search text (eg, to start with "deck:current").
+- Added an option in the Preferences screen to customize the starting search
+  text (eg, to start with "deck:current").
 - More reliably scroll to the current card.
 - New tag icons and associated backend work (thanks to Henrik).
 
@@ -98,13 +98,13 @@ Change notetype:
 
 - Supports multiple undo.
 - Can match old and new fields by name.
-- Allows mapping a source field to more than one destination
-  fields, allowing you to clone the contents of a field.
+- Allows mapping a source field to more than one destination fields, allowing
+  you to clone the contents of a field.
 
 Other features:
 
-- Warn user when they attempt to use cloze markers inappropriately
-  (thanks to Rumo).
+- Warn user when they attempt to use cloze markers inappropriately (thanks to
+  Rumo).
 - Support system SSL certs on Linux.
 - Improved add-on support for the new deck options screen (thanks to Henrik).
 - Changed v3 scheduler label from "experimental" to "beta".
@@ -121,7 +121,8 @@ Fixes:
 - Fixed 'Set Due Date' not remembering provided input.
 - Fixed incorrect card count when removing multiple templates.
 - Fixed an issue compiling on recent Python 3.9 installs.
-- Fixed field pin status being forgotten when opening Cards screen (thanks to Henrik).
+- Fixed field pin status being forgotten when opening Cards screen (thanks to
+  Henrik).
 - Reduce chances of a flash when revealing answer on cards with images.
 - Miscellaneous other changes.
 
@@ -134,8 +135,8 @@ Changes:
 - Added an option to the v3 scheduler to sort new cards in reverse order.
 - Added a Card Info option to the review screen.
 - Reduced editor toolbar size on Macs.
-- When opening the Browse screen with an active study card, the whole
-  deck is now shown (thanks to Rumo).
+- When opening the Browse screen with an active study card, the whole deck is
+  now shown (thanks to Rumo).
 
 Fixes:
 
@@ -163,18 +164,19 @@ v3 scheduler changes:
 
 Other features/behaviour changes:
 
-- Updated text colour and highlight colour buttons, thanks to Henrik and Matthias.
+- Updated text colour and highlight colour buttons, thanks to Henrik and
+  Matthias.
 - Added 3 new flag colours, thanks to Rumo.
-- Sidebar items can be dragged onto the Saved Searches area to add them as a favourite,
-  thanks to Rumo.
+- Sidebar items can be dragged onto the Saved Searches area to add them as a
+  favourite, thanks to Rumo.
 - Added a new menu item to clone the current deck options.
 - Custom study now limits the tag selection to 100 tags or fewer.
-- Extra checks are now done when updating a card template, such as detecting when
-  a cloze notetype is missing a cloze directive, or two templates have identical question
-  sides, thanks to Rumo.
+- Extra checks are now done when updating a card template, such as detecting
+  when a cloze notetype is missing a cloze directive, or two templates have
+  identical question sides, thanks to Rumo.
 - Editor toolbar styling improvements, thanks to Henrik and Matthias.
-- The "sync required" indicator is now updated immediately, and will turn off
-  if you undo the first change made after a sync.
+- The "sync required" indicator is now updated immediately, and will turn off if
+  you undo the first change made after a sync.
 - Removed the superfluous "keep input" option from the Fields dialog.
 - When opening deck option from the study screen, you'll now be asked which deck
   you want if the card is in a subdeck.
@@ -185,12 +187,15 @@ Fixes:
 - Fixed an error/crash occurring when timeboxing was enabled.
 - Fixed deck options screen mishandling steps shorter a minute.
 - Fixed remembered tags not being applied to subsequently-added notes.
-- Fixed an error being shown when exporting cards/decks with a non-default deck configuration.
-- Fixed changes to the current field not being saved when saving the deck options.
+- Fixed an error being shown when exporting cards/decks with a non-default deck
+  configuration.
+- Fixed changes to the current field not being saved when saving the deck
+  options.
 - Fixes for building on linux-arm64 (thanks to qubist-pixel-ux).
-- Force x11 mode when the packaged build is run on a system that tells Qt to use Wayland,
-  as Wayland is not currently supported by the packaged build.
-- When a fatal error occurs, close Anki instead of allowing it to remain in a stuck state.
+- Force x11 mode when the packaged build is run on a system that tells Qt to use
+  Wayland, as Wayland is not currently supported by the packaged build.
+- When a fatal error occurs, close Anki instead of allowing it to remain in a
+  stuck state.
 - Fix formatting of some error messages, thanks to Rumo.
 - Various behinds-the-scenes changes thanks to Henrik and Rumo.
 - Miscellaneous other changes.
@@ -206,8 +211,8 @@ Build f91f00a5 / 2021-05-24.
 - Improve cards/notes switch appearance (thanks to Rumo & Kleinerpirat).
 - Various tweaks to the Deck Options screen.
 - When Browse screen is opened, default to the first sidebar mode.
-- Add night mode styling to 'type in the answer' box, and improve legibility
-  of comparison.
+- Add night mode styling to 'type in the answer' box, and improve legibility of
+  comparison.
 - Fix Find&Replace searching in incorrect field.
 - Fix missing cumulative overlays in graphs.
 - Fix strange characters in Deck Options titlebar (thanks to Abdo).
@@ -222,11 +227,9 @@ Build f91f00a5 / 2021-05-24.
 Build b9a4908b / 2021-05-19.
 
 - Fixed a bug that was causing the Undo action to force a full sync.
-- You can now redo undone actions. The Redo menu item will be hidden
-  for actions that don't support the new undo code, including reviews in
-  the v1/v2 scheduer.
-- Changed the shortcut for Undo in the Browse screen to match the main
-  window.
+- You can now redo undone actions. The Redo menu item will be hidden for actions
+  that don't support the new undo code, including reviews in the v1/v2 scheduer.
+- Changed the shortcut for Undo in the Browse screen to match the main window.
 - Fixed an error when switching between cards and notes modes (thanks to Rumo).
 - Various tweaks to the appearance of the deck options screen (some thanks to
   Henrik).
@@ -254,8 +257,8 @@ Undo handling:
   clear the undo history.
 - Add-ons will clear the undo history if they modify the database directly, or
   use routines that don't support undoing. There are some new routines available
-  to add-ons to make operations undoable, but add-ons may need to be updated
-  to use them.
+  to add-ons to make operations undoable, but add-ons may need to be updated to
+  use them.
 
 Scheduling changes:
 
@@ -268,10 +271,9 @@ Browser changes, thanks to Rumo:
 - The sidebar now has two modes. The default allows clicking on items to search
   for them. The other mode allows you to select multiple items at once, so you
   can drag & drop or delete multiple items.
-- The browse screen can now be toggled between showing cards,
-  and showing notes.
-- When showing notes, some columns will show an aggregate over all the
-  cards of a note.
+- The browse screen can now be toggled between showing cards, and showing notes.
+- When showing notes, some columns will show an aggregate over all the cards of
+  a note.
 - Added an introduced:x search to locate cards first studied in the last x days.
 - Column rendering has been moved into the backend, and will be faster than
   before (but is still limited by the speed of the graphics toolkit).
@@ -287,7 +289,8 @@ Editor changes, thanks to Henrik:
 - The editor now provides buttons to control text alignment and indent.
 - Sticky fields can now be toggled on/off from the editing screen.
 - Editor shortcuts are handled differently, and the current approach does not
-  work well on non-QWERTY keymaps. This will likely change before a stable release.
+  work well on non-QWERTY keymaps. This will likely change before a stable
+  release.
 - A new API is available for add-ons, but this has not been finalized yet.
 
 State handling:
@@ -323,7 +326,8 @@ Other changes:
 
 - Numerous behind-the-scenes improvements from Henrik and Rumo.
 - The Find&Replace option in the Browse screen can now be used on tags as well.
-- You can now choose which add-ons you want to update (thanks to BlueGreenMagick).
+- You can now choose which add-ons you want to update (thanks to
+  BlueGreenMagick).
 - Fix text with single quote not being escaped in export (thanks to Ryan).
 - Other fixes and improvements thanks to Abdo, Glutanimate, Arthur and Shaun.
 - The Card Info screen ignores manual rescheduling when calculating the average

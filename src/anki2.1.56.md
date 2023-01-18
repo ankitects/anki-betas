@@ -6,19 +6,23 @@ Build bc697597 / 2023-01-04.
 
 New features/improvements:
 
-- Cloze deletions can now be nested inside other cloze deletions (thanks to TRIAEIOU).
-- Inactive cloze deletions can now be styled with .cloze-inactive (thanks to TRIAEIOU).
+- Cloze deletions can now be nested inside other cloze deletions (thanks to
+  TRIAEIOU).
+- Inactive cloze deletions can now be styled with .cloze-inactive (thanks to
+  TRIAEIOU).
 - Graphs in large collections now load approximately twice as quickly.
 - Add-on config help is now shown in a webview (thanks to Abdo).
 
 Fixes:
 
-- Fix error popping up 12 hours after starting Anki on macOS and some Linux machines.
+- Fix error popping up 12 hours after starting Anki on macOS and some Linux
+  machines.
 - Fix unreadable text when searching in sidebar.
 - Fix fcitx not working on Linux Qt6 package.
 - Fix old graphs failing to appear.
 - Fix dark mode display issues on macOS/Qt5.
-- Fix images not being constrained to window width when image shrinking disabled.
+- Fix images not being constrained to window width when image shrinking
+  disabled.
 - Fix incorrect macOS minimum version in Qt5 build.
 - Fix lack of highlight for marked cards in day mode.
 - Fix pop-up menu in editor sometimes flashing (thanks to Hikaru).

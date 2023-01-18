@@ -9,18 +9,20 @@ version, please go to the `File>Switch Profile` menu item, and click on
 
 ## Problems
 
-If you run into any issues, please let us know on the [beta testing
-section](https://forums.ankiweb.net/c/beta-testing/) of the user forums.
+If you run into any issues, please let us know on the
+[beta testing section](https://forums.ankiweb.net/c/beta-testing/) of the user
+forums.
 
 ## Packaged Builds
 
-You can get the [latest packaged beta](https://apps.ankiweb.net/downloads/beta/?C=N&O=D)
-from AnkiWeb.
+You can get the
+[latest packaged beta](https://apps.ankiweb.net/downloads/beta/?C=N&O=D) from
+AnkiWeb.
 
 ## Via PyPI/pip
 
-If you have a local Python 3.9 installation, you can also install beta
-builds directly with pip.
+If you have a local Python 3.9 installation, you can also install beta builds
+directly with pip.
 
 Anki will be installed in a local Python folder called 'pyenv'.
 
@@ -36,13 +38,14 @@ $ pyenv/bin/anki
 
 - Repeat the last step if you wish to start the same Anki version again.
 - Repeat the last two steps to update to the latest beta and start it.
+
 </details>
 
 <details>
 <summary>Linux (ARM)</summary>
 
-As there are no PyQt packages on PyPI for Linux/ARM, you will need to have
-your distro's PyQt5 packages already installed. Eg on Debian 11:
+As there are no PyQt packages on PyPI for Linux/ARM, you will need to have your
+distro's PyQt5 packages already installed. Eg on Debian 11:
 
 ```
 $ sudo apt install python3-pyqt5.{qtwebengine,qtmultimedia}
@@ -65,6 +68,7 @@ $ pyenv/bin/anki
 
 - Repeat the last step if you wish to start the same Anki version again.
 - Repeat the last two steps to update to the latest beta and start it.
+
 </details>
 
 <details>
@@ -77,7 +81,7 @@ c:\> pyenv\scripts\pip install --upgrade --pre aqt[qt6]
 c:\> pyenv\scripts\anki
 ```
 
-Repeat the last step if you wish to start the same Anki version again.
-Repeat the last two steps to update to the latest beta and start it.
+Repeat the last step if you wish to start the same Anki version again. Repeat
+the last two steps to update to the latest beta and start it.
 
 </details>

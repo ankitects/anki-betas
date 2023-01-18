@@ -2,6 +2,7 @@
 
 - [Intro & Downloads](./intro.md)
 - [2021 Scheduler](./2021-scheduler.md)
+- [Changes in 2.1.57](./anki2.1.57.md)
 - [Changes in 2.1.56](./anki2.1.56.md)
 - [Changes in 2.1.55](./anki2.1.55.md)
 - [Changes in 2.1.54](./anki2.1.54.md)

@@ -9,7 +9,7 @@ Build 3077a1f9 / 2021-08-25.
 For add-on developers:
 
 - The Svelte components Anki exports should now work correctly in add-ons,
-provided they exclude svelte when bundling.
+  provided they exclude svelte when bundling.
 - WithShortcut is now also available.
 
 ## Release Candidate 1
@@ -41,10 +41,12 @@ Other changes:
 - Fixed an issue with ampersands in the Add Cards history button (thanks to
   Arthur).
 - Fixed handling of audio/video tags (thanks to Hikaru).
-- Fixed errors playing audio when computer was slow to respond (thanks to Kelciour).
+- Fixed errors playing audio when computer was slow to respond (thanks to
+  Kelciour).
 - Fixed preferences screen not updating undo menu, and causing an error when
-subsequently reviewing a card in the v3 scheduler.
+  subsequently reviewing a card in the v3 scheduler.
 - Fixed case changes being ignored in tag rename.
 - Fixed error shown when DB check run on corrupt collection.
-- Fixed deck options prompt showing the default deck, instead of the correct one.
+- Fixed deck options prompt showing the default deck, instead of the correct
+  one.
 - Fixed reposition command ignoring suspended cards.
