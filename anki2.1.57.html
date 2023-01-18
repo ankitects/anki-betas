@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Changes in 2.1.56 - Anki Betas</title>
+        <title>Changes in 2.1.57 - Anki Betas</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.57.html">Changes in 2.1.57</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html" class="active">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.57.html" class="active">Changes in 2.1.57</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -145,53 +145,60 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="changes-in-2156"><a class="header" href="#changes-in-2156">Changes in 2.1.56</a></h1>
-<h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
-<p>Build bc697597 / 2023-01-04.</p>
-<p>New features/improvements:</p>
+                        <h1 id="changes-in-2157"><a class="header" href="#changes-in-2157">Changes in 2.1.57</a></h1>
+<h2 id="beta-1"><a class="header" href="#beta-1">Beta 1</a></h2>
+<p>Build 5cdfa7a6 / 2023-01-18.</p>
+<p>More UI improvements/fixes thanks to Matthias, including:</p>
 <ul>
-<li>Cloze deletions can now be nested inside other cloze deletions (thanks to
-TRIAEIOU).</li>
-<li>Inactive cloze deletions can now be styled with .cloze-inactive (thanks to
-TRIAEIOU).</li>
-<li>Graphs in large collections now load approximately twice as quickly.</li>
-<li>Add-on config help is now shown in a webview (thanks to Abdo).</li>
+<li>The top toolbar area can now take on the color/background of the main window.</li>
+<li>The top toolbar appears more subtle during review.</li>
+<li>A new option in the preferences to automatically hide the top and bottom bar
+during review.</li>
+<li>A new option in the preferences to enable a &quot;minimalist&quot; mode that makes the
+UI more compact/less fancy.</li>
+<li>A new option in the preferences to switch between native styling and the Anki
+theme (on Mac/Linux).</li>
+<li>The preferences screen has been redesigned to be easier to navigate.</li>
 </ul>
-<p>Fixes:</p>
+<p>Syncing has also been updated:</p>
 <ul>
-<li>Fix error popping up 12 hours after starting Anki on macOS and some Linux
-machines.</li>
-<li>Fix unreadable text when searching in sidebar.</li>
-<li>Fix fcitx not working on Linux Qt6 package.</li>
-<li>Fix old graphs failing to appear.</li>
-<li>Fix dark mode display issues on macOS/Qt5.</li>
-<li>Fix images not being constrained to window width when image shrinking
-disabled.</li>
-<li>Fix incorrect macOS minimum version in Qt5 build.</li>
-<li>Fix lack of highlight for marked cards in day mode.</li>
-<li>Fix pop-up menu in editor sometimes flashing (thanks to Hikaru).</li>
-<li>Fix some issues entering text via IME around MathJax area (thanks to Hikaru).</li>
-<li>Fix some regressions with the graphs when saving to a PDF.</li>
-<li>Fix truncated text on some buttons.</li>
-<li>Fix two mpv issues on Windows (thanks to Kelciour).</li>
-<li>Tweak focus highlight of some widgets (thanks to Abdo).</li>
+<li>Tweaks to the sync protocol that should be transparent when syncing with
+AnkiWeb, but that will break syncing with third-party servers that haven't
+been updated yet.</li>
+<li>The sync server bundled with Anki has been updated, and now supports syncing
+media as well. More information is available on
+<a href="https://docs.ankiweb.net/sync-server.html">https://docs.ankiweb.net/sync-server.html</a>.</li>
 </ul>
-<p>For devs:</p>
+<p>Other changes:</p>
 <ul>
-<li>Improve web building/reloading experience (thanks to Aristotelis).</li>
-<li>Fix an issue building the code with the latest git version.</li>
-<li>Fix aqt type completion not working with PyPI wheel.</li>
+<li>Switch to a different library for handling type-in-the-answer comparisons,
+which should give more reliable results, and not crash with certain inputs
+(thanks to Rumo).</li>
+<li>Fix <code>introduced:x</code> not working correctly when negated (thanks to Rumo).</li>
+<li>Fix ctrl+enter not working when importing screen first opened.</li>
+<li>Fix image dimensions not being correctly constrained (thanks to Hikaru).</li>
+<li>Fix incorrect total/average in added graph.</li>
+<li>Fix newlines not appearing when importing a csv file with HTML disabled.</li>
+<li>Fix quotes preventing field descriptions from showing.</li>
+<li>Fix spaces not handled properly when entering text around MathJax (thanks to
+Hikaru).</li>
+<li>Fix toolbar add-on breakages and introduce toolbar tray layout &amp; API (thanks
+to Aristotelis).</li>
+<li>Fix type-in-the-answer not supported nested cloze deletions.</li>
+<li>Increase delay when adjusting clipboard, which may improve compatibility on
+some systems.</li>
+<li>Update Windows/Linux builds to Qt 6.4.2.</li>
 </ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="anki2.1.57.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="2021-scheduler.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="anki2.1.55.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="anki2.1.56.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -201,11 +208,11 @@ disabled.</li>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="anki2.1.57.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="2021-scheduler.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="anki2.1.55.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="anki2.1.56.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

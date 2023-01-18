@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html" class="active">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.57.html">Changes in 2.1.57</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html" class="active">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -154,22 +154,26 @@
 <li>Fix cards not being generated after template edits.</li>
 <li>Fix deck options top bar disappearing as you scroll down.</li>
 <li>Fix duplicate Anki icons appearing in dock on macOS.</li>
-<li>Fix duplicate first character in certain ibus configurations (thanks to wisherhxl).</li>
+<li>Fix duplicate first character in certain ibus configurations (thanks to
+wisherhxl).</li>
 <li>Fix some MathJax directives failing to render in editor.</li>
 </ul>
 <h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
 <p>Build f6ecddef / 2022-05-20.</p>
 <p>Editor changes:</p>
 <ul>
-<li>Rework image resizing (thanks to Henrik). Images expand to the editor width by default now,
-and images that are resized for the editor will remain that way if you switch fields, or
-navigate to a different note and back.</li>
-<li>Existing height constraints on images are stripped when resizing (thanks to BlueGreenMagick).</li>
-<li>The MathJax editor now provides buttons/shortcuts to cloze-delete selected text (thanks to Henrik).</li>
+<li>Rework image resizing (thanks to Henrik). Images expand to the editor width by
+default now, and images that are resized for the editor will remain that way
+if you switch fields, or navigate to a different note and back.</li>
+<li>Existing height constraints on images are stripped when resizing (thanks to
+BlueGreenMagick).</li>
+<li>The MathJax editor now provides buttons/shortcuts to cloze-delete selected
+text (thanks to Henrik).</li>
 <li>MathJax preview now hides cloze markers.</li>
 <li>Style tags are no longer stripped when editing (thanks to Henrik).</li>
 <li><code>&lt;br&gt;</code> tags in MathJax are now handled correctly (thanks to Henrik).</li>
-<li>MathJax in the review screen now supports mathtools, and available packages in editor and review screen match (thanks to Henrik).</li>
+<li>MathJax in the review screen now supports mathtools, and available packages in
+editor and review screen match (thanks to Henrik).</li>
 <li>Move focus into HTML editor when hiding normal editor (thanks to Henrik).</li>
 <li>Image tags now have the alt property preserved when pasting.</li>
 </ul>
@@ -177,8 +181,10 @@ navigate to a different note and back.</li>
 <ul>
 <li>Fixed future due graph incorrectly including new cards.</li>
 <li>Custom study reports counts of child decks separately in v3 scheduler.</li>
-<li>Fixed initially-incorrect tooltip position in graphs (thanks to BlueGreenMagick).</li>
-<li>Fixed an error sometimes appearing in the browser when deleting notes (thanks to Rumo).</li>
+<li>Fixed initially-incorrect tooltip position in graphs (thanks to
+BlueGreenMagick).</li>
+<li>Fixed an error sometimes appearing in the browser when deleting notes (thanks
+to Rumo).</li>
 </ul>
 
                     </main>

@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html" class="active">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.57.html">Changes in 2.1.57</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html" class="active">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -156,8 +156,10 @@
 <h2 id="release-candidate-2"><a class="header" href="#release-candidate-2">Release Candidate 2</a></h2>
 <p>Build 30c6bd58 / 2022-06-21.</p>
 <ul>
-<li>Fixed broken column headers in Browse screen. You'll need to reconfigure your columns after updating.</li>
-<li>Fixed undo history being cleared and error showing when double-tapping delete in Browse screen.</li>
+<li>Fixed broken column headers in Browse screen. You'll need to reconfigure your
+columns after updating.</li>
+<li>Fixed undo history being cleared and error showing when double-tapping delete
+in Browse screen.</li>
 <li>Fixed field descriptions appearing underneath field text (thanks to Hikaru).</li>
 <li>Changing field delimiter in new import screen rebuilds field map.</li>
 <li>Editor API improvements (thanks to Henrik).</li>
@@ -169,12 +171,17 @@
 <ul>
 <li>Shows a preview based on the selected field separator.</li>
 <li>Column mapping includes field text for reference.</li>
-<li>Multiple decks and notetypes can now be imported/exported at once, as columns can be mapped to deck or notetype name.</li>
-<li>Supports exporting and importing a unique identifier for a note, to use instead of a matching first field. This removes the need for the 'add note id' add-on.</li>
-<li>Extends the header syntax so that files can specify metadata such as the desired field separator, and the mapping of fields.</li>
-<li>The new functionality is not enabled by default, and can be enabled with a checkbox in the preferences screen. This also enables
-the new apkg import/export code introduced in 2.1.52. If you use the Special Fields add-on, you will need to disable this option
-in order to use the add-on.</li>
+<li>Multiple decks and notetypes can now be imported/exported at once, as columns
+can be mapped to deck or notetype name.</li>
+<li>Supports exporting and importing a unique identifier for a note, to use
+instead of a matching first field. This removes the need for the 'add note id'
+add-on.</li>
+<li>Extends the header syntax so that files can specify metadata such as the
+desired field separator, and the mapping of fields.</li>
+<li>The new functionality is not enabled by default, and can be enabled with a
+checkbox in the preferences screen. This also enables the new apkg
+import/export code introduced in 2.1.52. If you use the Special Fields add-on,
+you will need to disable this option in order to use the add-on.</li>
 </ul>
 <p>Update to Qt 6.3.1:</p>
 <ul>
@@ -185,13 +192,17 @@ in order to use the add-on.</li>
 <p>Other changes:</p>
 <ul>
 <li>Accept .zip extension when importing add-ons (thanks to Abdo).</li>
-<li>Add support for getting light/dark mode status with latest freedesktop standard (thanks to Bart).</li>
-<li>Field descriptions in the editor are now shown inline, instead of in a tooltip (thanks to Matthias).</li>
+<li>Add support for getting light/dark mode status with latest freedesktop
+standard (thanks to Bart).</li>
+<li>Field descriptions in the editor are now shown inline, instead of in a tooltip
+(thanks to Matthias).</li>
 <li>Fixed a rounding issue when describing time intervals of a year or more.</li>
-<li>Fixed an error that occurred after a one-way download fetched a collection with a different scheduler version enabled.</li>
+<li>Fixed an error that occurred after a one-way download fetched a collection
+with a different scheduler version enabled.</li>
 <li>Fixed desktop hanging when attempting to add a new notetype in KDE (kwin).</li>
 <li>Fixed flag names not updating after sync until Anki restarted.</li>
-<li>Fixed inability to enter underscore in tags area on some keyboard layouts (thanks to Henrik).</li>
+<li>Fixed inability to enter underscore in tags area on some keyboard layouts
+(thanks to Henrik).</li>
 <li>Provide a way for the review screen to support drop events (thanks to Abdo).</li>
 <li>Other minor fixes and improvements.</li>
 </ul>

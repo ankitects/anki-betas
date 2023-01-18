@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html" class="active">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.57.html">Changes in 2.1.57</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html" class="active">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -153,11 +153,13 @@
 </ul>
 <h2 id="release-candidate-3"><a class="header" href="#release-candidate-3">Release Candidate 3</a></h2>
 <p>Build ab1c2395 / 2022-05-10.</p>
-<p>The Qt 6.3.1 release we were waiting on has been delayed by a month, so 2.1.52 is now
-expected to release as stable within the next week, if no important issues come up.</p>
+<p>The Qt 6.3.1 release we were waiting on has been delayed by a month, so 2.1.52
+is now expected to release as stable within the next week, if no important
+issues come up.</p>
 <p>Editor improvements:</p>
 <ul>
-<li>Ctrl/Cmd+A in tag editing area now selects all tags (thanks to BlueGreenMagick).</li>
+<li>Ctrl/Cmd+A in tag editing area now selects all tags (thanks to
+BlueGreenMagick).</li>
 <li>Pressing tab on the last field now moves focus to tag area (thanks to Henrik).</li>
 <li>Reduce size of editor buttons on Windows/Linux (thanks to Henrik).</li>
 <li>Tags copied from the tag editor are no longer joined together when pasted into
@@ -168,29 +170,36 @@ the add tags/remove tags dialogs (thanks to Henrik).</li>
 <p>Other fixes:</p>
 <ul>
 <li>Fixed scrollbars showing in bottom area of review screen (thanks to Matthias).</li>
-<li>Fixed v3 scheduler allowing one extra card when review limit reached (thanks to Rumo).</li>
-<li>Fixed Anki needing to close when invalid modification times encountered by the browser on
-Windows.</li>
+<li>Fixed v3 scheduler allowing one extra card when review limit reached (thanks
+to Rumo).</li>
+<li>Fixed Anki needing to close when invalid modification times encountered by the
+browser on Windows.</li>
 <li>Fixed new importer failing to import a subdeck export (thanks to Rumo).</li>
 <li>Improve progress feedback when using the new importing and exporting code.</li>
-<li>New import code supports .zip filenames, and runs on drag/drop + file double-click cases as well.</li>
+<li>New import code supports .zip filenames, and runs on drag/drop + file
+double-click cases as well.</li>
 </ul>
 <p>For developers:</p>
 <ul>
-<li>The <code>field_filter</code> hook can now check if it's running for the question or answer side (thanks to Abdo).</li>
+<li>The <code>field_filter</code> hook can now check if it's running for the question or
+answer side (thanks to Abdo).</li>
 <li>Added a <code>av_player_will_play_tags</code> hook (thanks to Abdo).</li>
 </ul>
 <h2 id="release-candidate-2"><a class="header" href="#release-candidate-2">Release Candidate 2</a></h2>
 <p>Build 63f05b2b / 2022-05-02.</p>
 <p>Bugfixes/tweaks:</p>
 <ul>
-<li>The Qt5 Mac build now caps tag autocomplete matches to 10, as showing more is extremely slow in the old toolkit version.</li>
-<li>Fix custom study applying the previously-input limit, instead of the current one.</li>
-<li>Fix an error when previewing cards and selecting multiple cards (thanks to Rumo).</li>
+<li>The Qt5 Mac build now caps tag autocomplete matches to 10, as showing more is
+extremely slow in the old toolkit version.</li>
+<li>Fix custom study applying the previously-input limit, instead of the current
+one.</li>
+<li>Fix an error when previewing cards and selecting multiple cards (thanks to
+Rumo).</li>
 <li>Removed the highlight on the Show Answer and Good buttons.</li>
 <li>Make it easier to search in fields programmatically (thanks to Abdo).</li>
 </ul>
-<p>This build also includes a new implementation of apkg importing and exporting, thanks to Rumo. Some advantages:</p>
+<p>This build also includes a new implementation of apkg importing and exporting,
+thanks to Rumo. Some advantages:</p>
 <ul>
 <li>Undo/redo is now supported.</li>
 <li>Faster imports (especially for decks with a lot of note content).</li>
@@ -198,20 +207,24 @@ Windows.</li>
 apkg files, and faster imports.</li>
 <li>Flags are removed when scheduling is excluded.</li>
 </ul>
-<p>The new functionality is hidden behind a feature flag, and <strong>not active by default</strong>.
-You can try it out by using <code>mw.pm.set_new_import_export(True)</code> in the <a href="https://docs.ankiweb.net/misc.html#debug-console">debug console</a>.
-To revert to the old behaviour, replace True with False.</p>
+<p>The new functionality is hidden behind a feature flag, and <strong>not active by
+default</strong>. You can try it out by using <code>mw.pm.set_new_import_export(True)</code> in
+the <a href="https://docs.ankiweb.net/misc.html#debug-console">debug console</a>. To revert
+to the old behaviour, replace True with False.</p>
 <p>Things to note:</p>
 <ul>
-<li>This is new code that has received limited testing so far, so please use <code>File&gt;Create Backup</code> before trying it out.
-Any testing/feedback you can provide would be appreciated.</li>
-<li>While active, it is not currently possible to export files other than apkg/colpkg.</li>
+<li>This is new code that has received limited testing so far, so please use
+<code>File&gt;Create Backup</code> before trying it out. Any testing/feedback you can
+provide would be appreciated.</li>
+<li>While active, it is not currently possible to export files other than
+apkg/colpkg.</li>
 <li>The Special Fields add-on will not work while this functionality is enabled.</li>
 </ul>
 <h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
 <p>Build a989e508 / 2022-04-25.</p>
 <ul>
-<li>Update Qt to 6.3, which fixes slow loading of large images, and inertial scrolling on macOS.</li>
+<li>Update Qt to 6.3, which fixes slow loading of large images, and inertial
+scrolling on macOS.</li>
 <li>List text is now aligned to the left by default (thanks to Matthias).</li>
 <li>Reset page zoom when moving between different screens.</li>
 <li>Fixed backspace sometimes removing multiple images at once (thanks to Henrik).</li>
@@ -219,14 +232,18 @@ Any testing/feedback you can provide would be appreciated.</li>
 <li>Fixed copying and pasting MathJax on Windows (Qt6).</li>
 <li>Fixed current working directory changing on apkg export.</li>
 <li>Fixed custom browser font not being honored (Qt6).</li>
-<li>Fixed due graph showing wrong date for review cards in a filtered deck with rescheduling disabled.</li>
+<li>Fixed due graph showing wrong date for review cards in a filtered deck with
+rescheduling disabled.</li>
 <li>Fixed some formatting being lost when copying between fields on Windows (Qt6).</li>
 <li>Fixed grey background in type answer text + dark mode (thanks to Matthias).</li>
 <li>Fixed handling of <code>&lt;</code> and <code>&gt;</code> symbols in MathJax (thanks to Henrik).</li>
-<li>Fixed intermittent editor loading failures when add-ons have injected a large amount of code.</li>
-<li>Fixed pasting of local files of unsupported types that contain spaces (thanks to Abdo).</li>
-<li>The Qt6 Linux build now defaults to X11/XWayland instead of Wayland due to some <a href="https://github.com/ankitects/anki/issues/1767">remaining issues</a>;
-you can force-enable Wayland with ANKI_WAYLAND=1.</li>
+<li>Fixed intermittent editor loading failures when add-ons have injected a large
+amount of code.</li>
+<li>Fixed pasting of local files of unsupported types that contain spaces (thanks
+to Abdo).</li>
+<li>The Qt6 Linux build now defaults to X11/XWayland instead of Wayland due to
+some <a href="https://github.com/ankitects/anki/issues/1767">remaining issues</a>; you
+can force-enable Wayland with ANKI_WAYLAND=1.</li>
 </ul>
 
                     </main>

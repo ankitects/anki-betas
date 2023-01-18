@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html" class="active">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.57.html">Changes in 2.1.57</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html" class="active">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,13 +147,14 @@
                     <main>
                         <h1 id="changes-in-2141"><a class="header" href="#changes-in-2141">Changes in 2.1.41</a></h1>
 <h2 id="add-on-notes"><a class="header" href="#add-on-notes">Add-On Notes</a></h2>
-<p>Add-on authors, please see <a href="https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390">https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390</a></p>
+<p>Add-on authors, please see
+<a href="https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390">https://forums.ankiweb.net/t/add-on-porting-notes-for-anki-2-1-41/7390</a></p>
 <h2 id="beta-7"><a class="header" href="#beta-7">Beta 7</a></h2>
 <p>Build 3ba08d11 / 2021-03-04.</p>
 <ul>
 <li>Fix a freeze when answering a card with a missing parent deck.</li>
-<li>Fix an error that could occur when syncing between 2.1.41 and older
-clients, then downgrading.</li>
+<li>Fix an error that could occur when syncing between 2.1.41 and older clients,
+then downgrading.</li>
 </ul>
 <h2 id="beta-6"><a class="header" href="#beta-6">Beta 6</a></h2>
 <p>Build 92aaaf71 / 2021-03-02.</p>
@@ -164,14 +165,18 @@ clients, then downgrading.</li>
 <h2 id="beta-5"><a class="header" href="#beta-5">Beta 5</a></h2>
 <p>Build 14cc81f8 / 2021-03-01.</p>
 <ul>
-<li>Filtered deck screen now has a link to show cards not matched by search (thanks to Rumo, Abdo).</li>
-<li>Support Alt+number to switch between clozes in the card layout screen (thanks to Abdo).</li>
+<li>Filtered deck screen now has a link to show cards not matched by search
+(thanks to Rumo, Abdo).</li>
+<li>Support Alt+number to switch between clozes in the card layout screen (thanks
+to Abdo).</li>
 <li>Fix images not shrinking to fit editor field (thanks to Henrik).</li>
 <li>Fix a focus handling issue in the editor (thanks to Henrik).</li>
 <li>Fix incorrect review counts in the 2.1 scheduler when parent decks had a
 smaller limit than their children.</li>
-<li>Fix early review cards remaining in new queue after upgrading to 2.1 scheduler.</li>
-<li>Improve error message when trying to nest under a filtered deck (thanks to Rumo).</li>
+<li>Fix early review cards remaining in new queue after upgrading to 2.1
+scheduler.</li>
+<li>Improve error message when trying to nest under a filtered deck (thanks to
+Rumo).</li>
 <li>Use monospace font in HTML editor.</li>
 </ul>
 <h2 id="beta-4"><a class="header" href="#beta-4">Beta 4</a></h2>
@@ -180,8 +185,8 @@ smaller limit than their children.</li>
 <ul>
 <li>The V1-&gt;V2 upgrade process no longer resets cards that are in learning, or
 removes cards from filtered decks.</li>
-<li>Users on the old scheduler will now see a message at the top of the deck
-list prompting them to update to the Anki 2.1 scheduler.</li>
+<li>Users on the old scheduler will now see a message at the top of the deck list
+prompting them to update to the Anki 2.1 scheduler.</li>
 <li>New users will see the message too. Enabling it by default would be a smoother
 experience, but that needs to wait until AnkiDroid 2.15 is released as stable,
 with support for the newer timezone handling.</li>
@@ -225,9 +230,8 @@ Multiple selection can be tackled again in a future update.</li>
 <p>Sidebar changes:</p>
 <ul>
 <li>Multiple selection. Currently only works with tag and deck drag&amp;drop.</li>
-<li>Ctrl/Alt/Shift options to add/modify the search now require
-a right click instead of a left click, to avoid conflicts with multiple
-selection.</li>
+<li>Ctrl/Alt/Shift options to add/modify the search now require a right click
+instead of a left click, to avoid conflicts with multiple selection.</li>
 <li>Move &quot;Current Deck&quot; to Decks</li>
 <li>Click on Decks to show whole collection.</li>
 <li>Click on Flags to show any flag.</li>
@@ -255,15 +259,15 @@ selection.</li>
 <p>Fix compatibility with fastbar add-on.</p>
 </li>
 <li>
-<p>Markdown rendering of deck config is now opt-in - once enabled,
-it will change the handling of both the overview and congrats screen.
-When not enabled, the congrats screen will not show the description.</p>
+<p>Markdown rendering of deck config is now opt-in - once enabled, it will change
+the handling of both the overview and congrats screen. When not enabled, the
+congrats screen will not show the description.</p>
 </li>
 </ul>
 <h2 id="beta-1"><a class="header" href="#beta-1">Beta 1</a></h2>
 <p>Build 704b5e58 / 2021-02-07.</p>
-<p>This beta includes all the changes from 2.1.39beta1 - please see
-its change notes as well.</p>
+<p>This beta includes all the changes from 2.1.39beta1 - please see its change
+notes as well.</p>
 <p>Changes since 2.1.39beta1:</p>
 <ul>
 <li>
@@ -281,8 +285,8 @@ add-ons that alter the editor will need updating.</li>
 <p>Browser sidebar improvements:</p>
 <ul>
 <li>Added a search bar, thanks to Abdo.</li>
-<li>The remaining items in the Filter button have been moved into the sidebar, and
-the Filter button removed.</li>
+<li>The remaining items in the Filter button have been moved into the sidebar,
+and the Filter button removed.</li>
 <li>Tags and decks can now be dragged and dropped.</li>
 <li>Each section can now be expanded/collapsed.</li>
 <li>Add-ons that were adjusting the sidebar or filter button may need updating.</li>
@@ -299,7 +303,9 @@ the Filter button removed.</li>
 <p>Reworked the Reschedule tool:</p>
 <ul>
 <li>Split into separate &quot;Forget&quot; and &quot;Set Due Date&quot; actions</li>
-<li>&quot;Set Due Date&quot; now <a href="https://github.com/ankitects/anki/commit/704b5e581a70089798f0f4742640fde4a3f1a507">adjusts intervals</a> of review cards, instead of resetting them.</li>
+<li>&quot;Set Due Date&quot; now
+<a href="https://github.com/ankitects/anki/commit/704b5e581a70089798f0f4742640fde4a3f1a507">adjusts intervals</a>
+of review cards, instead of resetting them.</li>
 <li>Changed the &quot;Delete Tags&quot; shortcut; Ctrl+Shift+D now changes the due date.</li>
 <li>Added the action to the review screen as well.</li>
 </ul>
@@ -311,7 +317,8 @@ the Filter button removed.</li>
 not only the start.</li>
 <li>The title bar on Macs will now turn dark when night mode is activated.</li>
 <li>Improvements to the graphs, thanks to Henrik.</li>
-<li>Add deck description back to congrats screen, with <a href="https://forums.ankiweb.net/t/anki-2-1-39-deck-descriptions-gone-after-finished-studying/7261">caveats</a>.</li>
+<li>Add deck description back to congrats screen, with
+<a href="https://forums.ankiweb.net/t/anki-2-1-39-deck-descriptions-gone-after-finished-studying/7261">caveats</a>.</li>
 <li>Add opus to media list in editor.</li>
 <li>Other improvements with thanks to Rumo, Henrik, Abdo, Arthur and Maksim.</li>
 </ul>
