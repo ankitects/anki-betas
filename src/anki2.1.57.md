@@ -1,5 +1,22 @@
 # Changes in 2.1.57
 
+## Release Candidate 1
+
+Build 14189a91 / 2023-01-26.
+
+- Fix non-Latin text wrapping in deck options dropdown (thanks to Fabricio).
+- Fix outer whitespace not being trimmed in type answer.
+- Fix style label being shown in preferences on Windows (thanks to Matthias).
+- Fix the future due graph counting learning cards on the wrong day.
+- HTML is now escaped in the deck list.
+- Improve styling of boxes in template editor (thanks to Matthias).
+- Fix 'View Files' not working with a relative base folder (thanks to Abdo).
+
+Dev related:
+
+- Make it easier to override node/protoc binaries during a build (thanks to
+  Mani)
+
 ## Beta 1
 
 Build 5cdfa7a6 / 2023-01-18.
