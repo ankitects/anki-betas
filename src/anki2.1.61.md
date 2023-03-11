@@ -29,10 +29,10 @@ Fixes:
 - Fix HTML editor sometimes not properly sized when opening editor (thanks to
   Hikaru).
 - Fix error showing if user clicks in sidebar before it's rendered.
-- Fix backup creation for collections > 1 GiB (thanks to RumovZ).
+- Fix backup creation for collections > 1 GiB (thanks to Rumo).
 - Fix black on grey minimalist buttons in Qt5 (thanks to Daniel).
 - Fix black on grey deck options on Qt5 (thanks to Daniel).
-- Export static references from sound tags (thanks to RumovZ).
+- Export static references from sound tags (thanks to Rumo).
 - Fix packaged audio tools path on Windows (thanks to Abdo).
 - Fix a case where 'reduce motion' and 'minimalist mode' were switched (thanks
   to Daniel).
