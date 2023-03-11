@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.57.html">Changes in 2.1.57</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.61.html">Changes in 2.1.61</a></li><li class="chapter-item expanded "><a href="anki2.1.57.html">Changes in 2.1.57</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -208,6 +208,50 @@ the last two steps to update to the latest beta and start it.</p>
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>Please see the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">FAQ page</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2161"><a class="header" href="#changes-in-2161">Changes in 2.1.61</a></h1>
+<h2 id="beta-1"><a class="header" href="#beta-1">Beta 1</a></h2>
+<p>Build 5ad29c37 / 2023-03-11.</p>
+<p>Improvements to the V3 scheduler:</p>
+<ul>
+<li>Added a global option to stop the review limit from limiting new cards (thanks
+to Rumo).</li>
+<li>You can now enable review burying without new burying again (thanks to Rumo).
+There are some caveats - please see the bury tooltips in the deck options.</li>
+<li>Ensure good is at least previous+1 even if low hard factor set.</li>
+</ul>
+<p>Other improvements:</p>
+<ul>
+<li>The tag area in the editor is now shown with a dropdown instead of a splitter
+(thanks to Matthias).</li>
+<li>Add a button in the preferences to reset window sizes (thanks to Abdo).</li>
+<li>Passing an invalid profile name on the commandline will now show profile
+picker instead of an error.</li>
+<li>You can shift-click on a deck to select it as the current deck (thanks to
+Tobias).</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Fix silent file save failures and bad default save path in Flatpak (thanks to
+Jack).</li>
+<li>Fix HTML editor sometimes not properly sized when opening editor (thanks to
+Hikaru).</li>
+<li>Fix error showing if user clicks in sidebar before it's rendered.</li>
+<li>Fix backup creation for collections &gt; 1 GiB (thanks to RumovZ).</li>
+<li>Fix black on grey minimalist buttons in Qt5 (thanks to Daniel).</li>
+<li>Fix black on grey deck options on Qt5 (thanks to Daniel).</li>
+<li>Export static references from sound tags (thanks to RumovZ).</li>
+<li>Fix packaged audio tools path on Windows (thanks to Abdo).</li>
+<li>Fix a case where 'reduce motion' and 'minimalist mode' were switched (thanks
+to Daniel).</li>
+<li>Fix panic with invalid sync server URL with port (thanks to Daniel).</li>
+<li>Fix double scrollbars in deck options (thanks to Fabricio).</li>
+<li>Fix images with non-Latin text and commas failing to display.</li>
+<li>Fix editor text possibly being transfer to different notetypes (thanks to
+Fabricio).</li>
+<li>Improve hover appearance of buttons (thanks to Matthias).</li>
+<li>Fix inability to activate search in graphs screen on Android (thanks to
+yellowjello).</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2157"><a class="header" href="#changes-in-2157">Changes in 2.1.57</a></h1>
 <h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
 <p>Build 14189a91 / 2023-01-26.</p>
@@ -225,7 +269,7 @@ the last two steps to update to the latest beta and start it.</p>
 <li>Make it easier to override node/protoc binaries during a build (thanks to
 Mani)</li>
 </ul>
-<h2 id="beta-1"><a class="header" href="#beta-1">Beta 1</a></h2>
+<h2 id="beta-1-1"><a class="header" href="#beta-1-1">Beta 1</a></h2>
 <p>Build 5cdfa7a6 / 2023-01-18.</p>
 <p>More UI improvements/fixes thanks to Matthias, including:</p>
 <ul>
@@ -526,7 +570,7 @@ any improvements/regressions it brings.</li>
 <li>Fix type answer warning making text bold.</li>
 <li>Fix font size not being removed when pasting between fields.</li>
 </ul>
-<h2 id="beta-1-1"><a class="header" href="#beta-1-1">Beta 1</a></h2>
+<h2 id="beta-1-2"><a class="header" href="#beta-1-2">Beta 1</a></h2>
 <p>Build f72570c or 6944210 / 2022-09-28.</p>
 <p>Various UI changes, thanks to Matthias:</p>
 <ul>
@@ -1244,7 +1288,7 @@ well (thanks to Rumo).</li>
 (which could lead to blank windows, a giant sync icon, etc).</li>
 <li>Miscellaneous other fixes, thanks to Abdo, Matthias, TheFeelTrain and Arthur.</li>
 </ul>
-<h2 id="beta-1-2"><a class="header" href="#beta-1-2">Beta 1</a></h2>
+<h2 id="beta-1-3"><a class="header" href="#beta-1-3">Beta 1</a></h2>
 <p>Build 43c41d76 / 2021-12-04.</p>
 <p>Toolkit changes:</p>
 <ul>
@@ -1553,7 +1597,7 @@ Henrik).</li>
 <li>Reduce chances of a flash when revealing answer on cards with images.</li>
 <li>Miscellaneous other changes.</li>
 </ul>
-<h2 id="beta-1-3"><a class="header" href="#beta-1-3">Beta 1</a></h2>
+<h2 id="beta-1-4"><a class="header" href="#beta-1-4">Beta 1</a></h2>
 <p>Build 5bd2dc65 / 2021-06-08.</p>
 <p>Changes:</p>
 <ul>
@@ -1752,14 +1796,14 @@ time.</li>
 <li>Performance improvements and other miscellaneous fixes.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2144"><a class="header" href="#changes-in-2144">Changes in 2.1.44</a></h1>
-<h2 id="beta-1-4"><a class="header" href="#beta-1-4">Beta 1</a></h2>
+<h2 id="beta-1-5"><a class="header" href="#beta-1-5">Beta 1</a></h2>
 <p>Build b2b3275f / 2021-05-04.</p>
 <ul>
 <li>Search text is no longer automatically quoted/interspersed with ANDs.</li>
 <li>Fix two backslashes being treated as one in MathJax.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changes-in-2143"><a class="header" href="#changes-in-2143">Changes in 2.1.43</a></h1>
-<h2 id="beta-1-5"><a class="header" href="#beta-1-5">Beta 1</a></h2>
+<h2 id="beta-1-6"><a class="header" href="#beta-1-6">Beta 1</a></h2>
 <p>Build 0fbae6bc / 2021-03-27.</p>
 <ul>
 <li>The reviewing screen will now wait for up to 100ms for images to load before
@@ -1894,7 +1938,7 @@ the handling of both the overview and congrats screen. When not enabled, the
 congrats screen will not show the description.</p>
 </li>
 </ul>
-<h2 id="beta-1-6"><a class="header" href="#beta-1-6">Beta 1</a></h2>
+<h2 id="beta-1-7"><a class="header" href="#beta-1-7">Beta 1</a></h2>
 <p>Build 704b5e58 / 2021-02-07.</p>
 <p>This beta includes all the changes from 2.1.39beta1 - please see its change
 notes as well.</p>
