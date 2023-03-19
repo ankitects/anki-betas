@@ -146,6 +146,33 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="changes-in-2161"><a class="header" href="#changes-in-2161">Changes in 2.1.61</a></h1>
+<h2 id="beta-2"><a class="header" href="#beta-2">Beta 2</a></h2>
+<p>Build d0ab7acb / 2023-03-20.</p>
+<ul>
+<li>You can now exclude certain fields from unqualified searches via the Fields
+screen (thanks to Abdo).</li>
+<li>You can now import decks with broken timestamps - they'll automatically be
+fixed on import (thanks to Rumo).</li>
+<li>A DB check will now fix broken timestamps (thanks to Rumo).</li>
+<li>Reduce motion is now on by default, as it fixes an issue with the bottom bar
+failing to appear for some users.</li>
+<li>Fix new limit in v3 decreasing more than it should (thanks to Rumo).</li>
+<li>Fix current tag text not being saved when changing note via shortcut key
+(thanks to Hikaru).</li>
+<li>Fix tags popover becoming separated from the tags field (thanks to Fabricio).</li>
+<li>Custom schedulers now have the deck name and random seed passed in to them, so
+they don't need to extract the info from the DOM (thanks to Rumo).</li>
+<li>Ensure the bottom buttons aren't displayed until the custom scheduling code
+has finished running (thanks to Rumo).</li>
+<li>Refresh study screen if the user toggles the v3 scheduler (thanks to Rumo).</li>
+<li>Fix notetypes screen not being closable after adding a notetype on Mac.</li>
+<li>Improve debug console (thanks to Rumo).</li>
+<li>Check for division by zero when calculating browser aspect ratio, which fixes
+an issue with i3 (thanks to Ben).</li>
+<li>Fallback to Wayland if X11 is not available (thanks to Ingemar).</li>
+<li>Tweaks to the build scripts to make packaging in distros easier (thanks to
+Euan).</li>
+</ul>
 <h2 id="beta-1"><a class="header" href="#beta-1">Beta 1</a></h2>
 <p>Build 5ad29c37 / 2023-03-11.</p>
 <p>Improvements to the V3 scheduler:</p>
