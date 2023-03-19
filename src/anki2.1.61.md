@@ -1,5 +1,33 @@
 # Changes in 2.1.61
 
+## Beta 2
+
+Build d0ab7acb / 2023-03-20.
+
+- You can now exclude certain fields from unqualified searches via the Fields
+  screen (thanks to Abdo).
+- You can now import decks with broken timestamps - they'll automatically be
+  fixed on import (thanks to Rumo).
+- A DB check will now fix broken timestamps (thanks to Rumo).
+- Reduce motion is now on by default, as it fixes an issue with the bottom bar
+  failing to appear for some users.
+- Fix new limit in v3 decreasing more than it should (thanks to Rumo).
+- Fix current tag text not being saved when changing note via shortcut key
+  (thanks to Hikaru).
+- Fix tags popover becoming separated from the tags field (thanks to Fabricio).
+- Custom schedulers now have the deck name and random seed passed in to them, so
+  they don't need to extract the info from the DOM (thanks to Rumo).
+- Ensure the bottom buttons aren't displayed until the custom scheduling code
+  has finished running (thanks to Rumo).
+- Refresh study screen if the user toggles the v3 scheduler (thanks to Rumo).
+- Fix notetypes screen not being closable after adding a notetype on Mac.
+- Improve debug console (thanks to Rumo).
+- Check for division by zero when calculating browser aspect ratio, which fixes
+  an issue with i3 (thanks to Ben).
+- Fallback to Wayland if X11 is not available (thanks to Ingemar).
+- Tweaks to the build scripts to make packaging in distros easier (thanks to
+  Euan).
+
 ## Beta 1
 
 Build 5ad29c37 / 2023-03-11.
