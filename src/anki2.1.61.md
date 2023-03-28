@@ -1,5 +1,18 @@
 # Changes in 2.1.61
 
+## Release Candidate 1
+
+Build 5613113f / 2023-03-28.
+
+- Add time of date to browser date.
+- Allow Shift+Tab to move focus from tag area to last field (thanks to Hikaru).
+- Ensure sync spinner spins when reduce motion is enabled.
+- Fix new ignore review limit help (thanks to Rumo).
+- Fix stats calendar incorrect due to daylight savings time (thanks to Kieran).
+- Prevent the top bar from hiding in the stats page as you scroll down (thanks
+  to Fabricio).
+- Start debug console with text area focused.
+
 ## Beta 2
 
 Build d0ab7acb / 2023-03-20.
