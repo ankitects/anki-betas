@@ -7,10 +7,11 @@ Build bf05fae9 / 2023-04-12.
 This build updates Qt6 on all platforms to the recently-released Qt6.5. Please
 report any regressions or improvements you notice.
 
-If you are on Linux and don't have ANKI_WAYLAND set, you may need to install
-libxcb-cursor or Anki will fail to start. Eg on Debian/Ubuntu:
+- The minimum macOS version for the Qt6 build is now macOS 11.
+- If you are on Linux and don't have ANKI_WAYLAND set, you may need to install
+  libxcb-cursor or Anki will fail to start. Eg on Debian/Ubuntu:
 
-    sudo apt install libxcb-cursor0
+  sudo apt install libxcb-cursor0
 
 Other changes:
 
