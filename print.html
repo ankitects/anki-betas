@@ -213,10 +213,16 @@ the last two steps to update to the latest beta and start it.</p>
 <p>Build bf05fae9 / 2023-04-12.</p>
 <p>This build updates Qt6 on all platforms to the recently-released Qt6.5. Please
 report any regressions or improvements you notice.</p>
+<ul>
+<li>
+<p>The minimum macOS version for the Qt6 build is now macOS 11.</p>
+</li>
+<li>
 <p>If you are on Linux and don't have ANKI_WAYLAND set, you may need to install
 libxcb-cursor or Anki will fail to start. Eg on Debian/Ubuntu:</p>
-<pre><code>sudo apt install libxcb-cursor0
-</code></pre>
+<p>sudo apt install libxcb-cursor0</p>
+</li>
+</ul>
 <p>Other changes:</p>
 <ul>
 <li>Fix MathJax editor not being sized correctly (thanks to Hikaru).</li>
