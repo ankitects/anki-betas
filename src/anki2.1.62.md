@@ -2,7 +2,7 @@
 
 ## Beta 1
 
-Build bf05fae9 / 2023-04-12.
+Build b5fa47e3 or bf05fae9 / 2023-04-12.
 
 This build updates Qt6 on all platforms to the recently-released Qt6.5. Please
 report any regressions or improvements you notice.
