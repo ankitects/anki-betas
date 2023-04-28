@@ -146,6 +146,22 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="changes-in-2162"><a class="header" href="#changes-in-2162">Changes in 2.1.62</a></h1>
+<h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
+<p>Build fd509efc / 2023-04-28.</p>
+<ul>
+<li>Revert Windows build to Qt 6.4, due to the reports of slowdowns on 6.5.
+Upgrade from 6.4.2 to 6.4.3.</li>
+<li>Add a new option to the card templates screen to restore a notetype to the
+default fields/templates/styling.</li>
+<li>Add clearer tooltip to hourly breakdown graph (thanks to Rumo).</li>
+<li>Fix focus loss when closing HTML editor (thanks to Hikaru).</li>
+<li>Prevent MathJax editor from closing when you selected text with the mouse and
+released the mouse button outside the window (thanks to Hikaru).</li>
+<li>Pass original deck name to custom scheduling code, instead of filtered deck
+name.</li>
+<li>When importing an .apkg where notetypes have changed, display a clearer
+message, and only if the notes in the incoming collection are newer.</li>
+</ul>
 <h2 id="beta-1"><a class="header" href="#beta-1">Beta 1</a></h2>
 <p>Build b5fa47e3 or bf05fae9 / 2023-04-12.</p>
 <p>This build updates Qt6 on all platforms to the recently-released Qt6.5. Please
