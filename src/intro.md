@@ -21,7 +21,7 @@ AnkiWeb.
 
 ## Via PyPI/pip
 
-If you have a local Python 3.9 installation, you can also install beta builds
+If you have a local Python 3.9+ installation, you can also install beta builds
 directly with pip.
 
 Anki will be installed in a local Python folder called 'pyenv'.
