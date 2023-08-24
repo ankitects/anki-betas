@@ -1,5 +1,17 @@
 # Changes in 2.1.66
 
+## Release Candidate 1
+
+Build 70506aeb / 2023-08-20.
+
+- The v3 scheduler is now the default for new users.
+- When imports complete, a summary window is now shown (thanks to Abdo).
+- Media check now automatically extracts images that have been embedded in fields.
+- Handle importing of legacy AnkiDroid backups.
+- Fixed a sporadic error in the review screen (thanks to mjuhanne).
+- Fixed an error that could occur when syncing between newer and older clients.
+- Fixed tab order in find&replace screen (thanks to Gabriel).
+
 ## Beta 1
 
 Build 46915605 / 2023-07-26.
