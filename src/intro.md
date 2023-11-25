@@ -48,26 +48,33 @@ As there are no PyQt packages on PyPI for Linux/ARM, you will need to have your
 distro's PyQt5 packages already installed. Eg on Debian 11:
 
 ```
-$ sudo apt install python3-pyqt5.{qtwebengine,qtmultimedia}
+apt install python3-pyqt5.{qtwebengine,qtmultimedia}
 ```
 
 Or on Fedora:
 
 ```
-$ sudo dnf install python3-qt5-webengine
+dnf install python3-qt5-webengine
 ```
 
 Then run the following:
 
 ```
-$ python3.9 -m venv --system-site-packages pyenv
-$ pyenv/bin/pip install --upgrade pip
-$ pyenv/bin/pip install --upgrade --pre aqt
-$ pyenv/bin/anki
+python3 -m venv --system-site-packages pyenv
+```
+```
+pyenv/bin/pip install --upgrade pip
+```
+```
+pyenv/bin/pip install --upgrade aqt
+```
+```
+pyenv/bin/anki
 ```
 
 - Repeat the last step if you wish to start the same Anki version again.
 - Repeat the last two steps to update to the latest beta and start it.
+- Optionally if you want to install a beta add the `--pre` argument to installing aqt step 
 
 </details>
 
