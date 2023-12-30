@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html" class="active">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="anki2.1.66.html">Changes in 2.1.66</a></li><li class="chapter-item expanded "><a href="anki2.1.62.html">Changes in 2.1.62</a></li><li class="chapter-item expanded "><a href="anki2.1.61.html">Changes in 2.1.61</a></li><li class="chapter-item expanded "><a href="anki2.1.57.html">Changes in 2.1.57</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html" class="active">Intro & Downloads</a></li><li class="chapter-item expanded "><a href="2021-scheduler.html">2021 Scheduler</a></li><li class="chapter-item expanded "><a href="github.html">Changes in 23.12+</a></li><li class="chapter-item expanded "><a href="anki23.10.html">Changes in 23.10</a></li><li class="chapter-item expanded "><a href="anki2.1.66.html">Changes in 2.1.66</a></li><li class="chapter-item expanded "><a href="anki2.1.62.html">Changes in 2.1.62</a></li><li class="chapter-item expanded "><a href="anki2.1.61.html">Changes in 2.1.61</a></li><li class="chapter-item expanded "><a href="anki2.1.57.html">Changes in 2.1.57</a></li><li class="chapter-item expanded "><a href="anki2.1.56.html">Changes in 2.1.56</a></li><li class="chapter-item expanded "><a href="anki2.1.55.html">Changes in 2.1.55</a></li><li class="chapter-item expanded "><a href="anki2.1.54.html">Changes in 2.1.54</a></li><li class="chapter-item expanded "><a href="anki2.1.53.html">Changes in 2.1.53</a></li><li class="chapter-item expanded "><a href="anki2.1.52.html">Changes in 2.1.52</a></li><li class="chapter-item expanded "><a href="anki2.1.51.html">Changes in 2.1.51</a></li><li class="chapter-item expanded "><a href="anki2.1.50.html">Changes in 2.1.50</a></li><li class="chapter-item expanded "><a href="anki2.1.48.html">Changes in 2.1.48</a></li><li class="chapter-item expanded "><a href="anki2.1.47.html">Changes in 2.1.47</a></li><li class="chapter-item expanded "><a href="anki2.1.45.html">Changes in 2.1.45</a></li><li class="chapter-item expanded "><a href="anki2.1.44.html">Changes in 2.1.44</a></li><li class="chapter-item expanded "><a href="anki2.1.43.html">Changes in 2.1.43</a></li><li class="chapter-item expanded "><a href="anki2.1.41.html">Changes in 2.1.41</a></li><li class="chapter-item expanded "><a href="older.html">Older</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -156,16 +156,14 @@ version, please go to the <code>File&gt;Switch Profile</code> menu item, and cli
 <a href="https://forums.ankiweb.net/c/beta-testing/">beta testing section</a> of the user
 forums.</p>
 <h2 id="packaged-builds"><a class="header" href="#packaged-builds">Packaged Builds</a></h2>
-<p>You can get the
-<a href="https://apps.ankiweb.net/downloads/beta/?C=N&amp;O=D">latest packaged beta</a> from
-AnkiWeb.</p>
+<p>Betas are posted on <a href="https://github.com/ankitects/anki/releases">https://github.com/ankitects/anki/releases</a>.</p>
 <h2 id="via-pypipip"><a class="header" href="#via-pypipip">Via PyPI/pip</a></h2>
 <p>If you have a local Python 3.9+ installation, you can also install beta builds
 directly with pip.</p>
 <p>Anki will be installed in a local Python folder called 'pyenv'.</p>
 <details>
 <summary>Mac (both Intel/Apple), and Linux (x86_64)</summary>
-<pre><code>$ python3.9 -m venv pyenv
+<pre><code>$ python3 -m venv pyenv
 $ pyenv/bin/pip install --upgrade pip
 $ pyenv/bin/pip install --upgrade --pre 'aqt[qt6]'
 $ pyenv/bin/anki
@@ -185,7 +183,7 @@ distro's PyQt5 packages already installed. Eg on Debian 11:</p>
 <pre><code>$ sudo dnf install python3-qt5-webengine
 </code></pre>
 <p>Then run the following:</p>
-<pre><code>$ python3.9 -m venv --system-site-packages pyenv
+<pre><code>$ python3 -m venv --system-site-packages pyenv
 $ pyenv/bin/pip install --upgrade pip
 $ pyenv/bin/pip install --upgrade --pre aqt
 $ pyenv/bin/anki
