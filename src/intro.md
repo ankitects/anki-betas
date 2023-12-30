@@ -28,7 +28,7 @@ Anki will be installed in a local Python folder called 'pyenv'.
 <summary>Mac (both Intel/Apple), and Linux (x86_64)</summary>
 
 ```
-$ python3.9 -m venv pyenv
+$ python3 -m venv pyenv
 $ pyenv/bin/pip install --upgrade pip
 $ pyenv/bin/pip install --upgrade --pre 'aqt[qt6]'
 $ pyenv/bin/anki
@@ -58,7 +58,7 @@ $ sudo dnf install python3-qt5-webengine
 Then run the following:
 
 ```
-$ python3.9 -m venv --system-site-packages pyenv
+$ python3 -m venv --system-site-packages pyenv
 $ pyenv/bin/pip install --upgrade pip
 $ pyenv/bin/pip install --upgrade --pre aqt
 $ pyenv/bin/anki
