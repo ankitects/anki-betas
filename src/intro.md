@@ -15,9 +15,7 @@ forums.
 
 ## Packaged Builds
 
-You can get the
-[latest packaged beta](https://apps.ankiweb.net/downloads/beta/?C=N&O=D) from
-AnkiWeb.
+Betas are posted on <https://github.com/ankitects/anki/releases>.
 
 ## Via PyPI/pip
 
