@@ -43,10 +43,10 @@ $ pyenv/bin/anki
 <summary>Linux (ARM)</summary>
 
 As there are no PyQt packages on PyPI for Linux/ARM, you will need to have your
-distro's PyQt5 packages already installed. Eg on Debian 11:
+distro's PyQt5 packages already installed. Eg on Debian 12:
 
 ```
-$ sudo apt install python3-pyqt5.{qtwebengine,qtmultimedia}
+$ sudo apt install python3-pyqt6.qt{quick,webengine,multimedia} python3-venv
 ```
 
 Or on Fedora:
