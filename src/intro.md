@@ -10,7 +10,7 @@ version, please go to the `File>Switch Profile` menu item, and click on
 ## Problems
 
 If you run into any issues, please let us know on the
-[beta testing section](https://forums.ankiweb.net/c/beta-testing/) of the user
+[beta testing section](https://forums.ankiweb.net/c/anki/beta-testing/13) of the user
 forums.
 
 ## Packaged Builds
