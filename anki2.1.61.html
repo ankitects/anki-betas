@@ -1,306 +1,36 @@
-<!DOCTYPE HTML>
-<html lang="en" class="light sidebar-visible" dir="ltr">
-    <head>
-        <!-- Book generated using mdBook -->
-        <meta charset="UTF-8">
-        <title>Changes in 2.1.61 - Anki Betas</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; URL=https://docs.ankiweb.net/releases/betas/anki2.1.61">
+    <link rel="canonical" href="https://docs.ankiweb.net/releases/betas/anki2.1.61">
+  </head>
+  <body>
+      <p>Redirecting to... <a href="https://docs.ankiweb.net/releases/betas/anki2.1.61">https://docs.ankiweb.net/releases/betas/anki2.1.61</a>.</p>
 
-
-        <!-- Custom HTML head -->
-
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff">
-
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
-
-        <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="highlight-css" href="highlight.css">
-        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
-        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
-
-        <!-- Custom theme stylesheets -->
-
-
-        <!-- Provide site root and default themes to javascript -->
-        <script>
-            const path_to_root = "";
-            const default_light_theme = "light";
-            const default_dark_theme = "navy";
-        </script>
-        <!-- Start loading toc.js asap -->
-        <script src="toc.js"></script>
-    </head>
-    <body>
-    <div id="mdbook-help-container">
-        <div id="mdbook-help-popup">
-            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
-            <div>
-                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
-                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
-                <p>Press <kbd>?</kbd> to show this help</p>
-                <p>Press <kbd>Esc</kbd> to hide this help</p>
-            </div>
-        </div>
-    </div>
-    <div id="body-container">
-        <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script>
-            try {
-                let theme = localStorage.getItem('mdbook-theme');
-                let sidebar = localStorage.getItem('mdbook-sidebar');
-
-                if (theme.startsWith('"') && theme.endsWith('"')) {
-                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-                }
-
-                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-                }
-            } catch (e) { }
-        </script>
-
-        <!-- Set the theme before any content is loaded, prevents flash -->
-        <script>
-            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
-            let theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
-            if (theme === null || theme === undefined) { theme = default_theme; }
-            const html = document.documentElement;
-            html.classList.remove('light')
-            html.classList.add(theme);
-            html.classList.add("js");
-        </script>
-
-        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
-
-        <!-- Hide / unhide sidebar before it is displayed -->
-        <script>
-            let sidebar = null;
-            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
-            if (document.body.clientWidth >= 1080) {
-                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
-                sidebar = sidebar || 'visible';
+<script>
+    // This handles redirects that involve fragments.
+    document.addEventListener('DOMContentLoaded', function() {
+        const fragmentMap =
+            {}
+        ;
+        const fragment = window.location.hash;
+        if (fragment) {
+            let redirectUrl = "https://docs.ankiweb.net/releases/betas/anki2.1.61";
+            const target = fragmentMap[fragment];
+            if (target) {
+                let url = new URL(target, window.location.href);
+                redirectUrl = url.href;
             } else {
-                sidebar = 'hidden';
+                let url = new URL(redirectUrl, window.location.href);
+                url.hash = window.location.hash;
+                redirectUrl = url.href;
             }
-            sidebar_toggle.checked = sidebar === 'visible';
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
-        </script>
-
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <!-- populated by js -->
-            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
-            <noscript>
-                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
-            </noscript>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
-                <div class="sidebar-resize-indicator"></div>
-            </div>
-        </nav>
-
-        <div id="page-wrapper" class="page-wrapper">
-
-            <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky">
-                    <div class="left-buttons">
-                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
-                        </label>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
-                        </button>
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                        </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
-
-                    <h1 class="menu-title">Anki Betas</h1>
-
-                    <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
-                        <a href="https://github.com/ankitects/anki-betas/" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-github"></i>
-                        </a>
-
-                    </div>
-                </div>
-
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script>
-                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
-                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-                    });
-                </script>
-
-                <div id="content" class="content">
-                    <main>
-                        <h1 id="changes-in-2161"><a class="header" href="#changes-in-2161">Changes in 2.1.61</a></h1>
-<h2 id="release-candidate-1"><a class="header" href="#release-candidate-1">Release Candidate 1</a></h2>
-<p>Build 5613113f / 2023-03-28.</p>
-<ul>
-<li>Add time of date to browser date.</li>
-<li>Allow Shift+Tab to move focus from tag area to last field (thanks to Hikaru).</li>
-<li>Ensure sync spinner spins when reduce motion is enabled.</li>
-<li>Fix new ignore review limit help (thanks to Rumo).</li>
-<li>Fix stats calendar incorrect due to daylight savings time (thanks to Kieran).</li>
-<li>Prevent the top bar from hiding in the stats page as you scroll down (thanks
-to Fabricio).</li>
-<li>Start debug console with text area focused.</li>
-</ul>
-<h2 id="beta-2"><a class="header" href="#beta-2">Beta 2</a></h2>
-<p>Build d0ab7acb / 2023-03-20.</p>
-<ul>
-<li>You can now exclude certain fields from unqualified searches via the Fields
-screen (thanks to Abdo).</li>
-<li>You can now import decks with broken timestamps - they'll automatically be
-fixed on import (thanks to Rumo).</li>
-<li>A DB check will now fix broken timestamps (thanks to Rumo).</li>
-<li>Reduce motion is now on by default, as it fixes an issue with the bottom bar
-failing to appear for some users.</li>
-<li>Fix new limit in v3 decreasing more than it should (thanks to Rumo).</li>
-<li>Fix current tag text not being saved when changing note via shortcut key
-(thanks to Hikaru).</li>
-<li>Fix tags popover becoming separated from the tags field (thanks to Fabricio).</li>
-<li>Custom schedulers now have the deck name and random seed passed in to them, so
-they don't need to extract the info from the DOM (thanks to Rumo).</li>
-<li>Ensure the bottom buttons aren't displayed until the custom scheduling code
-has finished running (thanks to Rumo).</li>
-<li>Refresh study screen if the user toggles the v3 scheduler (thanks to Rumo).</li>
-<li>Fix notetypes screen not being closable after adding a notetype on Mac.</li>
-<li>Improve debug console (thanks to Rumo).</li>
-<li>Check for division by zero when calculating browser aspect ratio, which fixes
-an issue with i3 (thanks to Ben).</li>
-<li>Fallback to Wayland if X11 is not available (thanks to Ingemar).</li>
-<li>Tweaks to the build scripts to make packaging in distros easier (thanks to
-Euan).</li>
-</ul>
-<h2 id="beta-1"><a class="header" href="#beta-1">Beta 1</a></h2>
-<p>Build 5ad29c37 / 2023-03-11.</p>
-<p>Improvements to the V3 scheduler:</p>
-<ul>
-<li>Added a global option to stop the review limit from limiting new cards (thanks
-to Rumo).</li>
-<li>You can now enable review burying without new burying again (thanks to Rumo).
-There are some caveats - please see the bury tooltips in the deck options.</li>
-<li>Ensure good is at least previous+1 even if low hard factor set.</li>
-</ul>
-<p>Other improvements:</p>
-<ul>
-<li>The tag area in the editor is now shown with a dropdown instead of a splitter
-(thanks to Matthias).</li>
-<li>Add a button in the preferences to reset window sizes (thanks to Abdo).</li>
-<li>Passing an invalid profile name on the commandline will now show profile
-picker instead of an error.</li>
-<li>You can shift-click on a deck to select it as the current deck (thanks to
-Tobias).</li>
-</ul>
-<p>Fixes:</p>
-<ul>
-<li>Fix silent file save failures and bad default save path in Flatpak (thanks to
-Jack).</li>
-<li>Fix HTML editor sometimes not properly sized when opening editor (thanks to
-Hikaru).</li>
-<li>Fix error showing if user clicks in sidebar before it's rendered.</li>
-<li>Fix backup creation for collections &gt; 1 GiB (thanks to Rumo).</li>
-<li>Fix black on grey minimalist buttons in Qt5 (thanks to Daniel).</li>
-<li>Fix black on grey deck options on Qt5 (thanks to Daniel).</li>
-<li>Export static references from sound tags (thanks to Rumo).</li>
-<li>Fix packaged audio tools path on Windows (thanks to Abdo).</li>
-<li>Fix a case where 'reduce motion' and 'minimalist mode' were switched (thanks
-to Daniel).</li>
-<li>Fix panic with invalid sync server URL with port (thanks to Daniel).</li>
-<li>Fix double scrollbars in deck options (thanks to Fabricio).</li>
-<li>Fix images with non-Latin text and commas failing to display.</li>
-<li>Fix editor text possibly being transfer to different notetypes (thanks to
-Fabricio).</li>
-<li>Improve hover appearance of buttons (thanks to Matthias).</li>
-<li>Fix inability to activate search in graphs screen on Android (thanks to
-yellowjello).</li>
-</ul>
-
-                    </main>
-
-                    <nav class="nav-wrapper" aria-label="Page navigation">
-                        <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="anki2.1.62.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-
-                            <a rel="next prefetch" href="anki2.1.57.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-
-                        <div style="clear: both"></div>
-                    </nav>
-                </div>
-            </div>
-
-            <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="anki2.1.62.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-
-                    <a rel="next prefetch" href="anki2.1.57.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-            </nav>
-
-        </div>
-
-
-
-
-        <script>
-            window.playground_copyable = true;
-        </script>
-
-
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
-
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
-
-        <!-- Custom JS scripts -->
-
-
-    </div>
-    </body>
+            window.location.replace(redirectUrl);
+        }
+        // else redirect handled by http-equiv
+    });
+</script>
+  </body>
 </html>
